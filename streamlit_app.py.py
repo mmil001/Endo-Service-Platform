@@ -53,7 +53,6 @@ def authenticate(username, password):
             st.experimental_rerun()
         else:
             st.error("Access denied. Invalid user, password, or expired license.")
-            st.stop()
 
 # --- Banco de erros ---
 if "problems_database" not in st.session_state:
