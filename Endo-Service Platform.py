@@ -64,6 +64,36 @@ patterns = {
 st.set_page_config(page_title="Endo Service Platform", layout="wide")
 st.image("mindray_logo_transparent.png", width=150)
 
+import json
+from datetime import datetime
+
+def load_users():
+    with open("users.json", "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def authenticate(username, password):
+    users = load_users()
+    user = users.get(username)
+    if user and user["password"] == password:
+        expiry = datetime.strptime(user["expires"], "%Y-%m-%d")
+        if expiry >= datetime.today():
+            return user["role"]
+    return None
+
+def login_screen():
+    st.title("🔐 Endo Service Platform - Login")
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+    if st.button("Login"):
+        role = authenticate(username, password)
+        if role:
+            st.session_state["logged_in"] = True
+            st.session_state["username"] = username
+            st.session_state["role"] = role
+            st.experimental_rerun()
+        else:
+            st.error("Access denied. Invalid user, password, or expired license.")
+
 # Verifica se o usuário está logado
 if "logged_in" not in st.session_state:
     login_screen()  # ← chama a função de login que criamos antes
