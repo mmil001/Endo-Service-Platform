@@ -83,14 +83,18 @@ patterns = {
     "Video Recording / USB Errors 📀": r"(usb.*fail|record.*error|video.*not saved|no.*recording|file.*system.*error)"
 }
 
-# --- Tabs ---
+# --- Tabs por tipo de usuário ---
 if "selected_tab" not in st.session_state:
     st.session_state.selected_tab = "Log Analyzer"
 
+menu = ["Log Analyzer", "Search Errors"]
+if st.session_state.get("role") == "master":
+    menu.append("Admin Panel")
+
 st.session_state.selected_tab = st.sidebar.radio(
     "Navigation",
-    ["Log Analyzer", "Search Errors", "Admin Panel"],
-    index=["Log Analyzer", "Search Errors", "Admin Panel"].index(st.session_state.selected_tab)
+    menu,
+    index=menu.index(st.session_state.selected_tab)
 )
 
 # Botão de logout no menu lateral
