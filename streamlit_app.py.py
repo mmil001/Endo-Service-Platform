@@ -10,6 +10,11 @@ import time
 from datetime import datetime
 from itertools import chain
 
+# --- Carrega usuários ---
+def load_users():
+    with open("users.json", "r", encoding="utf-8") as f:
+        return json.load(f)
+
 # --- Autenticação ---
 def authenticate(username, password):
     users = load_users()
@@ -29,26 +34,7 @@ def authenticate(username, password):
     except:
         return None  # data inválida
     
-    return user.get["role"]
-
-def login_screen():
-    st.image("mindray_logo_transparent.png", width=150)
-    st.markdown("## 🔐 Endo Service Platform - Login")
-    st.markdown("Please enter your credentials to access the platform.")
-    st.markdown("---")
-
-    username = st.text_input("Username", placeholder="Enter your username")
-    password = st.text_input("Password", type="password", placeholder="Enter your password")
-
-    if st.button("Login"):
-        role = authenticate(username, password)
-        if role:
-            st.session_state["logged_in"] = True
-            st.session_state["username"] = username
-            st.session_state["role"] = role
-            st.rerun()
-        else:
-            st.error("Access denied. Invalid user, password, or expired license.")
+    return user.get("role")  # ✅ corrigido aqui
 
 # --- Tela de login ---
 def login_screen():
