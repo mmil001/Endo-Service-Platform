@@ -305,6 +305,10 @@ def run_error_search():
                 for c in data['causes']:
                     st.markdown(f"- {c}")
 
+                st.markdown("**Recommended Actions:**")
+                for r in data['repairs']:
+                    st.markdown(f"- {r}")
+
                 if category == "Contamination Detected 🧫":
                     pptx_path = "resources/Contamination Detected.pptx"
                     if os.path.isfile(pptx_path):
@@ -317,7 +321,7 @@ def run_error_search():
                             )
                     else:
                         st.warning("⚠️ Arquivo não encontrado.")
-                        
+
     elif search_clicked:
         st.info("No results found.")              
 
