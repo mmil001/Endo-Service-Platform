@@ -184,7 +184,10 @@ Please follow these steps:
                         data = problems_database.get(category)
                         with st.expander(f"🔧 {category} — {len(dates)} occurrences"):
                             if data:
-                                st.markdown(f"**Problem:** {data['problem']}")
+                                # Exibir o problema
+                                st.markdown(f"**Problem:** {data.get('problem', 'No problem description.')}")
+
+                                # Exibir imagem (se existir)
                                 image_file = data.get("image")
                                 image_path = os.path.join("images", image_file) if image_file else None
                                 if image_path and os.path.isfile(image_path):
@@ -192,49 +195,24 @@ Please follow these steps:
                                 else:
                                     st.info("Image not found.")
 
-                                # Mapeia o nome da categoria para o nome do arquivo .pptx
-                                category_to_file = {
-                                    "Contamination Detected 🧫": "Contamination Detected.pptx"
-                                # Adicione outros se quiser
-                                }
-
-                                file_name = category_to_file.get(category)
-
-                                if file_name:
-                                    pptx_path = os.path.join("resources", file_name)
-                                    if os.path.isfile(pptx_path):
-                                        with open(pptx_path, "rb") as f:
-                                            st.download_button(
-                                                label="📥 Download Instructions (.pptx)",
-                                                data=f,
-                                                file_name=f"{safe_name}.pptx",
-                                                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                                                key=f"download_{safe_name}"  # ← chave única para evitar conflitos
-                                            )
-                                    else:
-                                        st.warning("⚠️ File not found in 'resources'.")
-                                else:
-                                    st.info("ℹ️ No instructions available for this error.")
-
-                                def remove_emojis(text):
-                                    return re.sub(r'[^\w\s\-]', '', text).strip()
-
-                                # Exibir problema, causas e soluções
-                                st.markdown(f"**Problem:** {problem_data.get('problem', 'No problem description.')}")
-                                causes = problem_data.get("causes", [])
-                                repairs = problem_data.get("repairs", [])
-
+                                # Exibir causas
+                                causes = data.get("causes", [])
                                 if causes:
                                     st.markdown("**Possible Causes:**")
                                     for cause in causes:
                                         st.markdown(f"- {cause}")
 
+                                # Exibir soluções
+                                repairs = data.get("repairs", [])
                                 if repairs:
                                     st.markdown("**Recommended Actions:**")
                                     for fix in repairs:
                                         st.markdown(f"- {fix}")
 
-                                # Se o arquivo de instruções existir, mostra o botão
+                                # Mostrar botão de download se o arquivo existir
+                                def remove_emojis(text):
+                                    return re.sub(r'[^\w\s\-]', '', text).strip()
+
                                 safe_name = remove_emojis(category)
                                 pptx_path = os.path.join("resources", f"{safe_name}.pptx")
 
@@ -247,13 +225,13 @@ Please follow these steps:
                                             mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
                                             key=f"download_{safe_name}"
                                         )
-       
                             else:
                                 st.markdown("No detailed data found for this error.")
-                else:
-                    st.info("No problems detected.")
-            except Exception as e:
-                st.error(f"An error occurred: {e}")
+
+                    else:
+                        st.info("No problems detected.")
+                    except Exception as e:
+                        st.error(f"An error occurred: {e}")
 
 # Search Errors
 from itertools import chain
@@ -346,12 +324,14 @@ def run_error_search():
                                 label="📥 Download Instructions (.pptx)",
                                 data=f,
                                 file_name=f"{safe_name}.pptx",
-                                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                key=f"download_{safe_name}"
                             )
+
                     else:
                         st.warning("⚠️ Arquivo não encontrado.")
         elif search_clicked:
-            t.info("No results found.")          
+            st.info("No results found.")          
 
 # Routing
 if st.session_state.selected_tab == "Log Analyzer":
