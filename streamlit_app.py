@@ -258,48 +258,6 @@ def run_error_search():
     with col_right:
         clear_clicked = st.button("Clear")
 
-    if results:
-        for category, data in results.items():
-            if "selected_error" not in st.session_state:
-                st.session_state.selected_error = category
-
-            expanded = st.session_state.get("selected_error") == category
-            with st.expander(f"🔧 {category}", expanded=expanded):
-                st.session_state.selected_error = category
-
-            st.markdown(f"**Problem:** {data['problem']}")
-
-            if "modelo" in data:
-                st.markdown(f"**Applicable Models:** {', '.join(data['modelo'])}")
-
-            image_file = data.get("image")
-            image_path = os.path.join("images", image_file) if image_file else None
-            if image_path and os.path.isfile(image_path):
-                st.image(image_path, caption="Associated image", width=300)
-            else:
-                st.info("Image not found.")
-
-            st.markdown("**Causes:**")
-            for c in data['causes']:
-                st.markdown(f"- {c}")
-
-            st.markdown("**Recommended Actions:**")
-            for r in data['repairs']:
-                st.markdown(f"- {r}")
-
-            safe_name = re.sub(r'[^\w\s-]', '', category).strip()
-            pptx_path = os.path.join("resources", f"{safe_name}.pptx")
-            if os.path.isfile(pptx_path):
-                with open(pptx_path, "rb") as f:
-                    st.download_button(
-                        label="📥 Download Instructions (.pptx)",
-                        data=f,
-                        file_name=f"{safe_name}.pptx",
-                        mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
-                    )
-            else:
-                st.warning("⚠️ Arquivo não encontrado.")
-
     results = {}
 
     if search_clicked:
@@ -319,44 +277,50 @@ def run_error_search():
             if matches_keyword and matches_model:
                 results[key] = value
 
-    if results:
-        for category, data in results.items():
-            with st.expander(f"🔧 {category}"):
-                st.markdown(f"**Problem:** {data['problem']}")
+        if results:
+            for category, data in results.items():
+                if "selected_error" not in st.session_state:
+                    st.session_state.selected_error = category
 
-                if "modelo" in data:
-                    st.markdown(f"**Applicable Models:** {', '.join(data['modelo'])}")
+                expanded = st.session_state.get("selected_error") == category
+                with st.expander(f"🔧 {category}", expanded=expanded):
+                    st.session_state.selected_error = category
 
-                image_file = data.get("image")
-                image_path = os.path.join("images", image_file) if image_file else None
-                if image_path and os.path.isfile(image_path):
-                    st.image(image_path, caption="Associated image", width=300)
-                else:
-                    st.info("Image not found.")
+                    st.markdown(f"**Problem:** {data['problem']}")
 
-                st.markdown("**Causes:**")
-                for c in data['causes']:
-                    st.markdown(f"- {c}")
+                    if "modelo" in data:
+                        st.markdown(f"**Applicable Models:** {', '.join(data['modelo'])}")
 
-                st.markdown("**Recommended Actions:**")
-                for r in data['repairs']:
-                    st.markdown(f"- {r}")
+                    image_file = data.get("image")
+                    image_path = os.path.join("images", image_file) if image_file else None
+                    if image_path and os.path.isfile(image_path):
+                        st.image(image_path, caption="Associated image", width=300)
+                    else:
+                        st.info("Image not found.")
 
-                if category == "Contamination Detected 🧫":
-                    pptx_path = "resources/Contamination Detected.pptx"
+                    st.markdown("**Causes:**")
+                    for c in data['causes']:
+                        st.markdown(f"- {c}")
+
+                    st.markdown("**Recommended Actions:**")
+                    for r in data['repairs']:
+                        st.markdown(f"- {r}")
+
+                    safe_name = re.sub(r'[^\w\s-]', '', category).strip()
+                    pptx_path = os.path.join("resources", f"{safe_name}.pptx")
                     if os.path.isfile(pptx_path):
                         with open(pptx_path, "rb") as f:
                             st.download_button(
                                 label="📥 Download Instructions (.pptx)",
                                 data=f,
-                                file_name="Contamination Detected.pptx",
+                                file_name=f"{safe_name}.pptx",
                                 mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
                             )
                     else:
                         st.warning("⚠️ Arquivo não encontrado.")
 
-    elif search_clicked:
-        st.info("No results found.")              
+        elif search_clicked:
+            st.info("No results found.")            
 
 # Routing
 if st.session_state.selected_tab == "Log Analyzer":
