@@ -305,9 +305,19 @@ def run_error_search():
                 for c in data['causes']:
                     st.markdown(f"- {c}")
 
-                st.markdown("**Recommended Actions:**")
-                for r in data['repairs']:
-                    st.markdown(f"- {r}")
+                if category == "Contamination Detected 🧫":
+                    pptx_path = "resources/Contamination Detected.pptx"
+                    if os.path.isfile(pptx_path):
+                        with open(pptx_path, "rb") as f:
+                            st.download_button(
+                                label="📥 Download Instructions (.pptx)",
+                                data=f,
+                                file_name="Contamination Detected.pptx",
+                                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                            )
+                    else:
+                        st.warning("⚠️ Arquivo não encontrado.")
+                        
     elif search_clicked:
         st.info("No results found.")              
 
