@@ -329,7 +329,7 @@ def run_error_search():
                             )
 
                     else:
-                        st.warning("⚠️ Arquivo não encontrado.")
+                        st.warning("⚠️ Troubleshooting guide not available.")
         elif search_clicked:
             st.info("No results found.")          
 
