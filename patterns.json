@@ -1,0 +1,11 @@
+{
+    "Contamination Detected 🧫": "(contamin|liquid.*detected|inlet.*liquid|pollution.*mark|level sensor error|ERR#08)",
+    "Communication Errors 🔵": "(connect.*failed|network.*unreach|ipc.*fail|timeout|socket.*error)",
+    "Heating Errors 🔥": "(heat.*fail|temperature.*alarm|ERR#14|ERR#15|heating plate|tube.*fail)",
+    "Insufflator Errors 🧪": "(flow.*error|pressure.*fail|valve.*fail|ERR#04|gas leak|pinch.*valve)",
+    "Insufflation / Flow Errors 🧪": "(proportional valve|zero drift|ERR#0[4-9]|ERR#1[0-2])",
+    "Power Supply Errors ⚡": "(power.*fail|fuse.*blown|voltage.*error|ERR#06|no power)",
+    "Image Processor / Camera Errors 🎥": "(video.*lost|camera.*error|CCU.*fail|no signal|image.*not found|firmware.*error|hdmi|dvi|sdi.*fail)",
+    "Camera Head Errors 🎯": "(camera head.*error|optical.*fail|coupler|lens|focus.*fail|zoom.*fail|no.*camera.*input)",
+    "Video Recording / USB Errors 💾": "(usb.*fail|record.*error|video.*not saved|no.*recording|file.*system.*error)"
+}

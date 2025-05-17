@@ -1,0 +1,209 @@
+{
+    "Contamination Detected 🧫": {
+        "problem": "Contamination detected by liquid ingress in HS-50F",
+        "causes": [
+            "Liquid reflux from the patient's abdomen",
+            "Insufflator placed below patient level",
+            "Level sensor malfunction or fluid detection error"
+        ],
+        "repairs": [
+            "Replace liquid inlet contamination spare parts",
+            "Clear contamination mark via software (V1.0 or V2.0 as per section 6.5)",
+            "Check and clean level sensor area",
+            "Ensure correct equipment height and use of filters",
+            "Cross-check with Mindray technical support"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+    "Communication Errors 🔵": {
+        "problem": "Internal communication failure between modules",
+        "causes": [
+            "Loose cable",
+            "Oxidized socket",
+            "Failing IPC board"
+        ],
+        "repairs": [
+            "Check connectors",
+            "Reconnect IPC cable",
+            "Replace internal network board"
+        ],
+        "image": "",
+        "modelo": [
+            "HB100",
+            "HB200L",
+            "HB300",
+            "HB300R",
+            "HB500",
+            "HB500R",
+            "HD3",
+            "U1",
+            "R1",
+            "UX1",
+            "UX3",
+            "UX5",
+            "UX7",
+            "HS-50F"
+        ]
+    },
+    "Heating Errors 🔥": {
+        "problem": "Heating malfunction, sensor or plate issue",
+        "causes": [
+            "Heating cable disconnected",
+            "Defective heating plate",
+            "Insufflator heating tube failure",
+            "Overtemperature or sensor error (ERR#14, ERR#15)"
+        ],
+        "repairs": [
+            "Reconnect or replace heating cable (Figure 5-2)",
+            "Replace heating plate (Section 9.15)",
+            "Replace heating insufflation tube",
+            "Check for overtemperature alarm and clear if needed"
+        ],
+        "image": "",
+        "modelo": [
+            "U1",
+            "R1",
+            "UX1",
+            "UX3",
+            "UX5",
+            "UX7",
+            "HS-50F",
+            "HD3",
+            "HB100",
+            "HB200L",
+            "HB300",
+            "HB300R",
+            "HB500",
+            "HB500R",
+            "UP700",
+            "HP100G",
+            "HP200G",
+            "HP200L",
+            "HP200D"
+        ]
+    },
+    "Insufflator Errors 🧪": {
+        "problem": "Gas flow, valve or pressure sensor issue",
+        "causes": [
+            "Defective pinch valve",
+            "Uncalibrated pressure sensor",
+            "Loose tubing"
+        ],
+        "repairs": [
+            "Recalibrate sensor",
+            "Replace flow valve",
+            "Check CO2 supply and connections"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+    "Insufflation / Flow Errors 🧪": {
+        "problem": "Proportional valve, pressure sensor, or flow sensor issue",
+        "causes": [
+            "Proportional valve out of range or short-circuited",
+            "Zero drift in high or low pressure sensor",
+            "Mechanical failure of inflation valve",
+            "ERR#04 to ERR#12 (flow, pressure, valve state mismatch)"
+        ],
+        "repairs": [
+            "Replace pneumatic module (section 9.6)",
+            "Zero calibration of pressure sensor (section 6.2)",
+            "Replace main board if sensor faults persist",
+            "Use diagnostic mode to verify valve heating or flow output"
+        ],
+        "modelo": []
+    },
+    "Power Supply Errors ⚡": {
+        "problem": "Electrical failure or blown fuse",
+        "causes": [
+            "Defective AC/DC board",
+            "Blown fuse",
+            "Overload on power board"
+        ],
+        "repairs": [
+            "Replace fuse",
+            "Check internal power supply",
+            "Inspect power board circuitry"
+        ],
+        "modelo": []
+    },
+    "Image Processor / Camera Errors 🎥": {
+        "problem": "Video board failure or no image detected",
+        "causes": [
+            "CCU board fault",
+            "Disconnected camera head",
+            "Firmware mismatch",
+            "Fault in video signal output module (e.g., HDMI, DVI, SDI)",
+            "Abnormal camera configuration parameters"
+        ],
+        "repairs": [
+            "Replace CCU module",
+            "Verify camera/cable compatibility",
+            "Update firmware (check with KOL)",
+            "Use maintenance menu to reset video output settings",
+            "Check output signal ports and reconfigure resolution if needed"
+        ],
+        "image": "",
+        "modelo": [
+            "U1",
+            "R1",
+            "UX1",
+            "UX3",
+            "UX5",
+            "UX7",
+            "HD3"
+        ]
+    },
+    "Camera Head Errors 🎯": {
+        "problem": "Camera head malfunction or improper connection",
+        "causes": [
+            "Optical coupler disconnected",
+            "Camera head cable pin damaged",
+            "Internal short-circuit or failed signal transmission"
+        ],
+        "repairs": [
+            "Reconnect or replace the camera head",
+            "Inspect cable integrity",
+            "Check CCU log for camera detection errors",
+            "Perform visual inspection per service manual section 5.3"
+        ],
+        "image": "",
+        "modelo": [
+            "HD3",
+            "U1",
+            "R1",
+            "UX1",
+            "UX3",
+            "UX5",
+            "UX7"
+        ]
+    },
+    "Video Recording / USB Errors 💾": {
+        "problem": "Failure to record or store images/videos",
+        "causes": [
+            "USB drive not recognized",
+            "File system error",
+            "Corrupted recorder board"
+        ],
+        "repairs": [
+            "Use Mindray-approved USB drives",
+            "Format USB to FAT32 before use",
+            "Replace recording board if detection fails (section 5.3.3)"
+        ],
+        "image": "",
+        "modelo": [
+            "HD3",
+            "U1",
+            "R1",
+            "UX1",
+            "UX3",
+            "UX5",
+            "UX7"
+        ]
+    }
+}
