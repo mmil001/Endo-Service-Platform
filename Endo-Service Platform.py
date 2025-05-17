@@ -65,8 +65,13 @@ patterns = {
 }
 
 # --- Tabs ---
-st.session_state.selected_tab = st.sidebar.radio("Navigation", ["Log Analyzer", "Search Errors", "Admin Panel"],
-                                                 index=0 if "selected_tab" not in st.session_state else ["Log Analyzer", "Search Errors", "Admin Panel"].index(st.session_state.selected_tab))
+if st.session_state.get("logged_in"):
+    st.session_state.selected_tab = st.sidebar.radio(
+        "Navigation",
+        ["Log Analyzer", "Search Errors", "Admin Panel"],
+        index=0 if "selected_tab" not in st.session_state else
+        ["Log Analyzer", "Search Errors", "Admin Panel"].index(st.session_state.selected_tab)
+    )
 
 # --- Interface por aba ---
 def show_user_panel():
