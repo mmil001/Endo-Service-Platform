@@ -207,8 +207,9 @@ Please follow these steps:
                                             st.download_button(
                                                 label="📥 Download Instructions (.pptx)",
                                                 data=f,
-                                                file_name=file_name,
-                                                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                                                file_name=f"{safe_name}.pptx",
+                                                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                                key=f"download_{safe_name}"  # ← chave única para evitar conflitos
                                             )
                                     else:
                                         st.warning("⚠️ File not found in 'resources'.")
@@ -218,18 +219,33 @@ Please follow these steps:
                                 def remove_emojis(text):
                                     return re.sub(r'[^\w\s\-]', '', text).strip()
 
+                                # Exibir problema, causas e soluções
+                                st.markdown(f"**Problem:** {problem_data.get('problem', 'No problem description.')}")
+                                causes = problem_data.get("causes", [])
+                                repairs = problem_data.get("repairs", [])
+
+                                if causes:
+                                    st.markdown("**Possible Causes:**")
+                                    for cause in causes:
+                                        st.markdown(f"- {cause}")
+
+                                if repairs:
+                                    st.markdown("**Recommended Actions:**")
+                                    for fix in repairs:
+                                        st.markdown(f"- {fix}")
+
+                                # Se o arquivo de instruções existir, mostra o botão
                                 safe_name = remove_emojis(category)
                                 pptx_path = os.path.join("resources", f"{safe_name}.pptx")
-                                st.markdown("---")  # só pra separar visualmente
-                                st.write("🔍 Caminho do arquivo:", pptx_path)
-                                st.write("📂 Existe?", os.path.isfile(pptx_path))
+
                                 if os.path.isfile(pptx_path):
                                     with open(pptx_path, "rb") as f:
                                         st.download_button(
                                             label="📥 Download Instructions (.pptx)",
                                             data=f,
                                             file_name=f"{safe_name}.pptx",
-                                            mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                                            mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                            key=f"download_{safe_name}"
                                         )
        
                             else:
