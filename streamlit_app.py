@@ -206,6 +206,9 @@ Please follow these steps:
 
                                 safe_name = remove_emojis(category)
                                 pptx_path = os.path.join("resources", f"{safe_name}.pptx")
+                                st.markdown("---")  # só pra separar visualmente
+                                st.write("🔍 Caminho do arquivo:", pptx_path)
+                                st.write("📂 Existe?", os.path.isfile(pptx_path))
                                 if os.path.isfile(pptx_path):
                                     with open(pptx_path, "rb") as f:
                                         st.download_button(
