@@ -259,9 +259,9 @@ def run_error_search():
         clear_clicked = st.button("Clear")
 
     if results:
-    for category, data in results.items():
-        if "selected_error" not in st.session_state:
-            st.session_state.selected_error = category
+        for category, data in results.items():
+            if "selected_error" not in st.session_state:
+                st.session_state.selected_error = category
 
         expanded = st.session_state.get("selected_error") == category
         with st.expander(f"🔧 {category}", expanded=expanded):
