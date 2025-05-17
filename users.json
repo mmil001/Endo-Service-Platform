@@ -1,6 +1,6 @@
 {
-  "ServiceAdmin": {
-    "password": "mindrayendoservice",
+  "admin": {
+    "password": "admin123",
     "role": "master",
     "expires": "2025-12-31"
   },
