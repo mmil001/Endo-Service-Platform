@@ -89,7 +89,7 @@ st.session_state.selected_tab = st.sidebar.radio(
 )
 
 # Botão de logout no menu lateral
-wwith st.sidebar:
+with st.sidebar:
     if st.button("🔲 Logout"):
         for key in list(st.session_state.keys()):
             del st.session_state[key]
