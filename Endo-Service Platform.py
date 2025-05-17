@@ -74,21 +74,6 @@ def show_user_panel():
     run_log_analyzer()
     run_error_search()
 
-def show_admin_panel():
-    st.title("🔧 Admin Panel")
-    run_admin_panel()
-
-# Routing
-if st.session_state.selected_tab == "Log Analyzer":
-    show_user_panel()
-elif st.session_state.selected_tab == "Search Errors":
-    show_user_panel()
-elif st.session_state.selected_tab == "Admin Panel":
-    if st.session_state["role"] == "master":
-        show_admin_panel()
-    else:
-        st.error("Access denied. Only administrators can access the Admin Panel.")
-
 # Função Log Analyzer
 def run_log_analyzer():
     uploaded_file = st.file_uploader("Select a .lzo log file", type=["lzo"])
@@ -382,14 +367,5 @@ elif st.session_state.selected_tab == "Admin Panel":
         show_admin_panel()
     else:
         st.error("Access denied. Only administrators can access the Admin Panel.")
-
-def show_admin_panel():
-    st.title("🛠️ Admin Panel")
-    # Aqui você vai colar depois tudo que for: adicionar, editar e deletar erros
-
-def show_user_panel():
-    st.title("🔍 Log Viewer & Error Library")
-    # Aqui você vai colar depois toda a parte de upload e leitura de arquivos
-
 
 
