@@ -250,77 +250,83 @@ def run_error_search():
     models = ['All'] + sorted(model_set)
 
     # Filtro com blocos (radio)
-    selected_model = st.radio("📌 Filter by Equipment Model", models, horizontal=True)
+selected_model = st.radio("📌 Filter by Equipment Model", models, horizontal=True)
 
-    col_left, col_spacer, col_right = st.columns([1, 8, 1])
-    with col_left:
-        search_clicked = st.button("Search")
-    with col_right:
-        clear_clicked = st.button("Clear")
+col_left, col_spacer, col_right = st.columns([1, 8, 1])
+with col_left:
+    search_clicked = st.button("Search")
+with col_right:
+    clear_clicked = st.button("Clear")
 
-    results = {}
+# Botão Clear apaga a busca
+if clear_clicked:
+    st.session_state.pop("query", None)
+    st.session_state.pop("results", None)
+    st.session_state.pop("selected_error", None)
+    st.session_state.selected_tab = "Search Errors"
+    st.rerun()
 
-    if search_clicked:
-        for key, value in problems_database.items():
-            matches_keyword = (
-                not query
-                or query.lower() in key.lower()
-                or query.lower() in value['problem'].lower()
-                or any(query.lower() in cause.lower() for cause in value['causes'])
-            )
+# Quando buscar, salva os resultados
+if search_clicked:
+    st.session_state.results = {}
+    for key, value in problems_database.items():
+        matches_keyword = (
+            not query
+            or query.lower() in key.lower()
+            or query.lower() in value['problem'].lower()
+            or any(query.lower() in cause.lower() for cause in value['causes'])
+        )
+        matches_model = (
+            selected_model == "All"
+            or (isinstance(value.get("modelo"), list) and selected_model in value["modelo"])
+        )
+        if matches_keyword and matches_model:
+            st.session_state.results[key] = value
 
-            matches_model = (
-                selected_model == "All"
-                or (isinstance(value.get("modelo"), list) and selected_model in value["modelo"])
-            )
+    # Exibe os resultados salvos
+    if "results" in st.session_state and st.session_state.results:
+        for category, data in st.session_state.results.items():
+            if "selected_error" not in st.session_state:
+                st.session_state.selected_error = category
 
-            if matches_keyword and matches_model:
-                results[key] = value
+            expanded = st.session_state.selected_error == category
+            with st.expander(f"🔧 {category}", expanded=expanded):
+                st.session_state.selected_error = category
 
-        if results:
-            for category, data in results.items():
-                if "selected_error" not in st.session_state:
-                    st.session_state.selected_error = category
+                st.markdown(f"**Problem:** {data['problem']}")
 
-                expanded = st.session_state.get("selected_error") == category
-                with st.expander(f"🔧 {category}", expanded=expanded):
-                    st.session_state.selected_error = category
+                if "modelo" in data:
+                    st.markdown(f"**Applicable Models:** {', '.join(data['modelo'])}")
 
-                    st.markdown(f"**Problem:** {data['problem']}")
+                image_file = data.get("image")
+                image_path = os.path.join("images", image_file) if image_file else None
+                if image_path and os.path.isfile(image_path):
+                    st.image(image_path, caption="Associated image", width=300)
+                else:
+                    st.info("Image not found.")
 
-                    if "modelo" in data:
-                        st.markdown(f"**Applicable Models:** {', '.join(data['modelo'])}")
+                st.markdown("**Causes:**")
+                for c in data['causes']:
+                    st.markdown(f"- {c}")
 
-                    image_file = data.get("image")
-                    image_path = os.path.join("images", image_file) if image_file else None
-                    if image_path and os.path.isfile(image_path):
-                        st.image(image_path, caption="Associated image", width=300)
-                    else:
-                        st.info("Image not found.")
+                st.markdown("**Recommended Actions:**")
+                for r in data['repairs']:
+                    st.markdown(f"- {r}")
 
-                    st.markdown("**Causes:**")
-                    for c in data['causes']:
-                        st.markdown(f"- {c}")
-
-                    st.markdown("**Recommended Actions:**")
-                    for r in data['repairs']:
-                        st.markdown(f"- {r}")
-
-                    safe_name = re.sub(r'[^\w\s-]', '', category).strip()
-                    pptx_path = os.path.join("resources", f"{safe_name}.pptx")
-                    if os.path.isfile(pptx_path):
-                        with open(pptx_path, "rb") as f:
-                            st.download_button(
-                                label="📥 Download Instructions (.pptx)",
-                                data=f,
-                                file_name=f"{safe_name}.pptx",
-                                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
-                            )
-                    else:
-                        st.warning("⚠️ Arquivo não encontrado.")
-
-        elif search_clicked:
-            st.info("No results found.")            
+                safe_name = re.sub(r'[^\w\s-]', '', category).strip()
+                pptx_path = os.path.join("resources", f"{safe_name}.pptx")
+                if os.path.isfile(pptx_path):
+                    with open(pptx_path, "rb") as f:
+                        st.download_button(
+                            label="📥 Download Instructions (.pptx)",
+                            data=f,
+                            file_name=f"{safe_name}.pptx",
+                            mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                        )
+                else:
+                    st.warning("⚠️ Arquivo não encontrado.")
+    elif search_clicked:
+        t.info("No results found.")          
 
 # Routing
 if st.session_state.selected_tab == "Log Analyzer":
