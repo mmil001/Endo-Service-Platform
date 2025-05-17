@@ -10,11 +10,30 @@ import time
 from datetime import datetime
 from itertools import chain
 
+# --- Tela de login ---
+def login_screen():
+    st.image("mindray_logo_transparent.png", width=150)
+    st.markdown("## 🔐 Endo Service Platform - Login")
+    st.markdown("Please enter your credentials to access the platform.")
+    st.markdown("---")
+
+    username = st.text_input("Username", placeholder="Enter your username")
+    password = st.text_input("Password", type="password", placeholder="Enter your password")
+
+    if st.button("Login"):
+        role = authenticate(username, password)
+        if role:
+            st.session_state["logged_in"] = True
+            st.session_state["username"] = username
+            st.session_state["role"] = role
+            st.rerun()
+        else:
+            st.error("Access denied. Invalid user, password, or expired license.")
+
 # --- Controle de login ---
 if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
-    from login import login_screen  # ou ajuste para seu arquivo/função real
-    login_screen()
-    st.stop()
+login_screen()
+st.stop()
 
 # Config inicial
 st.set_page_config(page_title="Endo Service Platform", layout="wide")
