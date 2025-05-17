@@ -192,14 +192,28 @@ Please follow these steps:
                                 else:
                                     st.info("Image not found.")
 
-                                st.markdown("**Causes:**")
-                                for c in data['causes']:
-                                    st.markdown(f"- {c}")
-                                st.markdown("**Recommended Actions:**")
-                                for r in data['repairs']:
-                                    st.markdown(f"- {r}")
-                                
-                                # Download de material complementar, se existir (fora do for)
+                                # Mapeia o nome da categoria para o nome do arquivo .pptx
+                                category_to_file = {
+                                    "Contamination Detected 🧫": "Contamination Detected.pptx"
+                                # Adicione outros se quiser
+                                }
+
+                                file_name = category_to_file.get(category)
+
+                                if file_name:
+                                    pptx_path = os.path.join("resources", file_name)
+                                    if os.path.isfile(pptx_path):
+                                        with open(pptx_path, "rb") as f:
+                                            st.download_button(
+                                                label="📥 Download Instructions (.pptx)",
+                                                data=f,
+                                                file_name=file_name,
+                                                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                                            )
+                                    else:
+                                        st.warning("⚠️ File not found in 'resources'.")
+                                else:
+                                    st.info("ℹ️ No instructions available for this error.")
 
                                 def remove_emojis(text):
                                     return re.sub(r'[^\w\s\-]', '', text).strip()
