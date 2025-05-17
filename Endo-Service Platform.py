@@ -1,4 +1,3 @@
-
 import streamlit as st
 import os
 import re
@@ -8,65 +7,14 @@ import subprocess
 import json
 from collections import defaultdict
 import time
-import json
 from datetime import datetime
-import streamlit as st
+from itertools import chain
 
-# Carregar dados de login
-def load_users():
-    with open("users.json", "r", encoding="utf-8") as f:
-        return json.load(f)
-
-# Validação de login
-def authenticate(username, password):
-    users = load_users()
-    user = users.get(username)
-
-    if user and user["password"] == password:
-        expiry = datetime.strptime(user["expires"], "%Y-%m-%d")
-        if expiry >= datetime.today():
-            return user["role"]
-    return None
-
-# Tela de login
-def login_screen():
-    st.title("🔐 Endo Service Platform - Login")
-    username = st.text_input("Username")
-    password = st.text_input("Password", type="password")
-    if st.button("Login"):
-        role = authenticate(username, password)
-        if role:
-            st.session_state["logged_in"] = True
-            st.session_state["username"] = username
-            st.session_state["role"] = role
-            st.experimental_rerun()
-        else:
-            st.error("Access denied. Check user, password or validity.")
-
-# Load patterns and problems from JSON
-if "problems_database" not in st.session_state:
-    with open("problems_database.json", "r", encoding="utf-8") as f:
-        st.session_state.problems_database = json.load(f)
-problems_database = st.session_state.problems_database
-
-patterns = {
-    "Contamination Detected 🧫": r"(contamin|liquid.*detected|inlet.*liquid|pollution.*mark|level sensor error|ERR#08)",
-    "Communication Errors 🔵": r"(connect.*failed|network.*unreach|ipc.*fail|timeout|socket.*error)",
-    "Heating Errors 🔥": r"(heat.*fail|temperature.*alarm|ERR#14|ERR#15|heating plate|tube.*fail)",
-    "Insufflator Errors 🧪": r"(flow.*error|pressure.*fail|valve.*fail|ERR#04|gas leak|pinch.*valve)",
-    "Insufflation / Flow Errors 🧪": r"(proportional valve|zero drift|ERR#0[4-9]|ERR#1[0-2])",
-    "Power Supply Errors ⚡": r"(power.*fail|fuse.*blown|voltage.*error|ERR#06|no power)",
-    "Image Processor / Camera Errors 🎥": r"(video.*lost|camera.*error|CCU.*fail|no signal|image.*not found|firmware.*error|hdmi|dvi|sdi.*fail)",
-    "Camera Head Errors 🎯": r"(camera head.*error|optical.*fail|coupler|lens|focus.*fail|zoom.*fail|no.*camera.*input)",
-    "Video Recording / USB Errors 💾": r"(usb.*fail|record.*error|video.*not saved|no.*recording|file.*system.*error)"
-}
-
+# Config inicial
 st.set_page_config(page_title="Endo Service Platform", layout="wide")
 st.image("mindray_logo_transparent.png", width=150)
 
-import json
-from datetime import datetime
-
+# --- Autenticação ---
 def load_users():
     with open("users.json", "r", encoding="utf-8") as f:
         return json.load(f)
@@ -94,63 +42,52 @@ def login_screen():
         else:
             st.error("Access denied. Invalid user, password, or expired license.")
 
-# Verifica se o usuário está logado
 if "logged_in" not in st.session_state:
-    login_screen()  # ← chama a função de login que criamos antes
-    st.stop()       # ← impede o restante do app até login
+    login_screen()
+    st.stop()
 
-# Agora sim: controle por nível de acesso
-if st.session_state["role"] == "master":
-    st.sidebar.success("Admin Access")
-    # mostrar painel admin
-else:
-    st.sidebar.info("User Access")
-    # esconder painel admin
-# Sessão
-if "auth" not in st.session_state:
-    st.session_state.auth = False
-if "show_password_input" not in st.session_state:
-    st.session_state.show_password_input = False
-if "selected_tab" not in st.session_state:
-    st.session_state.selected_tab = "Log Analyzer"
-if "awaiting_next_entry" not in st.session_state:
-    st.session_state.awaiting_next_entry = False
+# --- Banco de erros ---
+if "problems_database" not in st.session_state:
+    with open("problems_database.json", "r", encoding="utf-8") as f:
+        st.session_state.problems_database = json.load(f)
+problems_database = st.session_state.problems_database
 
-# Tabs
-tabs = ["Log Analyzer", "Search Errors"]
-if st.session_state.auth:
-    tabs.append("Admin Panel")
+patterns = {
+    "Contamination Detected 🦢": r"(contamin|liquid.*detected|inlet.*liquid|pollution.*mark|level sensor error|ERR#08)",
+    "Communication Errors 🔵": r"(connect.*failed|network.*unreach|ipc.*fail|timeout|socket.*error)",
+    "Heating Errors 🔥": r"(heat.*fail|temperature.*alarm|ERR#14|ERR#15|heating plate|tube.*fail)",
+    "Insufflator Errors 🧪": r"(flow.*error|pressure.*fail|valve.*fail|ERR#04|gas leak|pinch.*valve)",
+    "Insufflation / Flow Errors 🧪": r"(proportional valve|zero drift|ERR#0[4-9]|ERR#1[0-2])",
+    "Power Supply Errors ⚡": r"(power.*fail|fuse.*blown|voltage.*error|ERR#06|no power)",
+    "Image Processor / Camera Errors 🎥": r"(video.*lost|camera.*error|CCU.*fail|no signal|image.*not found|firmware.*error|hdmi|dvi|sdi.*fail)",
+    "Camera Head Errors 🎯": r"(camera head.*error|optical.*fail|coupler|lens|focus.*fail|zoom.*fail|no.*camera.*input)",
+    "Video Recording / USB Errors 📀": r"(usb.*fail|record.*error|video.*not saved|no.*recording|file.*system.*error)"
+}
 
-st.session_state.selected_tab = st.sidebar.radio("Navigation", tabs, index=tabs.index(st.session_state.selected_tab))
+# --- Tabs ---
+st.session_state.selected_tab = st.sidebar.radio("Navigation", ["Log Analyzer", "Search Errors", "Admin Panel"],
+                                                 index=0 if "selected_tab" not in st.session_state else ["Log Analyzer", "Search Errors", "Admin Panel"].index(st.session_state.selected_tab))
 
-# Título por aba
+# --- Interface por aba ---
+def show_user_panel():
+    st.title("🔍 Log Viewer & Error Library")
+    run_log_analyzer()
+    run_error_search()
+
+def show_admin_panel():
+    st.title("🔧 Admin Panel")
+    run_admin_panel()
+
+# Routing
 if st.session_state.selected_tab == "Log Analyzer":
-    st.title("🔧 Endo-Service Platform")
+    show_user_panel()
 elif st.session_state.selected_tab == "Search Errors":
-    st.title("📚 Endo-Service Platform - Error Search")
+    show_user_panel()
 elif st.session_state.selected_tab == "Admin Panel":
-    st.title("🛠️ Spock Admin Panel")
-
-# Admin login só na aba Search Errors
-if st.session_state.selected_tab == "Search Errors":
-    col1, col2 = st.columns([9, 1])
-    with col2:
-        if st.button("Administrator"):
-            st.session_state.show_password_input = True
-
-    if st.session_state.show_password_input:
-        col_pass, col_btn = st.columns([3, 1])
-        with col_pass:
-            password = st.text_input("Enter admin password:", type="password", label_visibility="collapsed")
-        with col_btn:
-            if st.button("Login"):
-                if password == "servtech":
-                    st.session_state.auth = True
-                    st.session_state.selected_tab = "Admin Panel"
-                    st.success("Access granted. Admin panel unlocked.")
-                    st.rerun()
-                else:
-                    st.error("You do not have administrator permission to access this content.")
+    if st.session_state["role"] == "master":
+        show_admin_panel()
+    else:
+        st.error("Access denied. Only administrators can access the Admin Panel.")
 
 # Função Log Analyzer
 def run_log_analyzer():
