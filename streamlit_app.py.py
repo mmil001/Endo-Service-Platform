@@ -10,6 +10,12 @@ import time
 from datetime import datetime
 from itertools import chain
 
+# --- Controle de login ---
+if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
+    from login import login_screen  # ou ajuste para seu arquivo/função real
+    login_screen()
+    st.stop()
+
 # Config inicial
 st.set_page_config(page_title="Endo Service Platform", layout="wide")
 st.image("mindray_logo_transparent.png", width=150)
@@ -50,7 +56,7 @@ def login_screen():
             st.session_state["logged_in"] = True
             st.session_state["username"] = username
             st.session_state["role"] = role
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("Access denied. Invalid user, password, or expired license.")
 
@@ -83,11 +89,12 @@ st.session_state.selected_tab = st.sidebar.radio(
 )
 
 # Botão de logout no menu lateral
-with st.sidebar:
+wwith st.sidebar:
     if st.button("🔲 Logout"):
         for key in list(st.session_state.keys()):
             del st.session_state[key]
-        st.experimental_rerun()
+        st.session_state["logged_in"] = False
+        st.rerun()
 
 # --- Interface por aba ---
 def show_user_panel():
