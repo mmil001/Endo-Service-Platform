@@ -51,8 +51,8 @@ def login_screen():
             st.session_state["logged_in"] = True
             st.session_state["username"] = username
             st.rerun()
-    else:
-        st.error("Access denied. Invalid user, password, or expired license.")
+        else:
+            st.error("Access denied. Invalid user, password, or expired license.")
 
 # --- Controle de login ---
 if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
