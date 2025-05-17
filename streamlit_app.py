@@ -263,9 +263,9 @@ def run_error_search():
             if "selected_error" not in st.session_state:
                 st.session_state.selected_error = category
 
-        expanded = st.session_state.get("selected_error") == category
-        with st.expander(f"🔧 {category}", expanded=expanded):
-            st.session_state.selected_error = category
+            expanded = st.session_state.get("selected_error") == category
+            with st.expander(f"🔧 {category}", expanded=expanded):
+                st.session_state.selected_error = category
 
             st.markdown(f"**Problem:** {data['problem']}")
 
