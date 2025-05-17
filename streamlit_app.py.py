@@ -73,13 +73,15 @@ patterns = {
 }
 
 # --- Tabs ---
-if st.session_state.get("logged_in"):
-    st.session_state.selected_tab = st.sidebar.radio(
-        "Navigation",
-        ["Log Analyzer", "Search Errors", "Admin Panel"],
-        index=0 if "selected_tab" not in st.session_state else
-        ["Log Analyzer", "Search Errors", "Admin Panel"].index(st.session_state.selected_tab)
-    )
+if "selected_tab" not in st.session_state:
+    st.session_state.selected_tab = "Log Analyzer"
+
+st.session_state.selected_tab = st.sidebar.radio(
+    "Navigation",
+    ["Log Analyzer", "Search Errors", "Admin Panel"],
+    index=["Log Analyzer", "Search Errors", "Admin Panel"].index(st.session_state.selected_tab)
+)
+
     # Botão de logout no menu lateral
     with st.sidebar:
         if st.button("🚪 Logout"):
