@@ -109,7 +109,6 @@ def show_user_panel():
     elif st.session_state.selected_tab == "Search Errors":
         st.title("📚 Error Libraries")
         run_error_search()
-        with st.expander(f"🔧 {category} — {len(dates)} occurrences"):
 
 # Função Log Analyzer
 def run_log_analyzer():
