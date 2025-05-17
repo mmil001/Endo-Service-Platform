@@ -35,6 +35,25 @@ def authenticate(username, password):
     
     return user["role"]
 
+    def login_screen():
+    st.image("mindray_logo_transparent.png", width=150)
+    st.markdown("## 🔐 Endo-Service Platform - Login")
+    st.markdown("Please enter your credentials to access the platform.")
+    st.markdown("---")
+
+    username = st.text_input("Username", placeholder="Enter your username")
+    password = st.text_input("Password", type="password", placeholder="Enter your password")
+
+    if st.button("Login"):
+        role = authenticate(username, password)
+        if role:
+            st.session_state["logged_in"] = True
+            st.session_state["username"] = username
+            st.session_state["role"] = role
+            st.experimental_rerun()
+        else:
+            st.error("Access denied. Invalid user, password, or expired license.")
+
 # --- Banco de erros ---
 if "problems_database" not in st.session_state:
     with open("problems_database.json", "r", encoding="utf-8") as f:
@@ -61,12 +80,21 @@ if st.session_state.get("logged_in"):
         index=0 if "selected_tab" not in st.session_state else
         ["Log Analyzer", "Search Errors", "Admin Panel"].index(st.session_state.selected_tab)
     )
+    # Botão de logout no menu lateral
+    with st.sidebar:
+        if st.button("🚪 Logout"):
+            for key in list(st.session_state.keys()):
+                del st.session_state[key]
+            st.experimental_rerun()
 
 # --- Interface por aba ---
 def show_user_panel():
-    st.title("🔍 Log Viewer & Error Library")
-    run_log_analyzer()
-    run_error_search()
+    if st.session_state.selected_tab == "Log Analyzer":
+        st.title("🛠️ Endo-Service Platform")
+        run_log_analyzer()
+    elif st.session_state.selected_tab == "Search Errors":
+        st.title("📚 Error Libraries")
+        run_error_search()
 
 # Função Log Analyzer
 def run_log_analyzer():
@@ -218,7 +246,7 @@ def run_error_search():
                 for r in data['repairs']:
                     st.markdown(f"- {r}")
     elif search_clicked:
-        st.info("No results found.")
+        st.info("No results found.")              
 
 # Admin Panel
 def run_admin_panel():
@@ -330,7 +358,7 @@ def run_admin_panel():
                 st.session_state.selected_tab = "Log Analyzer"
                 st.rerun() 
 
-        if st.session_state.awaiting_next_entry:
+        if st.session_state.get("awaiting_next_entry"):
             next_action = st.radio("Do you want to add or edit another entry?", ["Yes", "No"], key="add_more_radio")
     
             if next_action == "Yes":
@@ -347,7 +375,7 @@ def run_admin_panel():
                 for k in ["keyword_input", "problem_input", "causes_input", "solutions_input", "admin_mode"]:
                     if k in st.session_state:
                         del st.session_state[k]
-                st.rerun()               
+                st.rerun()
 
 # Routing
 if st.session_state.selected_tab == "Log Analyzer":
@@ -358,8 +386,6 @@ elif st.session_state.selected_tab == "Search Errors":
 
 elif st.session_state.selected_tab == "Admin Panel":
     if st.session_state["role"] == "master":
-        show_admin_panel()
+        run_admin_panel()
     else:
         st.error("Access denied. Only administrators can access the Admin Panel.")
-
-
