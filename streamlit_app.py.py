@@ -32,8 +32,8 @@ def login_screen():
 
 # --- Controle de login ---
 if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
-login_screen()
-st.stop()
+    login_screen()
+    st.stop()
 
 # Config inicial
 st.set_page_config(page_title="Endo Service Platform", layout="wide")
