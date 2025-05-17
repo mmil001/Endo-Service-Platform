@@ -87,11 +87,15 @@ if "selected_tab" not in st.session_state:
 
 menu = ["Log Analyzer", "Search Errors"]
 
-st.session_state.selected_tab = st.sidebar.radio(
+selected_tab = st.sidebar.radio(
     "Navigation",
     menu,
     index=menu.index(st.session_state.selected_tab)
 )
+
+if selected_tab != st.session_state.selected_tab:
+    st.session_state.selected_tab = selected_tab
+    st.rerun()
 
 # Botão de logout no menu lateral
 with st.sidebar:
