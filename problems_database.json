@@ -9,10 +9,7 @@
         "repairs": [
             "Check and clean level sensor area",
             "Ensure correct equipment height and use of filters",
-            "Contamination problem identified, you need replace the following parts: 
-            PN 115-063725-00 - Sensor hose FRU
-            PN 115-076020-00 - Influent contamination FRU
-            PN 115-077921-00 - Gas cycle FRU",
+            "Contamination problem identified, recommended replace the following parts: PN 115-063725-00 - Sensor hose FRU | PN 115-076020-00 - Influent contamination FRU | PN 115-077921-00 - Gas cycle FRU",
             "Clear contamination mark via software (V1.0 or V2.0 as per section 6.5)",
             "Perform the flow calibration procedure as described in section 6.4.4.2 — 'KV Value Calibration for Insufflator V2.0' of the service manual"
         ],
