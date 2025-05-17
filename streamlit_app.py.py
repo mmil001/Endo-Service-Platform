@@ -35,7 +35,7 @@ def authenticate(username, password):
     
     return user["role"]
 
-    def login_screen():
+def login_screen():
     st.image("mindray_logo_transparent.png", width=150)
     st.markdown("## 🔐 Endo Service Platform - Login")
     st.markdown("Please enter your credentials to access the platform.")
