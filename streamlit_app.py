@@ -178,6 +178,7 @@ Please follow these steps:
                 log_files = extract_tar(uploaded_file)
                 st.success(f"Extracted {len(log_files)} log files.")
                 issues = analyze_logs(log_files)
+
                 if issues:
                     st.subheader("⚠️ Diagnosed Issues")
                     for category, dates in sorted(issues.items(), key=lambda x: max(x[1], default=""), reverse=True):
@@ -186,7 +187,7 @@ Please follow these steps:
                             if data:
                                 # Exibir o problema
                                 st.markdown(f"**Problem:** {data.get('problem', 'No problem description.')}")
-
+                                
                                 # Exibir imagem (se existir)
                                 image_file = data.get("image")
                                 image_path = os.path.join("images", image_file) if image_file else None
@@ -209,13 +210,12 @@ Please follow these steps:
                                     for fix in repairs:
                                         st.markdown(f"- {fix}")
 
-                                # Mostrar botão de download se o arquivo existir
+                                # Botão para baixar instrução
                                 def remove_emojis(text):
                                     return re.sub(r'[^\w\s\-]', '', text).strip()
 
                                 safe_name = remove_emojis(category)
                                 pptx_path = os.path.join("resources", f"{safe_name}.pptx")
-
                                 if os.path.isfile(pptx_path):
                                     with open(pptx_path, "rb") as f:
                                         st.download_button(
@@ -227,11 +227,11 @@ Please follow these steps:
                                         )
                             else:
                                 st.markdown("No detailed data found for this error.")
+                else:
+                    st.info("No problems detected.")
 
-                    else:
-                        st.info("No problems detected.")
-                    except Exception as e:
-                        st.error(f"An error occurred: {e}")
+            except Exception as e:
+                st.error(f"An error occurred: {e}")
 
 # Search Errors
 from itertools import chain
