@@ -82,12 +82,12 @@ st.session_state.selected_tab = st.sidebar.radio(
     index=["Log Analyzer", "Search Errors", "Admin Panel"].index(st.session_state.selected_tab)
 )
 
-    # Botão de logout no menu lateral
-    with st.sidebar:
-        if st.button("🚪 Logout"):
-            for key in list(st.session_state.keys()):
-                del st.session_state[key]
-            st.experimental_rerun()
+# Botão de logout no menu lateral
+with st.sidebar:
+    if st.button("🔲 Logout"):
+        for key in list(st.session_state.keys()):
+            del st.session_state[key]
+        st.experimental_rerun()
 
 # --- Interface por aba ---
 def show_user_panel():
