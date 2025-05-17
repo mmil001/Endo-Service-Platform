@@ -8,6 +8,40 @@ import subprocess
 import json
 from collections import defaultdict
 import time
+import json
+from datetime import datetime
+import streamlit as st
+
+# Carregar dados de login
+def load_users():
+    with open("users.json", "r", encoding="utf-8") as f:
+        return json.load(f)
+
+# Validação de login
+def authenticate(username, password):
+    users = load_users()
+    user = users.get(username)
+
+    if user and user["password"] == password:
+        expiry = datetime.strptime(user["expires"], "%Y-%m-%d")
+        if expiry >= datetime.today():
+            return user["role"]
+    return None
+
+# Tela de login
+def login_screen():
+    st.title("🔐 Endo Service Platform - Login")
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+    if st.button("Login"):
+        role = authenticate(username, password)
+        if role:
+            st.session_state["logged_in"] = True
+            st.session_state["username"] = username
+            st.session_state["role"] = role
+            st.experimental_rerun()
+        else:
+            st.error("Access denied. Check user, password or validity.")
 
 # Load patterns and problems from JSON
 if "problems_database" not in st.session_state:
@@ -27,9 +61,21 @@ patterns = {
     "Video Recording / USB Errors 💾": r"(usb.*fail|record.*error|video.*not saved|no.*recording|file.*system.*error)"
 }
 
-st.set_page_config(page_title="Endo-Service Platform", layout="wide")
+st.set_page_config(page_title="Endo Service Platform", layout="wide")
 st.image("mindray_logo_transparent.png", width=150)
 
+# Verifica se o usuário está logado
+if "logged_in" not in st.session_state:
+    login_screen()  # ← chama a função de login que criamos antes
+    st.stop()       # ← impede o restante do app até login
+
+# Agora sim: controle por nível de acesso
+if st.session_state["role"] == "master":
+    st.sidebar.success("Admin Access")
+    # mostrar painel admin
+else:
+    st.sidebar.info("User Access")
+    # esconder painel admin
 # Sessão
 if "auth" not in st.session_state:
     st.session_state.auth = False
@@ -359,8 +405,24 @@ def run_admin_panel():
 
 # Routing
 if st.session_state.selected_tab == "Log Analyzer":
-    run_log_analyzer()
+    show_user_panel()
+
 elif st.session_state.selected_tab == "Search Errors":
-    run_error_search()
+    show_user_panel()
+
 elif st.session_state.selected_tab == "Admin Panel":
-    run_admin_panel()
+    if st.session_state["role"] == "master":
+        show_admin_panel()
+    else:
+        st.error("Access denied. Only administrators can access the Admin Panel.")
+
+def show_admin_panel():
+    st.title("🛠️ Admin Panel")
+    # Aqui você vai colar depois tudo que for: adicionar, editar e deletar erros
+
+def show_user_panel():
+    st.title("🔍 Log Viewer & Error Library")
+    # Aqui você vai colar depois toda a parte de upload e leitura de arquivos
+
+
+

@@ -1,0 +1,12 @@
+{
+  "ServiceAdmin": {
+    "password": "mindrayendoservice",
+    "role": "master",
+    "expires": "2025-12-31"
+  },
+  "Dealer1": {
+    "password": "senha123",
+    "role": "user",
+    "expires": "2025-06-30"
+  }
+}
