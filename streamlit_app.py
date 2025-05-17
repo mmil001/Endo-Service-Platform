@@ -200,23 +200,21 @@ Please follow these steps:
                                     st.markdown(f"- {r}")
                                 
                                 # Download de material complementar, se existir (fora do for)
-                                import re
 
                                 def remove_emojis(text):
                                     return re.sub(r'[^\w\s\-]', '', text).strip()
 
-                                    # Dentro do bloco de exibição do erro:
-                                    safe_name = remove_emojis(category)
-                                    pptx_path = os.path.join("resources", f"{safe_name}.pptx")
-                                    if os.path.isfile(pptx_path):
-                                        with open(pptx_path, "rb") as f:
-                                            st.download_button(
+                                safe_name = remove_emojis(category)
+                                pptx_path = os.path.join("resources", f"{safe_name}.pptx")
+                                if os.path.isfile(pptx_path):
+                                    with open(pptx_path, "rb") as f:
+                                        st.download_button(
                                             label="📥 Download Instructions (.pptx)",
                                             data=f,
                                             file_name=f"{safe_name}.pptx",
                                             mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
-                                        )       
-
+                                        )
+       
                             else:
                                 st.markdown("No detailed data found for this error.")
                 else:
