@@ -37,7 +37,7 @@ def authenticate(username, password):
 
     def login_screen():
     st.image("mindray_logo_transparent.png", width=150)
-    st.markdown("## 🔐 Endo-Service Platform - Login")
+    st.markdown("## 🔐 Endo Service Platform - Login")
     st.markdown("Please enter your credentials to access the platform.")
     st.markdown("---")
 
@@ -45,15 +45,15 @@ def authenticate(username, password):
     password = st.text_input("Password", type="password", placeholder="Enter your password")
 
     if st.button("Login"):
-    role = authenticate(username, password)
-    if role:
-        st.session_state["logged_in"] = True
-        st.session_state["username"] = username
-        st.session_state["role"] = role
-        st.experimental_rerun()
-    else:
-        st.error("❌ Access denied. Invalid user, password, or expired license.")
-        st.stop()
+        role = authenticate(username, password)
+        if role:
+            st.session_state["logged_in"] = True
+            st.session_state["username"] = username
+            st.session_state["role"] = role
+            st.experimental_rerun()
+        else:
+            st.error("Access denied. Invalid user, password, or expired license.")
+            st.stop()
 
 # --- Banco de erros ---
 if "problems_database" not in st.session_state:
