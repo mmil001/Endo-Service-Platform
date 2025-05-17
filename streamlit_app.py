@@ -34,7 +34,7 @@ def authenticate(username, password):
     except:
         return None  # data inválida
     
-    return user.get("role")  # ✅ corrigido aqui
+    return True
 
 # --- Tela de login ---
 def login_screen():
@@ -47,14 +47,12 @@ def login_screen():
     password = st.text_input("Password", type="password", placeholder="Enter your password")
 
     if st.button("Login"):
-        role = authenticate(username, password)
-        if role:
+        if authenticate(username, password):
             st.session_state["logged_in"] = True
             st.session_state["username"] = username
-            st.session_state["role"] = role
             st.rerun()
-        else:
-            st.error("Access denied. Invalid user, password, or expired license.")
+    else:
+        st.error("Access denied. Invalid user, password, or expired license.")
 
 # --- Controle de login ---
 if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
@@ -88,8 +86,6 @@ if "selected_tab" not in st.session_state:
     st.session_state.selected_tab = "Log Analyzer"
 
 menu = ["Log Analyzer", "Search Errors"]
-if st.session_state.get("role") == "master":
-    menu.append("Admin Panel")
 
 st.session_state.selected_tab = st.sidebar.radio(
     "Navigation",
@@ -325,135 +321,6 @@ def run_error_search():
     elif search_clicked:
         st.info("No results found.")              
 
-# Admin Panel
-def run_admin_panel():
-    st.subheader("🛠️ Admin Panel")
-
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        if st.button("➕ Add New Entry"):
-            st.session_state["admin_mode"] = "add"
-            for k in ["keyword_input", "problem_input", "causes_input", "solutions_input", "models_input"]:
-                st.session_state.pop(k, None)
-            st.rerun()
-
-    with col2:
-        if st.button("✏️ Edit Existing Entry"):
-            st.session_state["admin_mode"] = "edit"
-
-    with col3:
-        if st.button("🧹 Clear / Log Out"):
-            st.session_state.auth = False
-            st.session_state.show_password_input = False
-            st.session_state.selected_tab = "Log Analyzer"
-            for k in ["keyword_input", "problem_input", "causes_input", "solutions_input", "models_input", "admin_mode"]:
-                st.session_state.pop(k, None)
-            st.rerun()
-
-    if st.session_state.get("admin_mode") == "edit":
-        st.markdown("### 🔍 Select Existing Error to Edit")
-        selected_error = st.selectbox("Choose a category to edit", [""] + list(problems_database.keys()))
-        if selected_error:
-            existing = problems_database[selected_error]
-            st.session_state["keyword_input"] = selected_error
-            st.session_state["problem_input"] = existing["problem"]
-            st.session_state["causes_input"] = "\n".join(existing["causes"])
-            st.session_state["solutions_input"] = "\n".join(existing["repairs"])
-            st.session_state["models_input"] = existing.get("modelo", [])
-
-    if st.session_state.get("admin_mode") in ["add", "edit"]:
-        st.markdown("### 📝 Error Information")
-        keyword = st.text_input("Keyword / Category", key="keyword_input")
-        problem = st.text_input("Problem Description", key="problem_input")
-        causes = st.text_area("Causes (one per line)", key="causes_input").splitlines()
-        solutions = st.text_area("Solutions (one per line)", key="solutions_input").splitlines()
-
-        all_models = ["HD3", "U1", "R1", "UX1", "UX3", "UX5", "UX7", "HB100", "HB200L", "HB300", "HB300R", "HB500", "HB500R", "HS-50F"]
-        selected_models = st.multiselect("Applicable Equipment Models", all_models, default=st.session_state.get("models_input", []))
-
-        image = st.file_uploader("Upload an image (optional)", type=["jpg", "png"])
-
-        col_save, col_delete = st.columns([4, 1])
-        with col_save:
-            save = st.button("💾 Save to Database")
-        with col_delete:
-            delete = st.button("🗑️ Delete Error")
-
-        if delete and st.session_state.get("admin_mode") == "edit" and keyword in problems_database:
-            image_file = problems_database[keyword].get("image", "")
-            image_path = os.path.join("images", image_file)
-            if image_file and os.path.isfile(image_path):
-                os.remove(image_path)
-            del problems_database[keyword]
-            with open("problems_database.json", "w", encoding="utf-8") as f:
-                json.dump(problems_database, f, indent=4, ensure_ascii=False)
-            st.session_state.problems_database = problems_database
-            st.success("Entry deleted successfully.")
-            st.rerun()
-
-        if save:
-            if keyword and problem:
-                os.makedirs("images", exist_ok=True)
-                image_filename = None
-                if image is not None:
-                    ext = os.path.splitext(image.name)[1].lower()
-                    image_filename = f"{keyword}{ext}"
-                    image_path = os.path.join("images", image_filename)
-                    with open(image_path, "wb") as f:
-                        f.write(image.getbuffer())
-
-                problems_database[keyword] = {
-                    "problem": problem,
-                    "causes": causes,
-                    "repairs": solutions,
-                    "image": image_filename if image_filename else "",
-                    "modelo": selected_models
-                }
-
-                with open("problems_database.json", "w", encoding="utf-8") as f:
-                    json.dump(problems_database, f, indent=4, ensure_ascii=False)
-
-                st.session_state.problems_database = problems_database
-                st.success(f"Entry for '{keyword}' saved successfully.")
-                for k in ["keyword_input", "problem_input", "causes_input", "solutions_input", "models_input", "admin_mode"]:
-                    st.session_state.pop(k, None)
-                st.rerun()
-            else:
-                st.warning("Keyword and Problem Description are required.")
-
-                # Atualiza o JSON
-                with open("problems_database.json", "w", encoding="utf-8") as f:
-                    json.dump(problems_database, f, indent=4, ensure_ascii=False)
-
-                # Atualiza a variável de sessão
-                st.session_state.problems_database = problems_database
-
-                st.success(f"Entry for '{keyword}' saved successfully.")
-                for k in ["keyword_input", "problem_input", "causes_input", "solutions_input", "admin_mode"]:
-                    st.session_state.pop(k, None)
-                st.session_state.auth = False
-                st.session_state.selected_tab = "Log Analyzer"
-                st.rerun() 
-
-        if st.session_state.get("awaiting_next_entry"):
-            next_action = st.radio("Do you want to add or edit another entry?", ["Yes", "No"], key="add_more_radio")
-    
-            if next_action == "Yes":
-                # Marcar que é nova entrada, limpar modo e reiniciar
-                for k in ["keyword_input", "problem_input", "causes_input", "solutions_input", "admin_mode"]:
-                    if k in st.session_state:
-                        del st.session_state[k]
-                st.session_state.awaiting_next_entry = False
-                st.rerun()
-    
-            elif next_action == "No":
-                st.session_state.selected_tab = "Log Analyzer"
-                st.session_state.awaiting_next_entry = False
-                for k in ["keyword_input", "problem_input", "causes_input", "solutions_input", "admin_mode"]:
-                    if k in st.session_state:
-                        del st.session_state[k]
-                st.rerun()
-
 # Routing
 if st.session_state.selected_tab == "Log Analyzer":
     show_user_panel()
@@ -461,11 +328,7 @@ if st.session_state.selected_tab == "Log Analyzer":
 elif st.session_state.selected_tab == "Search Errors":
     show_user_panel()
 
-elif st.session_state.selected_tab == "Admin Panel":
-    if st.session_state["role"] == "master":
-        run_admin_panel()
-    else:
-        st.error("Access denied. Only administrators can access the Admin Panel.")
+# Admin Panel removido
 
 #Rodar isso no terminal para salvar as alterações:
 #git add .

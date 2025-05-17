@@ -1,18 +1,11 @@
 {
-  "mmagalhaes": {
-    "password": "Mindray@2024",
-    "role": "master",
+  "marcos.magalhaes@mindray.com": {
+    "password": "servtech",
     "expires": "2025-12-31"
   },
   "daiqing@mindray.com": {
     "password": "servtech",
-    "role": "master",
     "expires": "2025-12-31"
-  },
-  "Dealer1": {
-    "password": "senha123",
-    "role": "user",
-    "expires": "2025-06-30"
   }
 }
 
