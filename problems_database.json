@@ -205,5 +205,24 @@
             "UX5",
             "UX7"
         ]
+    },
+        "Brightness Explosion Error 💡": {
+        "problem": "Excessive brightness when approaching gauze due to auto brightness function disabled",
+        "causes": [
+            "Auto brightness function disabled in OSD menu",
+            "Defective video processing board",
+            "Incorrect OSD configuration not being saved after power off"
+        ],
+        "repairs": [
+            "Access the OSD service menu and activate the auto brightness adjustment function",
+            "If the function cannot be saved after power off, replace the video processing board (refer to section 7.3 of the service manual)",
+            "Perform image test using printed paper to verify correct brightness adjustment",
+            "Ensure all connectors (flat cable, button and side connectors) are properly connected during reassembly"
+        ],
+        "image": "Brightness Explosion Error 💡.png",
+        "modelo": [
+            "HD3",
+            "UX5"
+        ]
     }
 }
