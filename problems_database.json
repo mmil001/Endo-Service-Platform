@@ -219,10 +219,122 @@
             "Perform image test using printed paper to verify correct brightness adjustment",
             "Ensure all connectors (flat cable, button and side connectors) are properly connected during reassembly"
         ],
-        "image": "Brightness Explosion Error 💡.png",
+        "image": "S",
         "modelo": [
             "HD3",
             "UX5"
         ]
+    },
+        "Black Screen Error ⬛": {
+            "problem": "No image displayed on monitor",
+            "causes": [
+                "No power to HD3 or monitor",
+                "Camera head not connected properly",
+                "Incorrect or faulty video cable",
+                "Wrong video input selected on monitor",
+                "Internal failure in HD3 (CCU)"
+            ],
+            "repairs": [
+                "Check LED indicators on HD3 and monitor",
+                "Reconnect camera head and restart HD3",
+                "Verify and replace DVI cable",
+                "Use cross-check with laptop or another HD3",
+                "If CCU failure confirmed, replace the unit"
+            ],
+            "image": "",
+            "modelo": [
+                "HD3"
+            ]
+    },
+            "Flashing Image Error ⚡": {
+        "problem": "Image flickers when surgical instruments are inserted",
+        "causes": [
+            "AE mode set to 'fast'",
+            "Inappropriate surgical scene mode"
+        ],
+        "repairs": [
+            "Access OSD menu via front panel",
+            "Set AE speed to 'slow'",
+            "Switch scene mode to ENT or SDS",
+            "Select and confirm proper scene file"
+        ],
+        "image": "",
+        "modelo": [
+            "HD3"
+        ]
+    },
+        "Color Distortion Error 🎨": {
+        "problem": "Inaccurate or distorted colors during procedure",
+        "causes": [
+            "White balance not performed",
+            "Video cable issue (damaged or loose)",
+            "Incorrect settings on HD3 or monitor",
+            "Inappropriate scene mode selected"
+        ],
+        "repairs": [
+            "Perform proper white balance with pure white object",
+            "Inspect and replace DVI or SDI cable",
+            "Reset monitor and HD3 settings to default",
+            "Select appropriate scene mode for surgery"
+        ],
+        "image": "",
+        "modelo": [
+            "HD3"
+        ]
+    },
+        "USB Recognition Error 💾": {
+        "problem": "USB or portable HDD not recognized for recording",
+        "causes": [
+            "USB disk not formatted in FAT32",
+            "Internal software of HDD is incompatible",
+            "Using unsupported USB models"
+        ],
+        "repairs": [
+            "Format USB/HDD to FAT32 using a PC",
+            "Use Mindray-approved or common USB models",
+            "Play recorded video using VLC or PotPlayer"
+        ],
+        "image": "",
+        "modelo": [
+            "HD3"
+        ]
+    },
+        "Light Guide Cable Burn 🔥": {
+        "problem": "Patient skin burned due to overheating of light guide",
+        "causes": [
+            "Broken internal optical fibers in light guide",
+            "Heat accumulation inside the cable"
+        ],
+        "repairs": [
+            "Inspect light cable before each use",
+            "Do not use if more than 1/3 of optical fibers are broken"
+        ],
+        "image": "",
+        "modelo": [
+            "HD3"
+        ]
+    }, 
+        "Light Guide Tip Damage 🛑": {
+        "problem": "Damage to light guide tip due to excessive insertion",
+        "causes": [
+            "Limit stopper removed from light guide",
+            "Inserted into incompatible light source"
+        ],
+        "repairs": [
+            "Do not remove the limit stopper",
+            "Use only compatible light sources to avoid over-insertion"
+        ],
+        "image": "",
+        "modelo": [
+            "HD3"
+        ]
     }
 }
+
+
+
+
+
+
+
+
