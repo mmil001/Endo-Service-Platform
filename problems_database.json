@@ -49,40 +49,24 @@
         ]
     },
     "Heating Errors 🔥": {
-        "problem": "Heating malfunction, sensor or plate issue",
+        "problem": "Heating icon stays on even with heating pipe disconnected",
         "causes": [
-            "Heating cable disconnected",
-            "Defective heating plate",
-            "Insufflator heating tube failure",
-            "Overtemperature or sensor error (ERR#14, ERR#15)"
+            "Damaged heating cable causing feedback to the board",
+            "Heating plate circuitry failure",
+            "LED D6 remains on even with heating cable disconnected."
         ],
         "repairs": [
-            "Reconnect or replace heating cable (Figure 5-2)",
-            "Replace heating plate (Section 9.15)",
-            "Replace heating insufflation tube",
-            "Check for overtemperature alarm and clear if needed"
+            "Disconnect equipment from power supply",
+            "Check the heating cable and LED D6 status on heating board",
+            "If LED D6 is on without cable, replace the heating plate (PN 115-076021-00)",
+            "Reassemble unit and confirm icon is off when no cable is connected",
+            "Verify temperature reading in service menu is ~30°C without cable",
+            "If issue persists, check Main Board and Power Module",
+            "Perform functional test per service manual section 7.4.4 using heating insufflation tube (PN 115-052867-00)"
         ],
         "image": "",
         "modelo": [
-            "U1",
-            "R1",
-            "UX1",
-            "UX3",
-            "UX5",
-            "UX7",
-            "HS-50F",
-            "HD3",
-            "HB100",
-            "HB200L",
-            "HB300",
-            "HB300R",
-            "HB500",
-            "HB500R",
-            "UP700",
-            "HP100G",
-            "HP200G",
-            "HP200L",
-            "HP200D"
+            "HS-50F"
         ]
     },
     "Insufflator Errors 🧪": {
@@ -413,7 +397,31 @@
         "modelo": [
             "R1"
         ]
+    },
+        "LCD Intermittent Display Error 💡": {
+        "problem": "Intermittent blackout of the LCD display during surgery or usage",
+        "causes": [
+            "Loose flat cable connection between LCD and control board",
+            "Damaged LCD display",
+            "Control board failure",
+            "Connector terminal not properly locked",
+            "Possible impact or vibration during transport"
+        ],
+        "repairs": [
+            "Disconnect bottom cover and inspect flat cable + LCD terminal",
+            "Replace flat cable (PN 115-076664-00 – NIR Cable Kit)",
+            "Replace LCD module (PN 115-076632-00 – Host Shell)",
+            "Replace control board (PN 115-07676800 – Control Board R1)",
+            "Ensure connectors are properly locked during reassembly",
+            "Verify serial number, date/time, and reconfigure user setup if necessary"
+        ],
+        "image": "",
+        "modelo": [
+            "R1"
+        ],
+        "ppt": "Troubleshooting LCD Intermittent Error - R1.pptx"
     }
+
 }
 
 
