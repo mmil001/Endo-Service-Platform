@@ -258,7 +258,7 @@
             "Switch scene mode to ENT or SDS",
             "Select and confirm proper scene file"
         ],
-        "image": "",
+        "image": "Flashing Image Error ⚡.png",
         "modelo": [
             "HD3"
         ]
@@ -277,7 +277,7 @@
             "Reset monitor and HD3 settings to default",
             "Select appropriate scene mode for surgery"
         ],
-        "image": "",
+        "image": "Color Distortion Error 🎨.png",
         "modelo": [
             "HD3"
         ]
@@ -309,7 +309,7 @@
             "Inspect light cable before each use",
             "Do not use if more than 1/3 of optical fibers are broken"
         ],
-        "image": "",
+        "image": "Light Guide Cable Burn 🔥.png",
         "modelo": [
             "HD3"
         ]
@@ -324,7 +324,7 @@
             "Do not remove the limit stopper",
             "Use only compatible light sources to avoid over-insertion"
         ],
-        "image": "",
+        "image": "Light Guide Tip Damage 🛑.png",
         "modelo": [
             "HD3"
         ]
