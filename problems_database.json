@@ -328,9 +328,93 @@
         "modelo": [
             "HD3"
         ]
+    },
+        "CAN Communication Error 🔌": {
+        "problem": "Loss of CAN communication between camera system and light source",
+        "causes": [
+            "CAN cable not connected",
+            "Disconnected or loose CAN connector",
+            "Software version below required minimum"
+        ],
+        "repairs": [
+            "Verify CAN cable is properly connected",
+            "Check CAN cable condition and port",
+            "Ensure U1 software ≥ 01.13.00.04 or R1 ≥ 01.11.00.04 for full functionality"
+        ],
+        "image": "",
+        "modelo": [
+            "U1",
+            "R1"
+        ]
+    },
+        "Image Brightness Error 🌞": {
+        "problem": "Image too dark, too bright or with poor balance",
+        "causes": [
+            "Incorrect AE value setting",
+            "Improper peak ratio configuration",
+            "Low light source level or detection area misconfiguration"
+        ],
+        "repairs": [
+            "Increase AE value to brighten the image",
+            "Lower AE value to darken the image",
+            "Adjust peak ratio to reduce overexposed zones",
+            "Avoid lowering light source too much, increase brightness or adjust exposure balance"
+        ],
+        "image": "",
+        "modelo": [
+            "U1",
+            "R1"
+        ]
+    },
+        "Color Balance Error 🎨": {
+        "problem": "Image appears with incorrect colors (e.g. purple, yellowish)",
+        "causes": [
+            "Improper red/blue gain settings",
+            "Saturation misconfiguration"
+        ],
+        "repairs": [
+            "Reduce blue gain if image appears purple",
+            "Adjust red gain gradually to correct yellowish or faded image",
+            "Adjust saturation for desired color strength"
+        ],
+        "image": "",
+        "modelo": [
+            "U1",
+            "R1"
+        ]
+    },
+        "Sharpness / Edge Error ✴️": {
+        "problem": "Image has excessive noise or unnatural borders",
+        "causes": [
+            "High values for structure or edge settings",
+            "Sharpness mode set to High instead of Normal"
+        ],
+        "repairs": [
+            "Use 'Normal' sharpness to reduce image noise",
+            "Lower 'Structure' or 'Edge' value to avoid dark borders or color artifacts",
+            "Adjust only if necessary and monitor image impact"
+        ],
+        "image": "",
+        "modelo": [
+            "R1"
+        ]
+    },
+        "Fluorescence Mode Issue 🌈": {
+        "problem": "Weak or unclear fluorescence image during surgery",
+        "causes": [
+            "Low fluorescence intensity setting",
+            "Long distance or steep angle from scope to tissue"
+        ],
+        "repairs": [
+            "Increase fluorescence brightness (default HEP=4, GYN=2)",
+            "Bring endoscope closer or reduce the viewing angle"
+        ],
+        "image": "",
+        "modelo": [
+            "R1"
+        ]
     }
 }
-
 
 
 
