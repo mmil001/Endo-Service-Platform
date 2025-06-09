@@ -246,7 +246,7 @@
                 "HD3"
             ]
     },
-            "Flashing Image Error ⚡": {
+        "Flashing Image Error ⚡": {
         "problem": "Image flickers when surgical instruments are inserted",
         "causes": [
             "AE mode set to 'fast'",
@@ -330,6 +330,9 @@
         ]
     }
 }
+
+
+
 
 
 
