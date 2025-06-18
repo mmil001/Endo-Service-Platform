@@ -340,10 +340,5 @@ if st.session_state.selected_tab == "Log Analyzer":
 elif st.session_state.selected_tab == "Search Errors":
     show_user_panel()
 
-# Admin Panel removido
 
-#Rodar isso no terminal para salvar as alterações:
-#git add .
-#git commit -m "Update login screen design and add logout button"
-#git push origin main
 
