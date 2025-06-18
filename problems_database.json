@@ -398,7 +398,7 @@
             "R1"
         ]
     },
-        "LCD Intermittent Display Error 💡": {
+        "R1 LCD Intermittent Display Error 💡": {
         "problem": "Intermittent blackout of the LCD display during surgery or usage",
         "causes": [
             "Loose flat cable connection between LCD and control board",
@@ -422,7 +422,7 @@
         "ppt": "Troubleshooting LCD Intermittent Error - R1.pptx"
     },
 
-        "Device Failure Error Code #01 / #03 🛑": {
+        "HS-50F Device Failure Error Code #01 / #03 🛑": {
         "problem": "Device Failure detected (Error Code 01 or 03) in HS-50F",
         "causes": [
             "Residual gas inside the insufflator during self-inspection",
@@ -447,7 +447,7 @@
             "HS-50F"
         ]
     },
-        "Device Failure Error Code 02 & 04 🔧": {
+        "HS-50F Device Failure Error Code 02 & 04 🔧": {
         "problem": "Inflation and safety valve short-circuit or mechanical failure (Error Code 02 or 04)",
         "causes": [
             "Short circuit or failure of inflation valve",
@@ -465,7 +465,7 @@
             "HS-50F"
         ]
     },
-        "Device Failure Error Code 09 📉": {
+        "HS-50F Device Failure Error Code 09 📉": {
         "problem": "High-pressure sensor failure or abnormal readings (Error Code 09)",
         "causes": [
             "Disconnected high-pressure sensor cable",
@@ -483,7 +483,7 @@
             "HS-50F"
         ]
     },
-        "Device Failure Error Code 10 ⚠️": {
+        "HS-50F Device Failure Error Code 10 ⚠️": {
         "problem": "Low-pressure sensor out of range (Error Code 10)",
         "causes": [
             "Faulty low-pressure sensor in pneumatic module",
@@ -498,7 +498,7 @@
             "HS-50F"
         ]
     },
-        "Device Failure Error Code 11 📐": {
+        "HS-50F Device Failure Error Code 11 📐": {
         "problem": "Differential pressure sensor or valve-front sensor zero-point out of range (Error Code 11)",
         "causes": [
             "Main board differential sensor failure",
@@ -512,7 +512,7 @@
             "HS-50F"
         ]
     },
-        "Device Failure Error Code 13 💧": {
+        "HS-50F Device Failure Error Code 13 💧": {
         "problem": "Liquid sensor error detected (Error Code 13)",
         "causes": [
             "Disconnected level sensor cable",
@@ -527,7 +527,7 @@
             "HS-50F"
         ]
     },
-        "Device Failure Error Code 15 🔥": {
+        "HS-50F Device Failure Error Code 15 🔥": {
         "problem": "Heating module error (Error Code 15)",
         "causes": [
             "Heating plate disconnected",
@@ -542,7 +542,7 @@
             "HS-50F"
         ]
     },
-        "Error Code 001 🧠": {
+        "Ux3 Error Code 001 🧠": {
         "problem": "EEPROM read/write failure",
         "causes": [
             "Main CPU failure",
@@ -558,80 +558,135 @@
         ]
     },
 
-        "Error Code 002 🔌": {
-            "problem": "Communication failure between Main CPU and OSD CPU",
-            "causes": [
-                "Main CPU failure",
-                "OSD CPU failure"
-            ],
-            "repairs": [
-                "Restart the system",
-                "If the error persists, replace the Main Control Board PCBA (see section 6.37, page 181)"
-            ],
+        "Ux3 Error Code 002 🔌": {
+        "problem": "Communication failure between Main CPU and OSD CPU",
+        "causes": [
+            "Main CPU failure",
+            "OSD CPU failure"
+        ],
+        "repairs": [
+            "Restart the system",
+            "If the error persists, replace the Main Control Board PCBA (see section 6.37, page 181)"
+        ],
+        "image": "",
+        "modelo": [
+            "UX3"
+        ]
+    },
+
+        "Ux3 Error Code 003 🔋": {
+        "problem": "Communication failure between Main CPU and Power MCU",
+        "causes": [
+            "Main CPU failure",
+            "Power MCU failure"
+        ],
+        "repairs": [
+            "Restart the system",
+            "If the error persists, replace the Main Control Board PCBA (see section 6.37, page 181)"
+
+        ],
+        "image": "",
+        "modelo": [
+            "UX3"
+        ]
+    },
+
+        "Ux3 Error Code 104 🌡️": {
+        "problem": "Over-temperature in CCU A",
+        "causes": [
+            "Fan failure",
+            "Defective thermal grease",
+            "Heat sink malfunction or blockage",
+            "CCU hardware fault"
+        ],
+        "repairs": [
+            "Check if all fans are rotating normally (see section 6.19, page 123)",
+            "If the fan is defective, replace the cooling fan (section 6.19, page 123)",
+            "Check and replace the thermal pad or thermal grease if degraded (check during CCU disassembly, section 6.35, page 173)",
+            "If the issue persists, replace the CCU Board PCBA (section 6.35, page 173)"
+        ],
             "image": "",
             "modelo": [
                 "UX3"
             ]
         },
 
-        "Error Code 003 🔋": {
-            "problem": "Communication failure between Main CPU and Power MCU",
+            "Ux3 Error Code 105 🌡️": {
+            "problem": "Over-temperature in CCU B",
             "causes": [
-                "Main CPU failure",
-                "Power MCU failure"
+                "Fan failure",
+                "Defective thermal grease",
+                "Heat sink malfunction or blockage",
+                "CCU hardware fault"
             ],
             "repairs": [
                 "Restart the system",
-                "If the error persists, replace the Main Control Board PCBA (see section 6.37, page 181)"
-
+                "Check if all fans are rotating normally (see section 6.19, page 123)",
+                "If the fan is defective, replace the cooling fan (section 6.19, page 123)",
+                "Check and replace the thermal pad or thermal grease if degraded (check during CCU disassembly, section 6.35, page 173)",
+                "If the issue persists, replace the CCU Board PCBA (section 6.35, page 173)"
             ],
             "image": "",
             "modelo": [
-                "UX3"
+                    "UX3"
+                ]
+        },
+            "Error Code 001 🧠": {
+            "problem": "Main CPU Failed to Read or Write EEPROM",
+            "causes": [
+                "Main control board faulty",
+                "EEPROM failure"
+            ],
+            "repairs": [
+                "Restart the system",
+                "If the error persists, replace Main Control Board PCBA (see section 7.6.2, page 298)"
+            ],
+            "image": "",
+            "modelo": [
+                "UX5"
             ]
         },
 
-            "Error Code 104 🌡️": {
-                "problem": "Over-temperature in CCU A",
-                "causes": [
-                    "Fan failure",
-                    "Defective thermal grease",
-                    "Heat sink malfunction or blockage",
-                    "CCU hardware fault"
-                ],
-                "repairs": [
-                    "Check if all fans are rotating normally (see section 6.19, page 123)",
-                    "If the fan is defective, replace the cooling fan (section 6.19, page 123)",
-                    "Check and replace the thermal pad or thermal grease if degraded (check during CCU disassembly, section 6.35, page 173)",
-                    "If the issue persists, replace the CCU Board PCBA (section 6.35, page 173)"
-                ],
-                "image": "",
-                "modelo": [
-                    "UX3"
-                ]
-            },
+        "Error Code 104 🌡️": {
+            "problem": "CCU A Overtemperature",
+            "causes": [
+                "Cooling fan failure",
+                "Thermal pad degraded",
+                "Radiator loose or damaged",
+                "CCU board faulty"
+            ],
+            "repairs": [
+                "Check if fan is rotating (section 6.20, page 141)",
+                "Replace the fan if defective (section 6.20, page 141)",
+                "Check thermal pad and radiator during CCU maintenance (section 6.36, page 179)",
+                "Replace CCU Board PCBA if problem persists (section 6.36, page 179)"
+            ],
+            "image": "",
+            "modelo": [
+                "UX5"
+            ]
+        },
 
-            "Error Code 105 🌡️": {
-                "problem": "Over-temperature in CCU B",
-                "causes": [
-                    "Fan failure",
-                    "Defective thermal grease",
-                    "Heat sink malfunction or blockage",
-                    "CCU hardware fault"
-                ],
-                "repairs": [
-                    "Restart the system",
-                    "Check if all fans are rotating normally (see section 6.19, page 123)",
-                    "If the fan is defective, replace the cooling fan (section 6.19, page 123)",
-                    "Check and replace the thermal pad or thermal grease if degraded (check during CCU disassembly, section 6.35, page 173)",
-                    "If the issue persists, replace the CCU Board PCBA (section 6.35, page 173)"
-                ],
-                "image": "",
-                "modelo": [
-                    "UX3"
-                ]
+        "Error Code 801 🌀": {
+            "problem": "System Fan Speed Abnormal",
+            "causes": [
+                "Fan failure",
+                "IO board faulty",
+                "Main control board faulty",
+                "OSD cable faulty"
+            ],
+            "repairs": [
+                "Check and reconnect fan (section 6.20, page 141)",
+                "If fan defective, replace cooling fan (section 6.20, page 141)",
+                "Check IO Board PCBA (section 6.33, page 171)",
+                "Check main control board (section 6.38, page 186)",
+                "Check OSD cable (section 6.26, page 154)"
+            ],
+            "image": "",
+            "modelo": [
+                "UX5"
+            ]
         }
-
 }
 
 
