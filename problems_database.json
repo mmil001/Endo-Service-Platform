@@ -541,7 +541,97 @@
         "modelo": [
             "HS-50F"
         ]
-    }
+    },
+        "Error Code 001 🧠": {
+        "problem": "EEPROM read/write failure",
+        "causes": [
+            "Main CPU failure",
+            "EEPROM failure"
+        ],
+        "repairs": [
+            "Restart the system",
+            "If the error persists, replace the Main Control Board PCBA (see section 6.37, page 181)"
+        ],
+        "image": "",
+        "modelo": [
+            "UX3"
+        ]
+    },
+
+        "Error Code 002 🔌": {
+            "problem": "Communication failure between Main CPU and OSD CPU",
+            "causes": [
+                "Main CPU failure",
+                "OSD CPU failure"
+            ],
+            "repairs": [
+                "Restart the system",
+                "If the error persists, replace the Main Control Board PCBA (see section 6.37, page 181)"
+            ],
+            "image": "",
+            "modelo": [
+                "UX3"
+            ]
+        },
+
+        "Error Code 003 🔋": {
+            "problem": "Communication failure between Main CPU and Power MCU",
+            "causes": [
+                "Main CPU failure",
+                "Power MCU failure"
+            ],
+            "repairs": [
+                "Restart the system",
+                "If the error persists, replace the Main Control Board PCBA (see section 6.37, page 181)"
+
+            ],
+            "image": "",
+            "modelo": [
+                "UX3"
+            ]
+        },
+
+            "Error Code 104 🌡️": {
+                "problem": "Over-temperature in CCU A",
+                "causes": [
+                    "Fan failure",
+                    "Defective thermal grease",
+                    "Heat sink malfunction or blockage",
+                    "CCU hardware fault"
+                ],
+                "repairs": [
+                    "Check if all fans are rotating normally (see section 6.19, page 123)",
+                    "If the fan is defective, replace the cooling fan (section 6.19, page 123)",
+                    "Check and replace the thermal pad or thermal grease if degraded (check during CCU disassembly, section 6.35, page 173)",
+                    "If the issue persists, replace the CCU Board PCBA (section 6.35, page 173)"
+                ],
+                "image": "",
+                "modelo": [
+                    "UX3"
+                ]
+            },
+
+            "Error Code 105 🌡️": {
+                "problem": "Over-temperature in CCU B",
+                "causes": [
+                    "Fan failure",
+                    "Defective thermal grease",
+                    "Heat sink malfunction or blockage",
+                    "CCU hardware fault"
+                ],
+                "repairs": [
+                    "Restart the system",
+                    "Check if all fans are rotating normally (see section 6.19, page 123)",
+                    "If the fan is defective, replace the cooling fan (section 6.19, page 123)",
+                    "Check and replace the thermal pad or thermal grease if degraded (check during CCU disassembly, section 6.35, page 173)",
+                    "If the issue persists, replace the CCU Board PCBA (section 6.35, page 173)"
+                ],
+                "image": "",
+                "modelo": [
+                    "UX3"
+                ]
+        }
+
 }
 
 
