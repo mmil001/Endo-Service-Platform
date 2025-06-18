@@ -558,7 +558,7 @@
         ]
     },
 
-        "Ux3 Error Code 002 🔌": {
+        "Error Code 002 🔌": {
         "problem": "Communication failure between Main CPU and OSD CPU",
         "causes": [
             "Main CPU failure",
@@ -574,7 +574,7 @@
         ]
     },
 
-        "Ux3 Error Code 003 🔋": {
+        "Error Code 003 🔋": {
         "problem": "Communication failure between Main CPU and Power MCU",
         "causes": [
             "Main CPU failure",
@@ -611,7 +611,7 @@
             ]
         },
 
-            "Ux3 Error Code 105 🌡️": {
+            "Error Code 105 🌡️": {
             "problem": "Over-temperature in CCU B",
             "causes": [
                 "Fan failure",
