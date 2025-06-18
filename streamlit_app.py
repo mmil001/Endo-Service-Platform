@@ -12,7 +12,7 @@ from itertools import chain
 
 # --- Carrega usuários ---
 def load_users():
-    with open("users.json", "r", encoding="utf-8") as f:
+    with open("database/users.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 # --- Autenticação ---
