@@ -420,6 +420,32 @@
             "R1"
         ],
         "ppt": "Troubleshooting LCD Intermittent Error - R1.pptx"
+    },
+
+        "Device Failure Error Code #01 / #03 🛑": {
+        "problem": "Device Failure detected (Error Code 01 or 03) in HS-50F",
+        "causes": [
+            "Residual gas inside the insufflator during self-inspection",
+            "Sensor hose disconnected or loose",
+            "High-pressure sensor significant zero drift",
+            "Low-pressure sensor significant zero drift (V2.0 and above)",
+            "Short circuit or open circuit in proportional valve",
+            "Proportional valve driver failure",
+            "Mechanical failure of proportional valve"
+        ],
+        "repairs": [
+            "Restart insufflator after connecting adequate gas source",
+            "Reconnect or replace disconnected sensor hose",
+            "Perform zero calibration of high-pressure sensor (see section 6.2 of the Service Manual)",
+            "Replace high-pressure regulator assembly (see section 9.3)",
+            "Replace pneumatic module assembly (see section 9.6)",
+            "Replace main board if proportional valve issues persist (see section 9.10)",
+            "Conduct diagnostic mode verification for proportional valve operation (see sections 5.7.3.3 or 5.8.9)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
     }
 
 }
