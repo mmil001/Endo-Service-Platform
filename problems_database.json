@@ -686,8 +686,1438 @@
             "modelo": [
                 "UX5"
             ]
+        },
+
+        "E002": {
+            "problem": "Description of problem for E002",
+            "causes": [
+                "Cause 1 for E002",
+                "Cause 2 for E002",
+                "Cause 3 for E002"
+            ],
+            "repairs": [
+                "Step 1 to resolve E002 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E002",
+                "Step 3 to resolve E002"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E004": {
+            "problem": "Description of problem for E004",
+            "causes": [
+                "Cause 1 for E004",
+                "Cause 2 for E004",
+                "Cause 3 for E004"
+            ],
+            "repairs": [
+                "Step 1 to resolve E004 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E004",
+                "Step 3 to resolve E004"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E005": {
+            "problem": "Description of problem for E005",
+            "causes": [
+                "Cause 1 for E005",
+                "Cause 2 for E005",
+                "Cause 3 for E005"
+            ],
+            "repairs": [
+                "Step 1 to resolve E005 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E005",
+                "Step 3 to resolve E005"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E006": {
+            "problem": "Description of problem for E006",
+            "causes": [
+                "Cause 1 for E006",
+                "Cause 2 for E006",
+                "Cause 3 for E006"
+            ],
+            "repairs": [
+                "Step 1 to resolve E006 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E006",
+                "Step 3 to resolve E006"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E007": {
+            "problem": "Description of problem for E007",
+            "causes": [
+                "Cause 1 for E007",
+                "Cause 2 for E007",
+                "Cause 3 for E007"
+            ],
+            "repairs": [
+                "Step 1 to resolve E007 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E007",
+                "Step 3 to resolve E007"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E008": {
+            "problem": "Description of problem for E008",
+            "causes": [
+                "Cause 1 for E008",
+                "Cause 2 for E008",
+                "Cause 3 for E008"
+            ],
+            "repairs": [
+                "Step 1 to resolve E008 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E008",
+                "Step 3 to resolve E008"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E012": {
+            "problem": "Description of problem for E012",
+            "causes": [
+                "Cause 1 for E012",
+                "Cause 2 for E012",
+                "Cause 3 for E012"
+            ],
+            "repairs": [
+                "Step 1 to resolve E012 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E012",
+                "Step 3 to resolve E012"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E016": {
+            "problem": "Description of problem for E016",
+            "causes": [
+                "Cause 1 for E016",
+                "Cause 2 for E016",
+                "Cause 3 for E016"
+            ],
+            "repairs": [
+                "Step 1 to resolve E016 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E016",
+                "Step 3 to resolve E016"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E017": {
+            "problem": "Description of problem for E017",
+            "causes": [
+                "Cause 1 for E017",
+                "Cause 2 for E017",
+                "Cause 3 for E017"
+            ],
+            "repairs": [
+                "Step 1 to resolve E017 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E017",
+                "Step 3 to resolve E017"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E024": {
+            "problem": "Description of problem for E024",
+            "causes": [
+                "Cause 1 for E024",
+                "Cause 2 for E024",
+                "Cause 3 for E024"
+            ],
+            "repairs": [
+                "Step 1 to resolve E024 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E024",
+                "Step 3 to resolve E024"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E025": {
+            "problem": "Description of problem for E025",
+            "causes": [
+                "Cause 1 for E025",
+                "Cause 2 for E025",
+                "Cause 3 for E025"
+            ],
+            "repairs": [
+                "Step 1 to resolve E025 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E025",
+                "Step 3 to resolve E025"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E026": {
+            "problem": "Description of problem for E026",
+            "causes": [
+                "Cause 1 for E026",
+                "Cause 2 for E026",
+                "Cause 3 for E026"
+            ],
+            "repairs": [
+                "Step 1 to resolve E026 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E026",
+                "Step 3 to resolve E026"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E027": {
+            "problem": "Description of problem for E027",
+            "causes": [
+                "Cause 1 for E027",
+                "Cause 2 for E027",
+                "Cause 3 for E027"
+            ],
+            "repairs": [
+                "Step 1 to resolve E027 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E027",
+                "Step 3 to resolve E027"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E028": {
+            "problem": "Description of problem for E028",
+            "causes": [
+                "Cause 1 for E028",
+                "Cause 2 for E028",
+                "Cause 3 for E028"
+            ],
+            "repairs": [
+                "Step 1 to resolve E028 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E028",
+                "Step 3 to resolve E028"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E029": {
+            "problem": "Description of problem for E029",
+            "causes": [
+                "Cause 1 for E029",
+                "Cause 2 for E029",
+                "Cause 3 for E029"
+            ],
+            "repairs": [
+                "Step 1 to resolve E029 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E029",
+                "Step 3 to resolve E029"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E030": {
+            "problem": "Description of problem for E030",
+            "causes": [
+                "Cause 1 for E030",
+                "Cause 2 for E030",
+                "Cause 3 for E030"
+            ],
+            "repairs": [
+                "Step 1 to resolve E030 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E030",
+                "Step 3 to resolve E030"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E031": {
+            "problem": "Description of problem for E031",
+            "causes": [
+                "Cause 1 for E031",
+                "Cause 2 for E031",
+                "Cause 3 for E031"
+            ],
+            "repairs": [
+                "Step 1 to resolve E031 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E031",
+                "Step 3 to resolve E031"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E032": {
+            "problem": "Description of problem for E032",
+            "causes": [
+                "Cause 1 for E032",
+                "Cause 2 for E032",
+                "Cause 3 for E032"
+            ],
+            "repairs": [
+                "Step 1 to resolve E032 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E032",
+                "Step 3 to resolve E032"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E033": {
+            "problem": "Description of problem for E033",
+            "causes": [
+                "Cause 1 for E033",
+                "Cause 2 for E033",
+                "Cause 3 for E033"
+            ],
+            "repairs": [
+                "Step 1 to resolve E033 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E033",
+                "Step 3 to resolve E033"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E034": {
+            "problem": "Description of problem for E034",
+            "causes": [
+                "Cause 1 for E034",
+                "Cause 2 for E034",
+                "Cause 3 for E034"
+            ],
+            "repairs": [
+                "Step 1 to resolve E034 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E034",
+                "Step 3 to resolve E034"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E035": {
+            "problem": "Description of problem for E035",
+            "causes": [
+                "Cause 1 for E035",
+                "Cause 2 for E035",
+                "Cause 3 for E035"
+            ],
+            "repairs": [
+                "Step 1 to resolve E035 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E035",
+                "Step 3 to resolve E035"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E100": {
+            "problem": "Description of problem for E100",
+            "causes": [
+                "Cause 1 for E100",
+                "Cause 2 for E100",
+                "Cause 3 for E100"
+            ],
+            "repairs": [
+                "Step 1 to resolve E100 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E100",
+                "Step 3 to resolve E100"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E101": {
+            "problem": "Description of problem for E101",
+            "causes": [
+                "Cause 1 for E101",
+                "Cause 2 for E101",
+                "Cause 3 for E101"
+            ],
+            "repairs": [
+                "Step 1 to resolve E101 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E101",
+                "Step 3 to resolve E101"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E103": {
+            "problem": "Description of problem for E103",
+            "causes": [
+                "Cause 1 for E103",
+                "Cause 2 for E103",
+                "Cause 3 for E103"
+            ],
+            "repairs": [
+                "Step 1 to resolve E103 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E103",
+                "Step 3 to resolve E103"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E104": {
+            "problem": "Description of problem for E104",
+            "causes": [
+                "Cause 1 for E104",
+                "Cause 2 for E104",
+                "Cause 3 for E104"
+            ],
+            "repairs": [
+                "Step 1 to resolve E104 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E104",
+                "Step 3 to resolve E104"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E106": {
+            "problem": "Description of problem for E106",
+            "causes": [
+                "Cause 1 for E106",
+                "Cause 2 for E106",
+                "Cause 3 for E106"
+            ],
+            "repairs": [
+                "Step 1 to resolve E106 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E106",
+                "Step 3 to resolve E106"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E107": {
+            "problem": "Description of problem for E107",
+            "causes": [
+                "Cause 1 for E107",
+                "Cause 2 for E107",
+                "Cause 3 for E107"
+            ],
+            "repairs": [
+                "Step 1 to resolve E107 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E107",
+                "Step 3 to resolve E107"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E108": {
+            "problem": "Description of problem for E108",
+            "causes": [
+                "Cause 1 for E108",
+                "Cause 2 for E108",
+                "Cause 3 for E108"
+            ],
+            "repairs": [
+                "Step 1 to resolve E108 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E108",
+                "Step 3 to resolve E108"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E109": {
+            "problem": "Description of problem for E109",
+            "causes": [
+                "Cause 1 for E109",
+                "Cause 2 for E109",
+                "Cause 3 for E109"
+            ],
+            "repairs": [
+                "Step 1 to resolve E109 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E109",
+                "Step 3 to resolve E109"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E110": {
+            "problem": "Description of problem for E110",
+            "causes": [
+                "Cause 1 for E110",
+                "Cause 2 for E110",
+                "Cause 3 for E110"
+            ],
+            "repairs": [
+                "Step 1 to resolve E110 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E110",
+                "Step 3 to resolve E110"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E111": {
+            "problem": "Description of problem for E111",
+            "causes": [
+                "Cause 1 for E111",
+                "Cause 2 for E111",
+                "Cause 3 for E111"
+            ],
+            "repairs": [
+                "Step 1 to resolve E111 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E111",
+                "Step 3 to resolve E111"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E118": {
+            "problem": "Description of problem for E118",
+            "causes": [
+                "Cause 1 for E118",
+                "Cause 2 for E118",
+                "Cause 3 for E118"
+            ],
+            "repairs": [
+                "Step 1 to resolve E118 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E118",
+                "Step 3 to resolve E118"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E119": {
+            "problem": "Description of problem for E119",
+            "causes": [
+                "Cause 1 for E119",
+                "Cause 2 for E119",
+                "Cause 3 for E119"
+            ],
+            "repairs": [
+                "Step 1 to resolve E119 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E119",
+                "Step 3 to resolve E119"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E120": {
+            "problem": "Description of problem for E120",
+            "causes": [
+                "Cause 1 for E120",
+                "Cause 2 for E120",
+                "Cause 3 for E120"
+            ],
+            "repairs": [
+                "Step 1 to resolve E120 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E120",
+                "Step 3 to resolve E120"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E121": {
+            "problem": "Description of problem for E121",
+            "causes": [
+                "Cause 1 for E121",
+                "Cause 2 for E121",
+                "Cause 3 for E121"
+            ],
+            "repairs": [
+                "Step 1 to resolve E121 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E121",
+                "Step 3 to resolve E121"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E122": {
+            "problem": "Description of problem for E122",
+            "causes": [
+                "Cause 1 for E122",
+                "Cause 2 for E122",
+                "Cause 3 for E122"
+            ],
+            "repairs": [
+                "Step 1 to resolve E122 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E122",
+                "Step 3 to resolve E122"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E123": {
+            "problem": "Description of problem for E123",
+            "causes": [
+                "Cause 1 for E123",
+                "Cause 2 for E123",
+                "Cause 3 for E123"
+            ],
+            "repairs": [
+                "Step 1 to resolve E123 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E123",
+                "Step 3 to resolve E123"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E124": {
+            "problem": "Description of problem for E124",
+            "causes": [
+                "Cause 1 for E124",
+                "Cause 2 for E124",
+                "Cause 3 for E124"
+            ],
+            "repairs": [
+                "Step 1 to resolve E124 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E124",
+                "Step 3 to resolve E124"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E125": {
+            "problem": "Description of problem for E125",
+            "causes": [
+                "Cause 1 for E125",
+                "Cause 2 for E125",
+                "Cause 3 for E125"
+            ],
+            "repairs": [
+                "Step 1 to resolve E125 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E125",
+                "Step 3 to resolve E125"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E126": {
+            "problem": "Description of problem for E126",
+            "causes": [
+                "Cause 1 for E126",
+                "Cause 2 for E126",
+                "Cause 3 for E126"
+            ],
+            "repairs": [
+                "Step 1 to resolve E126 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E126",
+                "Step 3 to resolve E126"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E127": {
+            "problem": "Description of problem for E127",
+            "causes": [
+                "Cause 1 for E127",
+                "Cause 2 for E127",
+                "Cause 3 for E127"
+            ],
+            "repairs": [
+                "Step 1 to resolve E127 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E127",
+                "Step 3 to resolve E127"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E128": {
+            "problem": "Description of problem for E128",
+            "causes": [
+                "Cause 1 for E128",
+                "Cause 2 for E128",
+                "Cause 3 for E128"
+            ],
+            "repairs": [
+                "Step 1 to resolve E128 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E128",
+                "Step 3 to resolve E128"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E129": {
+            "problem": "Description of problem for E129",
+            "causes": [
+                "Cause 1 for E129",
+                "Cause 2 for E129",
+                "Cause 3 for E129"
+            ],
+            "repairs": [
+                "Step 1 to resolve E129 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E129",
+                "Step 3 to resolve E129"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E130": {
+            "problem": "Description of problem for E130",
+            "causes": [
+                "Cause 1 for E130",
+                "Cause 2 for E130",
+                "Cause 3 for E130"
+            ],
+            "repairs": [
+                "Step 1 to resolve E130 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E130",
+                "Step 3 to resolve E130"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E131": {
+            "problem": "Description of problem for E131",
+            "causes": [
+                "Cause 1 for E131",
+                "Cause 2 for E131",
+                "Cause 3 for E131"
+            ],
+            "repairs": [
+                "Step 1 to resolve E131 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E131",
+                "Step 3 to resolve E131"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E132": {
+            "problem": "Description of problem for E132",
+            "causes": [
+                "Cause 1 for E132",
+                "Cause 2 for E132",
+                "Cause 3 for E132"
+            ],
+            "repairs": [
+                "Step 1 to resolve E132 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E132",
+                "Step 3 to resolve E132"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E133": {
+            "problem": "Description of problem for E133",
+            "causes": [
+                "Cause 1 for E133",
+                "Cause 2 for E133",
+                "Cause 3 for E133"
+            ],
+            "repairs": [
+                "Step 1 to resolve E133 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E133",
+                "Step 3 to resolve E133"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E135": {
+            "problem": "Description of problem for E135",
+            "causes": [
+                "Cause 1 for E135",
+                "Cause 2 for E135",
+                "Cause 3 for E135"
+            ],
+            "repairs": [
+                "Step 1 to resolve E135 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E135",
+                "Step 3 to resolve E135"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E136": {
+            "problem": "Description of problem for E136",
+            "causes": [
+                "Cause 1 for E136",
+                "Cause 2 for E136",
+                "Cause 3 for E136"
+            ],
+            "repairs": [
+                "Step 1 to resolve E136 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E136",
+                "Step 3 to resolve E136"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E137": {
+            "problem": "Description of problem for E137",
+            "causes": [
+                "Cause 1 for E137",
+                "Cause 2 for E137",
+                "Cause 3 for E137"
+            ],
+            "repairs": [
+                "Step 1 to resolve E137 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E137",
+                "Step 3 to resolve E137"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E140": {
+            "problem": "Description of problem for E140",
+            "causes": [
+                "Cause 1 for E140",
+                "Cause 2 for E140",
+                "Cause 3 for E140"
+            ],
+            "repairs": [
+                "Step 1 to resolve E140 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E140",
+                "Step 3 to resolve E140"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E141": {
+            "problem": "Description of problem for E141",
+            "causes": [
+                "Cause 1 for E141",
+                "Cause 2 for E141",
+                "Cause 3 for E141"
+            ],
+            "repairs": [
+                "Step 1 to resolve E141 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E141",
+                "Step 3 to resolve E141"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E142": {
+            "problem": "Description of problem for E142",
+            "causes": [
+                "Cause 1 for E142",
+                "Cause 2 for E142",
+                "Cause 3 for E142"
+            ],
+            "repairs": [
+                "Step 1 to resolve E142 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E142",
+                "Step 3 to resolve E142"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E143": {
+            "problem": "Description of problem for E143",
+            "causes": [
+                "Cause 1 for E143",
+                "Cause 2 for E143",
+                "Cause 3 for E143"
+            ],
+            "repairs": [
+                "Step 1 to resolve E143 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E143",
+                "Step 3 to resolve E143"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E144": {
+            "problem": "Description of problem for E144",
+            "causes": [
+                "Cause 1 for E144",
+                "Cause 2 for E144",
+                "Cause 3 for E144"
+            ],
+            "repairs": [
+                "Step 1 to resolve E144 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E144",
+                "Step 3 to resolve E144"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E149": {
+            "problem": "Description of problem for E149",
+            "causes": [
+                "Cause 1 for E149",
+                "Cause 2 for E149",
+                "Cause 3 for E149"
+            ],
+            "repairs": [
+                "Step 1 to resolve E149 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E149",
+                "Step 3 to resolve E149"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E150": {
+            "problem": "Description of problem for E150",
+            "causes": [
+                "Cause 1 for E150",
+                "Cause 2 for E150",
+                "Cause 3 for E150"
+            ],
+            "repairs": [
+                "Step 1 to resolve E150 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E150",
+                "Step 3 to resolve E150"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E163": {
+            "problem": "Description of problem for E163",
+            "causes": [
+                "Cause 1 for E163",
+                "Cause 2 for E163",
+                "Cause 3 for E163"
+            ],
+            "repairs": [
+                "Step 1 to resolve E163 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E163",
+                "Step 3 to resolve E163"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E164": {
+            "problem": "Description of problem for E164",
+            "causes": [
+                "Cause 1 for E164",
+                "Cause 2 for E164",
+                "Cause 3 for E164"
+            ],
+            "repairs": [
+                "Step 1 to resolve E164 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E164",
+                "Step 3 to resolve E164"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E165": {
+            "problem": "Description of problem for E165",
+            "causes": [
+                "Cause 1 for E165",
+                "Cause 2 for E165",
+                "Cause 3 for E165"
+            ],
+            "repairs": [
+                "Step 1 to resolve E165 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E165",
+                "Step 3 to resolve E165"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E167": {
+            "problem": "Description of problem for E167",
+            "causes": [
+                "Cause 1 for E167",
+                "Cause 2 for E167",
+                "Cause 3 for E167"
+            ],
+            "repairs": [
+                "Step 1 to resolve E167 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E167",
+                "Step 3 to resolve E167"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E168": {
+            "problem": "Description of problem for E168",
+            "causes": [
+                "Cause 1 for E168",
+                "Cause 2 for E168",
+                "Cause 3 for E168"
+            ],
+            "repairs": [
+                "Step 1 to resolve E168 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E168",
+                "Step 3 to resolve E168"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E169": {
+            "problem": "Description of problem for E169",
+            "causes": [
+                "Cause 1 for E169",
+                "Cause 2 for E169",
+                "Cause 3 for E169"
+            ],
+            "repairs": [
+                "Step 1 to resolve E169 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E169",
+                "Step 3 to resolve E169"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E300": {
+            "problem": "Description of problem for E300",
+            "causes": [
+                "Cause 1 for E300",
+                "Cause 2 for E300",
+                "Cause 3 for E300"
+            ],
+            "repairs": [
+                "Step 1 to resolve E300 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E300",
+                "Step 3 to resolve E300"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E303": {
+            "problem": "Description of problem for E303",
+            "causes": [
+                "Cause 1 for E303",
+                "Cause 2 for E303",
+                "Cause 3 for E303"
+            ],
+            "repairs": [
+                "Step 1 to resolve E303 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E303",
+                "Step 3 to resolve E303"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E304": {
+            "problem": "Description of problem for E304",
+            "causes": [
+                "Cause 1 for E304",
+                "Cause 2 for E304",
+                "Cause 3 for E304"
+            ],
+            "repairs": [
+                "Step 1 to resolve E304 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E304",
+                "Step 3 to resolve E304"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E308": {
+            "problem": "Description of problem for E308",
+            "causes": [
+                "Cause 1 for E308",
+                "Cause 2 for E308",
+                "Cause 3 for E308"
+            ],
+            "repairs": [
+                "Step 1 to resolve E308 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E308",
+                "Step 3 to resolve E308"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E310": {
+            "problem": "Description of problem for E310",
+            "causes": [
+                "Cause 1 for E310",
+                "Cause 2 for E310",
+                "Cause 3 for E310"
+            ],
+            "repairs": [
+                "Step 1 to resolve E310 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E310",
+                "Step 3 to resolve E310"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E311": {
+            "problem": "Description of problem for E311",
+            "causes": [
+                "Cause 1 for E311",
+                "Cause 2 for E311",
+                "Cause 3 for E311"
+            ],
+            "repairs": [
+                "Step 1 to resolve E311 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E311",
+                "Step 3 to resolve E311"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E312": {
+            "problem": "Description of problem for E312",
+            "causes": [
+                "Cause 1 for E312",
+                "Cause 2 for E312",
+                "Cause 3 for E312"
+            ],
+            "repairs": [
+                "Step 1 to resolve E312 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E312",
+                "Step 3 to resolve E312"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E313": {
+            "problem": "Description of problem for E313",
+            "causes": [
+                "Cause 1 for E313",
+                "Cause 2 for E313",
+                "Cause 3 for E313"
+            ],
+            "repairs": [
+                "Step 1 to resolve E313 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E313",
+                "Step 3 to resolve E313"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E314": {
+            "problem": "Description of problem for E314",
+            "causes": [
+                "Cause 1 for E314",
+                "Cause 2 for E314",
+                "Cause 3 for E314"
+            ],
+            "repairs": [
+                "Step 1 to resolve E314 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E314",
+                "Step 3 to resolve E314"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E315": {
+            "problem": "Description of problem for E315",
+            "causes": [
+                "Cause 1 for E315",
+                "Cause 2 for E315",
+                "Cause 3 for E315"
+            ],
+            "repairs": [
+                "Step 1 to resolve E315 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E315",
+                "Step 3 to resolve E315"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E316": {
+            "problem": "Description of problem for E316",
+            "causes": [
+                "Cause 1 for E316",
+                "Cause 2 for E316",
+                "Cause 3 for E316"
+            ],
+            "repairs": [
+                "Step 1 to resolve E316 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E316",
+                "Step 3 to resolve E316"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E317": {
+            "problem": "Description of problem for E317",
+            "causes": [
+                "Cause 1 for E317",
+                "Cause 2 for E317",
+                "Cause 3 for E317"
+            ],
+            "repairs": [
+                "Step 1 to resolve E317 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E317",
+                "Step 3 to resolve E317"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E318": {
+            "problem": "Description of problem for E318",
+            "causes": [
+                "Cause 1 for E318",
+                "Cause 2 for E318",
+                "Cause 3 for E318"
+            ],
+            "repairs": [
+                "Step 1 to resolve E318 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E318",
+                "Step 3 to resolve E318"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E319": {
+            "problem": "Description of problem for E319",
+            "causes": [
+                "Cause 1 for E319",
+                "Cause 2 for E319",
+                "Cause 3 for E319"
+            ],
+            "repairs": [
+                "Step 1 to resolve E319 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E319",
+                "Step 3 to resolve E319"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E320": {
+            "problem": "Description of problem for E320",
+            "causes": [
+                "Cause 1 for E320",
+                "Cause 2 for E320",
+                "Cause 3 for E320"
+            ],
+            "repairs": [
+                "Step 1 to resolve E320 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E320",
+                "Step 3 to resolve E320"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E321": {
+            "problem": "Description of problem for E321",
+            "causes": [
+                "Cause 1 for E321",
+                "Cause 2 for E321",
+                "Cause 3 for E321"
+            ],
+            "repairs": [
+                "Step 1 to resolve E321 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E321",
+                "Step 3 to resolve E321"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E400": {
+            "problem": "Description of problem for E400",
+            "causes": [
+                "Cause 1 for E400",
+                "Cause 2 for E400",
+                "Cause 3 for E400"
+            ],
+            "repairs": [
+                "Step 1 to resolve E400 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E400",
+                "Step 3 to resolve E400"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E402": {
+            "problem": "Description of problem for E402",
+            "causes": [
+                "Cause 1 for E402",
+                "Cause 2 for E402",
+                "Cause 3 for E402"
+            ],
+            "repairs": [
+                "Step 1 to resolve E402 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E402",
+                "Step 3 to resolve E402"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E403": {
+            "problem": "Description of problem for E403",
+            "causes": [
+                "Cause 1 for E403",
+                "Cause 2 for E403",
+                "Cause 3 for E403"
+            ],
+            "repairs": [
+                "Step 1 to resolve E403 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E403",
+                "Step 3 to resolve E403"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E404": {
+            "problem": "Description of problem for E404",
+            "causes": [
+                "Cause 1 for E404",
+                "Cause 2 for E404",
+                "Cause 3 for E404"
+            ],
+            "repairs": [
+                "Step 1 to resolve E404 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E404",
+                "Step 3 to resolve E404"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
+        },
+        "E405": {
+            "problem": "Description of problem for E405",
+            "causes": [
+                "Cause 1 for E405",
+                "Cause 2 for E405",
+                "Cause 3 for E405"
+            ],
+            "repairs": [
+                "Step 1 to resolve E405 (refer to section 8.5, page 250+)",
+                "Step 2 to resolve E405",
+                "Step 3 to resolve E405"
+            ],
+            "image": "",
+            "modelo": [
+                "UP700"
+            ]
         }
 }
+
 
 
 
