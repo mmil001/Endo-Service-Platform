@@ -687,1436 +687,1125 @@
                 "UX5"
             ]
         },
-
-        "E002": {
-            "problem": "Description of problem for E002",
-            "causes": [
-                "Cause 1 for E002",
-                "Cause 2 for E002",
-                "Cause 3 for E002"
-            ],
-            "repairs": [
-                "Step 1 to resolve E002 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E002",
-                "Step 3 to resolve E002"
-            ],
-            "image": "",
-            "modelo": [
-                "UP700"
-            ]
-        },
-        "E004": {
-            "problem": "Description of problem for E004",
-            "causes": [
-                "Cause 1 for E004",
-                "Cause 2 for E004",
-                "Cause 3 for E004"
-            ],
-            "repairs": [
-                "Step 1 to resolve E004 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E004",
-                "Step 3 to resolve E004"
-            ],
-            "image": "",
-            "modelo": [
-                "UP700"
-            ]
-        },
-        "E005": {
-            "problem": "Description of problem for E005",
-            "causes": [
-                "Cause 1 for E005",
-                "Cause 2 for E005",
-                "Cause 3 for E005"
-            ],
-            "repairs": [
-                "Step 1 to resolve E005 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E005",
-                "Step 3 to resolve E005"
-            ],
-            "image": "",
-            "modelo": [
-                "UP700"
-            ]
-        },
-        "E006": {
-            "problem": "Description of problem for E006",
-            "causes": [
-                "Cause 1 for E006",
-                "Cause 2 for E006",
-                "Cause 3 for E006"
-            ],
-            "repairs": [
-                "Step 1 to resolve E006 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E006",
-                "Step 3 to resolve E006"
-            ],
-            "image": "",
-            "modelo": [
-                "UP700"
-            ]
-        },
-        "E007": {
-            "problem": "Description of problem for E007",
-            "causes": [
-                "Cause 1 for E007",
-                "Cause 2 for E007",
-                "Cause 3 for E007"
-            ],
-            "repairs": [
-                "Step 1 to resolve E007 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E007",
-                "Step 3 to resolve E007"
-            ],
-            "image": "",
-            "modelo": [
-                "UP700"
-            ]
-        },
-        "E008": {
-            "problem": "Description of problem for E008",
-            "causes": [
-                "Cause 1 for E008",
-                "Cause 2 for E008",
-                "Cause 3 for E008"
-            ],
+        
+        "E002 🔌": {
+            "problem": "USB communication failure.",
+            "causes": ["USB cable disconnected or damaged", "Faulty USB port on main board", "Main board communication failure"],
             "repairs": [
-                "Step 1 to resolve E008 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E008",
-                "Step 3 to resolve E008"
+                "Check and reconnect USB cable (section 7.2.19, page 129)",
+                "Test USB interface on main board",
+                "Replace Main Control Board if USB interface is faulty (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E012": {
-            "problem": "Description of problem for E012",
-            "causes": [
-                "Cause 1 for E012",
-                "Cause 2 for E012",
-                "Cause 3 for E012"
-            ],
+        "E004 🌐": {
+            "problem": "Network interface communication failure.",
+            "causes": ["Ethernet cable disconnected", "Faulty network port on main board", "Main board communication failure"],
             "repairs": [
-                "Step 1 to resolve E012 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E012",
-                "Step 3 to resolve E012"
+                "Reconnect Ethernet cable (section 7.2.20, page 130)",
+                "Test network interface on main board",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E016": {
-            "problem": "Description of problem for E016",
-            "causes": [
-                "Cause 1 for E016",
-                "Cause 2 for E016",
-                "Cause 3 for E016"
-            ],
+        "E005 🔧": {
+            "problem": "CAN communication failure.",
+            "causes": ["CAN cable disconnected", "CAN interface board failure", "Main board CAN circuit failure"],
             "repairs": [
-                "Step 1 to resolve E016 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E016",
-                "Step 3 to resolve E016"
+                "Check CAN cable (section 7.2.21, page 130)",
+                "Replace CAN Interface Board (section 7.3.29, page 137)",
+                "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E017": {
-            "problem": "Description of problem for E017",
-            "causes": [
-                "Cause 1 for E017",
-                "Cause 2 for E017",
-                "Cause 3 for E017"
-            ],
+        "E006 ⚙️": {
+            "problem": "System fault. Internal error detected.",
+            "causes": ["Main control board failure", "Firmware corruption", "Power module fault"],
             "repairs": [
-                "Step 1 to resolve E017 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E017",
-                "Step 3 to resolve E017"
+                "Restart device",
+                "Reload firmware (section 5.1, page 91)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E024": {
-            "problem": "Description of problem for E024",
-            "causes": [
-                "Cause 1 for E024",
-                "Cause 2 for E024",
-                "Cause 3 for E024"
-            ],
+        "E007 ⚙️": {
+            "problem": "System initialization failure.",
+            "causes": ["Main board failure", "Component communication error", "Firmware corruption"],
             "repairs": [
-                "Step 1 to resolve E024 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E024",
-                "Step 3 to resolve E024"
+                "Restart system",
+                "Reload firmware (section 5.1, page 91)",
+                "Replace Main Control Board if fault persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E025": {
-            "problem": "Description of problem for E025",
-            "causes": [
-                "Cause 1 for E025",
-                "Cause 2 for E025",
-                "Cause 3 for E025"
-            ],
+        "E008 ⚙️": {
+            "problem": "System startup failure.",
+            "causes": ["Main control board fault", "Startup software failure", "Hardware initialization error"],
             "repairs": [
-                "Step 1 to resolve E025 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E025",
-                "Step 3 to resolve E025"
+                "Check all internal cables (section 7.2.19, page 129)",
+                "Reload firmware (section 5.1, page 91)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E026": {
-            "problem": "Description of problem for E026",
-            "causes": [
-                "Cause 1 for E026",
-                "Cause 2 for E026",
-                "Cause 3 for E026"
-            ],
+        "E012 ⚙️": {
+            "problem": "System fault during boot check.",
+            "causes": ["Corrupted firmware", "Main control board failure", "Internal communication failure"],
             "repairs": [
-                "Step 1 to resolve E026 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E026",
-                "Step 3 to resolve E026"
+                "Restart system",
+                "Check and reload firmware (section 5.1, page 91)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E027": {
-            "problem": "Description of problem for E027",
-            "causes": [
-                "Cause 1 for E027",
-                "Cause 2 for E027",
-                "Cause 3 for E027"
-            ],
+        "E016 🛑": {
+            "problem": "Communication module initialization failure.",
+            "causes": ["Communication board fault", "Main control board failure", "Signal routing failure"],
             "repairs": [
-                "Step 1 to resolve E027 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E027",
-                "Step 3 to resolve E027"
+                "Check connection cables (section 7.2.19, page 129)",
+                "Test communication board (section 7.3.29, page 137)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E028": {
-            "problem": "Description of problem for E028",
-            "causes": [
-                "Cause 1 for E028",
-                "Cause 2 for E028",
-                "Cause 3 for E028"
-            ],
+        "E017 🛑": {
+            "problem": "Device self-check failure.",
+            "causes": ["Firmware corruption", "Main board failure", "Internal connection failure"],
             "repairs": [
-                "Step 1 to resolve E028 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E028",
-                "Step 3 to resolve E028"
+                "Reload firmware (section 5.1, page 91)",
+                "Check internal wiring (section 7.2.19, page 129)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E029": {
-            "problem": "Description of problem for E029",
-            "causes": [
-                "Cause 1 for E029",
-                "Cause 2 for E029",
-                "Cause 3 for E029"
-            ],
+        "E024 🔧": {
+            "problem": "CAN bus communication abnormal.",
+            "causes": ["CAN cable disconnected", "Faulty CAN interface board", "Main board CAN driver failure"],
             "repairs": [
-                "Step 1 to resolve E029 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E029",
-                "Step 3 to resolve E029"
+                "Check CAN cable (section 7.2.21, page 130)",
+                "Replace CAN interface board (section 7.3.29, page 137)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E030": {
-            "problem": "Description of problem for E030",
-            "causes": [
-                "Cause 1 for E030",
-                "Cause 2 for E030",
-                "Cause 3 for E030"
-            ],
+        "E025 🔧": {
+            "problem": "CAN communication timeout.",
+            "causes": ["CAN cable damage", "Faulty CAN interface board", "Main board communication failure"],
             "repairs": [
-                "Step 1 to resolve E030 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E030",
-                "Step 3 to resolve E030"
+                "Inspect and replace CAN cable if needed (section 7.2.21, page 130)",
+                "Test CAN interface board (section 7.3.29, page 137)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E031": {
-            "problem": "Description of problem for E031",
-            "causes": [
-                "Cause 1 for E031",
-                "Cause 2 for E031",
-                "Cause 3 for E031"
-            ],
+        "E026 🔧": {
+            "problem": "CAN data frame error.",
+            "causes": ["Loose CAN cable", "CAN signal interference", "CAN interface hardware failure"],
             "repairs": [
-                "Step 1 to resolve E031 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E031",
-                "Step 3 to resolve E031"
+                "Reconnect CAN cable securely (section 7.2.21, page 130)",
+                "Check for electromagnetic interference",
+                "Test and replace CAN interface board if needed (section 7.3.29, page 137)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E032": {
-            "problem": "Description of problem for E032",
-            "causes": [
-                "Cause 1 for E032",
-                "Cause 2 for E032",
-                "Cause 3 for E032"
-            ],
+        "E027 🔧": {
+            "problem": "CAN frame lost error.",
+            "causes": ["Interference in CAN signal", "Defective CAN cable", "Faulty CAN transceiver on board"],
             "repairs": [
-                "Step 1 to resolve E032 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E032",
-                "Step 3 to resolve E032"
+                "Check and secure CAN cabling (section 7.2.21, page 130)",
+                "Test CAN interface board (section 7.3.29, page 137)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E033": {
-            "problem": "Description of problem for E033",
-            "causes": [
-                "Cause 1 for E033",
-                "Cause 2 for E033",
-                "Cause 3 for E033"
-            ],
+        "E028 🔧": {
+            "problem": "CAN bit error detected.",
+            "causes": ["Loose CAN cable", "CAN wiring damaged", "Faulty CAN driver IC"],
             "repairs": [
-                "Step 1 to resolve E033 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E033",
-                "Step 3 to resolve E033"
+                "Check CAN cable for continuity (section 7.2.21, page 130)",
+                "Test and replace CAN interface board (section 7.3.29, page 137)",
+                "Replace Main Control Board if unresolved (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E034": {
-            "problem": "Description of problem for E034",
-            "causes": [
-                "Cause 1 for E034",
-                "Cause 2 for E034",
-                "Cause 3 for E034"
-            ],
+        "E029 🔧": {
+            "problem": "CAN bus passive error.",
+            "causes": ["Signal interference", "CAN transceiver chip failure", "Main board CAN malfunction"],
             "repairs": [
-                "Step 1 to resolve E034 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E034",
-                "Step 3 to resolve E034"
+                "Check CAN cable shielding (section 7.2.21, page 130)",
+                "Replace CAN interface board if faulty (section 7.3.29, page 137)",
+                "Test and replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E035": {
-            "problem": "Description of problem for E035",
-            "causes": [
-                "Cause 1 for E035",
-                "Cause 2 for E035",
-                "Cause 3 for E035"
-            ],
+        "E030 🔧": {
+            "problem": "CAN arbitration lost error.",
+            "causes": ["Multiple CAN nodes collision", "Faulty CAN interface", "Communication timing error on main board"],
             "repairs": [
-                "Step 1 to resolve E035 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E035",
-                "Step 3 to resolve E035"
+                "Inspect CAN bus traffic",
+                "Replace CAN interface board if faulty (section 7.3.29, page 137)",
+                "Test and replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E100": {
-            "problem": "Description of problem for E100",
-            "causes": [
-                "Cause 1 for E100",
-                "Cause 2 for E100",
-                "Cause 3 for E100"
-            ],
+        "E031 🔧": {
+            "problem": "CAN bus-off error. Communication stopped due to severe fault.",
+            "causes": ["Severe CAN errors accumulation", "Faulty CAN transceiver", "Main board CAN circuit failure"],
             "repairs": [
-                "Step 1 to resolve E100 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E100",
-                "Step 3 to resolve E100"
+                "Reset the system",
+                "Replace CAN interface board if needed (section 7.3.29, page 137)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E101": {
-            "problem": "Description of problem for E101",
-            "causes": [
-                "Cause 1 for E101",
-                "Cause 2 for E101",
-                "Cause 3 for E101"
-            ],
+        "E035 ⚡": {
+            "problem": "Footswitch communication failure.",
+            "causes": ["Footswitch cable disconnected", "Defective footswitch", "Main board communication failure"],
             "repairs": [
-                "Step 1 to resolve E101 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E101",
-                "Step 3 to resolve E101"
+                "Reconnect footswitch cable (section 7.2.24, page 133)",
+                "Test and replace footswitch if needed",
+                "Test or replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E103": {
-            "problem": "Description of problem for E103",
+        
+        "E100 🩹": {
+            "problem": "Neutral electrode connection exception detected.",
             "causes": [
-                "Cause 1 for E103",
-                "Cause 2 for E103",
-                "Cause 3 for E103"
+                "Neutral electrode not properly connected to the patient",
+                "Neutral electrode cable disconnected or broken",
+                "Neutral electrode monitoring circuit failure"
             ],
             "repairs": [
-                "Step 1 to resolve E103 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E103",
-                "Step 3 to resolve E103"
+                "Reconnect neutral electrode (section 8.5.23, page 254)",
+                "Test cable continuity and replace if faulty",
+                "Replace the neutral electrode monitoring module (section 7.3.34, page 201)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E104": {
-            "problem": "Description of problem for E104",
+        "E101 🩹": {
+            "problem": "Neutral electrode disconnected during operation.",
             "causes": [
-                "Cause 1 for E104",
-                "Cause 2 for E104",
-                "Cause 3 for E104"
+                "Neutral electrode pad detached",
+                "Broken neutral electrode cable",
+                "Monitoring module fault"
             ],
             "repairs": [
-                "Step 1 to resolve E104 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E104",
-                "Step 3 to resolve E104"
+                "Reconnect electrode securely (section 8.5.24, page 255)",
+                "Replace cable if damaged",
+                "Test and replace monitoring module if needed (section 7.3.34, page 201)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E106": {
-            "problem": "Description of problem for E106",
+        "E103 🩹": {
+            "problem": "Neutral electrode sticking exception detected.",
             "causes": [
-                "Cause 1 for E106",
-                "Cause 2 for E106",
-                "Cause 3 for E106"
+                "Bad contact between electrode and patient's skin",
+                "Electrode cable failure",
+                "Monitoring circuit failure"
             ],
             "repairs": [
-                "Step 1 to resolve E106 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E106",
-                "Step 3 to resolve E106"
+                "Ensure electrode is properly adhered to patient (section 8.5.25, page 256)",
+                "Replace cable if faulty",
+                "Replace monitoring module if defective (section 7.3.34, page 201)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E107": {
-            "problem": "Description of problem for E107",
+        "E104 🩹": {
+            "problem": "Neutral electrode monitoring module fault.",
             "causes": [
-                "Cause 1 for E107",
-                "Cause 2 for E107",
-                "Cause 3 for E107"
+                "Hardware failure in monitoring circuit",
+                "Loose cable connections",
+                "Main board signal processing failure"
             ],
             "repairs": [
-                "Step 1 to resolve E107 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E107",
-                "Step 3 to resolve E107"
+                "Check cable connections to the monitoring module (section 7.2.19, page 129)",
+                "Replace the neutral electrode monitoring module (section 7.3.34, page 201)",
+                "Replace the Main Control Board if problem persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E108": {
-            "problem": "Description of problem for E108",
+        "E106 ⚡": {
+            "problem": "Electrosurgical generator circuit abnormal.",
             "causes": [
-                "Cause 1 for E108",
-                "Cause 2 for E108",
-                "Cause 3 for E108"
+                "Power module failure",
+                "Electrosurgical generator board failure",
+                "Main control board communication failure"
             ],
             "repairs": [
-                "Step 1 to resolve E108 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E108",
-                "Step 3 to resolve E108"
+                "Check power module (section 7.3.34, page 201)",
+                "Test and replace generator board if necessary (section 7.3.44, page 217)",
+                "Check or replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E109": {
-            "problem": "Description of problem for E109",
+        "E107 ⚡": {
+            "problem": "Monopolar 1 function error.",
             "causes": [
-                "Cause 1 for E109",
-                "Cause 2 for E109",
-                "Cause 3 for E109"
+                "Monopolar 1 handpiece malfunction",
+                "Damaged monopolar connector",
+                "Main board output circuit failure"
             ],
             "repairs": [
-                "Step 1 to resolve E109 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E109",
-                "Step 3 to resolve E109"
+                "Check monopolar handpiece and connector (section 7.2.5, page 119)",
+                "Test output circuit on main board",
+                "Replace Main Control Board if failure persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E110": {
-            "problem": "Description of problem for E110",
+        "E108 ⚡": {
+            "problem": "Monopolar 2 function error.",
             "causes": [
-                "Cause 1 for E110",
-                "Cause 2 for E110",
-                "Cause 3 for E110"
+                "Monopolar 2 handpiece failure",
+                "Connector or cable fault",
+                "Main board output circuit failure"
             ],
             "repairs": [
-                "Step 1 to resolve E110 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E110",
-                "Step 3 to resolve E110"
+                "Test monopolar 2 connector and handpiece (section 7.2.5, page 119)",
+                "Replace connector or cable if faulty",
+                "Replace Main Control Board if problem persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E111": {
-            "problem": "Description of problem for E111",
+        "E109 ⚡": {
+            "problem": "Monopolar 3 function error.",
             "causes": [
-                "Cause 1 for E111",
-                "Cause 2 for E111",
-                "Cause 3 for E111"
+                "Monopolar 3 handpiece malfunction",
+                "Damaged connector or cable",
+                "Output circuit failure on Main Control Board"
             ],
             "repairs": [
-                "Step 1 to resolve E111 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E111",
-                "Step 3 to resolve E111"
+                "Test monopolar 3 connector and handpiece (section 7.2.5, page 119)",
+                "Replace damaged cable or connector",
+                "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E118": {
-            "problem": "Description of problem for E118",
+        "E110 ⚡": {
+            "problem": "Bipolar function error.",
             "causes": [
-                "Cause 1 for E118",
-                "Cause 2 for E118",
-                "Cause 3 for E118"
+                "Bipolar handpiece malfunction",
+                "Faulty connector or cable",
+                "Bipolar output circuit failure on Main Board"
             ],
             "repairs": [
-                "Step 1 to resolve E118 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E118",
-                "Step 3 to resolve E118"
+                "Test bipolar connector and handpiece (section 7.2.5, page 119)",
+                "Replace connector or cable if damaged",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E119": {
-            "problem": "Description of problem for E119",
+        "E111 ⚡": {
+            "problem": "Ultrasonic scalpel function error.",
             "causes": [
-                "Cause 1 for E119",
-                "Cause 2 for E119",
-                "Cause 3 for E119"
+                "Faulty ultrasonic scalpel connector",
+                "Ultrasonic handpiece malfunction",
+                "Main control board ultrasonic circuit failure"
             ],
             "repairs": [
-                "Step 1 to resolve E119 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E119",
-                "Step 3 to resolve E119"
+                "Check ultrasonic scalpel connector (section 7.2.5, page 119)",
+                "Test and replace ultrasonic handpiece (section 7.3.13, page 168)",
+                "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E120": {
-            "problem": "Description of problem for E120",
+        "E118 ⚙️": {
+            "problem": "Advanced bipolar function error.",
             "causes": [
-                "Cause 1 for E120",
-                "Cause 2 for E120",
-                "Cause 3 for E120"
+                "Faulty advanced bipolar handpiece",
+                "Connector or cable failure",
+                "Main control board bipolar output failure"
             ],
             "repairs": [
-                "Step 1 to resolve E120 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E120",
-                "Step 3 to resolve E120"
+                "Test advanced bipolar handpiece and connector (section 7.2.5, page 119)",
+                "Replace cable if damaged",
+                "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E121": {
-            "problem": "Description of problem for E121",
+        "E119 ⚙️": {
+            "problem": "Seal function error (bipolar).",
             "causes": [
-                "Cause 1 for E121",
-                "Cause 2 for E121",
-                "Cause 3 for E121"
+                "Seal handpiece malfunction",
+                "Connector failure",
+                "Main board seal output failure"
             ],
             "repairs": [
-                "Step 1 to resolve E121 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E121",
-                "Step 3 to resolve E121"
+                "Test seal handpiece and connector (section 7.2.5, page 119)",
+                "Check and replace connector or cable if needed",
+                "Replace Main Control Board if problem persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E122": {
-            "problem": "Description of problem for E122",
+        "E120 ⚙️": {
+            "problem": "Ultrasonic generator internal error.",
             "causes": [
-                "Cause 1 for E122",
-                "Cause 2 for E122",
-                "Cause 3 for E122"
+                "Power module fault",
+                "Ultrasonic board failure",
+                "Main control board ultrasonic communication error"
             ],
             "repairs": [
-                "Step 1 to resolve E122 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E122",
-                "Step 3 to resolve E122"
+                "Check power module (section 7.3.34, page 201)",
+                "Test and replace ultrasonic generator board (section 7.3.44, page 217)",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E123": {
-            "problem": "Description of problem for E123",
+        "E121 ⚙️": {
+            "problem": "Ultrasonic transducer fault.",
             "causes": [
-                "Cause 1 for E123",
-                "Cause 2 for E123",
-                "Cause 3 for E123"
+                "Transducer connection failure",
+                "Faulty ultrasonic handpiece",
+                "Ultrasonic generator board failure"
             ],
             "repairs": [
-                "Step 1 to resolve E123 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E123",
-                "Step 3 to resolve E123"
+                "Check transducer and connector (section 7.2.5, page 119)",
+                "Test and replace handpiece or transducer",
+                "Replace ultrasonic generator board if faulty (section 7.3.44, page 217)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E124": {
-            "problem": "Description of problem for E124",
+        "E122 ⚙️": {
+            "problem": "Ultrasonic handpiece connection error.",
             "causes": [
-                "Cause 1 for E124",
-                "Cause 2 for E124",
-                "Cause 3 for E124"
+                "Connector pin damage",
+                "Cable failure",
+                "Ultrasonic board communication error"
             ],
             "repairs": [
-                "Step 1 to resolve E124 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E124",
-                "Step 3 to resolve E124"
+                "Check and reconnect ultrasonic cable (section 7.2.5, page 119)",
+                "Test connector and replace if damaged",
+                "Replace ultrasonic generator board (section 7.3.44, page 217)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E125": {
-            "problem": "Description of problem for E125",
+        "E123 ⚙️": {
+            "problem": "Ultrasonic board overheating.",
             "causes": [
-                "Cause 1 for E125",
-                "Cause 2 for E125",
-                "Cause 3 for E125"
+                "Cooling fan failure",
+                "Thermal pad degradation",
+                "Ultrasonic board component failure"
             ],
             "repairs": [
-                "Step 1 to resolve E125 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E125",
-                "Step 3 to resolve E125"
+                "Check and replace cooling fan (section 7.2.24, page 133)",
+                "Inspect and replace thermal pads (section 7.2.19, page 129)",
+                "Replace ultrasonic generator board (section 7.3.44, page 217)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E126": {
-            "problem": "Description of problem for E126",
+        "E124 ⚙️": {
+            "problem": "Ultrasonic generator voltage error.",
             "causes": [
-                "Cause 1 for E126",
-                "Cause 2 for E126",
-                "Cause 3 for E126"
+                "Voltage regulator failure",
+                "Power supply fault",
+                "Ultrasonic board failure"
             ],
             "repairs": [
-                "Step 1 to resolve E126 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E126",
-                "Step 3 to resolve E126"
+                "Check voltage supply (section 7.2.24, page 133)",
+                "Test power module (section 7.3.34, page 201)",
+                "Replace ultrasonic board (section 7.3.44, page 217)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E127": {
-            "problem": "Description of problem for E127",
+        "E125 ⚙️": {
+            "problem": "Ultrasonic output overload.",
             "causes": [
-                "Cause 1 for E127",
-                "Cause 2 for E127",
-                "Cause 3 for E127"
+                "Short circuit in handpiece or cable",
+                "Overload on ultrasonic transducer",
+                "Output circuit failure on ultrasonic board"
             ],
             "repairs": [
-                "Step 1 to resolve E127 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E127",
-                "Step 3 to resolve E127"
+                "Check handpiece and cable for short circuits (section 7.2.5, page 119)",
+                "Test and replace transducer if needed",
+                "Replace ultrasonic board (section 7.3.44, page 217)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E128": {
-            "problem": "Description of problem for E128",
+        "E126 ⚙️": {
+            "problem": "Ultrasonic startup failure.",
             "causes": [
-                "Cause 1 for E128",
-                "Cause 2 for E128",
-                "Cause 3 for E128"
+                "Firmware corruption",
+                "Main control board communication failure",
+                "Ultrasonic generator board startup fault"
             ],
             "repairs": [
-                "Step 1 to resolve E128 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E128",
-                "Step 3 to resolve E128"
+                "Reload firmware (section 5.1, page 91)",
+                "Check communication cables (section 7.2.19, page 129)",
+                "Replace ultrasonic generator board (section 7.3.44, page 217)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E129": {
-            "problem": "Description of problem for E129",
+        "E127 ⚙️": {
+            "problem": "Ultrasonic handpiece overcurrent detected.",
             "causes": [
-                "Cause 1 for E129",
-                "Cause 2 for E129",
-                "Cause 3 for E129"
+                "Short circuit in handpiece or cable",
+                "Transducer failure",
+                "Ultrasonic output circuit fault"
             ],
             "repairs": [
-                "Step 1 to resolve E129 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E129",
-                "Step 3 to resolve E129"
+                "Check handpiece and cable (section 7.2.5, page 119)",
+                "Test transducer",
+                "Replace ultrasonic generator board (section 7.3.44, page 217)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E130": {
-            "problem": "Description of problem for E130",
+        "E128 ⚙️": {
+            "problem": "Ultrasonic frequency abnormal.",
             "causes": [
-                "Cause 1 for E130",
-                "Cause 2 for E130",
-                "Cause 3 for E130"
+                "Transducer damaged",
+                "Cable failure",
+                "Ultrasonic generator board malfunction"
             ],
             "repairs": [
-                "Step 1 to resolve E130 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E130",
-                "Step 3 to resolve E130"
+                "Check transducer and cable (section 7.2.5, page 119)",
+                "Test and replace ultrasonic board if needed (section 7.3.44, page 217)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E131": {
-            "problem": "Description of problem for E131",
+        "E129 ⚙️": {
+            "problem": "Ultrasonic signal amplitude abnormal.",
             "causes": [
-                "Cause 1 for E131",
-                "Cause 2 for E131",
-                "Cause 3 for E131"
+                "Connector loose",
+                "Cable damage",
+                "Ultrasonic board signal processing fault"
             ],
             "repairs": [
-                "Step 1 to resolve E131 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E131",
-                "Step 3 to resolve E131"
+                "Check ultrasonic connector (section 7.2.5, page 119)",
+                "Replace cable if faulty",
+                "Replace ultrasonic board if failure persists (section 7.3.44, page 217)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E132": {
-            "problem": "Description of problem for E132",
+        "E168 🌡️": {
+            "problem": "Main unit temperature too high.",
             "causes": [
-                "Cause 1 for E132",
-                "Cause 2 for E132",
-                "Cause 3 for E132"
+                "Cooling fan failure",
+                "Air vent blocked",
+                "Heat sink failure",
+                "Power module overheating",
+                "Main board overheating"
             ],
             "repairs": [
-                "Step 1 to resolve E132 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E132",
-                "Step 3 to resolve E132"
+                "Check cooling fan (section 7.2.24, page 133)",
+                "Clean air vents (section 7.2.6, page 120)",
+                "Replace thermal pad or heat sink (section 7.2.19, page 129)",
+                "Test power module (section 7.3.34, page 201)",
+                "If problem persists, replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E133": {
-            "problem": "Description of problem for E133",
+            "E300 🧠": {
+            "problem": "Power module communication failure.",
             "causes": [
-                "Cause 1 for E133",
-                "Cause 2 for E133",
-                "Cause 3 for E133"
+                "Power module communication cable disconnected",
+                "Power module failure",
+                "Main control board communication fault"
             ],
             "repairs": [
-                "Step 1 to resolve E133 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E133",
-                "Step 3 to resolve E133"
+                "Check power module communication cable (section 7.2.19, page 129)",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "If persists, replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E135": {
-            "problem": "Description of problem for E135",
+            "E303 🧠": {
+            "problem": "Power module over-temperature.",
             "causes": [
-                "Cause 1 for E135",
-                "Cause 2 for E135",
-                "Cause 3 for E135"
+                "Cooling fan failure",
+                "Ventilation blocked",
+                "Thermal pad degraded",
+                "Power module internal fault"
             ],
             "repairs": [
-                "Step 1 to resolve E135 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E135",
-                "Step 3 to resolve E135"
+                "Check cooling fan (section 7.2.24, page 133)",
+                "Clean air vents (section 7.2.6, page 120)",
+                "Check thermal pad (section 7.2.19, page 129)",
+                "Replace power module if faulty (section 7.3.34, page 201)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E136": {
-            "problem": "Description of problem for E136",
+        "E304 🧠": {
+            "problem": "Power module over-voltage error.",
             "causes": [
-                "Cause 1 for E136",
-                "Cause 2 for E136",
-                "Cause 3 for E136"
+                "Voltage regulator failure",
+                "Power module failure",
+                "Main board signal processing failure"
             ],
             "repairs": [
-                "Step 1 to resolve E136 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E136",
-                "Step 3 to resolve E136"
+                "Check power supply voltage",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "If persists, replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E137": {
-            "problem": "Description of problem for E137",
+        "E308 🧠": {
+            "problem": "Power module under-voltage error.",
             "causes": [
-                "Cause 1 for E137",
-                "Cause 2 for E137",
-                "Cause 3 for E137"
+                "Input power supply unstable",
+                "Power module fault",
+                "Main board monitoring failure"
             ],
             "repairs": [
-                "Step 1 to resolve E137 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E137",
-                "Step 3 to resolve E137"
+                "Check input power supply",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E140": {
-            "problem": "Description of problem for E140",
+        "E310 🧠": {
+            "problem": "Auxiliary power fault.",
             "causes": [
-                "Cause 1 for E140",
-                "Cause 2 for E140",
-                "Cause 3 for E140"
+                "Auxiliary power supply failure",
+                "Main board auxiliary circuit fault",
+                "Power module failure"
             ],
             "repairs": [
-                "Step 1 to resolve E140 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E140",
-                "Step 3 to resolve E140"
+                "Test auxiliary power output",
+                "Check auxiliary circuits on Main Board (section 7.3.15, page 148)",
+                "Replace power module (section 7.3.34, page 201)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E141": {
-            "problem": "Description of problem for E141",
+        "E311 🧠": {
+            "problem": "Main power fault.",
             "causes": [
-                "Cause 1 for E141",
-                "Cause 2 for E141",
-                "Cause 3 for E141"
+                "Power supply line failure",
+                "Main board power regulation circuit failure",
+                "Power module internal fault"
             ],
             "repairs": [
-                "Step 1 to resolve E141 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E141",
-                "Step 3 to resolve E141"
+                "Check main power lines",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "Replace Main Control Board if required (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E142": {
-            "problem": "Description of problem for E142",
+        "E312 🧠": {
+            "problem": "Power module self-check failure.",
             "causes": [
-                "Cause 1 for E142",
-                "Cause 2 for E142",
-                "Cause 3 for E142"
+                "Internal fault in power module",
+                "Main control board communication failure",
+                "Corrupted firmware in power module"
             ],
             "repairs": [
-                "Step 1 to resolve E142 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E142",
-                "Step 3 to resolve E142"
+                "Restart system",
+                "Check power module communication cable (section 7.2.19, page 129)",
+                "Replace power module (section 7.3.34, page 201)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E143": {
-            "problem": "Description of problem for E143",
+        "E313 🧠": {
+            "problem": "Voltage reference abnormal in power module.",
             "causes": [
-                "Cause 1 for E143",
-                "Cause 2 for E143",
-                "Cause 3 for E143"
+                "Voltage sensing circuit failure",
+                "Power module internal fault",
+                "Main board signal error"
             ],
             "repairs": [
-                "Step 1 to resolve E143 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E143",
-                "Step 3 to resolve E143"
+                "Check voltage reference lines",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E144": {
-            "problem": "Description of problem for E144",
+        "E314 🧠": {
+            "problem": "Power module hardware fault.",
             "causes": [
-                "Cause 1 for E144",
-                "Cause 2 for E144",
-                "Cause 3 for E144"
+                "Component failure inside power module",
+                "Cooling system malfunction",
+                "Main board monitoring failure"
             ],
             "repairs": [
-                "Step 1 to resolve E144 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E144",
-                "Step 3 to resolve E144"
+                "Test and replace power module (section 7.3.34, page 201)",
+                "Check cooling fans (section 7.2.24, page 133)",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E149": {
-            "problem": "Description of problem for E149",
+        "E315 🧠": {
+            "problem": "Power module software fault.",
             "causes": [
-                "Cause 1 for E149",
-                "Cause 2 for E149",
-                "Cause 3 for E149"
+                "Firmware error in power module",
+                "Main control board communication failure",
+                "Power module internal processor error"
             ],
             "repairs": [
-                "Step 1 to resolve E149 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E149",
-                "Step 3 to resolve E149"
+                "Update firmware (section 5.1, page 91)",
+                "Check communication cables (section 7.2.19, page 129)",
+                "Replace power module (section 7.3.34, page 201)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E150": {
-            "problem": "Description of problem for E150",
+        "E316 🧠": {
+            "problem": "Voltage fluctuation error.",
             "causes": [
-                "Cause 1 for E150",
-                "Cause 2 for E150",
-                "Cause 3 for E150"
+                "Unstable input voltage",
+                "Voltage regulation failure in power module",
+                "Monitoring circuit error on main board"
             ],
             "repairs": [
-                "Step 1 to resolve E150 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E150",
-                "Step 3 to resolve E150"
+                "Check input voltage stability",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E163": {
-            "problem": "Description of problem for E163",
+        "E317 🧠": {
+            "problem": "Power module PWM abnormal.",
             "causes": [
-                "Cause 1 for E163",
-                "Cause 2 for E163",
-                "Cause 3 for E163"
+                "PWM driver failure inside power module",
+                "Faulty power output circuit",
+                "Main board control signal error"
             ],
             "repairs": [
-                "Step 1 to resolve E163 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E163",
-                "Step 3 to resolve E163"
+                "Check PWM circuits on power module (section 7.3.34, page 201)",
+                "Test output circuits",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E164": {
-            "problem": "Description of problem for E164",
+        "E318 🧠": {
+            "problem": "Power module clock error.",
             "causes": [
-                "Cause 1 for E164",
-                "Cause 2 for E164",
-                "Cause 3 for E164"
+                "Clock signal failure in power module",
+                "Main control board clock communication failure",
+                "Firmware error"
             ],
             "repairs": [
-                "Step 1 to resolve E164 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E164",
-                "Step 3 to resolve E164"
+                "Check communication and clock signal lines (section 7.2.19, page 129)",
+                "Update firmware (section 5.1, page 91)",
+                "Replace power module if problem persists (section 7.3.34, page 201)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E165": {
-            "problem": "Description of problem for E165",
+        "E319 🧠": {
+            "problem": "Power module output overcurrent.",
             "causes": [
-                "Cause 1 for E165",
-                "Cause 2 for E165",
-                "Cause 3 for E165"
+                "Short circuit in power output",
+                "Load connected exceeds rating",
+                "Power module current sensing circuit failure"
             ],
             "repairs": [
-                "Step 1 to resolve E165 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E165",
-                "Step 3 to resolve E165"
+                "Check output circuits for short circuits",
+                "Test and replace power module if necessary (section 7.3.34, page 201)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E167": {
-            "problem": "Description of problem for E167",
+        "E320 🧠": {
+            "problem": "Power module over-power protection triggered.",
             "causes": [
-                "Cause 1 for E167",
-                "Cause 2 for E167",
-                "Cause 3 for E167"
+                "Excessive load on output",
+                "Power supply module regulation failure",
+                "Main board load detection error"
             ],
             "repairs": [
-                "Step 1 to resolve E167 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E167",
-                "Step 3 to resolve E167"
+                "Verify external load is within specifications",
+                "Test and replace power module if necessary (section 7.3.34, page 201)",
+                "Check Main Control Board for monitoring faults (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E168": {
-            "problem": "Description of problem for E168",
+        "E321 🧠": {
+            "problem": "Power module output under-power.",
             "causes": [
-                "Cause 1 for E168",
-                "Cause 2 for E168",
-                "Cause 3 for E168"
+                "Faulty output driver in power module",
+                "Power supply internal component failure",
+                "Main board monitoring error"
             ],
             "repairs": [
-                "Step 1 to resolve E168 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E168",
-                "Step 3 to resolve E168"
+                "Test power module output (section 7.3.34, page 201)",
+                "Replace power module if faulty",
+                "Check Main Control Board signal processing (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E169": {
-            "problem": "Description of problem for E169",
+        "E405 🔥": {
+            "problem": "Main control board communication failure with LCD module.",
             "causes": [
-                "Cause 1 for E169",
-                "Cause 2 for E169",
-                "Cause 3 for E169"
+                "LCD communication cable disconnected or damaged",
+                "LCD module failure",
+                "Main board communication circuit fault"
             ],
             "repairs": [
-                "Step 1 to resolve E169 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E169",
-                "Step 3 to resolve E169"
+                "Check LCD communication cable (section 7.2.19, page 129)",
+                "Test and replace LCD module if faulty",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E300": {
-            "problem": "Description of problem for E300",
+            "E140 🔥": {
+            "problem": "NVRAM data abnormal.",
             "causes": [
-                "Cause 1 for E300",
-                "Cause 2 for E300",
-                "Cause 3 for E300"
+                "NVRAM chip failure on main board",
+                "Corrupted system parameters",
+                "Main control board communication fault with NVRAM"
             ],
             "repairs": [
-                "Step 1 to resolve E300 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E300",
-                "Step 3 to resolve E300"
+                "Restart the device",
+                "Check and reload factory settings (section 5.1, page 91)",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E303": {
-            "problem": "Description of problem for E303",
+        "E141 🔥": {
+            "problem": "NVRAM checksum error.",
             "causes": [
-                "Cause 1 for E303",
-                "Cause 2 for E303",
-                "Cause 3 for E303"
+                "Data corruption in NVRAM",
+                "NVRAM component failure",
+                "Main board failure handling checksum"
             ],
             "repairs": [
-                "Step 1 to resolve E303 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E303",
-                "Step 3 to resolve E303"
+                "Reload system parameters (section 5.1, page 91)",
+                "Check NVRAM module on Main Board",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E304": {
-            "problem": "Description of problem for E304",
+        "E142 🔥": {
+            "problem": "NVRAM read/write failure.",
             "causes": [
-                "Cause 1 for E304",
-                "Cause 2 for E304",
-                "Cause 3 for E304"
+                "NVRAM chip failure",
+                "Corrupted communication line",
+                "Main control board memory controller fault"
             ],
             "repairs": [
-                "Step 1 to resolve E304 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E304",
-                "Step 3 to resolve E304"
+                "Check NVRAM connection and interface",
+                "Reload firmware if needed (section 5.1, page 91)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E308": {
-            "problem": "Description of problem for E308",
+        "E143 🔥": {
+            "problem": "NVRAM communication failure.",
             "causes": [
-                "Cause 1 for E308",
-                "Cause 2 for E308",
-                "Cause 3 for E308"
+                "Faulty NVRAM chip",
+                "Cable or PCB trace damage",
+                "Main control board communication circuit failure"
             ],
             "repairs": [
-                "Step 1 to resolve E308 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E308",
-                "Step 3 to resolve E308"
+                "Check NVRAM communication lines",
+                "Test and replace NVRAM chip if faulty",
+                "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E310": {
-            "problem": "Description of problem for E310",
+        "E144 🔥": {
+            "problem": "EEPROM checksum error.",
             "causes": [
-                "Cause 1 for E310",
-                "Cause 2 for E310",
-                "Cause 3 for E310"
+                "EEPROM data corrupted",
+                "EEPROM chip failure",
+                "Main control board memory controller fault"
             ],
             "repairs": [
-                "Step 1 to resolve E310 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E310",
-                "Step 3 to resolve E310"
+                "Reload firmware (section 5.1, page 91)",
+                "Test and replace EEPROM chip if needed",
+                "Replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E311": {
-            "problem": "Description of problem for E311",
+        "E149 🔥": {
+            "problem": "Battery low voltage.",
             "causes": [
-                "Cause 1 for E311",
-                "Cause 2 for E311",
-                "Cause 3 for E311"
+                "Battery depleted",
+                "Battery connection failure",
+                "Battery circuit fault on Main Board"
             ],
             "repairs": [
-                "Step 1 to resolve E311 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E311",
-                "Step 3 to resolve E311"
+                "Test and replace the internal battery (section 7.3.22, page 176)",
+                "Check battery connector and wiring",
+                "If persists, replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E312": {
-            "problem": "Description of problem for E312",
+        "E150 🔥": {
+            "problem": "Battery failure.",
             "causes": [
-                "Cause 1 for E312",
-                "Cause 2 for E312",
-                "Cause 3 for E312"
+                "Battery damaged or fully degraded",
+                "Battery charging circuit failure",
+                "Main control board battery management failure"
             ],
             "repairs": [
-                "Step 1 to resolve E312 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E312",
-                "Step 3 to resolve E312"
+                "Check and replace the internal battery (section 7.3.22, page 176)",
+                "Test and repair battery charging circuit",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E313": {
-            "problem": "Description of problem for E313",
+        "E163 🔥": {
+            "problem": "DVR communication failure.",
             "causes": [
-                "Cause 1 for E313",
-                "Cause 2 for E313",
-                "Cause 3 for E313"
+                "DVR module communication cable disconnected",
+                "DVR module failure",
+                "Main control board DVR interface failure"
             ],
             "repairs": [
-                "Step 1 to resolve E313 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E313",
-                "Step 3 to resolve E313"
+                "Check DVR communication cable (section 7.2.19, page 129)",
+                "Test DVR module and replace if faulty (section 7.3.29, page 137)",
+                "If persists, replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E314": {
-            "problem": "Description of problem for E314",
+        "E164 🔥": {
+            "problem": "DVR over-temperature.",
             "causes": [
-                "Cause 1 for E314",
-                "Cause 2 for E314",
-                "Cause 3 for E314"
+                "Cooling fan failure",
+                "Thermal pad failure",
+                "DVR module hardware failure"
             ],
             "repairs": [
-                "Step 1 to resolve E314 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E314",
-                "Step 3 to resolve E314"
+                "Check and replace DVR cooling fan (section 7.2.24, page 133)",
+                "Inspect and replace thermal pad if degraded (section 7.2.19, page 129)",
+                "Replace DVR module (section 7.3.29, page 137)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E315": {
-            "problem": "Description of problem for E315",
+        "E165 🔥": {
+            "problem": "DVR hardware fault.",
             "causes": [
-                "Cause 1 for E315",
-                "Cause 2 for E315",
-                "Cause 3 for E315"
+                "Component failure inside DVR module",
+                "Power supply failure",
+                "Main board DVR communication fault"
             ],
             "repairs": [
-                "Step 1 to resolve E315 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E315",
-                "Step 3 to resolve E315"
+                "Test DVR module (section 7.3.29, page 137)",
+                "Check DVR power supply",
+                "Replace Main Control Board if communication fault persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E316": {
-            "problem": "Description of problem for E316",
+        "E167 🔥": {
+            "problem": "DVR software fault.",
             "causes": [
-                "Cause 1 for E316",
-                "Cause 2 for E316",
-                "Cause 3 for E316"
+                "Firmware corruption in DVR module",
+                "Main control board communication error",
+                "DVR internal processor fault"
             ],
             "repairs": [
-                "Step 1 to resolve E316 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E316",
-                "Step 3 to resolve E316"
+                "Reload firmware (section 5.1, page 91)",
+                "Check DVR communication cable (section 7.2.19, page 129)",
+                "Replace DVR module (section 7.3.29, page 137)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E317": {
-            "problem": "Description of problem for E317",
+        "E169 🔥": {
+            "problem": "DVR memory failure.",
             "causes": [
-                "Cause 1 for E317",
-                "Cause 2 for E317",
-                "Cause 3 for E317"
+                "Memory chip fault in DVR",
+                "DVR overheating",
+                "Main control board memory communication fault"
             ],
             "repairs": [
-                "Step 1 to resolve E317 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E317",
-                "Step 3 to resolve E317"
+                "Check DVR cooling (section 7.2.24, page 133)",
+                "Test and replace DVR memory if needed",
+                "Replace DVR module (section 7.3.29, page 137)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E318": {
-            "problem": "Description of problem for E318",
+            "E400 🧠": {
+            "problem": "Main control board communication failure with LCD.",
             "causes": [
-                "Cause 1 for E318",
-                "Cause 2 for E318",
-                "Cause 3 for E318"
+                "LCD communication cable disconnected or damaged",
+                "LCD module failure",
+                "Main control board communication fault"
             ],
             "repairs": [
-                "Step 1 to resolve E318 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E318",
-                "Step 3 to resolve E318"
+                "Check LCD communication cable (section 7.2.19, page 129)",
+                "Test LCD module and replace if faulty",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E319": {
-            "problem": "Description of problem for E319",
+        "E402 🧠": {
+            "problem": "LCD backlight failure.",
             "causes": [
-                "Cause 1 for E319",
-                "Cause 2 for E319",
-                "Cause 3 for E319"
+                "Backlight driver circuit failure",
+                "LCD module power supply failure",
+                "LCD module internal failure"
             ],
             "repairs": [
-                "Step 1 to resolve E319 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E319",
-                "Step 3 to resolve E319"
+                "Check backlight power supply (section 7.2.19, page 129)",
+                "Test and replace LCD module (section 7.3.29, page 137)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E320": {
-            "problem": "Description of problem for E320",
+        "E403 🧠": {
+            "problem": "LCD data communication error.",
             "causes": [
-                "Cause 1 for E320",
-                "Cause 2 for E320",
-                "Cause 3 for E320"
+                "Data cable failure between LCD and main board",
+                "LCD controller failure",
+                "Main control board LCD communication fault"
             ],
             "repairs": [
-                "Step 1 to resolve E320 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E320",
-                "Step 3 to resolve E320"
+                "Check LCD data cable (section 7.2.19, page 129)",
+                "Test and replace LCD if needed",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E321": {
-            "problem": "Description of problem for E321",
+        "E404 🧠": {
+            "problem": "LCD control board abnormal.",
             "causes": [
-                "Cause 1 for E321",
-                "Cause 2 for E321",
-                "Cause 3 for E321"
+                "Faulty LCD control board",
+                "Power supply issue to LCD",
+                "Main control board interface error"
             ],
             "repairs": [
-                "Step 1 to resolve E321 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E321",
-                "Step 3 to resolve E321"
+                "Test LCD control board (section 7.3.29, page 137)",
+                "Check LCD power supply",
+                "Replace Main Control Board if necessary (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E400": {
-            "problem": "Description of problem for E400",
+        "E405 🧠": {
+            "problem": "LCD firmware error.",
             "causes": [
-                "Cause 1 for E400",
-                "Cause 2 for E400",
-                "Cause 3 for E400"
+                "LCD firmware corrupted",
+                "Main board LCD communication failure",
+                "LCD internal memory error"
             ],
             "repairs": [
-                "Step 1 to resolve E400 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E400",
-                "Step 3 to resolve E400"
+                "Reload LCD firmware (section 5.1, page 91)",
+                "Check communication cable (section 7.2.19, page 129)",
+                "Replace LCD module (section 7.3.29, page 137)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E402": {
-            "problem": "Description of problem for E402",
+        "E900 ⚠️": {
+            "problem": "System firmware corruption.",
             "causes": [
-                "Cause 1 for E402",
-                "Cause 2 for E402",
-                "Cause 3 for E402"
+                "Main control board firmware error",
+                "Memory corruption",
+                "Software installation failure"
             ],
             "repairs": [
-                "Step 1 to resolve E402 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E402",
-                "Step 3 to resolve E402"
+                "Reload system firmware (section 5.1, page 91)",
+                "If persists, replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E403": {
-            "problem": "Description of problem for E403",
+        "E901 ⚠️": {
+            "problem": "Bootloader error.",
             "causes": [
-                "Cause 1 for E403",
-                "Cause 2 for E403",
-                "Cause 3 for E403"
+                "Corrupted bootloader in main board",
+                "Main board memory failure",
+                "Firmware update interrupted"
             ],
             "repairs": [
-                "Step 1 to resolve E403 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E403",
-                "Step 3 to resolve E403"
+                "Reload bootloader firmware (section 5.1, page 91)",
+                "If fails, replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E404": {
-            "problem": "Description of problem for E404",
+        "E902 ⚠️": {
+            "problem": "Application software error.",
             "causes": [
-                "Cause 1 for E404",
-                "Cause 2 for E404",
-                "Cause 3 for E404"
+                "Corrupted application software",
+                "Main board memory error",
+                "Firmware update failure"
             ],
             "repairs": [
-                "Step 1 to resolve E404 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E404",
-                "Step 3 to resolve E404"
+                "Reload application software (section 5.1, page 91)",
+                "Check main board memory",
+                "Replace Main Control Board if required (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
+            "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E405": {
-            "problem": "Description of problem for E405",
+        "E999 💥": {
+            "problem": "Fatal hardware error.",
             "causes": [
-                "Cause 1 for E405",
-                "Cause 2 for E405",
-                "Cause 3 for E405"
+                "Severe internal failure in main control board",
+                "Multiple system hardware failures detected",
+                "Critical communication bus failure"
             ],
             "repairs": [
-                "Step 1 to resolve E405 (refer to section 8.5, page 250+)",
-                "Step 2 to resolve E405",
-                "Step 3 to resolve E405"
+                "Restart device",
+                "If error persists, replace Main Control Board (section 7.3.15, page 148)"
             ],
             "image": "",
-            "modelo": [
-                "UP700"
-            ]
-        }
+            "modelo": ["UP700", "EP300", "UP500"]
+            }
 }
+
+
+        
 
 
 
