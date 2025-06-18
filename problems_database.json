@@ -446,8 +446,102 @@
         "modelo": [
             "HS-50F"
         ]
+    },
+        "Device Failure Error Code 02 & 04 🔧": {
+        "problem": "Inflation and safety valve short-circuit or mechanical failure (Error Code 02 or 04)",
+        "causes": [
+            "Short circuit or failure of inflation valve",
+            "Safety valve failure",
+            "Main board valve driver failure",
+            "Mechanical failure of pneumatic module"
+        ],
+        "repairs": [
+            "Replace pneumatic module assembly (section 9.6)",
+            "Replace main board (section 9.10)",
+            "Conduct valve heating test in diagnostic mode"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+        "Device Failure Error Code 09 📉": {
+        "problem": "High-pressure sensor failure or abnormal readings (Error Code 09)",
+        "causes": [
+            "Disconnected high-pressure sensor cable",
+            "Faulty high-pressure sensor",
+            "Main board analog-to-digital (AD) conversion failure"
+        ],
+        "repairs": [
+            "Reconnect high-pressure sensor cable",
+            "Perform zero calibration of high-pressure sensor (section 6.2)",
+            "Replace high-pressure regulator assembly (section 9.3)",
+            "Replace main board if fault persists (section 9.10)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+        "Device Failure Error Code 10 ⚠️": {
+        "problem": "Low-pressure sensor out of range (Error Code 10)",
+        "causes": [
+            "Faulty low-pressure sensor in pneumatic module",
+            "Main board analog-to-digital (AD) conversion failure"
+        ],
+        "repairs": [
+            "Replace pneumatic module assembly (section 9.6)",
+            "Replace main board if issue persists (section 9.10)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+        "Device Failure Error Code 11 📐": {
+        "problem": "Differential pressure sensor or valve-front sensor zero-point out of range (Error Code 11)",
+        "causes": [
+            "Main board differential sensor failure",
+            "Valve-front pressure sensor malfunction"
+        ],
+        "repairs": [
+            "Replace main board (section 9.10)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+        "Device Failure Error Code 13 💧": {
+        "problem": "Liquid sensor error detected (Error Code 13)",
+        "causes": [
+            "Disconnected level sensor cable",
+            "Level sensor failure"
+        ],
+        "repairs": [
+            "Reconnect or inspect level sensor cable",
+            "Replace liquid contamination spare parts (section 9.11)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+        "Device Failure Error Code 15 🔥": {
+        "problem": "Heating module error (Error Code 15)",
+        "causes": [
+            "Heating plate disconnected",
+            "Heating plate defective"
+        ],
+        "repairs": [
+            "Reconnect heating plate cable",
+            "Replace heating plate (section 9.15)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
     }
-
 }
 
 
