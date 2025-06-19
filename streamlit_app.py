@@ -3,42 +3,53 @@ import os
 import re
 import tarfile
 import tempfile
-import subprocess
 import json
 from collections import defaultdict
 import time
 from datetime import datetime
 from itertools import chain
 
-# --- Carrega usuários ---
+# === Paths base directory ===
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# === Carrega usuários ===
 def load_users():
-    with open("database/users.json", "r", encoding="utf-8") as f:
+    users_path = os.path.join(BASE_DIR, "database", "users.json")
+    with open(users_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-# --- Autenticação ---
+# === Autenticação ===
 def authenticate(username, password):
     users = load_users()
-    
+
     if username not in users:
-        return None  # usuário não existe
-    
+        return None
+
     user = users[username]
 
     if user.get("password") != password:
-        return None  # senha errada
-    
+        return None
+
     try:
         expiry = datetime.strptime(user["expires"], "%Y-%m-%d")
         if expiry < datetime.today():
-            return None  # licença expirada
+            return None
     except:
-        return None  # data inválida
-    
+        return None
+
     return True
 
-# --- Tela de login ---
+# === Coletar modelos ===
+def get_models(problems_database):
+    model_set = set(chain.from_iterable(
+        v.get("modelo", []) for v in problems_database.values() if isinstance(v.get("modelo"), list)
+    ))
+    return ['All'] + sorted(model_set)
+
+# === Tela de login ===
 def login_screen():
-    st.image("mindray_logo_transparent.png", width=150)
+    logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
+    st.image(logo_path, width=150)
     st.markdown("## 🔐 Endo Service Platform - Login")
     st.markdown("Please enter your credentials to access the platform.")
     st.markdown("---")
@@ -54,21 +65,25 @@ def login_screen():
         else:
             st.error("Access denied. Invalid user, password, or expired license.")
 
-# --- Controle de login ---
+# === Controle de login ===
 if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
     login_screen()
     st.stop()
 
-# Config inicial
+# === Config inicial ===
 st.set_page_config(page_title="Endo Service Platform", layout="wide")
-st.image("mindray_logo_transparent.png", width=150)
+logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
+st.image(logo_path, width=150)
 
-# --- Banco de erros ---
+# === Banco de erros ===
 if "problems_database" not in st.session_state:
-    with open("problems_database.json", "r", encoding="utf-8") as f:
+    problems_path = os.path.join(BASE_DIR, "database", "problems_database.json")
+    with open(problems_path, "r", encoding="utf-8") as f:
         st.session_state.problems_database = json.load(f)
+
 problems_database = st.session_state.problems_database
 
+# === Patterns (fixos ou pode carregar do JSON depois) ===
 patterns = {
     "Contamination Detected 🧫": r"(contamin|liquid.*detected|inlet.*liquid|pollution.*mark|level sensor error|ERR#08)",
     "Communication Errors 🔵": r"(connect.*failed|network.*unreach|ipc.*fail|timeout|socket.*error)",
@@ -81,7 +96,7 @@ patterns = {
     "Video Recording / USB Errors 📀": r"(usb.*fail|record.*error|video.*not saved|no.*recording|file.*system.*error)"
 }
 
-# --- Tabs por tipo de usuário ---
+# === Tabs ===
 if "selected_tab" not in st.session_state:
     st.session_state.selected_tab = "Log Analyzer"
 
@@ -97,7 +112,7 @@ if selected_tab != st.session_state.selected_tab:
     st.session_state.selected_tab = selected_tab
     st.rerun()
 
-# Botão de logout no menu lateral
+# === Logout ===
 with st.sidebar:
     if st.button("🔲 Logout"):
         for key in list(st.session_state.keys()):
@@ -105,30 +120,19 @@ with st.sidebar:
         st.session_state["logged_in"] = False
         st.rerun()
 
-# --- Interface por aba ---
-def show_user_panel():
-    if st.session_state.selected_tab == "Log Analyzer":
-        st.title("🛠️ Endo-Service Platform")
-        run_log_analyzer()
-    elif st.session_state.selected_tab == "Search Errors":
-        st.title("📚 Error Libraries")
-        run_error_search()
-
-# Função Log Analyzer
+# === Log Analyzer ===
 def run_log_analyzer():
-    # Instruções para preparar o arquivo
-    st.markdown("### 📌 IMPORTANT — How to Prepare the Log File")
+    st.markdown("### 📌 How to Prepare the Log File")
     st.info("""
-The log file exported from the equipment is in `.lzo` format, which cannot be analyzed directly on this platform.
+The log file exported from the equipment is in `.lzo` format.
 
-Please follow these steps:
+Steps:
+1. Copy the `.lzo` file.
+2. Run `Converter_LZO.bat`.
+3. It generates a `.tar` file.
+4. Upload it here.
 
-1. Copy the `.lzo` file from the equipment to your computer or USB drive.
-2. Double-click the file `Converter_LZO.bat` provided by Mindray.
-3. The script will automatically generate a `.tar` file (e.g., `log.tar`) in the same folder.
-4. Upload the generated `.tar` file below for analysis.
-
-> If you do not have the converter tool, please contact Mindray Technical Support.
+If you don't have the converter, contact Mindray Technical Support.
     """)
 
     uploaded_file = st.file_uploader("Select a .tar log file", type=["tar"])
@@ -144,7 +148,6 @@ Please follow these steps:
         return [os.path.join(root, f) for root, _, files in os.walk(temp_dir) for f in files if f.endswith((".log", ".txt"))]
 
     def analyze_logs(log_files):
-        output = []
         seen = set()
         all_lines = []
         total_files = len(log_files)
@@ -157,18 +160,22 @@ Please follow these steps:
                         seen.add(clean)
             progress = int(((idx + 1) / total_files) * 50)
             progress_bar.progress(progress, text=f"Reading logs... ({progress}%)")
-            time.sleep(0.1)
+            time.sleep(0.05)
+
         compiled = {cat: re.compile(pat, re.IGNORECASE) for cat, pat in patterns.items()}
         issues = defaultdict(list)
+
         for i, line in enumerate(all_lines):
             for category, regex in compiled.items():
                 if regex.search(line):
                     date_match = re.search(r"(\d{4}-\d{2}-\d{2}|\d{2}/\d{2}/\d{2})", line)
                     date_str = date_match.group(1) if date_match else "0000-00-00"
                     issues[category].append(date_str)
+
             if i % 10 == 0:
                 progress = 50 + int((i / len(all_lines)) * 50)
                 progress_bar.progress(progress, text=f"Analyzing logs... ({progress}%)")
+
         progress_bar.progress(100, text="✅ Analysis complete.")
         return issues
 
@@ -185,37 +192,26 @@ Please follow these steps:
                         data = problems_database.get(category)
                         with st.expander(f"🔧 {category} — {len(dates)} occurrences"):
                             if data:
-                                # Exibir o problema
-                                st.markdown(f"**Problem:** {data.get('problem', 'No problem description.')}")
-                                
-                                # Exibir imagem (se existir)
+                                st.markdown(f"**Problem:** {data.get('problem', 'No description.')}")
                                 image_file = data.get("image")
-                                image_path = os.path.join("images", image_file) if image_file else None
+                                image_path = os.path.join(BASE_DIR, "images", image_file) if image_file else None
                                 if image_path and os.path.isfile(image_path):
                                     st.image(image_path, caption="Associated image", width=300)
-                                else:
-                                    st.info("Image not found.")
 
-                                # Exibir causas
                                 causes = data.get("causes", [])
                                 if causes:
                                     st.markdown("**Possible Causes:**")
                                     for cause in causes:
                                         st.markdown(f"- {cause}")
 
-                                # Exibir soluções
                                 repairs = data.get("repairs", [])
                                 if repairs:
                                     st.markdown("**Recommended Actions:**")
                                     for fix in repairs:
                                         st.markdown(f"- {fix}")
 
-                                # Botão para baixar instrução
-                                def remove_emojis(text):
-                                    return re.sub(r'[^\w\s\-]', '', text).strip()
-
-                                safe_name = remove_emojis(category)
-                                pptx_path = os.path.join("resources", f"{safe_name}.pptx")
+                                safe_name = re.sub(r'[^\w\s\-]', '', category).strip()
+                                pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
                                 if os.path.isfile(pptx_path):
                                     with open(pptx_path, "rb") as f:
                                         st.download_button(
@@ -233,26 +229,12 @@ Please follow these steps:
             except Exception as e:
                 st.error(f"An error occurred: {e}")
 
-# Search Errors
-from itertools import chain
-
+# === Search Errors ===
 def run_error_search():
     st.subheader("🔍 Search Errors")
-
     query = st.text_input("Enter a keyword (e.g., 'contamination')")
 
-    # Coleta de todos os modelos válidos
-    model_set = set(chain.from_iterable(
-        v.get("modelo", []) for v in problems_database.values() if isinstance(v.get("modelo"), list)
-    ))
-    models = ['All'] + sorted(model_set)
-
-    # Filtro com blocos (radio)
-    model_set = set(chain.from_iterable(
-        v.get("modelo", []) for v in problems_database.values() if isinstance(v.get("modelo"), list)
-    ))
-    models = ['All'] + sorted(model_set)
-
+    models = get_models(problems_database)
     selected_model = st.radio("📌 Filter by Equipment Model", models, horizontal=True)
 
     col_left, col_spacer, col_right = st.columns([1, 8, 1])
@@ -261,7 +243,6 @@ def run_error_search():
     with col_right:
         clear_clicked = st.button("Clear")
 
-    # Botão Clear apaga a busca
     if clear_clicked:
         st.session_state.pop("query", None)
         st.session_state.pop("results", None)
@@ -269,7 +250,6 @@ def run_error_search():
         st.session_state.selected_tab = "Search Errors"
         st.rerun()
 
-    # Quando buscar, salva os resultados
     if search_clicked:
         st.session_state.results = {}
         for key, value in problems_database.items():
@@ -286,7 +266,6 @@ def run_error_search():
             if matches_keyword and matches_model:
                 st.session_state.results[key] = value
 
-        # Exibe os resultados salvos
         if "results" in st.session_state and st.session_state.results:
             for category, data in st.session_state.results.items():
                 if "selected_error" not in st.session_state:
@@ -297,16 +276,13 @@ def run_error_search():
                     st.session_state.selected_error = category
 
                     st.markdown(f"**Problem:** {data['problem']}")
-
                     if "modelo" in data:
                         st.markdown(f"**Applicable Models:** {', '.join(data['modelo'])}")
 
                     image_file = data.get("image")
-                    image_path = os.path.join("images", image_file) if image_file else None
+                    image_path = os.path.join(BASE_DIR, "images", image_file) if image_file else None
                     if image_path and os.path.isfile(image_path):
                         st.image(image_path, caption="Associated image", width=300)
-                    else:
-                        st.info("Image not found.")
 
                     st.markdown("**Causes:**")
                     for c in data['causes']:
@@ -317,7 +293,7 @@ def run_error_search():
                         st.markdown(f"- {r}")
 
                     safe_name = re.sub(r'[^\w\s-]', '', category).strip()
-                    pptx_path = os.path.join("resources", f"{safe_name}.pptx")
+                    pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
                     if os.path.isfile(pptx_path):
                         with open(pptx_path, "rb") as f:
                             st.download_button(
@@ -327,18 +303,13 @@ def run_error_search():
                                 mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
                                 key=f"download_{safe_name}"
                             )
-
                     else:
                         st.warning("⚠️ Troubleshooting guide not available.")
-        elif search_clicked:
-            st.info("No results found.")          
+        else:
+            st.info("No results found.")
 
-# Routing
+# === Routing ===
 if st.session_state.selected_tab == "Log Analyzer":
-    show_user_panel()
-
+    run_log_analyzer()
 elif st.session_state.selected_tab == "Search Errors":
-    show_user_panel()
-
-
-
+    run_error_search()
