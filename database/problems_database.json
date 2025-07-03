@@ -17,6 +17,26 @@
         "modelo": [
             "HS-50F"
         ]
+        },
+        "LD Module Errors 🔴": {
+    "problem": "LD module failure detected (Error #12 - LD异常)",
+    "causes": [
+        "Laser diode overtemperature",
+        "LD module hardware malfunction",
+        "Loose or damaged connection to LD module",
+        "Faulty LD module firmware"
+    ],
+    "repairs": [
+        "Check LD module temperature and ensure proper ventilation",
+        "Inspect wiring and connectors for signs of damage",
+        "Replace the LD module if hardware fault is confirmed",
+        "Reflash or update LD module firmware if applicable"
+    ],
+    "image": "",
+    "modelo": [
+        "R1",
+        "U1"
+    ]
     },
     "Communication Errors 🔵": {
         "problem": "Internal communication failure between modules",
