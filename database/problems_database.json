@@ -18,7 +18,7 @@
             "HS-50F"
         ]
         },
-        "LD Module Errors 🔴": {
+        "LD ERROR": {
     "problem": "LD module failure detected (Error #12 - LD异常)",
     "causes": [
         "Laser diode overtemperature",
