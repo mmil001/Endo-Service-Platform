@@ -1,7 +1,7 @@
 {
     "CONTAMINATION": "(contamination|ingress|liquid|detected)",
     "COMMUNICATION": "(internal|modules|failure|between|communication)",
-    "HEATING": "(pipe|even|disconnected|icon|heating|with|stays)",
+    "HEATING": "(pipe|even|disconnected|icon|heating|with|stays|ChiShaProcessor::check_temp.*error code)",
     "INSUFFLATOR": "(issue|insufflator|flow|pressure|valve|sensor)",
     "INSUFFLATION": "(issue|proportional|flow|pressure|valve|insufflation|sensor)",
     "POWER": "(failure|electrical|power|blown|fuse)",
