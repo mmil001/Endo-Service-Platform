@@ -119,19 +119,16 @@
     "Image Processor / Camera Errors 🎥": {
         "problem": "Video board failure or no image detected",
         "causes": [
-            "CCU board fault",
-            "Disconnected camera head",
-            "Firmware mismatch",
-            "Fault in video signal output module (e.g., HDMI, DVI, SDI)",
+            "CCU video board failure",
+            "Incorrect video resolution or output settings",
+            "Faulty HDMI/SDI cable or external monitor",
             "Abnormal camera configuration parameters"
         ],
         "repairs": [
-            "Replace CCU module",
-            "Verify camera/cable compatibility",
-            "Update firmware (check with KOL)",
-            "Use maintenance menu to reset video output settings",
-            "Check output signal ports and reconfigure resolution if needed"
-        ],
+            "Replace the internal video processing board ",
+            "Use Maintenance Menu to reset video output to 1080p60",
+            "Update firmware using official USB method",
+            "Test signal using a certified HDMI cable and monitor"        ],
         "image": "",
         "modelo": [
             "U1",
