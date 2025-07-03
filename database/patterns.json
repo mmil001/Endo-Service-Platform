@@ -14,7 +14,7 @@
     "COLOR": "(yellowish|incorrect|appears|colors|purple|color|image|with)",
     "USB": "(recording|portable|recognized|usb)",
     "LIGHT": "(excessive|damage|insertion|light|guide)",
-    "LD ERROR": "(LD|ld)",
+    "LD ERROR": "(LD异常|LD module|LDComponent|laser diode|LD failure|laser temperature|ld error|LD error)",
     "CAN": "(can|source|between|communication|loss|camera|light|system)",
     "SHARPNESS": "(unnatural|borders|excessive|sharpness|image|noise)",
     "FLUORESCENCE": "(during|unclear|surgery|fluorescence|image|weak)",
