@@ -1,0 +1,292 @@
+{
+  "E001 - Communication Failure 🔌": {
+    "problem": "Communication between control boards failed.",
+    "causes": [
+      "Loose connection between internal boards",
+      "Faulty communication IC"
+    ],
+    "repairs": [
+      "Check and reseat all board communication cables",
+      "Replace main control board if fault persists"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E002 - Fan Error 🌬️": {
+    "problem": "Fan is blocked or not rotating.",
+    "causes": [
+      "Fan connector loose or fan damaged",
+      "Obstruction in airflow path"
+    ],
+    "repairs": [
+      "Check fan connector and ensure free rotation",
+      "Replace fan if no RPM feedback is detected"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E003 - LD Over Temperature 🌡️": {
+    "problem": "LD module temperature exceeded safety range.",
+    "causes": [
+      "Insufficient ventilation",
+      "Faulty temperature sensor"
+    ],
+    "repairs": [
+      "Clean air vents and verify fan function",
+      "Replace LD module or temp sensor if overheating persists"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E004 - LED Over Temperature 💡🔥": {
+    "problem": "LED module temperature exceeded safety range.",
+    "causes": [
+      "Fan malfunction",
+      "LED module failure"
+    ],
+    "repairs": [
+      "Check fan operation",
+      "Replace LED module if necessary"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E005 - Laser Safety Circuit Fault ⚠️": {
+    "problem": "Abnormality detected in the laser safety circuit.",
+    "causes": [
+      "Circuit component failure",
+      "Internal safety interlock triggered"
+    ],
+    "repairs": [
+      "Inspect safety circuit components",
+      "Replace laser safety control board if needed"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E006 - LD Current Abnormal 🔺": {
+    "problem": "Detected LD current is out of specification.",
+    "causes": [
+      "Driver malfunction",
+      "Short or open in LD circuit"
+    ],
+    "repairs": [
+      "Measure LD current",
+      "Replace driver or LD module"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E007 - LED Current Abnormal 🔺": {
+    "problem": "Detected LED current is abnormal.",
+    "causes": [
+      "LED driver error",
+      "Loose connector"
+    ],
+    "repairs": [
+      "Verify voltage and current at CN12",
+      "Replace LED driver board"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E008 - EEPROM Communication Error 📉": {
+    "problem": "The system failed to communicate with the EEPROM.",
+    "causes": [
+      "EEPROM failure",
+      "Communication cable issue"
+    ],
+    "repairs": [
+      "Reconnect EEPROM interface cable",
+      "Replace EEPROM chip if fault persists"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E009 - Foot Switch Connection Fault 🎛️": {
+    "problem": "Foot switch is not detected or malfunctioning.",
+    "causes": [
+      "Cable disconnected",
+      "Foot switch failure"
+    ],
+    "repairs": [
+      "Reconnect and test foot switch",
+      "Replace if still unresponsive"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E010 - Light Cable Not Detected 🔦": {
+    "problem": "System cannot detect the light cable.",
+    "causes": [
+      "Fiber optic connector not inserted",
+      "Sensor failure at detection point"
+    ],
+    "repairs": [
+      "Reconnect light cable securely",
+      "Replace cable detection sensor"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E011 - AC-DC Module Overvoltage ⚡": {
+    "problem": "Detected input voltage exceeds safe limit.",
+    "causes": [
+      "Power surge",
+      "AC-DC converter fault"
+    ],
+    "repairs": [
+      "Test AC input voltage",
+      "Replace power supply if unstable"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E012 - AC-DC Module Undervoltage ⚡": {
+    "problem": "Input voltage below minimum threshold.",
+    "causes": [
+      "Unstable power source",
+      "AC-DC board failure"
+    ],
+    "repairs": [
+      "Verify wall outlet power stability",
+      "Replace power board if needed"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E013 - Laser Overheating 🔥": {
+    "problem": "Laser temperature exceeded operating limit.",
+    "causes": [
+      "Ambient temp too high",
+      "Fan or heatsink not effective"
+    ],
+    "repairs": [
+      "Improve cooling and ventilation",
+      "Check fan and thermal paste condition"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "E014 - Communication Timeout ⏱️": {
+    "problem": "Communication between boards timed out.",
+    "causes": [
+      "Faulty board connection",
+      "Firmware/hardware communication failure"
+    ],
+    "repairs": [
+      "Reseat internal communication cables",
+      "Update firmware or replace board"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "Device Does Not Power On ⚠️": {
+    "problem": "The system does not turn on when the power button is pressed.",
+    "causes": [
+      "AC power cord is not connected properly",
+      "Power switch failure",
+      "Blown fuse or faulty power board"
+    ],
+    "repairs": [
+      "Check the AC power cord and outlet",
+      "Test power switch continuity",
+      "Inspect fuse and power supply output (24V), replace if faulty"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "System Shuts Down Automatically 🔁": {
+    "problem": "The unit shuts down during use without user intervention.",
+    "causes": [
+      "Overheating due to ventilation blockage",
+      "Power supply instability",
+      "Firmware protection triggered"
+    ],
+    "repairs": [
+      "Clean ventilation openings",
+      "Verify power input voltage",
+      "Check fan operation and replace if needed"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "No Light Output 🔦": {
+    "problem": "There is no light from the output port during operation.",
+    "causes": [
+      "Light source module damaged (LED or LD)",
+      "Loose connection on light output port",
+      "Faulty light cable"
+    ],
+    "repairs": [
+      "Reconnect or replace light cable",
+      "Inspect LED/LD module and replace if necessary",
+      "Verify output voltage from driver boards"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "Touchscreen Not Responding 📱": {
+    "problem": "The display screen does not respond to touch input.",
+    "causes": [
+      "Touch controller cable disconnected",
+      "Touch panel failure",
+      "Main board issue"
+    ],
+    "repairs": [
+      "Check and reconnect J10 or relevant connectors",
+      "Replace touchscreen panel if nonfunctional",
+      "Test main board functionality"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "Noise or Vibration During Operation 🔊": {
+    "problem": "The unit emits unusual noise or vibration.",
+    "causes": [
+      "Device not placed on a stable surface",
+      "Fan imbalance or obstruction"
+    ],
+    "repairs": [
+      "Ensure device is placed on level surface",
+      "Inspect and clean fan",
+      "Replace if vibration persists"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
+    "image": "",
+    "modelo": ["HB300R"]
+  },
+  "Laser Activation Failure with Footswitch 🦶": {
+    "problem": "Laser does not activate when pressing the footswitch.",
+    "causes": [
+      "Footswitch disconnected or faulty",
+      "Internal detection circuit error"
+    ],
+    "repairs": [
+      "Reconnect or replace footswitch",
+      "Verify control board input signal"
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
+    "image": "",
+    "modelo": ["HB300R"]
+  }
+}
+

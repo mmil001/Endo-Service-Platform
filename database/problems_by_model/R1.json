@@ -1,0 +1,166 @@
+{
+  "LED Over Heat (#01) 🔥": {
+    "problem": "The temperature of the LED light source is too high.",
+    "causes": [
+      "Ventilation outlet is blocked",
+      "High ambient temperature"
+    ],
+    "repairs": [
+      "Check whether the air outlet of the light source is shielded by any object. If yes, remove the object."
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.2, Page 5-2",
+    "image": "",
+    "modelo": ["R1"]
+  },
+  "LED Over Life Time (#02) ⌛": {
+    "problem": "The LED has reached the end of its service life.",
+    "causes": [
+      "LED component lifespan has expired"
+    ],
+    "repairs": [
+      "Contact Mindray Customer Service Department for replacement"
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.2, Page 5-2",
+    "image": "",
+    "modelo": ["R1"]
+  },
+  "LED Over Heat >105°C (#03) 🌡️": {
+    "problem": "The temperature of the LED light source exceeds 105°C.",
+    "causes": [
+      "Operating environment exceeds temperature limits"
+    ],
+    "repairs": [
+      "Check whether the light source is in an environment out of the temperature requirement"
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.2, Page 5-2",
+    "image": "",
+    "modelo": ["R1"]
+  },
+  "LD Over Heat (#04) 🔥": {
+    "problem": "The temperature of the LD light source is too high.",
+    "causes": [
+      "Blocked ventilation or poor heat dissipation"
+    ],
+    "repairs": [
+      "Check whether the air outlet of the LD light source is shielded by any object. If yes, remove the object"
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.2, Page 5-2",
+    "image": "",
+    "modelo": ["R1"]
+  },
+  "LD Over Heat > Limit (#05) 🌡️": {
+    "problem": "The temperature of the LD light source exceeds the operating temperature.",
+    "causes": [
+      "Excessive ambient temperature",
+      "Blocked air circulation"
+    ],
+    "repairs": [
+      "Check whether the light source is in an environment out of the temperature requirement"
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.2, Page 5-2",
+    "image": "",
+    "modelo": ["R1"]
+  },
+  "LED Error (#06) ⚠️": {
+    "problem": "The LED temperature sensor is not connected.",
+    "causes": [
+      "Sensor cable disconnected",
+      "Sensor failure"
+    ],
+    "repairs": [
+      "Contact Mindray Customer Service Department"
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.2, Page 5-2",
+    "image": "",
+    "modelo": ["R1"]
+  },
+  "Fan Error (#08) 🌬️": {
+    "problem": "Fans are not connected or are clogged.",
+    "causes": [
+      "Loose fan cable connection",
+      "Fan obstructed by foreign matter"
+    ],
+    "repairs": [
+      "Ensure that the ventilation outlets of fans have no object that could stop the fans from rotating"
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.2, Page 5-2",
+    "image": "",
+    "modelo": ["R1"]
+  },
+  "Device Does Not Power On 🔌": {
+    "problem": "The system does not turn on when pressing the power button.",
+    "causes": [
+      "Power cord not connected",
+      "Defective power board",
+      "Blown fuse"
+    ],
+    "repairs": [
+      "Check power input connection",
+      "Verify 24V DC output from power supply",
+      "Replace fuse or power board as needed"
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.1, Page 5-1",
+    "image": "",
+    "modelo": ["R1"]
+  },
+  "Image Does Not Appear on Monitor 🖥️": {
+    "problem": "The connected monitor does not display image from the system.",
+    "causes": [
+      "Incorrect video output settings",
+      "Faulty HDMI/DVI cable",
+      "Image processor board failure"
+    ],
+    "repairs": [
+      "Use maintenance menu to check and adjust resolution",
+      "Replace video cable",
+      "Test and replace image board if no signal is present"
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.1, Page 5-1",
+    "image": "",
+    "modelo": ["R1"]
+  },
+  "Device Restarts During Use 🔁": {
+    "problem": "The unit reboots or powers off unexpectedly.",
+    "causes": [
+      "Overheating from poor ventilation",
+      "Intermittent power supply",
+      "System protection mechanism triggered"
+    ],
+    "repairs": [
+      "Ensure device is placed in ventilated space",
+      "Check fan operation and clean filters",
+      "Test AC power stability"
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.1, Page 5-1",
+    "image": "",
+    "modelo": ["R1"]
+  },
+  "Touch Panel Unresponsive 📱": {
+    "problem": "The touchscreen does not react to input.",
+    "causes": [
+      "Touch panel cable disconnected",
+      "Touch IC damaged"
+    ],
+    "repairs": [
+      "Reconnect J11 connector",
+      "Replace touch controller or front panel"
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.1, Page 5-1",
+    "image": "",
+    "modelo": ["R1"]
+  },
+  "Fan Makes Unusual Noise 🌬️": {
+    "problem": "There is abnormal noise from internal fan.",
+    "causes": [
+      "Dust accumulation",
+      "Fan imbalance or bearing wear"
+    ],
+    "repairs": [
+      "Clean fan blades and vents",
+      "Replace fan if noise persists"
+    ],
+    "manual_reference": "R1 Service Manual - Section 5.1, Page 5-1",
+    "image": "",
+    "modelo": ["R1"]
+  }
+}

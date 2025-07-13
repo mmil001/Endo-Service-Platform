@@ -1,0 +1,82 @@
+{
+  "LED Does Not Turn On 💡": {
+    "problem": "The LED light source does not emit light after the system is powered on.",
+    "causes": [
+      "Faulty LED module",
+      "Disconnection between control board and LED",
+      "LED driver board malfunction"
+    ],
+    "repairs": [
+      "Check the LED output voltage from the control board (~24V at CN12)",
+      "Reconnect the LED cable if loose",
+      "Replace the LED module or LED driver board if voltage is abnormal"
+    ],
+    "manual_reference": "HB300L Service Manual - Section 4.3, Page 4-2",
+    "image": "",
+    "modelo": ["HB300L"]
+  },
+  "Fan Failure or Noise 🌬️": {
+    "problem": "The internal fan does not operate or produces abnormal noise.",
+    "causes": [
+      "Fan cable disconnected or damaged",
+      "Faulty fan motor",
+      "Obstruction or debris inside fan housing"
+    ],
+    "repairs": [
+      "Check fan connector at CN6",
+      "Test fan voltage (~12V); replace if not spinning",
+      "Clean any obstruction from the fan area"
+    ],
+    "manual_reference": "HB300L Service Manual - Section 4.3, Page 4-2",
+    "image": "",
+    "modelo": ["HB300L"]
+  },
+  "No Light Output from Front Port 🔦": {
+    "problem": "The system is powered, LED is on, but no light is emitted through the fiber port.",
+    "causes": [
+      "Broken LED optics or fiber output path",
+      "Defective or misaligned light guide port",
+      "Internal LED not mounted correctly"
+    ],
+    "repairs": [
+      "Verify optical alignment between LED and output port",
+      "Check and clean the port window",
+      "Replace LED or optical assembly if damaged"
+    ],
+    "manual_reference": "HB300L Service Manual - Section 6.3.4, Page 6-2",
+    "image": "",
+    "modelo": ["HB300L"]
+  },
+  "System Does Not Power On ⚠️": {
+    "problem": "The power switch is pressed, but the unit does not start.",
+    "causes": [
+      "AC cable disconnected",
+      "Power fuse (F1) is blown",
+      "Faulty power board or no DC output"
+    ],
+    "repairs": [
+      "Check power input at CN1",
+      "Replace fuse F1 (T3.15AH250V) if blown",
+      "Replace power supply board if output is not ~24V"
+    ],
+    "manual_reference": "HB300L Service Manual - Section 4.2 and 4.3, Page 4-2",
+    "image": "",
+    "modelo": ["HB300L"]
+  },
+  "Touch Panel Not Responding 📱": {
+    "problem": "Touch input does not register or screen remains black.",
+    "causes": [
+      "Disconnected or damaged touchscreen cable (J10)",
+      "Display board failure",
+      "Firmware or configuration issue"
+    ],
+    "repairs": [
+      "Reconnect cable J10 on the control board",
+      "Replace the touchscreen or display board",
+      "Check display board output voltages and backlight function"
+    ],
+    "manual_reference": "HB300L Service Manual - Section 6.3.4, Page 6-3",
+    "image": "",
+    "modelo": ["HB300L"]
+  }
+}

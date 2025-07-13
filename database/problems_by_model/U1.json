@@ -1,0 +1,139 @@
+{
+  "The equipment cannot be powered on.": {
+    "Fault Symptom": "The equipment cannot be powered on.",
+    "Causes": [
+      "The equipment is not connected to a power supply or the power supply is improperly connected."
+    ],
+    "Solution": [
+      "Check whether the power supply is properly connected. Remove and then insert the power cable, and restart the equipment"
+    ],
+    "manual_reference": "U1 Service Manual - Fault List - Section 5.3 - Page 33)",
+    "image": "",
+    "model": ["U1"]
+  },
+  "The equipment generates noise when it is operating.": {
+    "Fault Symptom": "The equipment generates noise when it is operating.",
+    "Causes": [
+      "The equipment is not placed on a flat surface or excessively heavy objects are stacked on the equipment."
+    ],
+    "Solution": [
+      "Check whether the camera control unit is placed on a flat surface. Do not place other objects on the equipment."
+    ],
+    "manual_reference": "U1 Service Manual - Fault List - Section 5.3 - Page 33",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Erratic display": {
+    "Fault Symptom": "Erratic display.",
+    "Causes": [
+      "The video cable or camera head cable is not properly connected.",
+    ],
+    "Solution": [
+      "Check the video cable connection, and reconnect the video cable. Check the connection cable of the camera head, and reconnect the camera head cable."
+    ],
+    "manual_reference": "U1 Service Manual - Fault List - Section 5.3 - Page 33",
+    "image": "",
+    "model": ["U1"]
+  },
+  "AWB fails.": {
+    "Fault Symptom": "AWB fails.",
+    "Causes": [
+      "The AWB key is not operated properly."
+    ],
+    "Solution": [
+      "Properly press the AWB key, and confirm the AWB status."
+    ],
+    "manual_reference": "U1 Service Manual - Fault List - Section 5.3 - Page 33",
+    "image": "",
+    "model": ["U1"]
+  },
+  "The monitor does not display images.": {
+    "Fault Symptom": "The monitor does not display images.",
+    "Causes": [
+      "The monitor’s switch is not turned on. The equipment is not properly connected."
+    ],
+    "Solution": [
+      "Check whether the monitor’s switch is turned on. Check whether the video cable connection between the camera head and camera control unit, and that between the camera control unit and monitor are proper. Shut down and restart the camera system."
+    ],
+    "manual_reference": "U1 Service Manual - Fault List - Section 5.3 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Image color is abnormal.": {
+    "Fault Symptom": "Image color is abnormal.",
+    "Causes": [
+      "AWB is improper. The operation scene is not properly selected. Image settings are improper."
+    ],
+    "Solution": [
+      "Properly adjust AWB. Select a proper operation scene. Check whether image settings are proper."
+    ],
+    "manual_reference": "U1 Service Manual - Fault List - Section 5.3 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Images are not clear.": {
+    "Fault Symptom": "Images are not clear.",
+    "Causes": [
+      "Images are not properly focused. The front end of the endoscope is dirtied by blood, mucus or chippings."
+    ],
+    "Solution": [
+      "Rotate the focusing ring for focusing. Carefully draw out the endoscope from the patient’s body, and remove blood or mucus."
+    ],
+    "manual_reference": "U1 Service Manual - Fault List - Section 5.3 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Images are too dark or too bright.": {
+    "Fault Symptom": "Images are too dark or too bright.",
+    "Causes": [
+      "Brightness and contrast of the monitor are not properly set. Image brightness of the endoscope is not properly set.",
+      "The light source is not properly connected.",
+      "The light cable is damaged."
+    ],
+    "repairs": [
+      "Replace with higher-capacity USB drive"
+    ],
+    "manual_reference": "U1 Service Manual - Section 4.12 and Error Table",
+    "image": "",
+    "model": ["U1"]
+  },
+  "#10 - USB Media Low Speed 🐢": {
+    "problem": "USB drive is too slow for video recording.",
+    "causes": [
+      "Low-speed or outdated USB drive"
+    ],
+    "repairs": [
+      "Replace with a faster USB drive"
+    ],
+    "manual_reference": "U1 Service Manual - Section 4.12 and Error Table",
+    "image": "",
+    "model": ["U1"]
+  },
+  "#12 - Fan Error 🌬️": {
+    "problem": "Fan fails or rotor is blocked.",
+    "causes": [
+      "Fan obstruction",
+      "Fan malfunction"
+    ],
+    "repairs": [
+      "Clear air outlet and foreign objects",
+      "Remove equipment from use if needed"
+    ],
+    "manual_reference": "U1 Service Manual - Section 4.12 and Error Table",
+    "image": "",
+    "model": ["U1"]
+  },
+  "#14 - CCU Over Heat 🌡️": {
+    "problem": "Temperature of CCU1 is too high.",
+    "causes": [
+      "Blocked air outlet",
+      "Overheating from internal component"
+    ],
+    "repairs": [
+      "Check and clear ventilation blockage"
+    ],
+    "manual_reference": "U1 Service Manual - Section 4.12 and Error Table",
+    "image": "",
+    "model": ["U1"]
+  }
+}

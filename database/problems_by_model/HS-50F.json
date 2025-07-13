@@ -1,0 +1,162 @@
+{
+  "HS-50F Insufflator Errors 🩺": {
+    "model": ["HS-50F"],
+    "problems": [
+      {
+        "code": "ERR#04",
+        "problem": "Failure of the proportional valve",
+        "causes": ["Main board failure"],
+        "repairs": ["Replace the main board (see section 9.10)"]
+      },
+      {
+        "code": "ERR#06",
+        "problem": "Power module failure",
+        "causes": ["Power module failure"],
+        "repairs": ["Replace the power supply module. See section 9.8"]
+      },
+      {
+        "code": "ERR#07",
+        "problem": "Main board hardware failure",
+        "causes": ["Main board failure"],
+        "repairs": ["Replace the main board (see section 9.10)"]
+      },
+      {
+        "code": "ERR#08",
+        "problem": "Valve failure: Inconsistent control/monitor state",
+        "causes": ["Main board failure"],
+        "repairs": ["Replace the main board (see section 9.10)"]
+      },
+      {
+        "code": "ERR#09",
+        "problem": "High-pressure sensor out of range",
+        "causes": ["Device Failure Error Code 9"],
+        "repairs": ["Refer to section 5.4 for troubleshooting"]
+      },
+      {
+        "code": "ERR#10",
+        "problem": "Low-pressure sensor out of range",
+        "causes": ["Device Failure Error Code 10"],
+        "repairs": ["Refer to section 5.4 for troubleshooting"]
+      },
+      {
+        "code": "ERR#11",
+        "problem": "Flow sensor and valve front pressure sensor (P2) out of range",
+        "causes": ["Main board failure"],
+        "repairs": ["Replace the main board (see section 9.10)"]
+      },
+      {
+        "code": "ERR#12",
+        "problem": "Sensor Error",
+        "causes": [
+          "Software fault (V1.0)",
+          "Sensor silicone tube falls off or is bent",
+          "Short circuit or open circuit of inflation valve"
+        ],
+        "repairs": [
+          "Upgrade software",
+          "Reconnect the sensor connection pipe",
+          "Replace the pneumatic module assembly (see section 9.6)"
+        ]
+      },
+      {
+        "code": "ERR#13",
+        "problem": "Level sensor AD out of range",
+        "causes": ["Device Failure Error Code 13"],
+        "repairs": ["Refer to section 5.4 for troubleshooting"]
+      },
+      {
+        "code": "ERR#14",
+        "problem": "Heating sensor error (insufflator tube failure)",
+        "causes": ["/"],
+        "repairs": ["Replace the heating insufflator tube"]
+      },
+      {
+        "code": "ERR#15",
+        "problem": "Heating plate failure",
+        "causes": [
+          "Poor connection of the heating plate cable",
+          "Not heating the plate"
+        ],
+        "repairs": [
+          "Reconnect the heating plate cable",
+          "Replace the heating plate (see 9.15)"
+        ]
+      },
+      {
+        "code": null,
+        "problem": "Contamination (liquid enters the device)",
+        "causes": ["Fluid ingress into insufflator"],
+        "repairs": ["Replace the liquid inlet", "Clear the contamination using software (V2.0)"]
+      },
+      {
+        "code": null,
+        "problem": "High zero drift of pressure sensor (main board failure)",
+        "causes": ["Other than listed faults", "Main board failure"],
+        "repairs": [
+          "Upgrade software (V1.0)",
+          "Replace main board (section 9.10)"
+        ]
+      },
+      {
+        "code": null,
+        "problem": "Inflation valve drive failure",
+        "causes": ["Main board failure"],
+        "repairs": ["Replace the main board (see section 9.10)"]
+      },
+      {
+        "code": null,
+        "problem": "Mechanical failure of inflation valve",
+        "causes": ["Failure of pneumatic module assembly"],
+        "repairs": ["Replace pneumatic module assembly (section 9.6)"]
+      },
+      {
+        "code": null,
+        "problem": "Proportional valve leakage",
+        "causes": ["Failure of pneumatic module"],
+        "repairs": ["Replace pneumatic module assembly (section 9.6)"]
+      },
+      {
+        "code": null,
+        "problem": "Smoke exhaust function failure",
+        "causes": ["Short/open circuit of pinch valve"],
+        "repairs": ["Replace smoke exhaust valve (see 9.19)"]
+      },
+      {
+        "code": null,
+        "problem": "Buzzer not functioning",
+        "causes": ["Buzzer/control circuit failure"],
+        "repairs": ["Replace main board (see 9.10)"]
+      },
+      {
+        "code": null,
+        "problem": "Insufflator tube not heated",
+        "causes": ["Insufflator tube failure"],
+        "repairs": ["Replace insufflator tube"]
+      },
+      {
+        "code": null,
+        "problem": "Heating plate power error",
+        "causes": ["Heating plate not connected"],
+        "repairs": ["Reconnect heating plate cable"]
+      },
+      {
+        "code": null,
+        "problem": "Abnormal sound of high-pressure valve",
+        "causes": ["Faulty high-pressure valve"],
+        "repairs": ["Replace high-pressure valve (section 9.5)"]
+      },
+      {
+        "code": null,
+        "problem": "Abnormal sound of low-pressure valve",
+        "causes": ["Low-pressure valve fault"],
+        "repairs": ["Replace low-pressure valve (section 9.5)"]
+      },
+      {
+        "code": null,
+        "problem": "Abnormal intermittent sound during inflation",
+        "causes": ["Proportional valve fault"],
+        "repairs": ["Replace pneumatic module assembly (see 9.6)"]
+      }
+    ]
+  }
+}
