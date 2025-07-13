@@ -23,10 +23,10 @@
     "image": "",
     "model": ["U1"]
   },
-  "Erratic display": {
+    "Erratic display": {
     "Fault Symptom": "Erratic display.",
     "Causes": [
-      "The video cable or camera head cable is not properly connected.",
+      "The video cable or camera head cable is not properly connected."
     ],
     "Solution": [
       "Check the video cable connection, and reconnect the video cable. Check the connection cable of the camera head, and reconnect the camera head cable."
@@ -90,49 +90,432 @@
       "The light source is not properly connected.",
       "The light cable is damaged."
     ],
-    "repairs": [
-      "Replace with higher-capacity USB drive"
+    "Solution": [
+      "Properly set brightness and contrast of the monitor according to monitor instructions.",
+      "Properly connect the light source and set image brightness of the endoscope.",
+      "Refer to the light source instructions to properly set the light source brightness.",
+      "Check the light cable. If the light cable is damaged, replace it."
     ],
-    "manual_reference": "U1 Service Manual - Section 4.12 and Error Table",
+    "manual_reference": "U1 Service Manual - Fault List - Section 5.3 - Page 34",
     "image": "",
     "model": ["U1"]
   },
-  "#10 - USB Media Low Speed 🐢": {
-    "problem": "USB drive is too slow for video recording.",
-    "causes": [
-      "Low-speed or outdated USB drive"
+  "Images are not displayed in the middle.": {
+    "Fault Symptom": "Images are not displayed in the middle.",
+    "Causes": [
+      "The endoscope lens is not properly installed."
     ],
-    "repairs": [
-      "Replace with a faster USB drive"
+    "Solution": [
+      "Remove the endoscope from the camera head, and connect it again."
     ],
-    "manual_reference": "U1 Service Manual - Section 4.12 and Error Table",
+    "manual_reference": "U1 Service Manual - Fault List - Section 5.3 - Page 34",
     "image": "",
     "model": ["U1"]
   },
-  "#12 - Fan Error 🌬️": {
-    "problem": "Fan fails or rotor is blocked.",
-    "causes": [
-      "Fan obstruction",
-      "Fan malfunction"
+  "Images are interrupted when a high-frequency surgical device is used.": {
+    "Fault Symptom": "Images are interrupted when a high-frequency surgical device is used.",
+    "Causes": [
+      "The equipment is interrupted by the high-frequency surgical device."
     ],
-    "repairs": [
-      "Clear air outlet and foreign objects",
-      "Remove equipment from use if needed"
+    "Solution": [
+      "Ensure that the cable that connects the high-frequency surgical device to the equipment is far away from the camera system and monitor."
     ],
-    "manual_reference": "U1 Service Manual - Section 4.12 and Error Table",
+    "manual_reference": "U1 Service Manual - Fault List - Section 5.3 - Page 34",
     "image": "",
     "model": ["U1"]
   },
-  "#14 - CCU Over Heat 🌡️": {
-    "problem": "Temperature of CCU1 is too high.",
-    "causes": [
-      "Blocked air outlet",
-      "Overheating from internal component"
+  "U1 - Error #01": {
+    "Prompt": "Recording error #01",
+    "Causes": [
+      "The recording board is not properly connected."
     ],
-    "repairs": [
-      "Check and clear ventilation blockage"
+    "Solution": [
+      "Replace the recorder board PN 115-070160-00 Video Recording Board (DVR) FRU."
     ],
-    "manual_reference": "U1 Service Manual - Section 4.12 and Error Table",
+    "manual_reference": "U1 Service Manual - Disassembly the Video Recording Board - Section 7.3.3 - Page 44",
+    "image": "",
+    "model": ["U1"]
+  },
+  "U1 - Error #02": {
+    "Prompt": "Recording error #02",
+    "Causes": [
+      "Input signals of the recording board are improper."
+    ],
+    "Solution": [
+      "Replace the recorder board PN 115-070160-00 Video Recording Board (DVR) FRU."
+    ],
+    "manual_reference": "U1 Service Manual - Disassembly the Video Recording Board - Section 7.3.3 - Page 44",
+    "image": "",
+    "model": ["U1"]
+  },
+  "U1 - Error #03": {
+    "Prompt": "CCU Over Heat #03",
+    "Causes": [
+      "CCU2 temperature is too high."
+    ],
+    "Solution": [
+      "Check whether the air outlet of the CCU is shielded by any object. If any, remove the object."
+    ],
+    "manual_reference": "U1 Service Manual - Error Code List - Section 5.4 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "U1 - Error #04": {
+    "Prompt": "CCU Over Heat #04",
+    "Causes": [
+      "Temperature of the 4K output board inside the host is too high."
+    ],
+    "Solution": [
+      "Check whether the air outlet of the CCU is shielded by any object. If any, remove the object."
+    ],
+    "manual_reference": "U1 Service Manual - Error Code List - Section 5.4 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "U1 - Error #05": {
+    "Prompt": "CCU Over Heat #05",
+    "Causes": [
+      "Temperature of the camera head module is too high."
+    ],
+    "Solution": [
+      "Check whether the ambient environment of the camera head exceeds the room temperature requirements."
+    ],
+    "manual_reference": "U1 Service Manual - Error Code List - Section 5.4 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "U1 - Error #06": {
+    "Prompt": "Camera Head Type Error #06",
+    "Causes": [
+      "An improper camera head is inserted."
+    ],
+    "Solution": [
+      "Check whether the camera head model is proper."
+    ],
+    "manual_reference": "U1 Service Manual - Error Code List - Section 5.4 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "U1 - Error #07": {
+    "Prompt": "Camera Head Connection Error #07",
+    "Causes": [
+      "The cable of the camera head is improperly connected."
+    ],
+    "Solution": [
+      "Ensure that the camera head cable is properly inserted into the camera control unit."
+    ],
+    "manual_reference": "U1 Service Manual - Error Code List - Section 5.4 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "U1 - Error #09": {
+    "Prompt": "USB Media Full #09",
+    "Causes": [
+      "The USB drive space does not have enough space to store recording/photos."
+    ],
+    "Solution": [
+      "Replace the USB drive with a large-capacity one, and then record videos/take photos."
+    ],
+    "manual_reference": "U1 Service Manual - Error Code List - Section 5.4 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "U1 - Error #10": {
+    "Prompt": "USB Media Low Speed #10",
+    "Causes": [
+      "The USB drive speed is too low to support recording/photo taking."
+    ],
+    "Solution": [
+      "Replace the USB drive with a large-capacity one, and then record videos/take photos."
+    ],
+    "manual_reference": "U1 Service Manual - Error Code List - Section 5.4 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "U1 - Error #12": {
+    "Prompt": "Fan Error #12",
+    "Causes": [
+      "The fan fails or the rotor of the fan is blocked."
+    ],
+    "Solution": [
+      "Ensure that the ventilation outlet is free from foreign matters that could stop the fan from rotating."
+    ],
+    "manual_reference": "U1 Service Manual - Error Code List - Section 5.4 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "U1 - Error #14": {
+    "Prompt": "FCCU Over Heat #14",
+    "Causes": [
+      "CCU1 temperature is too high."
+    ],
+    "Solution": [
+      "Check whether the air outlet of the CCU is blocked. If so, remove the object."
+    ],
+    "manual_reference": "U1 Service Manual - Error Code List - Section 5.4 - Page 34",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Camera Head Connection Error": {
+    "Possible Cause": [
+      "The camera head is not correctly connected to the CCU.",
+      "The connector is broken."
+    ],
+    "Attemptable Solution": [
+      "Connect the camera head to the correct connector on the CCU.",
+      "Replace the camera head with a new one."
+    ],
+    "manual_reference": "U1 Operator Manual - Error Messages - Section 4.12 - Page 39",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Camera Head Type Error": {
+    "Possible Cause": [
+      "The camera head connected to the CCU is not compatible."
+    ],
+    "Attemptable Solution": [
+      "Use the camera head specified by Mindray."
+    ],
+    "manual_reference": "U1 Operator Manual - Error Messages - Section 4.12 - Page 39",
+    "image": "",
+    "model": ["U1"]
+  },
+  "CCU Over Heat": {
+    "Possible Cause": [
+      "The ventilation outlet is blocked.",
+      "The room temperature exceeds the limit.",
+      "The fan does not work normally."
+    ],
+    "Attemptable Solution": [
+      "Clear the blockage from the ventilation outlet.",
+      "Reduce the room temperature.",
+      "Remove the equipment from use and use the backup one."
+    ],
+    "manual_reference": "U1 Operator Manual - Error Messages - Section 4.12 - Page 40",
+    "image": "",
+    "model": ["U1"]
+  },
+  "CCU initialization is failed": {
+    "Possible Cause": [
+      "The camera head is not connected."
+    ],
+    "Attemptable Solution": [
+      "Connect the camera head correctly and restart the CCU."
+    ],
+    "manual_reference": "U1 Operator Manual - Error Messages - Section 4.12 - Page 40",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Fan Error,Replace the Equipment": {
+    "Possible Cause": [
+      "The fan is blocked or damaged."
+    ],
+    "Attemptable Solution": [
+      "Check the ventilation outlet for anything that might interrupt the rotation of the fan.",
+      "Clear the blockage, if any.",
+      "Remove the system from use and use the backup one."
+    ],
+    "manual_reference": "U1 Operator Manual - Error Messages - Section 4.12 - Page 40",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Snap Error": {
+    "Possible Cause": [
+      "No USB drive is connected.",
+      "The USB drive connected is out of memory."
+    ],
+    "Attemptable Solution": [
+      "Connect an available USB drive.",
+      "Replace the USB drive with a new one.",
+      "Format the USB drive.",
+      "Make sure a backup is made before formatting."
+    ],
+    "manual_reference": "U1 Operator Manual - Error Messages - Section 4.12 - Page 40",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Recording Error": {
+    "Possible Cause": [
+      "No USB drive is connected.",
+      "The USB drive connected is out of memory.",
+      "Equipment failure occurs"
+    ],
+    "Attemptable Solution": [
+      "Connect an available USB drive.",
+      "Replace the USB drive with a new one.",
+      "Format the USB drive.",
+      "Make sure a backup is made before formatting.",
+      "Remove the equipment from use and use the backup one."
+    ],
+    "manual_reference": "U1 Operator Manual - Error Messages - Section 4.12 - Page 40",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Format Error, Please Change USB Disk !": {
+    "Possible Cause": [
+      "The USB drive is not compatible.",
+      "The USB drive is damaged."
+    ],
+    "Attemptable Solution": [
+      "Replace the USB drive with a new one."
+    ],
+    "manual_reference": "U1 Operator Manual - Error Messages - Section 4.12 - Page 40",
+    "image": "",
+    "model": ["U1"]
+  },
+  "The equipment does not power up. !": {
+    "Symptom": "Attemptable Solution.",
+    "Possible Cause": [
+      "The equipment is not properly connected to the AC Mains."
+    ],
+     "Attemptable Solution.": [
+      "Check the connection of the power cord.",
+      "Replug the power connectors and restart the equipment."
+     ],
+    "manual_reference": "U1 Operator Manual - Troubleshooting - Section 5 - Page 43",
+    "image": "",
+    "model": ["U1"]
+  },
+  "There is abnormal sound during operation.": {
+    "Symptom": "There is abnormal sound during operation.",
+    "Possible Cause": [
+      "The equipment is not horizontally placed.",
+      "Objects stacked on the equipment are too heavy."
+    ],
+     "Attemptable Solution.": [
+      "Check if the equipment is properly placed on a horizontal surface.",
+      "Do not stack on the equipment."
+     ],
+    "manual_reference": "U1 Operator Manual - Troubleshooting - Section 5 - Page 43",
+    "image": "",
+    "model": ["U1"]
+  },
+  "The monitor screen blurs.": {
+    "Symptom": "The monitor screen blurs.",
+    "Possible Cause": [
+      "The video cable is not correctly connected.",
+      "The camera head cable is not correctly connected."
+    ],
+     "Attemptable Solution.": [
+      "Check the connection of video cable.",
+      "Reconnect the cable.",
+      "Check the connection of camera head cable.",
+      "Reconnect the cable."
+     ],
+    "manual_reference": "U1 Operator Manual - Troubleshooting - Section 5 - Page 43",
+    "image": "",
+    "model": ["U1"]
+  },
+  "White balance fails.": {
+    "Symptom": "White balance fails.",
+    "Possible Cause": [
+      "The white balance button is not correctly pressed."
+    ],
+     "Attemptable Solution.": [
+      "Press the white balance button and check if white balance is correctly performed."
+     ],
+    "manual_reference": "U1 Operator Manual - Troubleshooting - Section 5 - Page 43",
+    "image": "",
+    "model": ["U1"]
+  },
+  "There is no image displayed on the monitor.": {
+    "Symptom": "There is no image displayed on the monitor.",
+    "Possible Cause": [
+      "The monitor is not turned on.",
+      "The monitor is not properly connected."
+    ],
+     "Attemptable Solution.": [
+      "Check if the monitor is on.",
+      "Check the connection between the camera head and CCU, and then the CCU and monitor.",
+      "Turn off and then restart the system."
+     ],
+    "manual_reference": "U1 Operator Manual - Troubleshooting - Section 5 - Page 43",
+    "image": "",
+    "model": ["U1"]
+  },
+  "The color of the displayed image deviates.": {
+    "Symptom": "The color of the displayed image deviates.",
+    "Possible Cause": [
+      "White balance is not properly performed.",
+      "The surgery mode is not correctly selected.",
+      "The image setting is not appropriate."
+    ],
+     "Attemptable Solution.": [
+      "Perform white balance correctly.",
+      "Select the correct surgery mode.",
+      "Check the image setting."
+     ],
+    "manual_reference": "U1 Operator Manual - Troubleshooting - Section 5 - Page 43",
+    "image": "",
+    "model": ["U1"]
+  },
+  "The image displayed is blurred.": {
+    "Symptom": "The image displayed is blurred.",
+    "Possible Cause": [
+      "The camera head is not correctly focused.",
+      "The front of endoscope is contaminated by blood, mucus or tissue fragments."
+    ],
+     "Attemptable Solution.": [
+      "Rotate the focusing ring on the camera head to focus.",
+      "Pull the endoscope out from the patient carefully and remove the blood or mucus."
+     ],
+    "manual_reference": "U1 Operator Manual - Troubleshooting - Section 5 - Page 44",
+    "image": "",
+    "model": ["U1"]
+  },
+  "The image displayed is too bright or dark.": {
+    "Symptom": "The image displayed is too bright or dark.",
+    "Possible Cause": [
+      "The brightness and contrast of the monitor is inappropriate.",
+      "The brightness setting of the CCU is inappropriate.",
+      "The light cable is not correctly connected.",
+      "The brightness and contrast of the monitor is not appropriate.",
+      "The light cable is broken."
+    ],
+     "Attemptable Solution.": [
+      "Adjust the brightness and contrast of the monitor following its instructions for use.",
+      "Adjust the brightness of the CCU.",
+      "Set the brightness of the light source following its instructions for use.",
+      "Check the light cable. If case of damage, replace it with a new one."
+     ],
+    "manual_reference": "U1 Operator Manual - Troubleshooting - Section 5 - Page 44",
+    "image": "",
+    "model": ["U1"]
+  },
+  "The image is not displayed in the center.": {
+    "Symptom": "The image is not displayed in the center.",
+    "Possible Cause": [
+      "The endoscope is not correctly connected."
+    ],
+     "Attemptable Solution.": [
+      "Disassemble the endoscope from the camera head, and reassemble them."
+     ],
+    "manual_reference": "U1 Operator Manual - Troubleshooting - Section 5 - Page 44",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Image is disturbed when using highfrequency surgical equipment.": {
+    "Symptom": "Image is disturbed when using highfrequency surgical equipment.",
+    "Possible Cause": [
+      "The system is interfered by the high-frequency surgical equipment."
+    ],
+     "Attemptable Solution.": [
+      "Take the cable that connects the high-frequency surgical equipment away from the system as much as possible."
+     ],
+    "manual_reference": "U1 Operator Manual - Troubleshooting - Section 5 - Page 44",
+    "image": "",
+    "model": ["U1"]
+  },
+  "Video recording fails.": {
+    "Symptom": "Video recording fails.",
+    "Possible Cause": [
+      "The USB drive is broken.",
+      "The USB drive is out of memory."
+    ],
+     "Attemptable Solution.": [
+      "Check the status of USB drive on the screen of the CCU. Make sure it is ready for use."
+     ],
+    "manual_reference": "U1 Operator Manual - Troubleshooting - Section 5 - Page 44",
     "image": "",
     "model": ["U1"]
   }

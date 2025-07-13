@@ -1,162 +1,288 @@
 {
-  "HS-50F Insufflator Errors 🩺": {
-    "model": ["HS-50F"],
-    "problems": [
-      {
-        "code": "ERR#04",
-        "problem": "Failure of the proportional valve",
-        "causes": ["Main board failure"],
-        "repairs": ["Replace the main board (see section 9.10)"]
-      },
-      {
-        "code": "ERR#06",
-        "problem": "Power module failure",
-        "causes": ["Power module failure"],
-        "repairs": ["Replace the power supply module. See section 9.8"]
-      },
-      {
-        "code": "ERR#07",
-        "problem": "Main board hardware failure",
-        "causes": ["Main board failure"],
-        "repairs": ["Replace the main board (see section 9.10)"]
-      },
-      {
-        "code": "ERR#08",
-        "problem": "Valve failure: Inconsistent control/monitor state",
-        "causes": ["Main board failure"],
-        "repairs": ["Replace the main board (see section 9.10)"]
-      },
-      {
-        "code": "ERR#09",
-        "problem": "High-pressure sensor out of range",
-        "causes": ["Device Failure Error Code 9"],
-        "repairs": ["Refer to section 5.4 for troubleshooting"]
-      },
-      {
-        "code": "ERR#10",
-        "problem": "Low-pressure sensor out of range",
-        "causes": ["Device Failure Error Code 10"],
-        "repairs": ["Refer to section 5.4 for troubleshooting"]
-      },
-      {
-        "code": "ERR#11",
-        "problem": "Flow sensor and valve front pressure sensor (P2) out of range",
-        "causes": ["Main board failure"],
-        "repairs": ["Replace the main board (see section 9.10)"]
-      },
-      {
-        "code": "ERR#12",
-        "problem": "Sensor Error",
-        "causes": [
-          "Software fault (V1.0)",
-          "Sensor silicone tube falls off or is bent",
-          "Short circuit or open circuit of inflation valve"
-        ],
-        "repairs": [
-          "Upgrade software",
-          "Reconnect the sensor connection pipe",
-          "Replace the pneumatic module assembly (see section 9.6)"
-        ]
-      },
-      {
-        "code": "ERR#13",
-        "problem": "Level sensor AD out of range",
-        "causes": ["Device Failure Error Code 13"],
-        "repairs": ["Refer to section 5.4 for troubleshooting"]
-      },
-      {
-        "code": "ERR#14",
-        "problem": "Heating sensor error (insufflator tube failure)",
-        "causes": ["/"],
-        "repairs": ["Replace the heating insufflator tube"]
-      },
-      {
-        "code": "ERR#15",
-        "problem": "Heating plate failure",
-        "causes": [
-          "Poor connection of the heating plate cable",
-          "Not heating the plate"
-        ],
-        "repairs": [
-          "Reconnect the heating plate cable",
-          "Replace the heating plate (see 9.15)"
-        ]
-      },
-      {
-        "code": null,
-        "problem": "Contamination (liquid enters the device)",
-        "causes": ["Fluid ingress into insufflator"],
-        "repairs": ["Replace the liquid inlet", "Clear the contamination using software (V2.0)"]
-      },
-      {
-        "code": null,
-        "problem": "High zero drift of pressure sensor (main board failure)",
-        "causes": ["Other than listed faults", "Main board failure"],
-        "repairs": [
-          "Upgrade software (V1.0)",
-          "Replace main board (section 9.10)"
-        ]
-      },
-      {
-        "code": null,
-        "problem": "Inflation valve drive failure",
-        "causes": ["Main board failure"],
-        "repairs": ["Replace the main board (see section 9.10)"]
-      },
-      {
-        "code": null,
-        "problem": "Mechanical failure of inflation valve",
-        "causes": ["Failure of pneumatic module assembly"],
-        "repairs": ["Replace pneumatic module assembly (section 9.6)"]
-      },
-      {
-        "code": null,
-        "problem": "Proportional valve leakage",
-        "causes": ["Failure of pneumatic module"],
-        "repairs": ["Replace pneumatic module assembly (section 9.6)"]
-      },
-      {
-        "code": null,
-        "problem": "Smoke exhaust function failure",
-        "causes": ["Short/open circuit of pinch valve"],
-        "repairs": ["Replace smoke exhaust valve (see 9.19)"]
-      },
-      {
-        "code": null,
-        "problem": "Buzzer not functioning",
-        "causes": ["Buzzer/control circuit failure"],
-        "repairs": ["Replace main board (see 9.10)"]
-      },
-      {
-        "code": null,
-        "problem": "Insufflator tube not heated",
-        "causes": ["Insufflator tube failure"],
-        "repairs": ["Replace insufflator tube"]
-      },
-      {
-        "code": null,
-        "problem": "Heating plate power error",
-        "causes": ["Heating plate not connected"],
-        "repairs": ["Reconnect heating plate cable"]
-      },
-      {
-        "code": null,
-        "problem": "Abnormal sound of high-pressure valve",
-        "causes": ["Faulty high-pressure valve"],
-        "repairs": ["Replace high-pressure valve (section 9.5)"]
-      },
-      {
-        "code": null,
-        "problem": "Abnormal sound of low-pressure valve",
-        "causes": ["Low-pressure valve fault"],
-        "repairs": ["Replace low-pressure valve (section 9.5)"]
-      },
-      {
-        "code": null,
-        "problem": "Abnormal intermittent sound during inflation",
-        "causes": ["Proportional valve fault"],
-        "repairs": ["Replace pneumatic module assembly (see 9.6)"]
-      }
-    ]
+  "The indicator light does not light up and the system is not started after the AC power supply is plugged in.": {
+    "Fault Symptom.": "The indicator light does not light up and the system is not started after the AC power supply is plugged in.",
+    "Possible Cause 1": [
+      "The fuse is blown."
+    ],
+    "Confirmation of Fault Cause 1": [
+      "The fault disappears after the fuse is replaced. You can also use the following method to determine:",
+      "1. The main board display light is off (see Figure 5-1).",
+      "2. Use a multimeter to measure the input voltage of the power supply module (see Figure 5-1).",
+      "The power supply module has no voltage output."
+    ],
+    "Troubleshooting 1": [
+      "Replace the AC outlet fuse. See Hs-50F - Service Manual - Section 9.21."
+    ],
+    "Possible Cause 2": [
+      "Power module failure."
+    ],
+    "Confirmation of Fault Cause 2": [
+      "The main board indicator light (see Figure 5-1) is off.",
+      "Use a multimeter to measure the output terminal of the power supply module (see Figure 5-1).",
+      "The output voltage is smaller than 10 V."
+    ],
+    "Troubleshooting 2": [
+      "Replace the power supply module. See HS-50F Service Manual - Section 9.8."
+    ],
+    "Possible Cause 3": [
+      "Poor connection of the power button board cable."
+    ],
+    "Confirmation of Fault Cause 3": [
+      "The main board indicator light (see Figure 5-1) is off.",
+      "The fault disappears after the power button board connection cable is reconnected. See Figure 5-2."
+    ],
+    "Troubleshooting 3": [
+      "Replace the power supply module. See HS-50F Service Manual - Section 9.8."
+    ],
+    "Possible Cause 4": [
+      "Power button board failure."
+    ],
+    "Confirmation of Fault Cause 4": [
+      "The fault disappears after the power button board is replaced (see section 9.14)."
+    ],
+    "Troubleshooting 4": [
+      "Replace the power button board. See section 9.14."
+    ],
+    "Possible Cause 5": [
+      "Main board failure."
+    ],
+    "Confirmation of Fault Cause 5": [
+      "The fault disappears after the main board is replaced (see section 9.10)."
+    ],
+    "Troubleshooting 5": [
+      "Replace the main board. See section 9.10."
+    ],
+    "manual_reference": "HS-50F Service Manual - Starting Problem Handling - Section 5.3 - Page 29",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "The indicator light is on, but the system is not started.": {
+    "Fault Symptom": "The indicator light is on, but the system is not started.",
+    "Possible Cause 1": [
+      "Main board failure."
+    ],
+    "Confirmation of Fault Cause 1": [
+      "After the power button is pressed, the power indicator turns green."
+    ],
+    "Troubleshooting 1": [
+      "Replace the main board. See section 9.10."
+    ],
+    "Possible Cause 2": [
+      "Poor connection of the power button board cable."
+    ],
+    "Confirmation of Fault Cause 2": [
+      "1. After the power button is pressed, the power indicator color remains the same.",
+      "2. The fault disappears after the power button board connection cable is reconnected (see Figure 5-2)."
+    ],
+    "Troubleshooting 2": [
+      "Reconnect the power button board connection cable. See Figure 5-2."
+    ],
+    "Possible Cause 3": [
+      "Power button board failure."
+    ],
+    "Confirmation of Fault Cause 3": [
+      "1. After the power button is pressed, the power indicator color remains the same.",
+      "2. The fault disappears after the power button board is replaced."
+    ],
+    "Troubleshooting 3": [
+      "Replace the power button board. See section 9.14."
+    ],
+    "manual_reference": "HS-50F Service Manual - Starting Problem Handling - Section 5.3 - Page 30",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "The screen is blank after booting, but there is a self-check sound.": {
+    "Fault Symptom": "The screen is blank after booting, but there is a self-check sound.",
+    "Possible Cause 01": [
+      "Poor display cable connection."
+    ],
+    "Confirmation of Fault Cause 01": [
+      "The fault disappears after the display cable is reconnected (see Figure 5-3)."
+    ],
+    "Troubleshooting 01": [
+      "Reconnect the display cable. See Figure 5-3."
+    ],
+    "Possible Cause 02": [
+      "Display fault."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "The fault disappears after the display is replaced (see section 9.13)."
+    ],
+    "Troubleshooting 02": [
+      "Replace the display. See section 9.13."
+    ],
+    "manual_reference": "HS-50F Service Manual - Starting Problem Handling - Section 5.3 - Page 30",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "There is a sound of gas leakage inside the machine after connecting the gas source": {
+    "Fault Symptom": "There is a sound of gas leakage inside the machine after connecting the gas source",
+    "Possible Cause 01": [
+      "Poor connection of PU hose and air leakage."
+    ],
+    "Confirmation of Fault Cause 01": [
+      "The fault disappears after the PU hoses in the machine is reconnected (see Figure 5-1)."
+    ],
+    "Troubleshooting 01": [
+      "Reconnect the PU hose with an insertion depth of about 20 mm."
+    ],"Possible Cause 02": [
+      "PU hose deformation."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "Pull out the PU hose (see Figure 5-1). The inserted part of the PU hose is obviously deformed and yellowed."
+    ],
+    "Troubleshooting 02": [
+      "Replace the PU hose (see Figure 5-1)."
+    ],"Possible Cause 03": [
+      "Leakage of high-pressure regulator assembly."
+    ],
+    "Confirmation of Fault Cause 03": [
+      "Pull out the PU hose at the input end of the low-pressure regulator (see Figure 5-1). The bend is suffocated, and there is still leakage even when the gas source is connected."
+    ],
+    "Troubleshooting 03": [
+      "Replace the high-pressure regulator assembly. See section 9.3."
+    ],
+    "Possible Cause 04": [
+      "Leakage of low-pressure regulator assembly"
+    ],
+    "Confirmation of Fault Cause 04": [
+      "Disassemble the PU hose at the input end of the pneumatic module assembly.",
+      "Disassemble the PU hose at the input end of the low-pressure regulator and connect it to the inlet end of the gas source (see Figure 5-1).",
+      "After connecting the gas source, the leakage disappears."
+    ],
+    "Troubleshooting 04": [
+      "Replace the low-pressure regulator assembly. See section 9.5."
+    ],
+    "Possible Cause 05": [
+      "Leakage of pneumatic module assembly."
+    ],
+    "Confirmation of Fault Cause 05": [
+      "Other than leakage of the above-mentioned components."
+    ],
+    "Troubleshooting 05": [
+      "Replace the pneumatic module assembly. See section 9.6."
+    ],
+    "manual_reference": "HS-50F Service Manual - Starting Problem Handling - Section 5.3 - Page 31",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "The gas cylinder is directly connected to the steel pipe for gas supply: Low gas source pressure Gas Supply.": {
+    "Fault Symptom": "The gas cylinder is directly connected to the steel pipe for gas supply: Low gas source pressure Gas Supply.",
+    "Possible Cause 01": [
+      "The gas source is not connected, or the gas source pressure is low."
+    ],
+    "Confirmation of Fault Cause 01": [
+      "Check the on-site gas source pressure.",
+      "Check whether the gas cylinder's gas source pressure is lower than 1 MPa."
+    ],
+    "Troubleshooting 01": [
+      "Connect a gas source with sufficient air pressure."
+    ],
+    "Possible Cause 02": [
+      "The high-pressure sensor has a large zero drift or failure."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "If the self-inspection problem remains when the gas source pressure is greater than 1 MPa, the high-pressure sensor is faulty."
+    ],
+    "Troubleshooting 02": [
+      "1. Perform zero calibration of high pressure sensor (see section 6.2).",
+      "2. Replace the high-pressure regulator assembly (See section 9.3) if the problem remains."
+    ],
+    "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 31",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Central gas supply or pressure relief valve is connected to the gas cylinder: Low gas source pressure Gas Supply": {
+    "Fault Symptom": "Central gas supply or pressure relief valve is connected to the gas cylinder: Low gas source pressure Gas Supply.",
+    "Possible Cause 01": [
+      "The gas source is not connected, or the gas source pressure is low."
+    ],
+    "Confirmation of Fault Cause 01": [
+      "Check the on-site gas source pressure. Check whether the pressure of the central gas source is lower than 0.1 MPa."
+    ],
+    "Troubleshooting 01": [
+      "Connect a gas source with sufficient air pressure."
+    ],
+    "Possible Cause 02": [
+      "Central gas supply or gas cylinders supply gas after passing through the pressure relieve valve, but the gas source type is set to cylinder."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "1. Press the Settings menu to enter the setting page. Change the gas source type to Central Air Supply. Restart the machine and the problem disappears."
+    ],
+    "Troubleshooting 02": [
+      "Press the Settings menu to enter the setting page. Change the gas source type to Central Air Supply. Restart the machine."
+    ],
+    "Possible Cause 03": [
+      "Low regulation pressure of the pressure relief valve."
+    ],
+    "Confirmation of Fault Cause 03": [
+      "1. Check whether the pressure of low-pressure gauge of the pressure relief valve is lower than 0.1 MPa.",
+      "2. Check whether the regulator knob of the pressure relief valve is loose.",
+      "It is the low regulation pressure of the pressure relief valve if either 1 or 2 is confirmed."
+    ],
+    "Troubleshooting 03": [
+      "Tighten the knob of the pressure relief valve clockwise to increase the output pressure of the pressure relief valve."
+    ],
+    "Possible Cause 04": [
+      "Dual-gauge pressure relief valve is stuck."
+    ],
+    "Confirmation of Fault Cause 04": [
+      "1. Check whether the pressure of low-pressure gauge of the pressure relief valve is lower than 0.1 MPa.",
+      "2. After loosening the pressure relief valve, re-tighten it. Repeat the operation 3~5 times. The problem disappears."
+    ],
+    "Troubleshooting 04": [
+      "After loosening the pressure relief valve, re-tighten it. Repeat the operation 3~5 times."
+    ],
+    "Possible Cause 05": [
+      "Dual-gauge pressure relief valve fault."
+    ],
+    "Confirmation of Fault Cause 05": [
+      "If it is confirmed that the pressure relief valve is not stuck (the fault remains after re-tightening the pressure relief valve), loosen the pressure relief valve adjusting knob, remove the connecting hose of the pressure relief valve, and then slowly tighten the pressure relief valve knob to observe Whether there is gas output at the output port of the pressure relief valve. If there is no gas output, the pressure relief valve is faulty."
+    ],
+    "Troubleshooting 05": [
+      "Replace the dual-gauge pressure relief valve."
+    ],
+    "Possible Cause 06": [
+      "The high-pressure sensor has a large zero drift or failure (V1.0)."
+    ],
+    "Confirmation of Fault Cause 06": [
+      "V1.0: If the fault disappears after upgrading the software (see 10) and zeroing of the high-pressure sensor (see section 6.2), the fault can be determined."
+    ],
+    "Troubleshooting 06": [
+      "1. V1.0 upgrading software of insufflator (10).",
+      "2. Perform zero calibration of high pressure sensor (see section 6.2).",
+      "3. Replace the high-pressure regulator assembly (See section 9.3) if the problem remains."
+    ],
+    "Possible Cause 07": [
+      "Short circuit or open circuit of the proportional valve (V1.0)."
+    ],
+    "Confirmation of Fault Cause 07": [
+      "Unplug the proportional valve cable (see Figure 5-2) and measure the proportional valve resistance. If the resistance is less than 9Ω, or >20Ω, the valve is faulty."
+    ],
+    "Troubleshooting 07": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "Possible Cause 08": [
+      "Mechanical failure of the proportional valve (V1.0)"
+    ],
+    "Confirmation of Fault Cause 08": [
+      "If it is not a drive failure of the main board, connect the gas source. Set the proportional valve current to 90 in the diagnostic mode and open the inflation valve (see 5.7.3.3).",
+      "Touch the proportional valve after about 2 minutes. If the valve is heated with no flow at the gas injection port, the fault can be determined."
+    ],
+    "Troubleshooting 08": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "Possible Cause 09": [
+      "The low-pressure sensor has a large zero drift or failure (V2.0 and above)."
+    ],
+    "Confirmation of Fault Cause 09": [
+      "When the gas source type is central gas supply, if the gas source pressure is greater than 0.1 MPa, but this self-check error remains, the low-pressure sensor is faulty."
+    ],
+    "Troubleshooting 09": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 31-33",
+    "image": "",
+    "model": ["HS-50F"]
   }
 }

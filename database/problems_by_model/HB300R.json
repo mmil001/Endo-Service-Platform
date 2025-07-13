@@ -1,292 +1,231 @@
 {
-  "E001 - Communication Failure 🔌": {
-    "problem": "Communication between control boards failed.",
-    "causes": [
-      "Loose connection between internal boards",
-      "Faulty communication IC"
+  "The equipment cannot be powered on.": {
+    "Fault Symptom": "The equipment cannot be powered on.",
+    "Possible Cause": [
+      "The equipment is not connected to a power supply or the power supply is improperly connected."
     ],
-    "repairs": [
-      "Check and reseat all board communication cables",
-      "Replace main control board if fault persists"
+    "Solution": [
+      "Check whether the power supply is properly connected.",
+      "Remove and then insert the power cord, and restart the equipment."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "manual_reference": "HB300R Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E002 - Fan Error 🌬️": {
-    "problem": "Fan is blocked or not rotating.",
-    "causes": [
-      "Fan connector loose or fan damaged",
-      "Obstruction in airflow path"
+  "The equipment generates noise when it is operating.": {
+    "Fault Symptom": [
+      "The equipment generates noise when it is operating."
     ],
-    "repairs": [
-      "Check fan connector and ensure free rotation",
-      "Replace fan if no RPM feedback is detected"
+    "Possible Cause": [
+      "The equipment is not placed flatly.",
+      "Objects placed on the top of the equipment are too heavy."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "Solution": [
+     "Check whether the equipment is flat.",
+      "Ensure that no object is placed on the top of the equipment."
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E003 - LD Over Temperature 🌡️": {
-    "problem": "LD module temperature exceeded safety range.",
-    "causes": [
-      "Insufficient ventilation",
-      "Faulty temperature sensor"
+  "There is no light output.": {
+    "Fault Symptom": [
+      "There is no light output."
     ],
-    "repairs": [
-      "Clean air vents and verify fan function",
-      "Replace LD module or temp sensor if overheating persists"
+    "Possible Cause": [
+      "The light cable is not properly connected."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "Solution": [
+     "Check whether the light cable is connected correctly.",
+     "Turn on the light source. If no light is output yet, contact service personnel."
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E004 - LED Over Temperature 💡🔥": {
-    "problem": "LED module temperature exceeded safety range.",
-    "causes": [
-      "Fan malfunction",
-      "LED module failure"
+  "Brightness is too low.": {
+    "Fault Symptom": [
+      "Brightness is too low."
     ],
-    "repairs": [
-      "Check fan operation",
-      "Replace LED module if necessary"
+    "Possible Cause": [
+      "The brightness settings are inappropriate."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "Solution": [
+     "Check whether the brightness level is too low and turn up the brightness level."
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E005 - Laser Safety Circuit Fault ⚠️": {
-    "problem": "Abnormality detected in the laser safety circuit.",
-    "causes": [
-      "Circuit component failure",
-      "Internal safety interlock triggered"
+  "Brightness is too high.": {
+    "Fault Symptom": [
+      "Brightness is too high."
     ],
-    "repairs": [
-      "Inspect safety circuit components",
-      "Replace laser safety control board if needed"
+    "Possible Cause": [
+      "The brightness settings are inappropriate."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "Solution": [
+     "Check whether the brightness level is too high and turn down the brightness level."
+    ],
+    "manual_reference": "HB300R Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E006 - LD Current Abnormal 🔺": {
-    "problem": "Detected LD current is out of specification.",
-    "causes": [
-      "Driver malfunction",
-      "Short or open in LD circuit"
+  "Error Code #01.": {
+    "Error Code": "#01",
+    "Prompt": "LED Over Heat #01",
+    "Cause": [
+      "The temperature of the LED light source is too high."
     ],
-    "repairs": [
-      "Measure LD current",
-      "Replace driver or LD module"
+    "Solution": [
+      "Check whether the air outlet of the light source is shielded by any object. If yes, remove the object."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "manual_reference": "HB300R Service Manual - Section 5.4 - Fault List, Page 30",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E007 - LED Current Abnormal 🔺": {
-    "problem": "Detected LED current is abnormal.",
-    "causes": [
-      "LED driver error",
-      "Loose connector"
+  "Error Code #02.": {
+    "Error Code": "#02",
+    "Prompt": "LED Over Life Time #02",
+    "Cause": [
+      "The LED has reached the end of its service life."
     ],
-    "repairs": [
-      "Verify voltage and current at CN12",
-      "Replace LED driver board"
+    "Solution": [
+      "Replace the PN 115-074373-00 - Lens Assembly FRU."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "manual_reference": "HB300R Service / Operator Manual - Removing the Lens Assembly - Section 7.3.5 - Page 42",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E008 - EEPROM Communication Error 📉": {
-    "problem": "The system failed to communicate with the EEPROM.",
-    "causes": [
-      "EEPROM failure",
-      "Communication cable issue"
+  "Error Code #03.": {
+    "Error Code": "#03",
+    "Prompt": "LED Over Heat #03",
+    "Cause": [
+      "The temperature of the LED light source exceeds 105°C."
     ],
-    "repairs": [
-      "Reconnect EEPROM interface cable",
-      "Replace EEPROM chip if fault persists"
+    "Solution": [
+      "Check whether the light source is in an environment out of the temperature requirement."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "manual_reference": "HB300R Service Manual - Section 5.4 - Fault List, Page 30",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E009 - Foot Switch Connection Fault 🎛️": {
-    "problem": "Foot switch is not detected or malfunctioning.",
-    "causes": [
-      "Cable disconnected",
-      "Foot switch failure"
+  "Error Code #04.": {
+    "Error Code": "#04",
+    "Prompt": "LD Over Heat #04",
+    "Cause": [
+      "The temperature of the LD light source is too high."
     ],
-    "repairs": [
-      "Reconnect and test foot switch",
-      "Replace if still unresponsive"
+    "Solution": [
+      "Check whether the air outlet of the light source is shielded by any object. If yes, remove the object."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "manual_reference": "HB300R Service Manual - Section 5.4 - Fault List, Page 30",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E010 - Light Cable Not Detected 🔦": {
-    "problem": "System cannot detect the light cable.",
-    "causes": [
-      "Fiber optic connector not inserted",
-      "Sensor failure at detection point"
+  "Error Code #05.": {
+    "Error Code": "#05",
+    "Prompt": "LD Over Heat #05",
+    "Cause": [
+      "The temperature of the LD light source exceeds the operating temperature."
     ],
-    "repairs": [
-      "Reconnect light cable securely",
-      "Replace cable detection sensor"
+    "Solution": [
+      "Check whether the light source is in an environment out of the temperature requirement."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "manual_reference": "HB300R Service Manual - Section 5.4 - Fault List, Page 31",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E011 - AC-DC Module Overvoltage ⚡": {
-    "problem": "Detected input voltage exceeds safe limit.",
-    "causes": [
-      "Power surge",
-      "AC-DC converter fault"
+  "Error Code #06.": {
+    "Error Code": "#06",
+    "Prompt": "LED Error #06",
+    "Cause": [
+      "The LED temperature sensor is not connected."
     ],
-    "repairs": [
-      "Test AC input voltage",
-      "Replace power supply if unstable"
+    "Solution": [
+      "Replace the PN 115-074375-00 LD Assembly FRU."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "manual_reference": "HB300R Service Manual - Removing the LD Assembly - Section 7.3.4 - Page 41",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E012 - AC-DC Module Undervoltage ⚡": {
-    "problem": "Input voltage below minimum threshold.",
-    "causes": [
-      "Unstable power source",
-      "AC-DC board failure"
+  "Error Code #08.": {
+    "Error Code": "#08",
+    "Prompt": "Fan Error #08",
+    "Cause": [
+      "Fans are not connected or are clogged."
     ],
-    "repairs": [
-      "Verify wall outlet power stability",
-      "Replace power board if needed"
+    "Solution": [
+      "Ensure that the ventilation outlets of fans have no object that could stop the fans from rotating."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "manual_reference": "HB300R Service Manual - Section 5.4 - Fault List, Page 31",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E013 - Laser Overheating 🔥": {
-    "problem": "Laser temperature exceeded operating limit.",
-    "causes": [
-      "Ambient temp too high",
-      "Fan or heatsink not effective"
+  "LED Over Heat | LD Over Heat.": {
+    "Message": "LED Over Heat | LD Over Heat.",
+    "Possible Cause": [
+      "The ventilation outlet is blocked.",
+      "The room temperature exceeds the limit.",
+      "The fan does not work normally."
     ],
-    "repairs": [
-      "Improve cooling and ventilation",
-      "Check fan and thermal paste condition"
+    "Attemptable Solution": [
+      "Clear the blockage from the ventilation outlet.",
+      "Reduce the room temperature.",
+      "Remove the equipment from use and use the backup one."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "manual_reference": "HB300R Operator Manual - Section 4.11 - Error Messages, Page 33",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "E014 - Communication Timeout ⏱️": {
-    "problem": "Communication between boards timed out.",
-    "causes": [
-      "Faulty board connection",
-      "Firmware/hardware communication failure"
+  "LED Over Life Time.": {
+    "Message": "LED Over Life Time.",
+    "Possible Cause": [
+      "The bulb has reached the end of its service life."
     ],
-    "repairs": [
-      "Reseat internal communication cables",
-      "Update firmware or replace board"
+    "Attemptable Solution": [
+      "Replace the PN 115-074373-00 - Lens Assembly FRU."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.4, Page 5-2",
+    "manual_reference": "HB300R Service / Operator Manual - Removing the Lens Assembly - Section 7.3.5 - Page 42",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "Device Does Not Power On ⚠️": {
-    "problem": "The system does not turn on when the power button is pressed.",
-    "causes": [
-      "AC power cord is not connected properly",
-      "Power switch failure",
-      "Blown fuse or faulty power board"
+  "LED Error.": {
+    "Message": "LED Error.",
+    "Possible Cause": [
+      "Equipment failure occurs."
     ],
-    "repairs": [
-      "Check the AC power cord and outlet",
-      "Test power switch continuity",
-      "Inspect fuse and power supply output (24V), replace if faulty"
+    "Attemptable Solution": [
+      "Remove the equipment from use and use the backup one."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
+    "manual_reference": "HB300R Service / Operator Manual - Removing the Lens Assembly - Section 7.3.5 - Page 42",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "System Shuts Down Automatically 🔁": {
-    "problem": "The unit shuts down during use without user intervention.",
-    "causes": [
-      "Overheating due to ventilation blockage",
-      "Power supply instability",
-      "Firmware protection triggered"
+  "LD Error.": {
+    "Message": "LD Error.",
+    "Possible Cause": [
+      "The bulb has reached the end of its service life.",
+      "Equipment failure occurs."
     ],
-    "repairs": [
-      "Clean ventilation openings",
-      "Verify power input voltage",
-      "Check fan operation and replace if needed"
+    "Attemptable Solution": [
+      "Replace the PN 115-074375-00 - LD Assembly FRU."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
+    "manual_reference": "HB300R Service Manual - Removing the LD Assembly - Section 7.3.4 - Page 41",
     "image": "",
     "modelo": ["HB300R"]
   },
-  "No Light Output 🔦": {
-    "problem": "There is no light from the output port during operation.",
-    "causes": [
-      "Light source module damaged (LED or LD)",
-      "Loose connection on light output port",
-      "Faulty light cable"
+  "Fan Error.": {
+    "Message": "Fan Error.",
+    "Possible Cause": [
+      "The fan is blocked or damaged."
     ],
-    "repairs": [
-      "Reconnect or replace light cable",
-      "Inspect LED/LD module and replace if necessary",
-      "Verify output voltage from driver boards"
+    "Attemptable Solution": [
+      "Check the ventilation outlet for anything that might interrupt the rotation of the fan. Clear the blockage if any.",
+      "Remove the system from use and use the backup one."
     ],
-    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
-    "image": "",
-    "modelo": ["HB300R"]
-  },
-  "Touchscreen Not Responding 📱": {
-    "problem": "The display screen does not respond to touch input.",
-    "causes": [
-      "Touch controller cable disconnected",
-      "Touch panel failure",
-      "Main board issue"
-    ],
-    "repairs": [
-      "Check and reconnect J10 or relevant connectors",
-      "Replace touchscreen panel if nonfunctional",
-      "Test main board functionality"
-    ],
-    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
-    "image": "",
-    "modelo": ["HB300R"]
-  },
-  "Noise or Vibration During Operation 🔊": {
-    "problem": "The unit emits unusual noise or vibration.",
-    "causes": [
-      "Device not placed on a stable surface",
-      "Fan imbalance or obstruction"
-    ],
-    "repairs": [
-      "Ensure device is placed on level surface",
-      "Inspect and clean fan",
-      "Replace if vibration persists"
-    ],
-    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
-    "image": "",
-    "modelo": ["HB300R"]
-  },
-  "Laser Activation Failure with Footswitch 🦶": {
-    "problem": "Laser does not activate when pressing the footswitch.",
-    "causes": [
-      "Footswitch disconnected or faulty",
-      "Internal detection circuit error"
-    ],
-    "repairs": [
-      "Reconnect or replace footswitch",
-      "Verify control board input signal"
-    ],
-    "manual_reference": "HB300R Service Manual - Section 5.3, Page 5-1",
+    "manual_reference": "HB300R Operator Manual - Section 4.11 - Error Messages, Page 33",
     "image": "",
     "modelo": ["HB300R"]
   }
 }
-

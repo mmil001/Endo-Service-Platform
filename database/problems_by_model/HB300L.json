@@ -1,81 +1,107 @@
 {
-  "LED Does Not Turn On 💡": {
-    "problem": "The LED light source does not emit light after the system is powered on.",
-    "causes": [
-      "Faulty LED module",
-      "Disconnection between control board and LED",
-      "LED driver board malfunction"
+  "LED is not lit when the power supply is connected and the power switch is pressed.": {
+    "Fault Symptom": "LED is not lit when the power supply is connected and the power switch is pressed.",
+    "Troubleshooting": [
+      "Check whether the power LED is lit. If not, check whether the power socket is normal. If the power LED is lit up in blue, check whether the touchscreen operates normally. If yes, check whether an error is displayed. If not, contact the service personnel."
     ],
-    "repairs": [
-      "Check the LED output voltage from the control board (~24V at CN12)",
-      "Reconnect the LED cable if loose",
-      "Replace the LED module or LED driver board if voltage is abnormal"
-    ],
-    "manual_reference": "HB300L Service Manual - Section 4.3, Page 4-2",
+    "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 29",
     "image": "",
     "modelo": ["HB300L"]
   },
-  "Fan Failure or Noise 🌬️": {
-    "problem": "The internal fan does not operate or produces abnormal noise.",
-    "causes": [
-      "Fan cable disconnected or damaged",
-      "Faulty fan motor",
-      "Obstruction or debris inside fan housing"
+  "The buzzer buzzes and the touchscreen prompts Fan Error.": {
+    "Fault Symptom": "The buzzer buzzes and the touchscreen prompts Fan Error.",
+    "Troubleshooting": [
+      "The fan is abnormal and should be returned for repair."
     ],
-    "repairs": [
-      "Check fan connector at CN6",
-      "Test fan voltage (~12V); replace if not spinning",
-      "Clean any obstruction from the fan area"
-    ],
-    "manual_reference": "HB300L Service Manual - Section 4.3, Page 4-2",
+    "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 29",
     "image": "",
     "modelo": ["HB300L"]
   },
-  "No Light Output from Front Port 🔦": {
-    "problem": "The system is powered, LED is on, but no light is emitted through the fiber port.",
-    "causes": [
-      "Broken LED optics or fiber output path",
-      "Defective or misaligned light guide port",
-      "Internal LED not mounted correctly"
+  "The buzzer buzzes and the brightness output is lessened.": {
+    "Fault Symptom": "The buzzer buzzes and the brightness output is lessened.",
+    "Troubleshooting": [
+      "The temperature of the equipment is too high. Check whether the ambient temperature is too high and whether the rear air outlet is blocked. If yes, remove the obstacles and wait until the equipment cools off."
     ],
-    "repairs": [
-      "Verify optical alignment between LED and output port",
-      "Check and clean the port window",
-      "Replace LED or optical assembly if damaged"
-    ],
-    "manual_reference": "HB300L Service Manual - Section 6.3.4, Page 6-2",
+    "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 29",
     "image": "",
     "modelo": ["HB300L"]
   },
-  "System Does Not Power On ⚠️": {
-    "problem": "The power switch is pressed, but the unit does not start.",
-    "causes": [
-      "AC cable disconnected",
-      "Power fuse (F1) is blown",
-      "Faulty power board or no DC output"
+  "The front panel prompts LED Over Life Time.": {
+    "Fault Symptom": "The front panel prompts LED Over Life Time.",
+    "Troubleshooting": [
+      "LED light source has reached the end of its service life (60,000 hrs). Contact the customer service to replace the LED module."
     ],
-    "repairs": [
-      "Check power input at CN1",
-      "Replace fuse F1 (T3.15AH250V) if blown",
-      "Replace power supply board if output is not ~24V"
-    ],
-    "manual_reference": "HB300L Service Manual - Section 4.2 and 4.3, Page 4-2",
+    "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 29",
     "image": "",
     "modelo": ["HB300L"]
   },
-  "Touch Panel Not Responding 📱": {
-    "problem": "Touch input does not register or screen remains black.",
-    "causes": [
-      "Disconnected or damaged touchscreen cable (J10)",
-      "Display board failure",
-      "Firmware or configuration issue"
+  "The equipment generates noise when it is operating.": {
+    "Fault Symptom": "The equipment generates noise when it is operating.",
+    "Troubleshooting": [
+      "The equipment is not placed on a flat surface or excessively heavy objects are stacked on the equipment.",
+      "Check whether the equipment is placed on a flat surface. Do not place other objects on the equipment."
     ],
-    "repairs": [
-      "Reconnect cable J10 on the control board",
-      "Replace the touchscreen or display board",
-      "Check display board output voltages and backlight function"
+    "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 30",
+    "image": "",
+    "modelo": ["HB300L"]
+  },
+  "Light cable cannot be inserted.": {
+    "Fault Symptom": "Light cable cannot be inserted.",
+    "Troubleshooting": [
+      "Check whether the light cable matches this equipment.",
+      "Otherwise, replace the light cable.",
+      "Check whether the output optical interface is blocked."
     ],
-    "manual_reference": "HB300L Service Manual - Section 6.3.4, Page 6-3",
+    "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 30",
+    "image": "",
+    "modelo": ["HB300L"]
+  },
+  "Lamp does not work.": {
+    "Common Fault": "Lamp does not work.",
+    "Analysis and Solutions": [
+      "Check the power connection is normal or not, loose or not, power connection instability occurs.",
+      "Plug out and plug in the power cable and press the power button again."
+    ],
+    "manual_reference": "HB300L Operator Manual - Section 5.6 - Fault analysis and Troubleshooting, Page 25",
+    "image": "",
+    "modelo": ["HB300L"]
+  },
+  "No optical output.": {
+    "Common Fault": "No optical output.",
+    "Analysis and Solutions": [
+      "Note that cannot look directly at the light outlet at any time!.",
+      "Check the connection between the light cable and the light source.",
+      "If the light cable is not connected, connect it correctly.",
+      "If the light cable has been connected correctly, restart the light source and exit the standby mode. If the problem persists, contact your service personnel."
+    ],
+    "manual_reference": "HB300L Operator Manual - Section 5.6 - Fault analysis and Troubleshooting, Page 25",
+    "image": "",
+    "modelo": ["HB300L"]
+  },
+  "Abnormal sound during operation.": {
+    "Common Fault": "Abnormal sound during operation.",
+    "Analysis and Solutions": [
+      "Check whether the image processing host is placed horizontally, and whether any objects have been placed on the host. If something unusual suddenly occurs, please turn off the power supply and contact the maintenance staff."
+    ],
+    "manual_reference": "HB300L Operator Manual - Section 5.6 - Fault analysis and Troubleshooting, Page 25",
+    "image": "",
+    "modelo": ["HB300L"]
+  },
+  "Insufficient brightness.": {
+    "Common Fault": "Insufficient brightness.",
+    "Analysis and Solutions": [
+      "Check whether the brightness stalls is too low, and if so, increase brightness stalls."
+    ],
+    "manual_reference": "HB300L Operator Manual - Section 5.6 - Fault analysis and Troubleshooting, Page 25",
+    "image": "",
+    "modelo": ["HB300L"]
+  },
+  "Brightness is too high.": {
+    "Common Fault": "Brightness is too high.",
+    "Analysis and Solutions": [
+      "Check whether the brightness stalls is too high, and if so, decrease brightness stalls."
+    ],
+    "manual_reference": "HB300L Operator Manual - Section 5.6 - Fault analysis and Troubleshooting, Page 25",
     "image": "",
     "modelo": ["HB300L"]
   }
