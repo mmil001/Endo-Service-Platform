@@ -125,7 +125,8 @@
     ],
     "Troubleshooting 01": [
       "Reconnect the PU hose with an insertion depth of about 20 mm."
-    ],"Possible Cause 02": [
+    ],
+    "Possible Cause 02": [
       "PU hose deformation."
     ],
     "Confirmation of Fault Cause 02": [
@@ -133,7 +134,8 @@
     ],
     "Troubleshooting 02": [
       "Replace the PU hose (see Figure 5-1)."
-    ],"Possible Cause 03": [
+    ],
+    "Possible Cause 03": [
       "Leakage of high-pressure regulator assembly."
     ],
     "Confirmation of Fault Cause 03": [
@@ -284,5 +286,697 @@
     "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 31-33",
     "image": "",
     "model": ["HS-50F"]
+  },
+  "Contamination.": {
+    "Fault Symptom": "Contamination.",
+    "Possible Cause": [
+      "Liquid enters the insufflator."
+    ],
+    "Confirmation of Fault Cause": [
+      "/."
+    ],
+    "Troubleshooting": [
+      "1. Replacement of the liquid inlet sensor repair spare parts for V1.0 (see 9.11, 9.10 and 9.6), and replacement of liquid inlet contamination repair spare parts for V2.0 (see section 9.11).",
+      "2. For V1.0, upgrade the software version to clear the pollution mark (see 10). For V2.0, enter software settings to clear the pollution mark (see 6.5)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Starting Problem Handling - Section 5.4 - Page 33",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Device Failure Error Code 1 Device Failure Error Code 3.": {
+    "Fault Symptom": "Device Failure Error Code 1 Device Failure Error Code 3.",
+    "Possible Cause 01": [
+      "A part of the gas remains inside the insufflator. A self-check error occurs after it is exhausted during the self-check process."
+    ],
+    "Confirmation of Fault Cause 01": [
+      "The problem disappears after insufflator is restarted and the gas source is connected."
+    ],
+    "Troubleshooting 01": [
+      "Restart the insufflator after connecting the gas source."
+    ],
+    "Possible Cause 02": [
+      "Sensor hose falls off."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "Disassemble the upper cover (see section 9.1). Check whether the joints of the sensor silicone tube are well connected (see Figure 5-1 Host Interior-1)."
+    ],
+    "Troubleshooting 02": [
+      "Reconnect the dropped silicone tube (see Figure 5-1)."
+    ],
+    "Possible Cause 03": [
+      "The high-pressure sensor has a large zero drift."
+    ],
+    "Confirmation of Fault Cause 03": [
+      "In the cylinder gas supply mode, this error occurs when the gas source is not connected.",
+      "V1.0: In the central gas supply mode, the fault disappears after upgrading the software (see 10) and zeroing the high-pressure sensor (see section 6.2)."
+    ],
+    "Troubleshooting 03": [
+      "1. V1.0 upgrading software of insufflator (10).",
+      "2. Perform zero calibration of high pressure sensor (see section 6.2).",
+      "3. Replace the high-pressure regulator assembly (See section 9.3) if the problem remains."
+    ],
+    "Possible Cause 04": [
+      "The low-pressure sensor has a large zero drift (V2.0 and above)."
+    ],
+    "Confirmation of Fault Cause 04": [
+      "In the central gas supply mode, this error occurs when the gas source is not connected."
+    ],
+    "Troubleshooting 04": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "Possible Cause 05": [
+      "Short circuit or open circuit of the proportional valve."
+    ],
+    "Confirmation of Fault Cause 05": [
+      "Unplug the proportional valve cable (see Figure 5-2) and measure the proportional valve resistance. If the resistance is less than 9Ω, or >20Ω, the valve is faulty."
+    ],
+    "Troubleshooting 05": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "Possible Cause 06": [
+      "Drive failure of the main board proportional valve."
+    ],
+    "Confirmation of Fault Cause 06": [
+      "If it is not a short-circuit or open-circuit fault of the proportional valve, then: do not connect the gas source, set the proportional valve current to 90 in the diagnostic mode (see 5.7.3.3 for V1.0, 5.8.9 for V2.0). Touch the proportional valve after about 2 minutes. If it is not heated, the proportional valve is faulty."
+    ],
+    "Troubleshooting 06": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "Possible Cause 07": [
+      "Mechanical failure of the proportional valve."
+    ],
+    "Confirmation of Fault Cause 07": [
+      "If it is not a drive failure of the main board, connect the gas source. Set the proportional valve current to 90 in the diagnostic mode and open the inflation valve (see 5.7.3.3 for V1.0, 5.8.9 for V2.0). Touch the proportional valve after about 2 minutes. If the valve is heated with no flow at the gas injection port, the fault can be determined."
+    ],
+    "Troubleshooting 07": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Starting Problem Handling - Section 5.4 - Page 33-35",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Device Failure Error Code 2 Device Failure Error Code 4": {
+    "Fault Symptom": "Device Failure Error Code 2 Device Failure Error Code 4",
+    "Possible Cause 01": [
+      "Short circuit of inflation valve and safety valve (failure of pneumatic module assembly)."
+    ],
+    "Confirmation of Fault Cause 01": [
+      "Unplug the inflation valve and safety valve cable connector (see Figure 5-2), and measure the inflation valve and safety resistance. If the resistance value is smaller than 9 Ω or greater than 20 Ω, the fault is confirmed."
+    ],
+    "Troubleshooting 01": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "Possible Cause 02": [
+      "Inflation valve, safety valve drive failure (main board failure)."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "If it is not a short-circuit or open-circuit fault of the solenoid valve, then: do not connect the gas source. After the 'insufficient gas source' prompt and the Menu button appear, press the Menu button to enter the standby mode. Open the inflation valve and safety valve (see 5.7.3.3 for V1.0, 5.8.9 for V2.0). Touch the inflation valve and safety valve after about 2 minutes. If they are not heated, the fault is confirmed."
+    ],
+    "Troubleshooting 02": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "Possible Cause 03": [
+      "Mechanical failure of inflation valve and safety valve (failure of pneumatic module assembly)."
+    ],
+    "Confirmation of Fault Cause 03": [
+      "If it is not a main board failure, then: do not connect the gas source. After the 'insufficient gas source' prompt and the Menu button appear, press the Menu button to enter the standby mode. Connect the gas source, connect the gas injection port to the flowmeter, and then set the proportional valve current to 90 in the diagnostic mode. Open the inflation valve (see 5.7.3.3 for V1.0, 5.8.9 for V2.0). If no flow can be detected at the gas injection port, the fault can be confirmed."
+    ],
+    "Troubleshooting 03": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "Possible Cause 04": [
+      "Proportional valve leakage (failure of pneumatic module assembly)."
+    ],
+    "Confirmation of Fault Cause 04": [
+      "1 - Open the inflation valve in the diagnosis mode and observe that the flow rate of the flowmeter is not less than 0.5 L/min.",
+      "2 - The following method can also be used to diagnose: In the shutdown state, connect the gas source, remove the silicone tube (Figure 5-2) connected to the 3# sensor on the main board, and connect it to the pressure gauge. The pressure of the pressure gauge gradually increases."
+    ],
+    "Troubleshooting 04": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "Possible Cause 05": [
+      "High zero drift of the pressure sensor in front of the valve (main board failure)."
+    ],
+    "Confirmation of Fault Cause 05": [
+      "Other than the above-mentioned fault."
+    ],
+    "Troubleshooting 05": [
+      "1. V1.0: upgradingsoftware (10).",
+      "2. Replace the main board (see section 9.10) if the problemremains."
+    ],
+    "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 35-36",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Device Failure Error Code 6": {
+    "Fault Symptom": "Device Failure Error Code 6.",
+    "Possible Cause": [
+      "DPU self-inspection error."
+    ],
+    "Confirmation of Fault Cause": [
+      "Main board failure."
+    ],
+    "Troubleshooting": [
+      "Replace the power module (see 9.10)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 36",
+    "image": "",
+    "model": [
+      "HS-50F"
+    ]
+  },
+  "Device Failure Error Code 7": {
+    "Fault Symptom": "Device Failure Error Code 7",
+    "Possible Cause": [
+      "CPU initialization communication failure Voltage other than 12 V is out of range"
+    ],
+    "Confirmation of Fault Cause": [
+      "Main board failure."
+    ],
+    "Troubleshooting": [
+      "Replace the main board (see 9.10)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 36",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Device Failure Error Code 8": {
+    "Fault Symptom": "Device Failure Error Code 8",
+    "Possible Cause 01": [
+      "Open or shorted valve."
+    ],
+    "Confirmation of Fault Cause 01": [
+      "Unplug the inflation valve, safety valve and smoke exhaust cable connector (see Figure 5-2), and measure the valve resistance. If the resistance value is smaller than 9 Ω or greater than 20 Ω, the fault is confirmed."
+    ],
+    "Troubleshooting 01": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "Possible Cause 02": [
+      "Valve drive failure."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "If the valve is not open or shorted, the fault is confirmed."
+    ],
+    "Troubleshooting 02": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 337",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Device Failure Error Code 9 High-pressure sensor failure": {
+    "Fault Symptom": "Device Failure Error Code 9 High-pressure sensor failure.",
+    "Possible Cause 01": [
+      "High-pressure sensor cable is off."
+    ],
+    "Confirmation of Fault Cause 01": [
+      "Confirm whether the high-pressure sensor cable is well connected (see Figure 5-3)."
+    ],
+    "Troubleshooting 01": [
+      "Reconnect the high-pressure sensor cable (see Figure 5-3)."
+    ],
+    "Possible Cause 02": [
+      "High-pressure sensor failure."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "1. Perform zero calibration of high-pressure sensor (see section 6.2).",
+      "2. If the problem disappears after the a new high-pressure sensor is installed on the main board, the fault is confirmed."
+    ],
+    "Troubleshooting 02": [
+      "1. Perform zero calibration of high pressure sensor (see section 6.2).",
+      "2. Replace the high-pressure regulator assembly(See section 9.3) if the problem remains."
+    ],
+    "Possible Cause 03": [
+      "Main board AD failure."
+    ],
+    "Confirmation of Fault Cause 03": [
+      "If the problem remains after connecting the new high-pressure sensor, the fault is confirmed."
+    ],
+    "Troubleshooting 03": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 37",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Device Failure Error Code 10": {
+    "Fault Symptom": "Device Failure Error Code 10",
+    "Possible Cause 01": [
+      "Low-pressure sensor out of range (pneumatic module assembly)"
+    ],
+    "Confirmation of Fault Cause 01": [
+      "Low-pressure sensor failure."
+    ],
+    "Troubleshooting 01": [
+      "1. Replace the pneumatic module assembly (see section 9.6).",
+      "2. Replace the pneumatic module assembly (see section 9.6) if the problem remains."
+    ],
+    "Possible Cause 02": [
+      "Main board AD failure"
+    ],
+    "Confirmation of Fault Cause 02": [
+      "If the problem remains after connecting the new low-pressure sensor, the fault is confirmed."
+    ],
+    "Troubleshooting 02": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 37",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Device Failure Error Code 11": {
+    "Fault Symptom": "Device Failure Error Code 11",
+    "Possibel Cause": [
+      "Differential pressure sensor, valve front sensor, outlet sensor zero point out of range."
+    ],
+    "Confirmation of Fault Cause": [
+      "Main board failure."
+    ],
+    "Troubleshooting": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 38",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Buzzer not functioning": {
+    "Fault Symptom": "Buzzer not functioning.",
+    "Possible Cause": [
+      "Buzzer or control circuit failure"
+    ],
+    "Confirmation of Fault Cause": [
+      "Main board failure"
+    ],
+    "Troubleshooting": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 38",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Liquid Sensor Error Device Failure Error Code 13.": {
+    "Fault Symptom": "Liquid Sensor Error Device Failure Error Code 13.",
+    "Possible Cause": [
+      "Level sensor cable is off or unconnected."
+    ],
+    "Confirmation of Fault Cause": [
+      "Confirm whether the level sensor cable is well connected (see Figure 5-2)."
+    ],
+    "Troubleshooting": [
+      "Reconnect the level sensor cable (see Figure 5-2)."
+    ],
+  "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 38",
+  "image": "",
+  "model": ["HS-50F"]
+  },
+  "Heat Module Error Heat Module Power Error Device Failure Error Code 15": {
+    "Fault Sympyom": "Heat Module Error Heat Module Power Error Device Failure Error Code 15",
+    "Possible Cause 01": [
+      "Heating plate cable is not connected."
+    ],
+    "Confirmation of Fault Cause": [
+      "Check whether the heating plate cable is connected properly (see Figure 5-2)."
+    ],
+    "Troubleshooting 01": [
+      "Reconnect the heating plate cable (see Figure 5-2)."
+    ],
+    "Possible Cause 02": [
+      "Heating plate failure."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "If the failure disappears after replacing the heating plate, the fault is confirmed."
+    ],
+    "Troubleshooting 03": [
+      "Replace the heating plate (see 9.15)."
+    ],
+  "manual_reference": "HS-50F Service Manual - Self-Inspection Problem Handling - Section 5.4 - Page 38",
+  "image": "",
+  "model": ["HS-50F"]
+  },
+  "Gas Supply?": {
+    "Fault Symptom": "Gas Supply?",
+    "Possible Cause": "Refer to section 5.4.",
+    "Confirmation of Fault Cause": [
+      "Refer to section 5.4."
+    ],
+    "Troubleshooting": [
+      "Refer to section 5.4."
+    ],
+  "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 38",
+  "image": "",
+  "model": ["HS-50F"]
+  },
+  "Gas Exhausted?": {
+    "Fault Symptom": "Gas Exhausted",
+    "Possible Cause": [
+      "The gas source is disconnected or the gas cylinder is exhausted, or the pressure relief valve is closed."
+    ],
+    "Confirmation of Fault Cause": [
+      "/"
+    ],
+    "Troubleshooting": [
+      "Replace the gas source with sufficient connection pressure, or increase the pressure of the pressure relief valve."
+    ],
+  "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 38"
+  },
+  "Contamination": {
+    "Fault Symptom": "Contamination.",
+    "Possible Cause": [
+      "Liquid enters the device."
+    ],
+    "Confirmation of Fault Cause": [
+      "/"
+    ],
+    "Troubleshooting": [
+      "Refer to section 5.4."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 38",
+    "image": "images/Contamination Detected 🧫.png",
+    "model": ["HS-50F"]
+  },
+  "ERR#04": {
+    "Fault Symptom": "ERR#04",
+    "Possible Cause": [
+      "Failure of the proportional valve."
+    ],
+    "Confirmation of Fault Cause": [
+      "/"
+    ],
+    "Troubleshooting": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 38",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "ERR#06": {
+    "Fault Symptom": "ERR#06",
+    "Possible Cause": [
+      "Power module failure"
+    ],
+    "Confirmation of Fault Cause": [
+      "/"
+    ],
+    "Troubleshooting": [
+      "Replace the power supply module. See section 9.8."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 38",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "ERR#07": {
+    "Fault Symptom": "ERR#07",
+    "Possible Cause": [
+      "Main board hardware failure"
+    ],
+    "Confirmation of Fault Cause": [
+      "Main board failure."
+    ],
+    "Troubleshooting": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "manual_reference":"HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 38",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "ERR#08": {
+    "Fault Symptom": "ERR#08",
+    "Possible Cause": [
+      "Valve failure: The valve control state is inconsistent with the monitoring state."
+    ],
+    "Confirmation of Fault Cause": [
+      "Main board failure."
+    ],
+    "Troubleshooting": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 38",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "ERR#09": {
+    "Fault Symptom": "ERR#09",
+    "Possible Cause": [
+      "High-pressure sensor out of range."
+    ],
+    "Confirmation of Fault Cause": [
+      "Refer to 5.4 Device Failure Error Code 9."
+    ],
+    "Troubleshooting": [
+      "Refer to 5.4 Device Failure Error Code 9."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 39",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "ERR#10": {
+    "Fault Symptom": "ERR#10",
+    "Possible Cause": [
+      "Low-pressure sensor out of range"
+    ],
+    "Confirmation of Fault Cause": [
+      "Refer to 5.4 Device Failure Error Code 10"
+    ],
+    "Troubleshooting": [
+      "Refer to 5.4 Device Failure Error Code 10"
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 39",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "ERR#11": {
+    "Fault Symptom": "ERR#11",
+    "Possible Cause": [
+      "Flow sensor and valve front pressure sensor (P2) out of range."
+    ],
+    "Confirmation of Fault Cause": [
+      "Main board failure."
+    ],
+    "Troubleshooting": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 39",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "ERR#12 Sensor Error": {
+    "Fault Symptom": "ERR#12 Sensor Error",
+    "Possible Cause 01": [
+      "V1.0: software fault"
+    ],
+    "Confirmation of Fault Cause 01": [
+      "V1.0: If the fault disappears after upgrading the software, the fault is confirmed."
+    ],
+    "Troubleshooting 01": [
+      "Upgrade software (10)"
+    ],
+    "Possible Cause 02": [
+      "Sensor silicone tube falls off or is bent."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "Dissemble the upper cover (see 9.1) and check whether the sensor connecting pipe is disconnected or bent (see Figure 5-1)."
+    ],
+    "Troubleshooting 02": [
+      "Reconnect the sensor connecting pipe."
+    ],
+    "Possible Cause 03": [
+      "Short circuit of inflation valve (failure of pneumatic module assembly)."
+    ],
+    "Confirmation of Fault Cause 03": [
+      "Unplug the inflation valve cable connector, and measure the inflation valve resistance. If the resistance value is smaller than 9 Ω or greater than 20 Ω, the fault is confirmed."
+    ],
+    "Troubleshooting 03": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "Possible Cause 04": [
+      "Inflation valve drive failure (main board failure)."
+    ],
+    "Confirmation of Fault Cause 04": [
+      "If it is not a short-circuit or open-circuit fault of the solenoid valve, then: do not connect the gas source, open the inflation valve in the diagnosis mode (see 5.7.3.3 for V1.0, 5.8.9 for V2,0). Touch the inflation valve after about 2 minutes. If it is not heated, the fault is confirmed."
+    ],
+    "Troubleshooting 04": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "Possible Cause 05": [
+      "Mechanical failure of inflation valve (failure of pneumatic module assembly)."
+    ],
+    "Confirmation of Fault Cause 05": [
+      "If it is not a main board failure, then: connect the gas source. Connect the gas injection port to the flowmeter, and then set the proportional valve current to 90 in the diagnostic mode. Open the inflation valve (see 5.7.3.3 for V1.0, 5.8.9 for V2.0). If no flow can be detected at the gas injection port, the fault can be confirmed."
+    ],
+    "Troubleshooting 05": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "Possible Cause 06": [
+      "Pressure sensor failure (main board failure)."
+    ],
+    "Confirmation of Fault Cause 06": [
+      "Other than the above-mentioned fault."
+    ],
+    "Troubleshooting 06": [
+      "Replace the main board (see 9.10)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 39",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "ERR#13 Liquid Sensor Error": {
+    "Fault Symptom": "ERR#13 Liquid Sensor Error",
+    "Possible Cause": [
+      "Level sensor AD out of range."
+    ],
+    "Confirmation of Fault Cause": [
+      "Refer to 5.4 Device Failure Error Code 13"
+    ],
+    "Troubleshooting": [
+      "Refer to 5.4 Device | Failure Error Code 13"
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 39",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "ERR#14": {
+    "Fault Symptom": "ERR#14",
+    "Possible Cause": [
+      "Heating sensor error (insufflator tube failure)."
+    ],
+    "Confirmation of Fault Cause": [
+      "/"
+    ],
+    "Troubleshooting": [
+      "Replace the heating insufflator tube."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 40",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "ERR#15 Heating plate failure Heat Module Error": {
+    "Fault Symptom": "ERR#15 Heating plate failure Heat Module Error",
+    "Possible Cause 01": [
+      "Poor connection of the heating plate cable."
+    ],
+    "Confirmation of Fault Cause 01": [
+      "The problem disappears after the heating plate cable is replaced (see Figure 5-2 Host Interior-2)9.15."
+    ],
+    "Troubleshooting 01": [
+      "Reconnect the heating plate cable (see Figure 5-2 Host Interior-2)."
+    ],
+    "Possible Cause 02": [
+      "Heating plate failure."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "Not the heating plate cable fault"
+    ],
+    "Troubleshooting 02": [
+      "Replace the heating plate (see 9.15)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 40",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Insufflator tube not heated | Heating plate power supply fault | Heat Module Power Error": {
+    "Fault Symptom": "Insufflator tube not heated | Heating plate power supply fault | Heat Module Power Error.",
+    "Possible Cause 01": [
+      "Insufflator tube failure."
+    ],
+    "Confirmation of Fault Cause 01": [
+      "Replace the heating insufflator tube, the fault disappears."
+    ],
+    "Troubleshooting 01": [
+      "Replace the heating insufflator tube."
+    ],
+    "Possible Cause 02": [
+      "Poor connection of the heating plate cable."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "The problem disappears after the heating plate cable is replaced (see Figure 5-2 Host Interior-2)9.15."
+    ],
+    "Troubleshooting 02": [
+      "Reconnect the heating plate cable (see Figure 5-2 Host Interior-2)."
+    ],
+    "Possible Cause 03": [
+      "Heating plate failure."
+    ],
+    "Confirmation of Fault Cause 03": [
+      "Not the heating plate cable fault."
+    ],
+    "Troubleshooting 03": [
+      "Replace the heating plate (see 9.15)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 40",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Smoke exhaust function failed": {
+    "Fault Symptom": "Smoke exhaust function failed.",
+    "Possible Cause 01": [
+      "Short circuit or open circuit of pinch valve"
+    ],
+    "Confirmation of Fault Cause 01": [
+      "Unplug the smoke exhaust valve cable connector (see Figure 5-2 Host Interior-2), and measure the resistance. If the resistance value is smaller than 9 Ω or greater than 20 Ω, the fault is confirmed."
+    ],
+    "Troubleshooting 01": [
+      "Replace the smoke exhaust valve (see 9.19)."
+    ],
+    "Possible Cause 02": [
+      "Main board drive failure."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "If it is not a short-circuit or open-circuit fault of the pinch valve, then: Open the pinch valve in the diagnosis mode (see 5.7.3.3 for V1.0, 5.8.9 for V2,0). Touch the pinch valve after about 2 minutes. If it is not heated, the fault is confirmed."
+    ],
+    "Troubleshooting 02": [
+      "Replace the main board (see section 9.10)."
+    ],
+    "Possible Cause 03": [
+      "Pinch valve mechanical failure."
+    ],
+    "Confirmation of Fault Cause 03": [
+      "If it is not a short circuit or open circuit fault of the pinch valve, then: Open the pinch valve in the diagnosis mode (see 5.7.3.3 for V1.0, 5.8.9 for V2.0). Touch the pinch valve after about 2 minutes. If it is heated, but cannot be opened, the fault is confirmed."
+    ],
+    "Troubleshooting 03": [
+      "Replace the smoke exhaust valve (see 9.19)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 40",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Abnormal sound (large hissing sound when inflating)": {
+    "Fault Symptom": "Abnormal sound (large hissing sound when inflating).",
+    "Possible Cause 01": [
+      "Abnormal sound of low-pressure valve"
+    ],
+    "Confirmation of Fault Cause 01": [
+      "Disconnect the gas source, connect the output gas source of the high-pressure valve directly to the gas source inlet of the pneumatic module (see Figure 5-1 Host Interior-1), then connect the gas source to start inflating. The abnormal sound disappears."
+    ],
+    "Troubleshooting 01": [
+      "Replace the low-pressure valve (see 9.5)."
+    ],
+    "Possibel Cause 02": [
+      "Abnormal sound of high-pressure valve."
+    ],
+    "Confirmation of Fault Cause 02": [
+      "The abnormal sound comes from the high-pressure valve."
+    ],
+     "Troubleshooting 02": [
+      "Replace the high-pressure valve (see 9.3)."
+     ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 40-41",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Abnormal sound (abnormal intermittent sound during inflation)": {
+    "Fault Symptom": "Abnormal sound (abnormal intermittent sound during inflation).",
+    "Possible Cause": [
+      "Proportional valve fault."
+    ],
+    "Confirmation of Fault Cause": [
+      "Do not connect the insufflator tube and start inflation in adult mode. The time of each inflation pulse is less than 2s."
+    ],
+    "Troubleshooting": [
+      "Replace the pneumatic module assembly (see section 9.6)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 41",
+    "image": "",
+    "model": ["HS-50F"]
   }
 }
+      
