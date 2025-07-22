@@ -256,7 +256,7 @@ def run_error_search():
             matches_keyword = (
                 not query
                 or query.lower() in key.lower()
-                or query.lower() in value['problem'].lower()
+                or query.lower() in key.lower()
                 or any(query.lower() in cause.lower() for cause in value['causes'])
             )
             matches_model = (
@@ -275,7 +275,7 @@ def run_error_search():
                 with st.expander(f"🔧 {category}", expanded=expanded):
                     st.session_state.selected_error = category
 
-                    st.markdown(f"**Problem:** {data['problem']}")
+                    st.markdown(f"**Problem:** {category}")
                     if "modelo" in data:
                         st.markdown(f"**Applicable Models:** {', '.join(data['modelo'])}")
 
