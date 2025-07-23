@@ -280,7 +280,7 @@ def run_error_search():
                         st.markdown(f"**Applicable Models:** {', '.join(data['model'])}")
 
                     image_file = data.get("image")
-                    image_path = os.path.join(BASE_DIR, "images", image_file) if image_file else None
+                    image_path = os.path.join(BASE_DIR,  "resources", "images", image_file) if image_file else None
                     if image_path and os.path.isfile(image_path):
                         st.image(image_path, caption="Associated image", width=300)
 
