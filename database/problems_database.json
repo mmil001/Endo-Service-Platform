@@ -1619,7 +1619,7 @@
       "2. For V1.0, upgrade the software version to clear the pollution mark (see 10). For V2.0, enter software settings to clear the pollution mark (see 6.5)."
     ],
     "manual_reference": "HS-50F Service Manual - Starting Problem Handling - Section 5.4 - Page 33",
-    "image": "",
+    "image": "images/Contamination Detected.png",
     "model": ["HS-50F"]
   },
   "Device Failure Error Code 1 Device Failure Error Code 3.": {
