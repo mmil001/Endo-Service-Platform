@@ -85,15 +85,15 @@ problems_database = st.session_state.problems_database
 
 # === Patterns (fixos ou pode carregar do JSON depois) ===
 patterns = {
-    "Contamination Detected 🧫": r"(contamin|liquid.*detected|inlet.*liquid|pollution.*mark|level sensor error|ERR#08)",
-    "Communication Errors 🔵": r"(connect.*failed|network.*unreach|ipc.*fail|timeout|socket.*error)",
-    "Heating Errors 🔥": r"(heat.*fail|temperature.*alarm|ERR#14|ERR#15|heating plate|tube.*fail)",
-    "Insufflator Errors 🧪": r"(flow.*error|pressure.*fail|valve.*fail|ERR#04|gas leak|pinch.*valve)",
-    "Insufflation / Flow Errors 🧪": r"(proportional valve|zero drift|ERR#0[4-9]|ERR#1[0-2])",
-    "Power Supply Errors ⚡": r"(power.*fail|fuse.*blown|voltage.*error|ERR#06|no power)",
-    "Image Processor / Camera Errors 🎥": r"(video.*lost|camera.*error|CCU.*fail|no signal|image.*not found|firmware.*error|hdmi|dvi|sdi.*fail)",
-    "Camera Head Errors 🎯": r"(camera head.*error|optical.*fail|coupler|lens|focus.*fail|zoom.*fail|no.*camera.*input)",
-    "Video Recording / USB Errors 📀": r"(usb.*fail|record.*error|video.*not saved|no.*recording|file.*system.*error)"
+    "Contamination Detected": r"(contamin|liquid.*detected|inlet.*liquid|pollution.*mark|level sensor error|ERR#08)",
+    "Communication Errors": r"(connect.*failed|network.*unreach|ipc.*fail|timeout|socket.*error)",
+    "Heating Errors": r"(heat.*fail|temperature.*alarm|ERR#14|ERR#15|heating plate|tube.*fail)",
+    "Insufflator Errors": r"(flow.*error|pressure.*fail|valve.*fail|ERR#04|gas leak|pinch.*valve)",
+    "Insufflation / Flow Errors": r"(proportional valve|zero drift|ERR#0[4-9]|ERR#1[0-2])",
+    "Power Supply Errors": r"(power.*fail|fuse.*blown|voltage.*error|ERR#06|no power)",
+    "Image Processor / Camera Errors": r"(video.*lost|camera.*error|CCU.*fail|no signal|image.*not found|firmware.*error|hdmi|dvi|sdi.*fail)",
+    "Camera Head Errors": r"(camera head.*error|optical.*fail|coupler|lens|focus.*fail|zoom.*fail|no.*camera.*input)",
+    "Video Recording / USB Errors": r"(usb.*fail|record.*error|video.*not saved|no.*recording|file.*system.*error)"
 }
 
 # === Tabs ===
