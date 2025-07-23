@@ -42,7 +42,7 @@ def authenticate(username, password):
 # === Coletar modelos ===
 def get_models(problems_database):
     model_set = set(chain.from_iterable(
-        v.get("modelo", []) for v in problems_database.values() if isinstance(v.get("modelo"), list)
+        v.get("model", []) for v in problems_database.values() if isinstance(v.get("model"), list)
     ))
     return ['All'] + sorted(model_set)
 
@@ -261,7 +261,7 @@ def run_error_search():
             )
             matches_model = (
                 selected_model == "All"
-                or (isinstance(value.get("modelo"), list) and selected_model in value["modelo"])
+                or (isinstance(value.get("model"), list) and selected_model in value["model"])
             )
             if matches_keyword and matches_model:
                 st.session_state.results[key] = value
@@ -276,21 +276,35 @@ def run_error_search():
                     st.session_state.selected_error = category
 
                     st.markdown(f"**Problem:** {category}")
-                    if "modelo" in data:
-                        st.markdown(f"**Applicable Models:** {', '.join(data['modelo'])}")
+                    if "model" in data:
+                        st.markdown(f"**Applicable Models:** {', '.join(data['model'])}")
 
                     image_file = data.get("image")
                     image_path = os.path.join(BASE_DIR, "images", image_file) if image_file else None
                     if image_path and os.path.isfile(image_path):
                         st.image(image_path, caption="Associated image", width=300)
 
-                    st.markdown("**Causes:**")
-                    for c in data['causes']:
-                        st.markdown(f"- {c}")
+                    # === Causas ===
+                    cause_keys = ["causes", "Causes", "Possible Cause", "Fault Symptom", "Symptom", "Common Fault", "Fautl Symptom", "Faul Symptom"]
+                    causes = next((data[k] for k in cause_keys if k in data), [])
 
-                    st.markdown("**Recommended Actions:**")
-                    for r in data['repairs']:
-                        st.markdown(f"- {r}")
+                    if isinstance(causes, str):
+                        st.markdown(f"**Cause:** {causes}")
+                    elif isinstance(causes, list):
+                        st.markdown("**Causes:**")
+                        for c in causes:
+                            st.markdown(f"- {c}")
+
+                    # === Soluções / reparos ===
+                    solution_keys = ["repairs", "Solution", "Attemptable Solution", "Troubleshooting", "Analysis and Solutions", "Attemptable Solution.", "Troubleshooting 1"]
+                    solutions = next((data[k] for k in solution_keys if k in data), [])
+
+                    if isinstance(solutions, str):
+                        st.markdown(f"**Recommended Action:** {solutions}")
+                    elif isinstance(solutions, list):
+                        st.markdown("**Recommended Actions:**")
+                        for s in solutions:
+                            st.markdown(f"- {s}")
 
                     safe_name = re.sub(r'[^\w\s-]', '', category).strip()
                     pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")

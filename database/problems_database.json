@@ -715,7 +715,7 @@
     ],
     "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 29",
     "image": "",
-    "modelo": ["HB300L"]
+    "model": ["HB300L"]
   },
   "The buzzer buzzes and the touchscreen prompts Fan Error.": {
     "Fault Symptom": "The buzzer buzzes and the touchscreen prompts Fan Error.",
@@ -724,7 +724,7 @@
     ],
     "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 29",
     "image": "",
-    "modelo": ["HB300L"]
+    "model": ["HB300L"]
   },
   "The buzzer buzzes and the brightness output is lessened.": {
     "Fault Symptom": "The buzzer buzzes and the brightness output is lessened.",
@@ -733,7 +733,7 @@
     ],
     "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 29",
     "image": "",
-    "modelo": ["HB300L"]
+    "model": ["HB300L"]
   },
   "The front panel prompts LED Over Life Time.": {
     "Fault Symptom": "The front panel prompts LED Over Life Time.",
@@ -742,7 +742,7 @@
     ],
     "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 29",
     "image": "",
-    "modelo": ["HB300L"]
+    "model": ["HB300L"]
   },
   "The equipment generates noise when it is operating HB300L.": {
     "Fault Symptom": "The equipment generates noise when it is operating.",
@@ -752,7 +752,7 @@
     ],
     "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["HB300L"]
+    "model": ["HB300L"]
   },
   "Light cable cannot be inserted.": {
     "Fault Symptom": "Light cable cannot be inserted.",
@@ -763,7 +763,7 @@
     ],
     "manual_reference": "HB300L Service Manual - Section 4.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["HB300L"]
+    "model": ["HB300L"]
   },
   "Lamp does not work.": {
     "Common Fault": "Lamp does not work.",
@@ -773,7 +773,7 @@
     ],
     "manual_reference": "HB300L Operator Manual - Section 5.6 - Fault analysis and Troubleshooting, Page 25",
     "image": "",
-    "modelo": ["HB300L"]
+    "model": ["HB300L"]
   },
   "No optical output.": {
     "Common Fault": "No optical output.",
@@ -785,7 +785,7 @@
     ],
     "manual_reference": "HB300L Operator Manual - Section 5.6 - Fault analysis and Troubleshooting, Page 25",
     "image": "",
-    "modelo": ["HB300L"]
+    "model": ["HB300L"]
   },
   "Abnormal sound during operation.": {
     "Common Fault": "Abnormal sound during operation.",
@@ -794,7 +794,7 @@
     ],
     "manual_reference": "HB300L Operator Manual - Section 5.6 - Fault analysis and Troubleshooting, Page 25",
     "image": "",
-    "modelo": ["HB300L"]
+    "model": ["HB300L"]
   },
   "Insufficient brightness.": {
     "Common Fault": "Insufficient brightness.",
@@ -803,7 +803,7 @@
     ],
     "manual_reference": "HB300L Operator Manual - Section 5.6 - Fault analysis and Troubleshooting, Page 25",
     "image": "",
-    "modelo": ["HB300L"]
+    "model": ["HB300L"]
   },
   "Brightness is too high HB300L": {
     "Common Fault": "Brightness is too high.",
@@ -812,7 +812,7 @@
     ],
     "manual_reference": "HB300L Operator Manual - Section 5.6 - Fault analysis and Troubleshooting, Page 25",
     "image": "",
-    "modelo": ["HB300L"]
+    "model": ["HB300L"]
   },
   "The equipment cannot be powered on": {
     "Fault Symptom": "The equipment cannot be powered on.",
@@ -825,7 +825,7 @@
     ],
     "manual_reference": "R1 Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["R1"]
+    "model": ["R1"]
   },
   "The equipment generates noise when it is operating R1": {
     "Fault Symptom": "The equipment generates noise when it is operating.",
@@ -839,7 +839,7 @@
     ],
     "manual_reference": "R1 Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["R1"]
+    "model": ["R1"]
   },
   "There is no light output R1": {
     "Fault Symptom": "There is no light output.",
@@ -852,7 +852,7 @@
     ],
     "manual_reference": "R1 Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["R1"]
+    "model": ["R1"]
   },
   "Brightness is too low R1": {
     "Fault Symptom": "Brightness is too low.",
@@ -864,7 +864,7 @@
     ],
     "manual_reference": "R1 Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["R1"]
+    "model": ["R1"]
   },
   "Brightness is too high R1": {
     "Fault Symptom": "Brightness is too high.",
@@ -876,7 +876,7 @@
     ],
     "manual_reference": "R1 Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["R1"]
+    "model": ["R1"]
   },
   "R1 - Error #01": {
     "Prompt": "LED Over Heat #01",
@@ -1100,7 +1100,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "The equipment generates noise when it is operating.": {
     "Fault Symptom": [
@@ -1116,7 +1116,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "There is no light output.": {
     "Fault Symptom": [
@@ -1131,7 +1131,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "Brightness is too low.": {
     "Fault Symptom": [
@@ -1145,7 +1145,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "Brightness is too high.": {
     "Fault Symptom": [
@@ -1159,7 +1159,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "Error Code #01.": {
     "Error Code": "#01",
@@ -1172,7 +1172,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Section 5.4 - Fault List, Page 30",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "Error Code #02.": {
     "Error Code": "#02",
@@ -1185,7 +1185,7 @@
     ],
     "manual_reference": "HB300R Service / Operator Manual - Removing the Lens Assembly - Section 7.3.5 - Page 42",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "Error Code #03.": {
     "Error Code": "#03",
@@ -1198,7 +1198,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Section 5.4 - Fault List, Page 30",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "Error Code #04.": {
     "Error Code": "#04",
@@ -1211,7 +1211,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Section 5.4 - Fault List, Page 30",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "Error Code #05.": {
     "Error Code": "#05",
@@ -1224,7 +1224,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Section 5.4 - Fault List, Page 31",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "Error Code #06.": {
     "Error Code": "#06",
@@ -1237,7 +1237,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Removing the LD Assembly - Section 7.3.4 - Page 41",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "Error Code #08.": {
     "Error Code": "#08",
@@ -1250,7 +1250,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Section 5.4 - Fault List, Page 31",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "LED Over Heat | LD Over Heat.": {
     "Message": "LED Over Heat | LD Over Heat.",
@@ -1266,7 +1266,7 @@
     ],
     "manual_reference": "HB300R Operator Manual - Section 4.11 - Error Messages, Page 33",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "LED Over Life Time.": {
     "Message": "LED Over Life Time.",
@@ -1278,7 +1278,7 @@
     ],
     "manual_reference": "HB300R Service / Operator Manual - Removing the Lens Assembly - Section 7.3.5 - Page 42",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "LED Error.": {
     "Message": "LED Error.",
@@ -1290,7 +1290,7 @@
     ],
     "manual_reference": "HB300R Service / Operator Manual - Removing the Lens Assembly - Section 7.3.5 - Page 42",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "LD Error.": {
     "Message": "LD Error.",
@@ -1303,7 +1303,7 @@
     ],
     "manual_reference": "HB300R Service Manual - Removing the LD Assembly - Section 7.3.4 - Page 41",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "Fan Error.": {
     "Message": "Fan Error.",
@@ -1316,7 +1316,7 @@
     ],
     "manual_reference": "HB300R Operator Manual - Section 4.11 - Error Messages, Page 33",
     "image": "",
-    "modelo": ["HB300R"]
+    "model": ["HB300R"]
   },
   "The indicator light does not light up and the system is not started after the AC power supply is plugged in.": {
     "Fault Symptom.": "The indicator light does not light up and the system is not started after the AC power supply is plugged in.",
