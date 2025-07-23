@@ -1102,6 +1102,70 @@
     "image": "",
     "model": ["R1"]
   },
+  "Color Balance Error": {
+    "Fault Symptom": "Incorrect image color due to color gain imbalance.",
+    "Possible Cause": [
+      "Improper adjustment of red or blue gain.",
+      "Saturation value is too high or too low.",
+      "Image appears purple or yellowish due to incorrect RGB balance."
+    ],
+    "Solution": [
+      "Access the video processor color settings (Paint Red, Paint Blue, Saturation).",
+      "If the image is purple, reduce Blue Gain first, then slightly reduce Red Gain.",
+      "If the image becomes yellowish after reducing Red, increase Red Gain appropriately.",
+      "Adjust Saturation to increase image vividness if colors appear too faint.",
+      "Maintain RGB balance according to the procedure lighting environment."
+    ],
+    "manual_reference": "None",
+    "image": "Color Distortion Error.png",
+    "model": ["U1", "R1"]
+  },
+  "CAN Communication Error": {
+    "Fault Symptom": "CAN Communication Error",
+    "Possible Cause": [
+      "CAN cable is not connected properly between the camera system and the light source.",
+      "CAN cable is damaged or disconnected.",
+      "Software version does not support full CAN functionality."
+    ],
+    "Solution": [
+      "Verify that the CAN cable is securely connected between the rear panel of the camera system (U1/R1) and the light source (HB300L/HB300R).",
+      "Replace the CAN cable if physical damage is observed.",
+      "Ensure the software version is equal or higher than 01.13.00.04 (U1) or 01.11.00.04 (R1) to support full CAN integration."
+    ],
+    "manual_reference": "None",
+    "image": "",
+    "model": ["U1", "R1", "HB300L", "HB300R"]
+  },
+  
+  "Brightness Explosion Error": {
+    "Fault Symptom": "Brightness Explosion Error",
+    "Possible Cause": [
+      "Defect in image processing > automatic brightness control."
+    ],
+    "Solution": [
+      "Check that the Auto_Brightness function is activated in the Maintenance Menu > OSD Menu > Brigtness, if it is not you will need to replace the CCU Assembly item.."
+    ],
+    "manual_reference": "R1 Service Manual - Disassembling the CCU Assembly 7.3.8 - Page 53",
+    "image": "Brightnes Explosion Error.png",
+    "model": ["R1"]
+  },
+  "Flashing Image Error": {
+    "Fault Symptom": "Image flashing during procedures, especially when surgical instruments are inserted.",
+    "Possible Cause": [
+      "Inappropriate AE (Auto Exposure) speed setting.",
+      "Incorrect surgical scene selected in the camera system."
+    ],
+    "Solution": [
+      "Open the front panel of HD3 and access the OSD menu.",
+      "Navigate to 'AE Mode' and change the speed from 'Fast' to 'Slow'.",
+      "Then, go to 'Scene File' and switch the scene mode to ENT or SDS.",
+      "Test both modes and select the one that provides the best image performance for the procedure.",
+      "If the issue persists, contact a Mindray service engineer."
+    ],
+    "manual_reference": "None",
+    "image": "Flashing Image Error.png",
+    "model": ["HD3"]
+  },
   "The equipment cannot be powered on.": {
     "Fault Symptom": "The equipment cannot be powered on.",
     "Possible Cause": [
@@ -1114,6 +1178,123 @@
     "manual_reference": "HB300R Service Manual - Section 5.3 - Fault List, Page 30",
     "image": "",
     "model": ["HB300R"]
+  },
+  "Light Guide Tip Damage": {
+    "Fault Symptom": "Damage at the tip of the light guide cable.",
+    "Possible Cause": [
+      "The limit stopper was removed, allowing the light guide to be inserted too deeply into the light source, which damaged the tip glass."
+    ],
+    "Solution": [
+      "Always use the light guide cable with its limit stopper to avoid over-insertion.",
+      "Inspect the light guide tip before each use to check for damage.",
+      "If damage is found, stop using the cable and replace it to avoid risk to the patient or equipment."
+    ],
+    "manual_reference": "None",
+    "image": "Light Guide Tip Damage.png",
+    "model": ["HD3"]
+  },
+  "Sharpness Edge Error": {
+    "Fault Symptom": "Unnatural image appearance with black edges or color distortion around image boundaries.",
+    "Possible Cause": [
+      "Sharpness parameters such as 'structure' or 'edge' are set too high, causing artifacts in the image."
+    ],
+    "Solution": [
+      "Avoid setting 'structure' and 'edge' parameters too high in the sharpness adjustment menu.",
+      "If needed, prioritize adjusting 'structure' value with care, keeping it moderate.",
+      "Use 'Normal' mode for sharpness instead of 'High' to reduce image noise.",
+      "Reset sharpness parameters to default if image artifacts persist."
+    ],
+    "manual_reference": "None",
+    "image": "",
+    "model": ["R1"]
+  },
+  "Heating Plate Error": {
+    "Fault Symptom": "Heating icon remains on even when the heating cable is disconnected; abnormal temperature reading in service menu.",
+    "Possible Cause": [
+      "Damage to the heating plate circuit due to faulty or damaged heating cable.",
+      "LED D6 on the heating board remains on even with the heating cable disconnected, indicating a faulty board."
+    ],
+    "Solution": [
+      "Check the heating cable and entire heating circuit for continuity and damage.",
+      "Inspect LED D6 on the heating board; if it remains on while the cable is disconnected, replace the heating plate.",
+      "Replace the heating board (PN: 115-076021-00) following service manual disassembly procedure.",
+      "After replacement, verify heating icon is off when cable is disconnected and that the standby temperature is around ~30°C in the service menu.",
+      "If the issue persists after heating board replacement, check the Main Board and Power Module."
+    ],
+    "manual_reference": "HS-50F Service Manual - Dissassembly the CCU - Section 5.3 - Page 32",
+    "image": "",
+    "model": ["HS-50F"]
+  },
+  "Fluorescence Mode Issue": {
+    "Fault Symptom": "Green fluorescence image is too dark or not visible during surgery.",
+    "Possible Cause": [
+      "Fluorescence intensity setting is too low in the camera system.",
+      "Incorrect distance or angle between the endoscope and the target tissue.",
+      "Using the fluorescence function without proper CAN communication between R1 and HB300R.",
+      "Software version is below required minimum for fluorescence control."
+    ],
+    "Solution": [
+      "Ensure the CAN cable is properly connected between R1 and HB300R.",
+      "Update the software to version 01.11.00.04 or higher on the R1 system.",
+      "Access the R1 menu using the camera head up/down arrows and switch to fluorescence mode.",
+      "Adjust the fluorescence intensity parameter to brighten the green fluorescence in MIX view.",
+      "Position the endoscope closer and more directly toward the lesion for optimal intensity."
+    ],
+    "manual_reference": "None",
+    "image": "Fluorescence Mode Issue.png",
+    "model": ["R1", "HB300R"]
+  },
+  "Image Brightness Error": {
+    "Fault Symptom": "Image is too dark or too bright during procedures.",
+    "Possible Cause": [
+      "Incorrect AE (Auto Exposure) value setting.",
+      "Peak ratio is not optimized for the surgical environment.",
+      "Detection area setting is not ideal.",
+      "Low brightness setting on the light source.",
+      "Improper light guide size based on telescope diameter."
+    ],
+    "Solution": [
+      "Access the camera system menu and increase AE value if the image is dark.",
+      "If the image is too bright, lower the AE value by one level (default is 4).",
+      "If overexposed points are too intense, increase Peak Ratio value.",
+      "Avoid reducing light source brightness to prevent noise amplification.",
+      "Match light guide size to the telescope diameter: 3.5mm for ENT/Uro/Hystero scopes, 4.8mm for 5mm or 10mm laparoscopes.",
+      "If using R1, zoom in the image circle using the zoom ring on the camera head to improve detection area performance."
+    ],
+    "manual_reference": "None",
+    "image": "Image Brightness Error.png",
+    "model": ["U1", "R1", "HB300L", "HB300R"]
+  },
+  "Light Guide Cable Burn": {
+    "Fault Symptom": "Patient's skin is burned by the light guide cable during procedure.",
+    "Possible Cause": [
+      "Optical fibers inside the light guide cable are broken, causing heat accumulation inside the cable."
+    ],
+    "Solution": [
+      "Inspect the light guide cable before procedure.",
+      "Do not use the light guide cable if 1/3 or more of the optical fibers are broken.",
+      "Use a light guide cable with a limit stopper to prevent over-insertion, which can damage the tip glass."
+    ],
+    "manual_reference": "None",
+    "image": "Light Guide Cable Burn.png",
+    "model": ["HD3"]
+  },
+  "USB Recognition Error": {
+    "Fault Symptom": "The HD3 system does not recognize a USB flash drive or portable HDD.",
+    "Possible Cause": [
+      "The USB storage device is not formatted in FAT32.",
+      "The USB or HDD has embedded internal software not compatible with HD3.",
+      "The device is not a tested or supported model by Mindray."
+    ],
+    "Solution": [
+      "Ensure that the USB or HDD is formatted to FAT32 using a computer.",
+      "Avoid using USB drives with built-in encryption or special software.",
+      "Use USB models tested and recommended by Mindray.",
+      "To play recorded videos, use compatible software like VLC or Pot Player on a computer."
+    ],
+    "manual_reference": "None",
+    "image": "",
+    "model": ["HD3"]
   },
   "The equipment generates noise when it is operating.": {
     "Fault Symptom": [
