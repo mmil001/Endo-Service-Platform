@@ -253,16 +253,18 @@ def run_error_search():
     if search_clicked:
         st.session_state.results = {}
         for key, value in problems_database.items():
+            
             matches_keyword = (
                 not query
                 or query.lower() in key.lower()
                 or query.lower() in key.lower()
-                or any(query.lower() in cause.lower() for cause in value['causes'])
-            )
+            )  
+
             matches_model = (
                 selected_model == "All"
                 or (isinstance(value.get("model"), list) and selected_model in value["model"])
             )
+
             if matches_keyword and matches_model:
                 st.session_state.results[key] = value
 
