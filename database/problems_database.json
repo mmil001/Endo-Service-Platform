@@ -1089,6 +1089,19 @@
     "image": "",
     "model": ["R1"]
   },
+  "Black Screen Error": {
+    "Fault Symptom": "Black Screen Error",
+    "Possible Cause": [
+      "There is a bad contact in the connectors of the panel next to the control board."
+    ],
+    "Solution": [
+      "Check and clean the contacts on the apartment cable and connector that connect the panel to the control board. If the error persists, it is necessary to crosscheck with the control board of another device..",
+      "If the crosscheck confirms that the control board is defective, this item must be replaced, but pay attention to the **version of your equipment**"
+    ],
+    "manual_reference": "R1 Service Manual - Disassembling the Control Board Section 7.3.5 - Page 51",
+    "image": "",
+    "model": ["R1"]
+  },
   "The equipment cannot be powered on.": {
     "Fault Symptom": "The equipment cannot be powered on.",
     "Possible Cause": [
