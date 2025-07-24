@@ -1,7 +1,8 @@
 {
   "The equipment cannot be started": {
-    "Fault Symptom": "The equipment cannot be started.",
-    "Troubleshooting": [
+    "problem": "The equipment cannot be started.",
+    "causes": "",
+    "solutions": [
       "Observe whether the power indicator is steadily on. If it is on, check the LED color. An orange LED indicates that the AC source is connected but the equipment is not started, and a blue LED indicates that the equipment is started. If it is off, check whether the AC source is connected, whether the fuse is intact, and whether the power cable is connected normally without looseness, disconnection, or instability."
     ],
     "manual_reference": "HD3 Service Manual - Section 4.3 (p. 29)",
@@ -9,8 +10,9 @@
     "model": ["HD3"]
   },
   "No image output.": {
-    "Fault Symptom": "No image output.",
-    "Troubleshooting": [
+    "problem": "No image output.",
+    "causes": "",
+    "solutions": [
       "Check whether the camera head and CCU are connected normally without looseness or instability, whether the CCU and monitor are connected normally, and whether the monitor input settings are correct."
     ],
     "manual_reference": "HD3 Service Manual - Section 4.3 (p. 29)",

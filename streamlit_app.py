@@ -187,45 +187,35 @@ If you don't have the converter, contact Mindray Technical Support.
                     st.subheader("⚠️ Diagnosed Issues")
                     for key, log_line in issues.items():
                         data = problems_database.get(key)
-                        with st.expander(f"🔧 {key}", expanded=(st.session_state.selected_error == key)):
-                            st.session_state.selected_error = key 
+                        st.markdown(f"**Log Line:** {log_line}")
 
-                            st.markdown(f"**Problem:** {key }")
-                            
+                        if data:
+                            st.markdown(f"**Problem:** {data.get('problem', 'N/A')}")
+                            st.markdown(f"**Applicable Models:** {', '.join(data.get('model', []))}")
+
                             image_file = data.get("image")
-                            image_path = os.path.join(BASE_DIR, "images", image_file) if image_file else None
-                            if image_path and os.path.isfile(image_path):
-                                st.image(image_path, caption="Associated image", width=300)
+                            if image_file:
+                                image_path = os.path.join(BASE_DIR, "images", image_file)
+                                if os.path.isfile(image_path):
+                                    st.image(image_path, caption="Associated image", width=300)
 
-                            # Mostrar todos os campos do JSON dinamicamente
-                            for field, value in data.items():
-                                if not value or field == "image":
-                                    continue
+                            causes = data.get("causes", [])
+                            if isinstance(causes, list) and causes:
+                                st.markdown("**Causes:**")
+                                for c in causes:
+                                    st.markdown(f"- {c}")
 
-                                field_title = field.replace("_", " ").title()
-                                st.markdown(f"**{field_title}:**")
+                            solutions = data.get("solutions", [])
+                            if isinstance(solutions, list) and solutions:
+                                st.markdown("**Recommended Actions:**")
+                                for s in solutions:
+                                    st.markdown(f"- {s}")
 
-                                if isinstance(value, list):
-                                    for item in value:
-                                        st.markdown(f"- {item}")
-                                elif isinstance(value, dict):
-                                    for subkey, subval in value.items():
-                                        st.markdown(f"• **{subkey}**: {subval}")
-                                else:
-                                    st.markdown(str(value))
-
-                            # PPT download
-                            safe_name = re.sub(r'[^\w\s-]', '', key ).strip()
-                            pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
-                            if os.path.isfile(pptx_path):
-                                with open(pptx_path, "rb") as f:
-                                    st.download_button(
-                                        label="📥 Download Instructions (.pptx)",
-                                        data=f,
-                                        file_name=f"{safe_name}.pptx",
-                                        mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                                        key=f"download_{safe_name}_{time.time()}"
-                                    )
+                            manual = data.get("manual_reference")
+                            if manual:
+                                st.markdown(f"**Manual Reference:** {manual}")
+                        else:
+                            st.warning("⚠️ No data found in problem database.")
 
 # === Search Errors ===
 def run_error_search():
