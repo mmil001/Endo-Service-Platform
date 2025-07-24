@@ -301,24 +301,24 @@ def run_error_search():
                                 st.markdown(f"- {s}")
                         else:
                             st.markdown("**Solutions:** ⚠️ None provided.")
-    # === PPT de Troubleshooting Guide ===
-    pptx_file = data.get("Troubleshooting Guide", "")
-    if pptx_file:
-        pptx_path = os.path.join(BASE_DIR, "resources", pptx_file)
-        if os.path.isfile(pptx_path):
-            safe_name = category.replace(" ", "_").replace(".", "_").lower()
-            with open(pptx_path, "rb") as f:
-                st.download_button(
-                    label="📥 Download Instructions (.pptx)",
-                    data=f,
-                    file_name=pptx_file,
-                    mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                    key=f"download_{safe_name}_{time.time()}"
-                )
-        else:
-            st.warning("⚠️ Troubleshooting guide file not found.")
-    else:
-        st.warning("⚠️ No troubleshooting guide provided.")
+                    # === PPT de Troubleshooting Guide ===
+                    pptx_file = data.get("Troubleshooting Guide", "")
+                    if pptx_file:
+                        pptx_path = os.path.join(BASE_DIR, "resources", pptx_file)
+                        if os.path.isfile(pptx_path):
+                            safe_name = category.replace(" ", "_").replace(".", "_").lower()
+                            with open(pptx_path, "rb") as f:
+                                st.download_button(
+                                    label="📥 Download Instructions (.pptx)",
+                                    data=f,
+                                    file_name=pptx_file,
+                                    mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                    key=f"download_{safe_name}_{time.time()}"
+                                )
+                        else:
+                            st.warning("⚠️ Troubleshooting guide file not found.")
+                    else:
+                        st.warning("⚠️ No troubleshooting guide provided.")
 
 # === Routing ===
 if st.session_state.selected_tab == "Log Analyzer":
