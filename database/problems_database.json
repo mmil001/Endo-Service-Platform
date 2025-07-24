@@ -12,7 +12,7 @@
   },
   "No image output.": {
     "problem": "No image output.",
-    "model": ["HD3"],
+    "model": ["HD3", "HS-50F"],
     "causes": [],
     "solutions": [
       "Check whether the camera head and CCU are connected normally without looseness or instability, whether the CCU and monitor are connected normally, and whether the monitor input settings are correct."
