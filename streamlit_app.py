@@ -223,7 +223,7 @@ If you don't have the converter, contact Mindray Technical Support.
                                                     data=f,
                                                     file_name=f"{safe_name}.pptx",
                                                     mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                                                    key=f"download_{safe_name}"
+                                                    key=f"download_{safe_name}_{time.time()}"
                                                 )
                             else:
                                 st.warning("⚠️ Troubleshooting guide not available.")
