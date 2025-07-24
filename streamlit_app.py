@@ -181,8 +181,8 @@ If you don't have the converter, contact Mindray Technical Support.
                 st.success(f"Extracted {len(log_files)} log files.")
                 issues = analyze_logs(log_files)
             except Exception as e:
-                st.error(f"An error occurred: {e}")
-                return  # Parar se deu erro
+                st.error(f"An error occurred while reading logs: {e}")
+            return
 
         if issues:
             st.subheader("⚠️ Diagnosed Issues")
