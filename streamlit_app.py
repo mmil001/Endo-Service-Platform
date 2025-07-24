@@ -221,6 +221,23 @@ If you don't have the converter, contact Mindray Technical Support.
                         manual = data.get("manual_reference")
                         if manual:
                             st.markdown(f"**Manual Reference:** {manual}")
+
+                            # Mostrar troubleshooting guide (PPT)
+                            ppt_file = data.get("Troubleshooting Guide")
+                            if ppt_file:
+                                ppt_path = os.path.join(BASE_DIR, "resources", ppt_file)
+                                if os.path.isfile(ppt_path):
+                                    with open(ppt_path, "rb") as f:
+                                        st.download_button(
+                                            label="📥 Download Instructions (.pptx)",
+                                            data=f,
+                                            file_name=ppt_file,
+                                            mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                            key=f"ppt_{ppt_file}_{time.time()}"
+                                        )
+                                else:
+                                    st.warning("⚠️ Troubleshooting guide file not found.")
+                                    
                     else:
                         st.warning("⚠️ No data found in problem database.")
         else:
