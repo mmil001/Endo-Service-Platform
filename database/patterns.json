@@ -21,6 +21,7 @@
     "R1": "(intermittent|during|usage|surgery|display|r1|blackout)",
     "HS-50F": "(module|code|error|hs-50f|heating)",
     "UX3": "(ux3)",
+    "STARTUP": "(cannot\\s+be\\s+started|startup\\s+failure|failed\\s+to\\s+start|system\\s+boot\\s+error)",
     "ERROR": "(system|speed|error|abnormal)",
     "E002": "(communication|e002|failure)",
     "E004": "(network|failure|communication|interface|e004)",
