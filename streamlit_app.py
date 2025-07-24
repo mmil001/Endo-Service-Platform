@@ -169,7 +169,7 @@ If you don't have the converter, contact Mindray Technical Support.
                 if key.lower() in line.lower():
                     if key not in found_issues:
                         found_issues[key] = []
-                        found_issues[key].append(line)
+                found_issues[key].append(line)
 
         progress_bar.progress(100, text="✅ Analysis complete.")
         return found_issues
@@ -182,40 +182,49 @@ If you don't have the converter, contact Mindray Technical Support.
                 issues = analyze_logs(log_files)
             except Exception as e:
                 st.error(f"An error occurred: {e}")
+                return  # Parar se deu erro
 
         if issues:
             st.subheader("⚠️ Diagnosed Issues")
-            for key, log_line in issues.items():
+            for key, log_lines in issues.items():
                 data = problems_database.get(key)
-                st.markdown(f"**Log Line:** {log_line}")
+                with st.expander(f"🔧 {key}", expanded=True):
+                    for line in log_lines:
+                        st.markdown(f"**Log Line:** `{line}`")
 
-                if data:
-                    st.markdown(f"**Problem:** {data.get('problem', 'N/A')}")
-                    st.markdown(f"**Applicable Models:** {', '.join(data.get('model', []))}")
+                    if data:
+                        st.markdown(f"**Problem:** {data.get('problem', 'N/A')}")
+                        st.markdown(f"**Applicable Models:** {', '.join(data.get('model', []))}")
 
-                    image_file = data.get("image")
-                    if image_file:
-                        image_path = os.path.join(BASE_DIR, "images", image_file)
-                        if os.path.isfile(image_path):
-                            st.image(image_path, caption="Associated image", width=300)
+                        # Mostrar imagem
+                        image_file = data.get("image")
+                        if image_file:
+                            image_path = os.path.join(BASE_DIR, "images", image_file)
+                            if os.path.isfile(image_path):
+                                st.image(image_path, caption="Associated image", width=300)
 
-                    causes = data.get("causes", [])
-                    if isinstance(causes, list) and causes:
-                        st.markdown("**Causes:**")
-                        for c in causes:
-                            st.markdown(f"- {c}")
+                        # Mostrar causas
+                        causes = data.get("causes", [])
+                        if isinstance(causes, list) and causes:
+                            st.markdown("**Causes:**")
+                            for c in causes:
+                                st.markdown(f"- {c}")
 
-                    solutions = data.get("solutions", [])
-                    if isinstance(solutions, list) and solutions:
-                        st.markdown("**Recommended Actions:**")
-                        for s in solutions:
-                            st.markdown(f"- {s}")
+                        # Mostrar soluções
+                        solutions = data.get("solutions", [])
+                        if isinstance(solutions, list) and solutions:
+                            st.markdown("**Recommended Actions:**")
+                            for s in solutions:
+                                st.markdown(f"- {s}")
 
-                    manual = data.get("manual_reference")
-                    if manual:
-                        st.markdown(f"**Manual Reference:** {manual}")
-                else:
-                            st.warning("⚠️ No data found in problem database.")
+                        # Referência de manual
+                        manual = data.get("manual_reference")
+                        if manual:
+                            st.markdown(f"**Manual Reference:** {manual}")
+                    else:
+                        st.warning("⚠️ No data found in problem database.")
+        else:
+            st.info("✅ No issues matched from the log.")
 
 # === Search Errors ===
 def run_error_search():
