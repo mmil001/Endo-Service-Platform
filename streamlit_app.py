@@ -168,16 +168,20 @@ If you don't have the converter, contact Mindray Technical Support.
         found_issues = defaultdict(list)
 
         for line in all_lines:
+            matched = False
             for key, pattern in patterns.items():
                 try:
-                    if re.search(pattern, line):
+                    if re.search(pattern, line, flags=re.IGNORECASE):
                         found_issues[key].append(line)
+                        matched = True
                 except Exception as e:
                     st.warning(f"Erro no padrão {key}: {e}")
 
+            if not matched:
+                found_issues["Unclassified"].append(line)
+
         progress_bar.progress(100, text="✅ Analysis complete.")
         return found_issues
-
 
     if uploaded_file:
         with st.spinner("Extracting file..."):
