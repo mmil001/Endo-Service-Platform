@@ -18,5 +18,18 @@
     ],
     "manual_reference": "HD3 Service Manual - Section 4.3 (p. 29)",
     "image": ""
+  },
+  "Contamination": {
+    "problem": "Contamination.",
+    "model": ["HS-50F"],
+    "causes": [
+      "Liquid enters the insufflator."
+    ],
+    "solutions": [
+      "1. Replacement of the liquid inlet sensor repair spare parts for V1.0 (see 9.11, 9.10 and 9.6), and replacement of liquid inlet contamination repair spare parts for V2.0 (see section 9.11).",
+      "2. For V1.0, upgrade the software version to clear the pollution mark (see 10). For V2.0, enter software settings to clear the pollution mark (see 6.5)."
+    ],
+    "manual_reference": "HS-50F Service Manual - Starting Problem Handling - Section 5.4 - Page 33",
+    "image": "Contamination.png",
   }
 }

@@ -275,7 +275,6 @@ def run_error_search():
                         st.image(image_path, caption="Associated image", width=300)
 
                     # === Causas ===
-                    # === Causas ===
                     cause_keys = ["causes", "Causes", "Possible Cause", "Fault Symptom", "Symptom", "Common Fault", "Fautl Symptom", "Faul Symptom"]
                     causes = next((data[k] for k in cause_keys if k in data), [])
 
@@ -288,6 +287,20 @@ def run_error_search():
                                 st.markdown(f"- {c}")
                         else:
                             st.markdown("**Causes:** ⚠️ None provided.")
+                    
+                    # === Soluções ===
+                    solutions = data.get("solutions", [])
+
+                    if isinstance(solutions, str) and solutions.strip():
+                        st.markdown("**Solution:**")
+                        st.markdown(f"- {solutions}")
+                    elif isinstance(solutions, list):
+                        if solutions:
+                            st.markdown("**Solutions:**")
+                            for s in solutions:
+                                st.markdown(f"- {s}")
+                        else:
+                            st.markdown("**Solutions:** ⚠️ None provided.")
 
 # === Routing ===
 if st.session_state.selected_tab == "Log Analyzer":
