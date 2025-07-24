@@ -324,7 +324,7 @@ def run_error_search():
                                 data=f,
                                 file_name=f"{safe_name}.pptx",
                                 mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                                key=f"download_{safe_name}_{log_line}"
+                                key=f"download_{safe_name}_{time.time()}"
                             )
                     else:
                         st.warning("⚠️ Troubleshooting guide not available.")
