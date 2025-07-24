@@ -162,22 +162,15 @@ If you don't have the converter, contact Mindray Technical Support.
             progress_bar.progress(progress, text=f"Reading logs... ({progress}%)")
             time.sleep(0.05)
 
-        compiled = {cat: re.compile(pat, re.IGNORECASE) for cat, pat in patterns.items()}
-        issues = defaultdict(list)
-
-        for i, line in enumerate(all_lines):
-            for category, regex in compiled.items():
-                if regex.search(line):
-                    date_match = re.search(r"(\d{4}-\d{2}-\d{2}|\d{2}/\d{2}/\d{2})", line)
-                    date_str = date_match.group(1) if date_match else "0000-00-00"
-                    issues[category].append(date_str)
-
-            if i % 10 == 0:
-                progress = 50 + int((i / len(all_lines)) * 50)
-                progress_bar.progress(progress, text=f"Analyzing logs... ({progress}%)")
+        # NOVO: tenta casar com nomes exatos do problems_database
+        found_issues = {}
+        for line in all_lines:
+            for key in problems_database.keys():
+                if key.lower() in line.lower():
+                    found_issues[key] = line  # salva a linha original para mostrar se quiser
 
         progress_bar.progress(100, text="✅ Analysis complete.")
-        return issues
+        return found_issues
 
     if uploaded_file:
         with st.spinner("Extracting file..."):
@@ -188,41 +181,37 @@ If you don't have the converter, contact Mindray Technical Support.
 
                 if issues:
                     st.subheader("⚠️ Diagnosed Issues")
-                    for category, dates in sorted(issues.items(), key=lambda x: max(x[1], default=""), reverse=True):
-                        data = problems_database.get(category)
-                        with st.expander(f"🔧 {category} — {len(dates)} occurrences"):
+                    for key, log_line in issues.items():
+                        data = problems_database.get(key)
+                        with st.expander(f"🔧 {key}"):
+                            st.markdown(f"**Log Line:** {log_line}")
                             if data:
-                                st.markdown(f"**Problem:** {data.get('problem', 'No description.')}")
                                 image_file = data.get("image")
                                 image_path = os.path.join(BASE_DIR, "images", image_file) if image_file else None
                                 if image_path and os.path.isfile(image_path):
                                     st.image(image_path, caption="Associated image", width=300)
 
-                                causes = data.get("causes", [])
-                                if causes:
-                                    st.markdown("**Possible Causes:**")
-                                    for cause in causes:
-                                        st.markdown(f"- {cause}")
+                                st.markdown(f"**Manual Reference:** {data.get('manual_reference', 'N/A')}")
 
-                                repairs = data.get("repairs", [])
-                                if repairs:
-                                    st.markdown("**Recommended Actions:**")
-                                    for fix in repairs:
-                                        st.markdown(f"- {fix}")
+                                # Causes
+                                cause_keys = ["causes", "Causes", "Possible Cause", "Fault Symptom", "Symptom", "Common Fault", "Fautl Symptom", "Faul Symptom"]
+                                causes = next((data[k] for k in cause_keys if k in data), [])
 
-                                safe_name = re.sub(r'[^\w\s\-]', '', category).strip()
-                                pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
-                                if os.path.isfile(pptx_path):
-                                    with open(pptx_path, "rb") as f:
-                                        st.download_button(
-                                            label="📥 Download Instructions (.pptx)",
-                                            data=f,
-                                            file_name=f"{safe_name}.pptx",
-                                            mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                                            key=f"download_{safe_name}"
-                                        )
+                                if isinstance(causes, list):
+                                    st.markdown("**Causes:**")
+                                    for c in causes:
+                                        st.markdown(f"- {c}")
+
+                                # Soluções
+                                solution_keys = ["repairs", "Solution", "Attemptable Solution", "Troubleshooting", "Analysis and Solutions", "Attemptable Solution.", "Troubleshooting 1"]
+                                solutions = next((data[k] for k in solution_keys if k in data), [])
+
+                                if isinstance(solutions, list):
+                                    st.markdown("**Solutions:**")
+                                    for s in solutions:
+                                        st.markdown(f"- {s}")
                             else:
-                                st.markdown("No detailed data found for this error.")
+                                st.warning("No data found in problem database for this error.")
                 else:
                     st.info("No problems detected.")
 
