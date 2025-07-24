@@ -187,49 +187,45 @@ If you don't have the converter, contact Mindray Technical Support.
                     st.subheader("⚠️ Diagnosed Issues")
                     for key, log_line in issues.items():
                         data = problems_database.get(key)
-                        with st.expander(f"🔧 {key}"):
-                            st.markdown(f"**Log Line:** {log_line}")
-                            if data:
-                                image_file = data.get("image")
-                                image_path = os.path.join(BASE_DIR, "images", image_file) if image_file else None
-                                if image_path and os.path.isfile(image_path):
-                                    st.image(image_path, caption="Associated image", width=300)
+                        with st.expander(f"🔧 {key}", expanded=(st.session_state.selected_error == key)):
+                            st.session_state.selected_error = key 
 
-                                st.markdown(f"**Manual Reference:** {data.get('manual_reference', 'N/A')}")
+                            st.markdown(f"**Problem:** {key }")
+                            
+                            image_file = data.get("image")
+                            image_path = os.path.join(BASE_DIR, "images", image_file) if image_file else None
+                            if image_path and os.path.isfile(image_path):
+                                st.image(image_path, caption="Associated image", width=300)
 
-                                # Causes === Mostrar tudo dinamicamente ===
-                                for field, value in data.items():
-                                    if not value:
-                                        continue
+                            # Mostrar todos os campos do JSON dinamicamente
+                            for field, value in data.items():
+                                if not value or field == "image":
+                                    continue
 
-                                    # Deixa o nome do campo bonito
-                                    field_title = field.replace("_", " ").title()
+                                field_title = field.replace("_", " ").title()
+                                st.markdown(f"**{field_title}:**")
 
-                                    st.markdown(f"**{field_title}:**")
+                                if isinstance(value, list):
+                                    for item in value:
+                                        st.markdown(f"- {item}")
+                                elif isinstance(value, dict):
+                                    for subkey, subval in value.items():
+                                        st.markdown(f"• **{subkey}**: {subval}")
+                                else:
+                                    st.markdown(str(value))
 
-                                    if isinstance(value, list):
-                                        for item in value:
-                                            st.markdown(f"- {item}")
-                                    elif isinstance(value, dict):
-                                        for subkey, subval in value.items():
-                                            st.markdown(f"**• {subkey}:** {subval}")
-                                    else:
-                                        st.markdown(f"{value}")
-
-                                    # Exibir botão do PPT somente uma vez (após as soluções)
-                                    safe_name = re.sub(r'[^\w\s-]', '', key).strip()
-                                    pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
-                                    if os.path.isfile(pptx_path):
-                                        with open(pptx_path, "rb") as f:
-                                            st.download_button(
-                                                label="📥 Download Instructions (.pptx)",
-                                                data=f,
-                                                file_name=f"{safe_name}.pptx",
-                                                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                                                key=f"download_{safe_name}_{time.time()}"
-                                            )
-                            else:
-                                st.warning("⚠️ Troubleshooting guide not available.")
+                            # PPT download
+                            safe_name = re.sub(r'[^\w\s-]', '', key ).strip()
+                            pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
+                            if os.path.isfile(pptx_path):
+                                with open(pptx_path, "rb") as f:
+                                    st.download_button(
+                                        label="📥 Download Instructions (.pptx)",
+                                        data=f,
+                                        file_name=f"{safe_name}.pptx",
+                                        mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                        key=f"download_{safe_name}_{time.time()}"
+                                    )
 
 # === Search Errors ===
 def run_error_search():
