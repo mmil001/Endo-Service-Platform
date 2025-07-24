@@ -301,6 +301,21 @@ def run_error_search():
                                 st.markdown(f"- {s}")
                         else:
                             st.markdown("**Solutions:** ⚠️ None provided.")
+    # === PPT de Troubleshooting Guide ===
+    pptx_file = data.get("Troubleshooting Guide")
+    if pptx_file:
+        pptx_path = os.path.join(BASE_DIR, "resources", pptx_file)
+        if os.path.isfile(pptx_path):
+            with open(pptx_path, "rb") as f:
+                st.download_button(
+                    label="📥 Download Troubleshooting Guide (.pptx)",
+                    data=f,
+                    file_name=pptx_file,
+                    mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                    key=f"download_{pptx_file}_{time.time()}"
+                    )
+        else:
+            st.warning("⚠️ Troubleshooting Guide file not found.")
 
 # === Routing ===
 if st.session_state.selected_tab == "Log Analyzer":
