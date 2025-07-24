@@ -296,6 +296,20 @@ def run_error_search():
                         st.markdown("**Recommended Actions:**")
                         for s in solutions:
                             st.markdown(f"- {s}")
+                            # === PPT (se existir) ===
+                            safe_name = re.sub(r'[^\w\s-]', '', key).strip()
+                            pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
+                            if os.path.isfile(pptx_path):
+                                with open(pptx_path, "rb") as f:
+                                    st.download_button(
+                                        label="📥 Download Instructions (.pptx)",
+                                        data=f,
+                                        file_name=f"{safe_name}.pptx",
+                                        mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                        key=f"download_{safe_name}"
+                                    )
+                            else:
+                                st.warning("⚠️ Troubleshooting guide not available.")
 
                     safe_name = re.sub(r'[^\w\s-]', '', category).strip()
                     pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
