@@ -180,6 +180,8 @@ If you don't have the converter, contact Mindray Technical Support.
                 log_files = extract_tar(uploaded_file)
                 st.success(f"Extracted {len(log_files)} log files.")
                 issues = analyze_logs(log_files)
+            except Exception as e:
+                st.error(f"An error occurred: {e}")
 
                 if issues:
                     st.subheader("⚠️ Diagnosed Issues")
@@ -195,24 +197,24 @@ If you don't have the converter, contact Mindray Technical Support.
 
                                 st.markdown(f"**Manual Reference:** {data.get('manual_reference', 'N/A')}")
 
-                                # Causes
-                                cause_keys = ["causes", "Causes", "Possible Cause", "Fault Symptom", "Symptom", "Common Fault", "Fautl Symptom", "Faul Symptom"]
-                                causes = next((data[k] for k in cause_keys if k in data), [])
+                                # Causes === Mostrar tudo dinamicamente ===
+                                for field, value in data.items():
+                                    if not value:
+                                        continue
 
-                                if isinstance(causes, list):
-                                    st.markdown("**Causes:**")
-                                    for c in causes:
-                                        st.markdown(f"- {c}")
+                                    # Deixa o nome do campo bonito
+                                    field_title = field.replace("_", " ").title()
 
-                                    solution_keys = ["repairs", "Solution", "Attemptable Solution", "Troubleshooting", "Analysis and Solutions", "Attemptable Solution.", "Troubleshooting 1"]
-                                solutions = next((data[k] for k in solution_keys if k in data), [])
+                                    st.markdown(f"**{field_title}:**")
 
-                                if isinstance(solutions, str):
-                                    st.markdown(f"**Recommended Action:** {solutions}")
-                                elif isinstance(solutions, list):
-                                    st.markdown("**Recommended Actions:**")
-                                    for s in solutions:
-                                        st.markdown(f"- {s}")
+                                    if isinstance(value, list):
+                                        for item in value:
+                                            st.markdown(f"- {item}")
+                                    elif isinstance(value, dict):
+                                        for subkey, subval in value.items():
+                                            st.markdown(f"**• {subkey}:** {subval}")
+                                    else:
+                                        st.markdown(f"{value}")
 
                                     # Exibir botão do PPT somente uma vez (após as soluções)
                                     safe_name = re.sub(r'[^\w\s-]', '', key).strip()
@@ -228,25 +230,6 @@ If you don't have the converter, contact Mindray Technical Support.
                                             )
                             else:
                                 st.warning("⚠️ Troubleshooting guide not available.")
-
-                                # Soluções
-                                solution_keys = ["repairs", "Solution", "Attemptable Solution", "Troubleshooting", "Analysis and Solutions", "Attemptable Solution.", "Troubleshooting 1"]
-                                solutions = next((data[k] for k in solution_keys if k in data), [])
-
-                                if isinstance(solutions, str):
-                                    st.markdown(f"**Recommended Action:** {solutions}")
-                                elif isinstance(solutions, list):
-                                    st.markdown("**Recommended Actions:**")
-                                    for s in solutions:
-                                        st.markdown(f"- {s}")
-                                else:
-                                    st.warning("No data found in problem database for this error.")
-
-                else:
-                    st.info("No problems detected.")
-
-            except Exception as e:
-                st.error(f"An error occurred: {e}")
 
 # === Search Errors ===
 def run_error_search():
