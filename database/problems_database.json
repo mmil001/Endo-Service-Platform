@@ -2152,21 +2152,6 @@
     ],
   "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 38"
   },
-  "Contamination": {
-    "Fault Symptom": "Contamination.",
-    "Possible Cause": [
-      "Liquid enters the device."
-    ],
-    "Confirmation of Fault Cause": [
-      "/"
-    ],
-    "Troubleshooting": [
-      "Refer to section 5.4."
-    ],
-    "manual_reference": "HS-50F Service Manual - Operation Fault Handling - Section 5.5 - Page 38",
-    "image": "images/Contamination Detected 🧫.png",
-    "model": ["HS-50F"]
-  },
   "ERR#04": {
     "Fault Symptom": "ERR#04",
     "Possible Cause": [
