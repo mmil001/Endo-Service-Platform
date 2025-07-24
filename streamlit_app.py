@@ -88,49 +88,46 @@ def extract_tar(file):
 
 def analyze_logs(log_files):
     found = defaultdict(list)
-    seen = set()
+    seen_errors = set()
     for file in log_files:
         with open(file, "r", encoding="utf-8", errors="ignore") as f:
             for line in f:
                 clean = line.strip()
-                if clean and clean not in seen and re.search(r"[a-zA-Z]", clean):
+                if clean and clean not in seen_errors and re.search(r"[a-zA-Z]", clean):
                     for key, pat in patterns.items():
                         if re.search(pat, clean, re.IGNORECASE):
-                            found[key].append(clean)
+                            found[key].append(1)  # count only
+                            seen_errors.add(clean)
                             break
-                    else:
-                        found["Unclassified"].append(clean)
-                    seen.add(clean)
     return found
 
-def render_problem(category, lines):
+def render_problem(category):
     data = problems.get(category)
+    if not data:
+        return
     with st.expander(f"🔧 {category}", expanded=True):
-        for line in lines:
-            st.markdown(f"- `{line}`")
-        if data:
-            st.markdown(f"**Problem:** {data.get('problem', 'N/A')}")
-            if data.get("model"):
-                st.markdown(f"**Applicable Models:** {', '.join(data['model'])}")
-            if data.get("causes"):
-                st.markdown("**Causes:**")
-                for c in data["causes"]:
-                    st.markdown(f"- {c}")
-            if data.get("solutions"):
-                st.markdown("**Solutions:**")
-                for s in data["solutions"]:
-                    st.markdown(f"- {s}")
-            if data.get("manual_reference"):
-                st.markdown(f"**Manual Reference:** {data['manual_reference']}")
-            if data.get("image"):
-                img_path = os.path.join(BASE_DIR, "images", data["image"])
-                if os.path.exists(img_path):
-                    st.image(img_path, width=300)
-            if isinstance(data.get("Troubleshooting Guide"), str):
-                pptx_path = os.path.join(BASE_DIR, "resources", data["Troubleshooting Guide"])
-                if os.path.exists(pptx_path):
-                    with open(pptx_path, "rb") as f:
-                        st.download_button("📥 Download Guide", data=f, file_name=data["Troubleshooting Guide"], mime="application/vnd.openxmlformats-officedocument.presentationml.presentation")
+        st.markdown(f"**Problem:** {data.get('problem', 'N/A')}")
+        if data.get("model"):
+            st.markdown(f"**Applicable Models:** {', '.join(data['model'])}")
+        if data.get("causes"):
+            st.markdown("**Causes:**")
+            for c in data["causes"]:
+                st.markdown(f"- {c}")
+        if data.get("solutions"):
+            st.markdown("**Solutions:**")
+            for s in data["solutions"]:
+                st.markdown(f"- {s}")
+        if data.get("manual_reference"):
+            st.markdown(f"**Manual Reference:** {data['manual_reference']}")
+        if data.get("image"):
+            img_path = os.path.join(BASE_DIR, "images", data["image"])
+            if os.path.exists(img_path):
+                st.image(img_path, width=300)
+        if isinstance(data.get("Troubleshooting Guide"), str):
+            pptx_path = os.path.join(BASE_DIR, "resources", data["Troubleshooting Guide"])
+            if os.path.exists(pptx_path):
+                with open(pptx_path, "rb") as f:
+                    st.download_button("📥 Download Guide", data=f, file_name=data["Troubleshooting Guide"], mime="application/vnd.openxmlformats-officedocument.presentationml.presentation")
 
 # === Aba Log Analyzer ===
 if menu == "Log Analyzer":
@@ -142,9 +139,10 @@ if menu == "Log Analyzer":
             try:
                 log_files = extract_tar(uploaded_file)
                 result = analyze_logs(log_files)
-                if result:
-                    for key, logs in result.items():
-                        render_problem(key, logs)
+                matched_keys = [key for key in result if key in problems]
+                if matched_keys:
+                    for key in matched_keys:
+                        render_problem(key)
                 else:
                     st.success("✅ No known errors found.")
             except Exception as e:
@@ -165,6 +163,6 @@ elif menu == "Search Errors":
                     results[k] = v
         if results:
             for key in results:
-                render_problem(key, [key])
+                render_problem(key)
         else:
             st.warning("No results found.")
