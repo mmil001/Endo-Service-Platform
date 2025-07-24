@@ -215,7 +215,7 @@ If you don't have the converter, contact Mindray Technical Support.
                             if manual:
                                 st.markdown(f"**Manual Reference:** {manual}")
                         else:
-                            st.warning("⚠️ No data found in problem database.")
+                                    st.warning("⚠️ No data found in problem database.")
 
 # === Search Errors ===
 def run_error_search():
