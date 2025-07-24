@@ -183,39 +183,39 @@ If you don't have the converter, contact Mindray Technical Support.
             except Exception as e:
                 st.error(f"An error occurred: {e}")
 
-                if issues:
-                    st.subheader("⚠️ Diagnosed Issues")
-                    for key, log_line in issues.items():
-                        data = problems_database.get(key)
-                        st.markdown(f"**Log Line:** {log_line}")
+        if issues:
+            st.subheader("⚠️ Diagnosed Issues")
+            for key, log_line in issues.items():
+                data = problems_database.get(key)
+                st.markdown(f"**Log Line:** {log_line}")
 
-                        if data:
-                            st.markdown(f"**Problem:** {data.get('problem', 'N/A')}")
-                            st.markdown(f"**Applicable Models:** {', '.join(data.get('model', []))}")
+                if data:
+                    st.markdown(f"**Problem:** {data.get('problem', 'N/A')}")
+                    st.markdown(f"**Applicable Models:** {', '.join(data.get('model', []))}")
 
-                            image_file = data.get("image")
-                            if image_file:
-                                image_path = os.path.join(BASE_DIR, "images", image_file)
-                                if os.path.isfile(image_path):
-                                    st.image(image_path, caption="Associated image", width=300)
+                    image_file = data.get("image")
+                    if image_file:
+                        image_path = os.path.join(BASE_DIR, "images", image_file)
+                        if os.path.isfile(image_path):
+                            st.image(image_path, caption="Associated image", width=300)
 
-                            causes = data.get("causes", [])
-                            if isinstance(causes, list) and causes:
-                                st.markdown("**Causes:**")
-                                for c in causes:
-                                    st.markdown(f"- {c}")
+                    causes = data.get("causes", [])
+                    if isinstance(causes, list) and causes:
+                        st.markdown("**Causes:**")
+                        for c in causes:
+                            st.markdown(f"- {c}")
 
-                            solutions = data.get("solutions", [])
-                            if isinstance(solutions, list) and solutions:
-                                st.markdown("**Recommended Actions:**")
-                                for s in solutions:
-                                    st.markdown(f"- {s}")
+                    solutions = data.get("solutions", [])
+                    if isinstance(solutions, list) and solutions:
+                        st.markdown("**Recommended Actions:**")
+                        for s in solutions:
+                            st.markdown(f"- {s}")
 
-                            manual = data.get("manual_reference")
-                            if manual:
-                                st.markdown(f"**Manual Reference:** {manual}")
-                        else:
-                                    st.warning("⚠️ No data found in problem database.")
+                    manual = data.get("manual_reference")
+                    if manual:
+                        st.markdown(f"**Manual Reference:** {manual}")
+                else:
+                            st.warning("⚠️ No data found in problem database.")
 
 # === Search Errors ===
 def run_error_search():
