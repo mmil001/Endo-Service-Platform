@@ -2520,7 +2520,7 @@
       "Replace the button board PCBA (FRU). For details, see button board PCBA (FRU) 6.7.2 Disassembly and Assembly."
     ],
     "image": "",
-    "model": ["UX3"],
+    "model": ["UX3", "Ux5"],
     "reference": "Service Manual Section 7.4.2.1"
     },
     "No Response Upon Startup When Connecting to the External Power Supply": {
@@ -2538,7 +2538,7 @@
         "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3 FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly."
         ],
         "image": "",
-        "model": ["UX3"],
+        "model": ["UX3", "Ux5"],
         "reference": "Service Manual Section 7.4.2.2"
     },
     "Screen Is Black or White upon Power-on": {
@@ -2556,7 +2556,7 @@
         "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3,FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly."
     ],
     "image": "",
-    "model": ["UX3"],
+    "model": ["UX3", "Ux5"],
     "reference": "Service Manual Section 7.4.3.1"
     },
     "Screen Does Not Respond upon Power-on": {
@@ -2575,7 +2575,7 @@
         "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3,FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly."
     ],
     "image": "",
-    "model": "UX3",
+    "model": ["UX3", "Ux5"],
     "reference": "Service Manual Section 7.4.3.2"
     },
     "The Screen Is Black or Does Not Output Any Image Upon Power-on": {
@@ -2610,7 +2610,7 @@
         "Replace the high speed signal line. For details, see high-speed signal cable 6.17.2 Disassembly and Assembly"
     ],
     "image": "",
-    "model": "UX3",
+    "model": ["UX3", "Ux5"],
     "reference": "Service Manual Section 7.4.3.3"
     },
     "The Main Unit Is Powered on Normally, But the 2K DVI Output or 2K HDMI Input of the Display Is Abnormal": {
@@ -2654,6 +2654,47 @@
     "model": "UX3",
     "reference": "Service Manual Section 7.4.3.4"
     },
+    "The Main Unit Is Powered on Normally, But the 2K DVI Output or 2K HDMI Input of the Display Is Abnormal Ux5": {
+    "problem": "The power supply is normal when the main unit is turned on, and the screen displays normally and is operable, but the 2K DVI output is abnormal",
+    "causes": [
+        "The display is damaged.",
+        "The DVI cable is faulty or non-standard.",
+        "The 2K board PCBA is damaged.",
+        "The cable between the 2K board and the CCU is damaged.",
+        "The CCU board is damaged.",
+        "The isolation board is damaged.",
+        "The video camera is damaged.",
+        "The video camera cable is damaged.",
+        "The high speed signal line from the CCU to the isolation board is abnormal."
+    ],
+    "Involved FRU": [
+        "Display, HDMI/DVI cable, CCU board PCBA (FRU), 2K output board PCBA (FRU), 2K cable, High Speed Slim Cable, camera head socket assembly (FRU), camera connection cable (FRU), CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU), and high speed signal line."
+    ],
+    "Troubleshooting": [
+        "Check whether the HDMI/DVI cable is standard. If not, replace it.",
+        "Replace the HDMI/DVI cable and check whether the error is cleared.",
+        "If not, connect the display to other video sources to check whether the display is normal. Connect the external input source to the display and check whether the external input source is normal.",
+        "If the display and external input source are normal, replace the 2K board and the cable between the 2K board and the CCU to check whether there is a problem with the 2K board and the connection",
+        "If the error persists after the replacement, replace the handle assembly and check whether the video camera is faulty",
+        "If the error persists after the replacement, replace the video camera cable",
+        "If the error persists, disassemble the main unit and replace the camera head socket assembly, CCU board, high-speed signal cable to identify the cause."
+    ],
+    "repairs": [
+        "Replace the display.",
+        "Replace HDMI/DVI cable.",
+        "Replace the 2K output board PCBA (FRU). For details, see 2K output board PCBA (FRU) 6.34.2 Disassembly and Assembly.",
+        "Replace the 2K cable. For details, see 2K cable 6.27.2 Disassembly and Assembly.",
+        "Replace the High speed slim cable. For details, see High speed slim cable 6.12.2 Disassembly and Assembly",
+        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.36.2 Disassembly and Assembly.",
+        "Replace the camera head socket assembly (FRU). For details, see camera head socket assembly (FRU) 6.15.2 Disassembly and Assembly.",
+        "Replace the camera connection cable. For details, see camera connection cable 3m (FRU) 6.56.2 Disassembly and Assembly.",
+        "Replace the CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU). For details, see see 6.71.2 Disassembly and Assembly in *FRU Replacement*.",
+        "Replace the high speed signal line. For details, see high-speed signal cable 6.17.2 Disassembly and Assembly."
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.4.3.4"
+    },
     "Unrecognized USB Flash Drive": {
     "problem": "When the USB flash disk is plugged in, the machine does not respond and the USB flash disk icon appears gray.",
     "causes": [
@@ -2671,11 +2712,11 @@
     "repairs": [
         "Replace the USB flash disk with the recommended model.",
         "Replace the High speed slim cable. For details, see High speed slim cable 6.12.2 Disassembly and Assembly.",
-        "Replace the recording board PCBA (FRU). For details, see UX series recording board PCBA (FRU) 6.36.2 Disassembly and Assembly.",
+        "Replace the recording board PCBA (FRU). For details, see UX series recording board PCBA (FRU) 6.36.2 (for Ux3) and 6.37.2 (for Ux5) Disassembly and Assembly.",
         "Replace the USB socket PCBA (FRU). For details, see USB socket PCBA (FRU) 6.5.2 Disassembly and Assembly."
     ],
     "image": "",
-    "model": "UX3",
+    "model": ["UX3", "Ux5"],
     "reference": "Service Manual Section 7.4.4.1"
     },
     "Unable to Take Photos/Videos": {
@@ -2697,7 +2738,7 @@
         "Replace the USB socket PCBA (FRU). For details, see USB socket PCBA (FRU) 6.5.2 Disassembly and Assembly."
     ],
     "image": "",
-    "model": "UX3",
+    "model": ["UX3", "Ux5"],
     "reference": "Service Manual Section 7.4.4.2"
     },
     "Main Unit Does Not Respond When Pressing the Button on the Handle": {
@@ -2712,13 +2753,15 @@
         "The OSD cable is faulty."
     ],
     "Involved FRU": [
-        "CH3-SW100/CH3-SW110 handle assembly (FRU), camera connection cable (FRU), main control board PCBA (FRU), camera head socket assembly (FRU), high speed signal line, CCU board PCBA (FRU), and OSD cable."
+        "For Ux3 - CH3-SW100/CH3-SW110 handle assembly (FRU), camera connection cable (FRU), main control board PCBA (FRU), camera head socket assembly (FRU), high speed signal line, CCU board PCBA (FRU), and OSD cable.",
+        "For Ux5 - CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU), camera connection cable (FRU), main control board PCBA (FRU), camera head socket assembly (FRU), high-speed signal cable (with magnetic ring), CCU board PCBA (FRU), and OSD cable."
     ],
     "Troubleshooting": [
         "None"
     ],
     "repairs": [
-        "Replace the CH3-SW100/CH3-SW110 handle assembly (FRU). For details, see CH3-SW100 handle assembly (FRU) 6.55.2 Disassembly and Assembly and CH3-SW110 handle assembly (FRU) 6.54.2 Disassembly and Assembly",
+        "Replace the CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU). For details, see 6.71.2 Disassembly and Assembly in *FRU Replacemnet*.",
+        "Replace the CH3-SW100/CH3-SW110 handle assembly (FRU). For details, see CH3-SW100 handle assembly (FRU) 6.55.2 (for Ux3) and 6.56. 2 (for Ux5) Disassembly and Assembly and CH3-SW110 handle assembly (FRU) 6.54.2 Disassembly and Assembly",
         "Replace the camera connection cable. For details, see camera connection cable 3m (FRU) 6.45.2 Disassembly and Assembly.",
         "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3, FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly.",
         "Replace the camera head socket assembly (FRU). For details, see camera head socket assembly (FRU) 6.15.2 Disassembly and Assembly.",
@@ -2727,8 +2770,50 @@
         "Replace the OSD cable. For details, see OSD cable 6.25.2 Disassembly and Assembly."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.4.5.1"
+    "model": ["UX3", "Ux5"],
+    "reference": "Service Manual Section 7.4.5.1 - Page 292"
+    },
+    "Wi-Fi Function Is Turned On, But the Wi-Fi Hotspot Cannot Be Obtained or Cannot Be Connected": {
+      "Fault Description": "The Wi-Fi function is turned on, but the Wi-Fi hotspot cannot be obtained or cannot be connected.",
+      "Severity": "Maintenance as soon as possible.",
+      "Possible Cause": [
+        "1. The Wi-Fi module is faulty.",
+        "2. The main control board is damaged.",
+        "3. The Wi-Fi antenna is damaged."
+      ],
+      "Involved FRU": "Wi-Fi board PCBA (FRU), Wi-Fi board antenna (FRU), and main control board PCBA (FRU).",
+      "Troubleshooting": "None",
+      "Solution": [
+        "1. Replace the Wi-Fi board PCBA (FRU). For details, see 6.46.2 Disassembly and Assembly in *FRU Replacemnet*.",
+        "Replace the Wi-Fi board antenna (FRU).",
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in *FRU Replacemnet*."
+      ],
+      "image": "",
+      "model": ["UX3", "Ux5"],
+      "reference": "Service Manual Section 7.4.6.1 - Page 292"
+    },
+    "UWB Function Is Turned On, But UWB Cannot Obtain Positioning Data or The Positioning Data Is Abnormal": {
+      "Fault Description": "The UWB function is turned on, but UWB cannot obtain positioning data or the positioning data is abnormal.",
+      "Severity": "Maintenance as soon as possible.",
+      "Possible Causes": [
+        "1. The UWB module is faulty.",
+        "2. The main control board is damaged.",
+        "3. The UWB antenna is damaged.",
+        "4. The UWB cable is damaged."
+      ],
+      "Involved FRU": [
+        "UWB board PCBA (FRU), UWB board antenna (FRU), main control board PCBA (FRU), and UWB cable."
+      ],
+      "Troubleshooting": "None.",
+      "Solution": [
+        "1. Replace the UWB board PCBA (FRU). For details, see 6.42.2 Disassembly and Assembly in *FRU Replacemnet*.",
+        "2. Replace the UWB board Antenna. For details, see 6.43.2 Disassembly and Assembly in *FRU Replacemnet*.",
+        "3. Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in *FRU Replacemnet*.",
+        "4. Replace the UWB cable. For details, see 6.19.2 Disassembly and Assembly in *FRU Replacemnet*."
+      ],
+      "image": "",
+      "model": ["Ux5"],
+      "reference": "Service Manual Section 7.4.6.2 - Page 293"
     },
     "Equipment Temperature Is Too High": {
     "Fault Description": "Equipment Temperature Is Too High.",
@@ -2740,7 +2825,7 @@
         "Check the cooling air outlet. Check whether there is a technical alarm. If so, refer to troubleshooting measures of technical alarms #104, #105, #201 and #301 to handle the faults"
     ],
     "image": "",
-    "model": "UX3",
+    "model": ["UX3", "Ux5"],
     "reference": "Service Manual Section 7.5.2"
     },
     "Abnormal Recording Function Initialization": {
@@ -2753,7 +2838,7 @@
         "Restart the main unit and check whether the fault is eliminated. Check whether there is a technical alarm. If so, refer to troubleshooting measures of technical alarms #904 and #906 to handle the faults."
     ],
     "image": "",
-    "model": "UX3",
+    "model": ["UX3", "Ux5"],
     "reference": "Service Manual Section 7.5.3"
     },
     "Abnormal Video Camera Connection": {
@@ -2766,7 +2851,7 @@
         "Re-plug the video camera and check whether the fault is eliminated. Check whether there is a technical alarm. If so, refer to troubleshooting measures of technical alarms #910 and #911 to handle the faults."
     ],
     "image": "",
-    "model": "UX3",
+    "model": ["UX3", "Ux5"],
     "reference": "Service Manual Section 7.5.4"
     },
     "Main Unit of Video Camera and Light Source Are Not Interconnected": {
@@ -2779,10 +2864,10 @@
         "Re-plug the MSB cable and check whether the fault is eliminated. Check whether there is a technical alarm. If so, refer to troubleshooting measures of technical alarms #A01 and #A02 to handle the faults."
     ],
     "image": "",
-    "model": "UX3",
+    "model": ["UX3", "Ux5"],
     "reference": "Service Manual Section 7.5.5"
     },
-    "#001: Main CPU Failed to Read or Write EEPROM": {
+    "#001: Main CPU Failed to Read or Write EEPROM (UX5)": {
     "Fault Code": "#001.",
     "Fault Description": "User and Administrator Permission - System error #001 | Service Engineer Permission - System error #001.",
     "Severity": "Maintenance as soon as possible.",
@@ -2797,13 +2882,13 @@
         "Turn the machine on and off again. If the error persists, replace the main control board."
     ],
     "Solution": [
-        "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3, FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly."
+        "RReplace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in *FRU Replacement*."
     ],
     "image": "",
-    "model": "UX3",
+    "model": "UX5",
     "reference": "Service Manual Section 7.6.2"
     },
-    "#002: Communication Failure Between Primary CPU and OSD CPU": {
+    "#002: Communication Failure Between Primary CPU and OSD CPU (UX5)": {
     "Fault Code": "#002.",
     "Fault Description": "User and Administrator Permission - System error #002 | Service Engineer Permission - System error #002.",
     "Severity": "Maintenance as soon as possible.",
@@ -2818,10 +2903,10 @@
         "Turn the machine on and off again. If the error persists, replace the main control board."
     ],
     "Solution": [
-        "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3, FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly."
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in *FRU Replacement*."
     ],
     "image": "",
-    "model": "UX3",
+    "model": "UX5",
     "reference": "Service Manual Section 7.6.3"
     },
     "#003: Primary CPU Power MCU Communication Failure": {
@@ -2839,13 +2924,62 @@
         "Turn the machine on and off again. If the error persists, replace the main control board."
     ],
     "Solution": [
-        "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3, FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly."
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in *FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
+    "model": "UX5",
     "reference": "Service Manual Section 7.6.4"
     },
-    "#101: CCU A FPGA Failed to Read or Write DDR": {
+    "#004: Abnormal Communication Between Wi-Fi Module and Main Control Board": {
+    "Fault Code": "#004.",
+    "Fault Description": "User and Administrator Permission - System error #0004 | Service Engineer Permission - System error #004.",
+    "Severity": "Maintenance as soon as possible.",
+    "Error Mechanism": "None.",
+    "Possible Causes": [
+        "The main control CPU is faulty or the Wi-Fi module is faulty or the Wi-Fi module is loose."
+    ],
+    "Involved FRU": [
+        "Main control board PCBA (FRU) and Wi-Fi board PCBA (FRU)."
+    ],
+    "Troubleshooting": [
+        "1. Turn the machine on and off again. If the error persists, re-plug the Wi-Fi module.",
+        "2. If the error persists, replace the Wi-Fi module.",
+        "3. If the error persists, replace the main control board."
+    ],
+    "Solution": [
+        "1. Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in *FRU Replacement*.",
+        "2. Replace the Wi-Fi board PCBA (FRU). For details, see 6.46.2 Disassembly and Assembly in *FRU Replacement*"
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.5"
+    },
+    "#005: Abnormal Communication Between Wi-Fi Module and Main Control Board": {
+    "Fault Code": "#005.",
+    "Fault Description": "User and Administrator Permission - System error #005 | Service Engineer Permission - System error #005.",
+    "Severity": "Maintenance as soon as possible.",
+    "Error Mechanism": "None.",
+    "Possible Causes": [
+        "The main control CPU is faulty or the Wi-Fi module is faulty or the Wi-Fi module is loose."
+    ],
+    "Involved FRU": [
+        "Main control board PCBA (FRU), UWB board PCBA (FRU), and UWB cable."
+    ],
+    "Troubleshooting": [
+        "1. Turn the machine on and off again. If the error persists, re-plug the connection cable.",
+        "2. If the error persists, replace the UWB module.",
+        "3. If the error persists, replace the main control board."
+    ],
+    "Solution": [
+        "1. Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in *FRU Replacement*.",
+        "2. Replace the UWB board PCBA (FRU). For details, see 6.42.2 Disassembly and Assembly in *FRU Replacement*",
+        "3. Replace the UWB cable. For details, see 6.19.2 Disassembly and Assembly in *FRU Replacement*"
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.6"
+    },
+    "#101: CCU A FPGA Failed to Read or Write DDR (UX5)": {
     "Fault Code": "#101.",
     "Fault Description": "User and Administrator Permission - System error #101 | Service Engineer Permission - System error #101.",
     "Severity": "Suspension.",
@@ -2860,13 +2994,13 @@
         "Turn the machine on and off again. If the error persists, replace the CCU board."
     ],
     "Solution": [
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in *FRU Replacement*."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.5"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.7"
     },
-    "#102: Abnormal Aurora Connection Between CCU A and BFPGAs": {
+    "#102: Abnormal Aurora Connection Between CCU A and BFPGAs (UX5)": {
     "Fault Code": "#102.",
     "Fault Description": "User and Administrator Permission - System error #102 | Service Engineer Permission - System error #102.",
     "Severity": "Suspension.",
@@ -2881,13 +3015,13 @@
         "Turn the machine on and off again. If the error persists, replace the CCU board."
     ],
     "Solution": [
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in *FRU Replacement*"
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.6"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.8"
     },
-    "#103: CCU B FPGA Failed to Read or Write DDR": {
+    "#103: CCU B FPGA Failed to Read or Write DDR (UX5)": {
     "Fault Code": "#103.",
     "Fault Description": "User and Administrator Permission - System error #103 | Service Engineer Permission - System error #103.",
     "Severity": "Suspension.",
@@ -2905,10 +3039,10 @@
         "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.7"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.9"
     },
-    "#104: CCU A Is Overtemperature": {
+    "#104: CCU A Is Overtemperature (UX5)": {
     "Fault Code": "#104.",
     "Fault Description": "User and Administrator Permission - System error #104 | Service Engineer Permission - System error #104.",
     "Severity": "Suspension.",
@@ -2930,10 +3064,10 @@
         "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.8"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.10"
     },
-    "#105: CCU B Is Overtemperature": {
+    "#105: CCU B Is Overtemperature (UX5)": {
     "Fault Code": "#105.",
     "Fault Description": "User and Administrator Permission - System error #105 | Service Engineer Permission - System error #105",
     "Severity": "Suspension.",
@@ -2955,10 +3089,10 @@
         "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.9"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.11"
     },
-    "#201: DVR Board FPGA Is Overtemperature": {
+    "#201: DVR Board FPGA Is Overtemperature (UX5)": {
     "Fault Code": "#201.",
     "Fault Description": "User and Administrator Permission - System error #201 | Service Engineer Permission - System error #201",
     "Severity": "Suspension.",
@@ -2976,14 +3110,38 @@
         "If the error is not eliminated, replace the DVR board."
     ],
     "Solution": [
-        "Replace the DVR radiator. For details, see DVR Radiator FRU 6.29.2 Disassembly and Assembly.",
-        "Replace the recording board PCBA (FRU). For details, see UX series recording board PCBA (FRU) 6.36.2 Disassembly and Assembly."
+        "Replace the DVR radiator. For details, see DVR Radiator FRU 6.30.2 Disassembly and Assembly.",
+        "Replace the recording board PCBA (FRU). For details, see UX series recording board PCBA (FRU) 6.37.2 Disassembly and Assembly."
     ],
     "image": "",
     "model": "UX3",
-    "reference": "Service Manual Section 7.6.10"
+    "reference": "Service Manual Section 7.6.12"
     },
-    "#401: Abnormal Voltage of Isolation Board": {
+    "#301: AI Board Processor Is Overtemperature": {
+    "Fault Code": "#301.",
+    "Fault Description": "User and Administrator Permission - System error #301 | Service Engineer Permission - System error #301",
+    "Severity": "Suspension.",
+    "Error Mechanism": "None.",
+    "Possible Causes": [
+        "The isolation board is faulty or the CCU is faulty or the Aurora cable connection is abnormal."
+    ],
+    "Involved FRU": [
+        "Camera head socket assembly (FRU), CCU board PCBA (FRU), high speed signal line."
+    ],
+    "Troubleshooting": [
+        "Turn the machine on and off again. If the error persists, replace the isolation connection board.",
+        "If the error persists, replace the cable between the isolation board and the CCU board.",
+        "If the error is not eliminated, replace the CCU board."
+    ],
+    "Solution": [
+        "Replace the CCU board/AI board cooling fan (FRU). For details, see 6.31.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the AI board PCBA (FRU). For details, see 6.47.2 Disassembly and Assembly in FRU Replacement."
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.13"
+    },
+    "#401: Abnormal Voltage of Isolation Board (UX5)": {
     "Fault Code": "#401.",
     "Fault Description": "User and Administrator Permission - System error #401 | Service Engineer Permission - System error #401",
     "Severity": "Suspension.",
@@ -3001,20 +3159,20 @@
     ],
     "Solution": [
         "Replace the camera head socket assembly (FRU). For details, see camera head socket assembly (FRU) 6.15.2 Disassembly and Assembly.",
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly.",
+        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.36.2 Disassembly and Assembly.",
         "Replace the high speed signal line. For details, see high-speed signal cable 6.17.2 Disassembly and Assembly."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.11"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.14"
     },
-    "#501: Abnormal Touch Screen Communication Response": {
+    "#501: Abnormal Touch Screen Communication Response (UX5)": {
     "Fault Code": "#501.",
     "Fault Description": "User and Administrator Permission - System error #501 | Service Engineer Permission - System error #501",
     "Severity": "Maintenance as soon as possible.",
     "Error Mechanism": "None.",
     "Possible Causes": [
-        "The touch screen is faulty."
+        "The touchscreen is faulty."
     ],
     "Involved FRU": [
         "Touch panel cable, main control board PCBA (FRU), and top cover assembly (FRU)."
@@ -3025,15 +3183,55 @@
         "If the error is not eliminated, replace the touch screen assembly."
     ],
     "Solution": [
-        "Replace the touch panel cable. For details, see the touch panel cable 6.13.2 Disassembly and Assembly.",
-        "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3, FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly.",
-        "Replace the top cover Assembly (FRU). For details, see UX3 top cover Assembly (FRU) 6.4.2 Disassembly and Assembly."
+        "Replace the touch panel cable. For details, see 6.13.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in FRU Replacement ",
+        "Replace the top cover assembly (FRU). For details, see 6.4.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.12"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.15"
     },
-    "#603: Abnormal Camera Motor Self-test": {
+    "#601: Abnormal Communication of White Light Sensor of Fluorescent Camera (UX5)": {
+    "Fault Code": "#601.",
+    "Fault Description": "User and Administrator Permission - System error #601 | Service Engineer Permission - System error #601",
+    "Error Mechanism": "None.",
+    "Possible Causes": [
+        "White light sensor failure, or NIR CHU board failure, or ultra-fine coaxial cable connection anomaly."
+    ],
+    "Involved FRU": [
+        "CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
+    ],
+    "Troubleshooting": [
+        "TReplace the handle assembly."
+    ],
+    "Solution": [
+        "Replace the CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU). For details, see 6.71.2 Disassembly and Assembly in FRU Replacement."
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.16"
+    },
+    "#602: Abnormal Communication of Fluorescence Sensor of Fluorescent Camera (UX5)": {
+    "Fault Code": "#602.",
+    "Fault Description": "User and Administrator Permission - System error #602 | Service Engineer Permission - System error #602",
+    "Error Mechanism": "None.",
+    "Possible Causes": [
+        "Fluorescence sensor failure, or NIR CHU board failure, or ultra-fine coaxial cable connection anomaly."
+    ],
+    "Involved FRU": [
+        "CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
+    ],
+    "Troubleshooting": [
+        "Replace CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
+    ],
+    "Solution": [
+        "Replace the CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU). For details, see 6.71.2 Disassembly and Assembly in FRU Replacement."
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.17"
+    },
+    "#603: Abnormal Camera Motor Self-test (UX5)": {
     "Fault Code": "#603.",
     "Fault Description": "User and Administrator Permission - System error #603 | Service Engineer Permission - System error #603",
     "Severity": "Suspension.",
@@ -3042,19 +3240,19 @@
         "Motor failure or CHU failure."
     ],
     "Involved FRU": [
-        "CH3-SW100/CH3-SW110 handle assembly (FRU)."
+        "CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
     ],
     "Troubleshooting": [
-        "Replace the CH3-SW100/CH3-SW110 handle assembly (FRU)."
+        "Replace CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
     ],
     "Solution": [
-        "Replace the CH3-SW100/CH3-SW110 handle assembly (FRU). For details, see CH3-SW100 handle assembly (FRU) 6.55.2 Disassembly and Assembly and CH3-SW110 handle assembly (FRU) 6.54.2 Disassembly and Assembly."
+        "Replace the CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU). For details, see 6.71.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.13"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.18"
     },
-    "#604: Abnormal MIPI Link of White Light Camera Sensor": {
+    "#604: Abnormal MIPI Link of White Light Camera Sensor (UX5)": {
     "Fault Code": "#604.",
     "Fault Description": "User and Administrator Permission - System error #604 | Service Engineer Permission - System error #604",
     "Severity": "Suspension.",
@@ -3063,19 +3261,19 @@
         "The white light CHU board is faulty."
     ],
     "Involved FRU": [
-        "CH3-SW100/CH3-SW110 handle assembly (FRU)."
+        "CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
     ],
     "Troubleshooting": [
-        "Replace the CH3-SW100/CH3-SW110 handle assembly (FRU)."
+        "Replace CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
     ],
     "Solution": [
-        "Replace the CH3-SW100/CH3-SW110 handle assembly (FRU). For details, see CH3-SW100 handle assembly (FRU) 6.55.2 Disassembly and Assembly and CH3-SW110 handle assembly (FRU) 6.54.2 Disassembly and Assembly."
+        "Replace the CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU). For details, see 6.71.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.14"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.19"
     },
-    "#605: Abnormal Communication of White Light Camera Sensor": {
+    "#605: Abnormal Communication of White Light Camera Sensor (UX5)": {
     "Fault Code": "#605.",
     "Fault Description": "User and Administrator Permission - System error #605 | Service Engineer Permission - System error #605",
     "Severity": "Suspension.",
@@ -3084,19 +3282,61 @@
         "The white light CHU board is faulty."
     ],
     "Involved FRU": [
-        "CH3-SW100/CH3-SW110 handle assembly (FRU)."
+        "Replace CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
     ],
     "Troubleshooting": [
-        "Replace the CH3-SW100/CH3-SW110 handle assembly (FRU)."
+        "Replace CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
     ],
     "Solution": [
-        "Replace the CH3-SW100/CH3-SW110 handle assembly (FRU). For details, see CH3-SW100 handle assembly (FRU) 6.55.2 Disassembly and Assembly and CH3-SW110 handle assembly (FRU) 6.54.2 Disassembly and Assembly."
+        "Replace the CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU). For details, see 6.71.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.15"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.20"
     },
-    "#801: The Monitored Speed of System Fan Is Abnormal": {
+    "#701: Abnormal MIPI Link of White Light Sensor of Fluorescent Camera": {
+    "Fault Code": "#701",
+    "Fault Description": "User and Administrator Permission - System error #701 | Service Engineer Permission - System error #701",
+    "Severity": "Suspension.",
+    "Error Mechanism": "None.",
+    "Possible Causes": [
+        "White light sensor failure, or NIR CHU board failure, or ultra-fine coaxial cable connection anomaly."
+    ],
+    "Involved FRU": [
+        "Replace CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
+    ],
+    "Troubleshooting": [
+        "Replace CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
+    ],
+    "Solution": [
+        "Replace the CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU). For details, see 6.71.2 Disassembly and Assembly in FRU Replacement."
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.21"
+    },
+    "#702: Abnormal MIPI Link of Fluorescent Sensor of Fluorescent Camera": {
+    "Fault Code": "#702",
+    "Fault Description": "User and Administrator Permission - System error #702 | Service Engineer Permission - System error #702",
+    "Severity": "Suspension.",
+    "Error Mechanism": "None.",
+    "Possible Causes": [
+        "Fluorescence sensor failure, or NIR CHU board failure, or ultra-fine coaxial cable connection anomaly."
+    ],
+    "Involved FRU": [
+        "Replace CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
+    ],
+    "Troubleshooting": [
+        "Replace CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
+    ],
+    "Solution": [
+        "Replace the CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU). For details, see 6.71.2 Disassembly and Assembly in FRU Replacement."
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.21"
+    },
+    "#801: The Monitored Speed of System Fan Is Abnormal (UX5)": {
     "Fault Code": "#801.",
     "Fault Description": "User and Administrator Permission - System error #801 | Service Engineer Permission - System error #801",
     "Severity": "Suspension.",
@@ -3118,19 +3358,20 @@
         "3)If the error is not eliminated, replace the IO cable."
     ],
     "Solution": [
-        "Replace the cooling fan of power supply (FRU). For details, see the cooling fan of power supply (FRU) 6.19.2 Disassembly and Assembly.",
-        "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3,FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly.",
-        "Replace the IO board PCBA (FRU). For details, see IO board PCBA (FRU) 6.32.2 Disassembly and Assembly.",
-        "Replace the OSD cable. For details, see OSD cable 6.25.2 Disassembly and Assembly.",
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly.",
-        "Replace the IO transit cable. For details, see the IO transit cable 6.20.2 Disassembly and Assembly.",
-        "Replace the IO cable. For details, see the IO cable 6.21.2 Disassembly and Assembly."
+        "Replace the power cooling fan (FRU). For details, see 6.20.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in *FRU Replacement.",
+
+        "Replace the IO board PCBA (FRU). For details, see 6.33.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the OSD cable. For details, see 6.26.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in *FRU Replacement*",
+        "Replace the IO transit cable. For details, see 6.21.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the IO cable. For details, see 6.22.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.16"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.23"
     },
-    "#802: Abnormal Monitoring of the Fan of CCU A FPGA": {
+    "#802: Abnormal Monitoring of the Fan of CCU A FPGA (UX5)": {
     "Fault Code": "#802.",
     "Fault Description": "User and Administrator Permission - System error #802 | Service Engineer Permission - System error #802",
     "Severity": "Suspension.",
@@ -3147,14 +3388,14 @@
         "IIf the error is not eliminated, replace the CCU board."
     ],
     "Solution": [
-        "Replace the CCU board/AI board cooling fan (FRU). For details, see CCU board/AI board cooling fan (FRU) 6.30.2 Disassembly and Assembly.",
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
+        "Replace the CCU board/AI board cooling fan (FRU). For details, see 6.31.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.17"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.24"
     },
-    "#803: Abnormal Monitoring of the Fan of CCU B FPGA": {
+    "#803: Abnormal Monitoring of the Fan of CCU B FPGA (UX5)": {
     "Fault Code": "#803.",
     "Fault Description": "User and Administrator Permission - System error #803 | Service Engineer Permission - System error #803",
     "Severity": "Suspension.",
@@ -3171,14 +3412,14 @@
         "IIf the error is not eliminated, replace the CCU board."
     ],
     "Solution": [
-        "Replace the CCU board/AI board cooling fan (FRU). For details, see CCU board/AI board cooling fan (FRU) 6.30.2 Disassembly and Assembly.",
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
-    ],
+        "Replace the CCU board/AI board cooling fan (FRU). For details, see 6.31.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement."
+    ], 
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.18"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.25"
     },
-    "#804: Abnormal Monitoring of the Fan of the DVR Board": {
+    "#804: Abnormal Monitoring of the Fan of the DVR Board (UX5)": {
     "Fault Code": "#804.",
     "Fault Description": "User and Administrator Permission - System error #804 | Service Engineer Permission - System error #804",
     "Severity": "Suspension.",
@@ -3195,14 +3436,38 @@
         "If the error is not eliminated, replace the DVR board."
     ],
     "Solution": [
-        "Replace the DVR radiator. For details, see DVR Radiator FRU 6.29.2 Disassembly and Assembly.",
-        "Replace the recording board PCBA (FRU). For details, see UX series recording board PCBA (FRU) 6.36.2 Disassembly and Assembly."
+        "Replace DVR radiator (self-developed video board) FRU. For details, see 6.30.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the video board PCBA (FRU). For details, see 6.37.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.19"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.26"
     },
-    "#901: The Main Control Board Failed to Read and Write UART Communication Information of CCU": {
+    "#805: Abnormal Monitoring of the Fan of the AI Board": {
+    "Fault Code": "#805.",
+    "Fault Description": "User and Administrator Permission - System error #805 | Service Engineer Permission - System error #805",
+    "Severity": "Suspension.",
+    "Error Mechanism": "None.",
+    "Possible Causes": [
+        "AI fan failure or AI failure."
+    ],
+    "Involved FRU": [
+        "CCU board/AI board cooling fan (FRU), and AI board PCBA (FRU)."
+    ],
+    "Troubleshooting": [
+        "Observe whether the fan rotates normally. If not, replug the fan cable.",
+        "If the error is not eliminated, replace the fan.",
+        "If the error is not eliminated, replace the AI board."
+    ],
+    "Solution": [
+        "Replace the CCU board/AI board cooling fan (FRU). For details, see 6.31.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the AI board PCBA (FRU). For details, see 6.47.2 Disassembly and Assembly in FRU Replacement."
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.27"
+    },
+    "#901: The Main Control Board Failed to Read and Write UART Communication Information of CCU (UX5)": {
     "Fault Code": "#901.",
     "Fault Description": "User and Administrator Permission - System error #901 | Service Engineer Permission - System error #901",
     "Severity": "Suspension.",
@@ -3219,15 +3484,15 @@
         "If the error is not eliminated, replace the main control board."
     ],
     "Solution": [
-        "Replace the OSD cable. For details, see OSD cable 6.25.2 Disassembly and Assembly.",
-        "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3,FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly.",
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
+        "Replace the OSD cable. For details, see 6.26.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.20"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.28"
     },
-    "#902: The Main Control Board Failed to Read and Write SPI Communication Information of CCU A": {
+    "#902: The Main Control Board Failed to Read and Write SPI Communication Information of CCU A (UX5)": {
     "Fault Code": "#902.",
     "Fault Description": "User and Administrator Permission - System error #902 | Service Engineer Permission - System error #902",
     "Severity": "Suspension.",
@@ -3244,15 +3509,15 @@
         "If the error is not eliminated, replace the main control board."
     ],
     "Solution": [
-        "Replace the OSD cable. For details, see OSD cable 6.25.2 Disassembly and Assembly.",
-        "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3,FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly.",
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
+        "Replace the OSD cable. For details, see 6.26.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.21"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.29"
     },
-    "#903: The Main Control Board Failed to Read and Write SPI Communication Information of CCU B": {
+    "#903: The Main Control Board Failed to Read and Write SPI Communication Information of CCU B (UX5)": {
     "Fault Code": "#903.",
     "Fault Description": "User and Administrator Permission - System error #903 | Service Engineer Permission - System error #903",
     "Severity": "Suspension.",
@@ -3269,15 +3534,15 @@
         "If the error is not eliminated, replace the main control board."
     ],
     "Solution": [
-        "Replace the OSD cable. For details, see OSD cable 6.25.2 Disassembly and Assembly.",
-        "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3,FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly.",
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
+        "Replace the OSD cable. For details, see 6.26.2 Disassembly and Assembly in.",
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in *FRU Replacement*.",
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.22"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.30"
     },
-    "#904: The Main Control Board Failed to Read and Write DVR Network Communication Information": {
+    "#904: The Main Control Board Failed to Read and Write DVR Network Communication Information (UX5)": {
     "Fault Code": "#904.",
     "Fault Description": "User and Administrator Permission - System error #904 | Service Engineer Permission - System error #904",
     "Severity": "Suspension.",
@@ -3294,15 +3559,15 @@
         "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
     ],
     "Solution": [
-        "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3, FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly.",
-        "Replace the recording board PCBA (FRU). For details, see UX series recording board PCBA (FRU) 6.36.2 Disassembly and Assembly.",
-        "Replace the DVR cable. For details, see the DVR cable 6.27.2 Disassembly and Assembly."
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the video board PCBA (FRU). For details, see 6.37.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the DVR cable. For details, see 6.28.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.23"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.31"
     },
-    "#906: Abnormal DVR Video Source Input": {
+    "#906: Abnormal DVR Video Source Input (UX5)": {
     "Fault Code": "#906.",
     "Fault Description": "User and Administrator Permission - System error #906 | Service Engineer Permission - System error #906",
     "Severity": "Suspension.",
@@ -3319,15 +3584,90 @@
         "If the error is not eliminated, replace the CCU board."
     ],
     "Solution": [
-        "Replace the recording board PCBA (FRU). For details, see UX series recording board PCBA (FRU) 6.36.2 Disassembly and Assembly",
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly.",
-        "Replace the 16 pairs high speed cable. For details, see 16 pairs high speed cable 6.18.2 Disassembly and Assembly."
+        "Replace the video board PCBA (FRU). For details, see 6.37.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the 16 pairs high speed cable. For details, see 6.18.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.24"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.32"
     },
-    "#910: Abnormal RS485 Communication Between CCU and CHU": {
+    "#907: The Main Control Board Failed to Detect the Presence of AI Board": {
+    "Fault Code": "#907.",
+    "Fault Description": "User and Administrator Permission - System error #907 | Service Engineer Permission - System error #907",
+    "Severity": "Suspension.",
+    "Error Mechanism": "None.",
+    "Possible Causes": [
+        "Main control board failure, AI board failure, and AI communication cable failure."
+    ],
+    "Involved FRU": [
+        "Main control board PCBA (FRU), AI board PCBA (FRU), and AI control cable."
+    ],
+    "Troubleshooting": [
+        "Turn the machine on and off again. If the error persists, re-plug the cable between the main control board and the AI board.",
+        "If the error is not eliminated, replace the AI board.",
+        "If the error is not eliminated, replace the main control board."
+    ],
+    "Solution": [
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the AI board PCBA (FRU). For details, see 6.47.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the AI control cable. For details, see 6.48.2 Disassembly and Assembly in FRU Replacement."
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.33"
+    },
+    "#908: The CCU Failed to Read and Write Serial Port Communication Information of AI Board": {
+    "Fault Code": "#908.",
+    "Fault Description": "User and Administrator Permission - System error #908 | Service Engineer Permission - System error #908",
+    "Severity": "Suspension.",
+    "Error Mechanism": "None.",
+    "Possible Causes": [
+        "AI low-speed communication cable connection failure, or CCU board failure, or AI board failure."
+    ],
+    "Involved FRU": [
+        "AI communication cable, CCU board PCBA (FRU), and AI board PCBA (FRU)."
+    ],
+    "Troubleshooting": [
+        "Turn the machine on and off again. If the error persists, re-plug the AI low-speed communication cable.",
+        "If the error is not eliminated, replace the AI board.",
+        "If the error is not eliminated, replace the CCU board."
+    ],
+    "Solution": [
+        "Replace the AI communication cable. For details, see 6.49.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the AI board PCBA (FRU). For details, see 6.47.2 Disassembly and Assembly in FRU Replacement."
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.34"
+    },
+    "#909: TThe CCU Failed to Read and Write Data Through Aurora Connection with AI Board": {
+    "Fault Code": "#909.",
+    "Fault Description": "User and Administrator Permission - System error #909 | Service Engineer Permission - System error #909",
+    "Severity": "Suspension.",
+    "Error Mechanism": "None.",
+    "Possible Causes": [
+        "AI Aurora communication cable connection failure, or CCU board failure, or AI board failure."
+    ],
+    "Involved FRU": [
+        "AI high-speed Aurora communication cable (8 pairs of 8-inch cables), CCU board PCBA (FRU) and AI board PCBA (FRU)."
+    ],
+    "Troubleshooting": [
+        "TTurn the machine on and off again. If the error persists, replace the AI high-speed Aurora communication cable.",
+        "If the error is not eliminated, replace the AI board.",
+        "If the error is not eliminated, replace the CCU board."
+    ],
+    "Solution": [
+        "Replace the High Speed Slim Cable. For details, see 6.12.2 Disassembly and Assembly in FRU Replacement.",
+        "RReplace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the AI board PCBA (FRU). For details, see 6.47.2 Disassembly and Assembly in FRU Replacement."
+    ],
+    "image": "",
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.35"
+    },
+    "#910: Abnormal RS485 Communication Between CCU and CHU (UX5)": {
     "Fault Code": "#910.",
     "Fault Description": "User and Administrator Permission - System error #910 | Service Engineer Permission - System error #910",
     "Severity": "Suspension.",
@@ -3336,7 +3676,7 @@
         "CCU failure, or Aurora cable connection failure between CCU and isolation board, or isolation board failure, or camera cable failure, or CHU failure."
     ],
     "Involved FRU": [
-        "CCU board PCBA (FRU), high speed signal line between CCU and isolation board, camera head socket assembly (FRU), camera connection cable (FRU), and CH3-SW100/CH3-SW110 handle assembly (FRU)."
+        "CCU board PCBA (FRU), high speed signal line between CCU and isolation board, camera head socket assembly (FRU), camera connection cable (FRU), and CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
     ],
     "Troubleshooting": [
         "Turn the machine on and off again. If the error persists, replace the video camera.",
@@ -3345,17 +3685,17 @@
         "If the error is not eliminated, replace the CCU board."
     ],
     "Solution": [
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly.",
-        "Replace the high speed signal line. For details, see high-speed signal cable 6.17.2 Disassembly and Assembly.",
-        "Replace the camera head socket assembly (FRU). For details, see camera head socket assembly (FRU) 6.15.2 Disassembly and Assembly.",
-        "Replace the camera connection cable. For details, see camera connection cable 3m (FRU) 6.45.2 Disassembly and Assembly.",
-        "Replace the CH3-SW100/CH3-SW110 handle assembly (FRU). For details, see CH3-SW100 handle assembly (FRU) 6.55.2 Disassembly and Assembly and CH3-SW110 handle assembly (FRU) 6.54.2 Disassembly and Assembly."
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the high speed signal line. For details, see 6.17.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the camera head socket assembly (FRU). For details, see 6.15.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the camera connection cable. For details, see 6.56.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU). For details, see 6.71.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.25"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.36"
     },
-    "#911: The CCU Failed to Read and Write Data Through Aurora Connection with CHU": {
+    "#911: The CCU Failed to Read and Write Data Through Aurora Connection with CHU (UX5)": {
     "Fault Code": "#911.",
     "Fault Description": "User and Administrator Permission - System error #911 | Service Engineer Permission - System error #911",
     "Severity": "Suspension.",
@@ -3364,7 +3704,7 @@
         "CCU failure, or Aurora cable connection failure between CCU and isolation board, or isolation board failure, or camera cable failure, or CHU failure."
     ],
     "Involved FRU": [
-        "CCU board PCBA (FRU), high speed signal line between CCU and isolation board, camera head socket assembly (FRU), camera connection cable (FRU), and CH3-SW100/CH3-SW110 handle assembly (FRU)."
+        "CCU board PCBA (FRU), high speed signal line between CCU and isolation board, camera head socket assembly (FRU), camera connection cable (FRU), and CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU)."
     ],
     "Troubleshooting": [
         "Turn the machine on and off again. If the error persists, replace the video camera.",
@@ -3373,17 +3713,17 @@
         "If the error is not eliminated, replace the CCU board."
     ],
     "Solution": [
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly.",
-        "Replace the high speed signal line. For details, see high-speed signal cable 6.17.2 Disassembly and Assembly.",
-        "Replace the camera head socket assembly (FRU). For details, see camera head socket assembly (FRU) 6.15.2 Disassembly and Assembly.",
-        "Replace the camera connection cable. For details, see camera connection cable 3m (FRU) 6.45.2 Disassembly and Assembly.",
-        "Replace the CH3-SW100/CH3-SW110 handle assembly (FRU). For details, see CH3-SW100 handle assembly (FRU) 6.55.2 Disassembly and Assembly and CH3-SW110 handle assembly (FRU) 6.54.2 Disassembly and Assembly."
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the high speed signal line. For details, see 6.17.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the camera head socket assembly (FRU). For details, see 6.15.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the camera connection cable. For details, see 6.56.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the CH5-SR110/CH5-SR100/CH5-SW100/CH5-SW110 handle assembly (FRU). For details, see 6.71.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.26"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.37"
     },
-    "#912: Image Data Sent by OSD Is Abnormal": {
+    "#912: Image Data Sent by OSD Is Abnormal (UX5)": {
     "Fault Code": "#912.",
     "Fault Description": "User and Administrator Permission - System error #912 | Service Engineer Permission - System error #912",
     "Severity": "Suspension.",
@@ -3401,15 +3741,15 @@
         "If the error is not eliminated, replace the CCU board."
     ],
     "Solution": [
-        "Replace the OSD cable. For details, see OSD cable 6.25.2 Disassembly and Assembly.",
-        "Replace the main control board PCBA (FRU). For details, see main control board PCBA (UX3, FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly.",
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly."
+        "Replace the OSD cable. For details, see 6.26.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.27"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.38"
     },
-    "#A01: Abnormal MSB Communication": {
+    "#A01: Abnormal MSB Communication (UX5)": {
     "Fault Code": "#A01.",
     "Fault Description": "User and Administrator Permission - System error #A01 | Service Engineer Permission - System error #A01",
     "Severity": "Suspension.",
@@ -3429,16 +3769,16 @@
     ],
     "Solution": [
         "Replace the MSB cable.",
-        "Replace the main control board PCBA (FRU) of the main unit. For details, see main control board PCBA (UX3, FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly.",
-        "Replace the IO board PCBA (FRU). For details, see IO board PCBA (FRU) 6.32.2 Disassembly and Assembly.",
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly.",
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the IO board PCBA (FRU). For details, see 6.33.2 Disassembly and Assembly in FRU Replacemen.",
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacemen.",
         "If the problem still cannot be solved, refer to the measures taken on the light source side to check whether the light source link is abnormal."
     ],
     "image": "",
-    "model": "UX3",
-    "reference": "Service Manual Section 7.6.28"
+    "model": "UX5",
+    "reference": "Service Manual Section 7.6.39"
     },
-    "#A02: Abnormal Auto Dimming Link": {
+    "#A02: Abnormal Auto Dimming Link (UX5)": {
     "Fault Code": "#A02.",
     "Fault Description": "User and Administrator Permission - System error #A02 | Service Engineer Permission - System error #A02",
     "Severity": "Suspension.",
@@ -3458,13 +3798,13 @@
     ],
     "Solution": [
         "Replace the MSB cable.",
-        "Replace the main control board PCBA (FRU) of the main unit. For details, see main control board PCBA (UX3, FRU) 6.37.2 Disassembly and Assembly, main control PCBA (UX3-SIM, FRU) 6.38.2 Disassembly and Assembly, main control PCBA (UX3-TEC, FRU) 6.39.2 Disassembly and Assembly and main control board PCBA (UX3-NOR, FRU) 6.40.2 Disassembly and Assembly.",
-        "Replace the IO board PCBA (FRU). For details, see IO board PCBA (FRU) 6.32.2 Disassembly and Assembly.",
-        "Replace the CCU board PCBA (FRU). For details, see CCU board PCBA (UX3, FRU) 6.35.2 Disassembly and Assembly.",
+        "Replace the main control board PCBA (FRU). For details, see 6.38.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the IO board PCBA (FRU). For details, see 6.33.2 Disassembly and Assembly in FRU Replacement.",
+        "Replace the CCU board PCBA (FRU). For details, see 6.36.2 Disassembly and Assembly in FRU Replacement.",
         "If the problem still cannot be solved, refer to the measures taken on the light source side to check whether the light source link is abnormal."
     ],
     "image": "",
-    "model": "UX3",
+    "model": "UX5",
     "reference": "Service Manual Section 7.6.29"
     }
 }
