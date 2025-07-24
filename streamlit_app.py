@@ -162,25 +162,6 @@ If you don't have the converter, contact Mindray Technical Support.
             progress_bar.progress(progress, text=f"Reading logs... ({progress}%)")
             time.sleep(0.05)
 
-        # NOVO: tenta casar com nomes exatos do problems_database
-        found_issues = {}
-        def analyze_logs(log_files):
-            seen = set()
-            all_lines = []
-            total_files = len(log_files)
-            
-            for idx, file in enumerate(log_files):
-                with open(file, "r", encoding="utf-8", errors="ignore") as f:
-                    for line in f:
-                        clean = line.strip()
-                        if clean and clean not in seen and re.search(r"[a-zA-Z]", clean):
-                            all_lines.append(clean)
-                            seen.add(clean)
-
-                progress = int(((idx + 1) / total_files) * 50)
-                progress_bar.progress(progress, text=f"Reading logs... ({progress}%)")
-                time.sleep(0.05)
-
             # Identificar padrões nos logs com base em patterns
             found_issues = defaultdict(list)
 
