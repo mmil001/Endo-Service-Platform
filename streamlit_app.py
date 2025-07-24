@@ -181,9 +181,59 @@ If you don't have the converter, contact Mindray Technical Support.
                 log_files = extract_tar(uploaded_file)
                 st.success(f"Extracted {len(log_files)} log files.")
                 issues = analyze_logs(log_files)
+
+                if issues:
+                    st.subheader("⚠️ Diagnosed Issues")
+                    for key, log_lines in issues.items():
+                        data = problems_database.get(key)
+                        with st.expander(f"🔧 {key}", expanded=True):
+                            for line in log_lines:
+                                st.markdown(f"**Log Line:** `{line}`")
+
+                            if data:
+                                st.markdown(f"**Problem:** {data.get('problem', 'N/A')}")
+                                st.markdown(f"**Applicable Models:** {', '.join(data.get('model', []))}")
+
+                                image_file = data.get("image")
+                                if image_file:
+                                    image_path = os.path.join(BASE_DIR, "images", image_file)
+                                    if os.path.isfile(image_path):
+                                        st.image(image_path, caption="Associated image", width=300)
+
+                                causes = data.get("causes", [])
+                                if isinstance(causes, list) and causes:
+                                    st.markdown("**Causes:**")
+                                    for c in causes:
+                                        st.markdown(f"- {c}")
+
+                                solutions = data.get("solutions", [])
+                                if isinstance(solutions, list) and solutions:
+                                    st.markdown("**Recommended Actions:**")
+                                    for s in solutions:
+                                        st.markdown(f"- {s}")
+
+                                manual = data.get("manual_reference")
+                                if manual:
+                                    st.markdown(f"**Manual Reference:** {manual}")
+
+                                ppt_file = data.get("Troubleshooting Guide")
+                                if ppt_file:
+                                    ppt_path = os.path.join(BASE_DIR, "resources", ppt_file)
+                                    if os.path.isfile(ppt_path):
+                                        with open(ppt_path, "rb") as f:
+                                            st.download_button(
+                                                label="📥 Download Instructions (.pptx)",
+                                                data=f,
+                                                file_name=ppt_file,
+                                                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                                key=f"ppt_{ppt_file}_{time.time()}"
+                                            )
+                            else:
+                                st.warning("⚠️ No data found in problem database.")
+                else:
+                    st.info("✅ No issues matched from the log.")
             except Exception as e:
                 st.error(f"An error occurred while reading logs: {e}")
-            return
 
         if issues:
             st.subheader("⚠️ Diagnosed Issues")
