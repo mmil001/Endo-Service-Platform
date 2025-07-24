@@ -275,31 +275,19 @@ def run_error_search():
                         st.image(image_path, caption="Associated image", width=300)
 
                     # === Causas ===
+                    # === Causas ===
                     cause_keys = ["causes", "Causes", "Possible Cause", "Fault Symptom", "Symptom", "Common Fault", "Fautl Symptom", "Faul Symptom"]
                     causes = next((data[k] for k in cause_keys if k in data), [])
 
-                    if isinstance(causes, str):
+                    if isinstance(causes, str) and causes.strip():
                         st.markdown(f"**Cause:** {causes}")
                     elif isinstance(causes, list):
-                        st.markdown("**Causes:**")
-                        for c in causes:
-                            st.markdown(f"- {c}")
-
-                    safe_name = re.sub(r'[^\w\s-]', '', category).strip()
-                    pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
-                    if os.path.isfile(pptx_path):
-                        with open(pptx_path, "rb") as f:
-                            st.download_button(
-                                label="📥 Download Instructions (.pptx)",
-                                data=f,
-                                file_name=f"{safe_name}.pptx",
-                                mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                                key=f"download_{safe_name}_{time.time()}"
-                            )
-                    else:
-                        st.warning("⚠️ Troubleshooting guide not available.")
-        else:
-            st.info("No results found.")
+                        if causes:
+                            st.markdown("**Causes:**")
+                            for c in causes:
+                                st.markdown(f"- {c}")
+                        else:
+                            st.markdown("**Causes:** ⚠️ None provided.")
 
 # === Routing ===
 if st.session_state.selected_tab == "Log Analyzer":
