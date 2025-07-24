@@ -151,7 +151,7 @@ If you don't have the converter, contact Mindray Technical Support.
         seen = set()
         all_lines = []
         total_files = len(log_files)
-        
+
         for idx, file in enumerate(log_files):
             with open(file, "r", encoding="utf-8", errors="ignore") as f:
                 for line in f:
@@ -162,18 +162,22 @@ If you don't have the converter, contact Mindray Technical Support.
 
             progress = int(((idx + 1) / total_files) * 50)
             progress_bar.progress(progress, text=f"Reading logs... ({progress}%)")
-            time.sleep(0.05)
+            time.sleep(0.01)
 
-            # Identificar padrões nos logs com base em patterns
-            found_issues = defaultdict(list)
+        # Resultado final
+        found_issues = defaultdict(list)
 
-            for line in all_lines:
-                for key, pattern in patterns.items():
-                    if re.search(pattern, line, re.IGNORECASE):
+        for line in all_lines:
+            for key, pattern in patterns.items():
+                try:
+                    if re.search(pattern, line):
                         found_issues[key].append(line)
+                except Exception as e:
+                    st.warning(f"Erro no padrão {key}: {e}")
 
-            progress_bar.progress(100, text="✅ Analysis complete.")
-            return found_issues
+        progress_bar.progress(100, text="✅ Analysis complete.")
+        return found_issues
+
 
     if uploaded_file:
         with st.spinner("Extracting file..."):
