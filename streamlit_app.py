@@ -240,7 +240,7 @@ If you don't have the converter, contact Mindray Technical Support.
                                         st.markdown(f"- {s}")
                                 else:
                                     st.warning("No data found in problem database for this error.")
-                                    
+
                 else:
                     st.info("No problems detected.")
 
@@ -324,7 +324,7 @@ def run_error_search():
                                 data=f,
                                 file_name=f"{safe_name}.pptx",
                                 mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                                key=f"download_{safe_name}"
+                                key=f"download_{safe_name}_{log_line}"
                             )
                     else:
                         st.warning("⚠️ Troubleshooting guide not available.")
