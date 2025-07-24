@@ -204,16 +204,43 @@ If you don't have the converter, contact Mindray Technical Support.
                                     for c in causes:
                                         st.markdown(f"- {c}")
 
+                                    solution_keys = ["repairs", "Solution", "Attemptable Solution", "Troubleshooting", "Analysis and Solutions", "Attemptable Solution.", "Troubleshooting 1"]
+                                solutions = next((data[k] for k in solution_keys if k in data), [])
+
+                                if isinstance(solutions, str):
+                                    st.markdown(f"**Recommended Action:** {solutions}")
+                                elif isinstance(solutions, list):
+                                    st.markdown("**Recommended Actions:**")
+                                    for s in solutions:
+                                        st.markdown(f"- {s}")
+                                        # === PPT (se existir) ===
+                                        safe_name = re.sub(r'[^\w\s-]', '', key).strip()
+                                        pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
+                                        if os.path.isfile(pptx_path):
+                                            with open(pptx_path, "rb") as f:
+                                                st.download_button(
+                                                    label="📥 Download Instructions (.pptx)",
+                                                    data=f,
+                                                    file_name=f"{safe_name}.pptx",
+                                                    mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                                    key=f"download_{safe_name}"
+                                                )
+                            else:
+                                st.warning("⚠️ Troubleshooting guide not available.")
+
                                 # Soluções
                                 solution_keys = ["repairs", "Solution", "Attemptable Solution", "Troubleshooting", "Analysis and Solutions", "Attemptable Solution.", "Troubleshooting 1"]
                                 solutions = next((data[k] for k in solution_keys if k in data), [])
 
-                                if isinstance(solutions, list):
-                                    st.markdown("**Solutions:**")
+                                if isinstance(solutions, str):
+                                    st.markdown(f"**Recommended Action:** {solutions}")
+                                elif isinstance(solutions, list):
+                                    st.markdown("**Recommended Actions:**")
                                     for s in solutions:
                                         st.markdown(f"- {s}")
-                            else:
-                                st.warning("No data found in problem database for this error.")
+                                else:
+                                    st.warning("No data found in problem database for this error.")
+                                    
                 else:
                     st.info("No problems detected.")
 
@@ -287,31 +314,6 @@ def run_error_search():
                         st.markdown("**Causes:**")
                         for c in causes:
                             st.markdown(f"- {c}")
-
-                    # === Soluções / reparos ===
-                    solution_keys = ["repairs", "Solution", "Attemptable Solution", "Troubleshooting", "Analysis and Solutions", "Attemptable Solution.", "Troubleshooting 1"]
-                    solutions = next((data[k] for k in solution_keys if k in data), [])
-
-                    if isinstance(solutions, str):
-                        st.markdown(f"**Recommended Action:** {solutions}")
-                    elif isinstance(solutions, list):
-                        st.markdown("**Recommended Actions:**")
-                        for s in solutions:
-                            st.markdown(f"- {s}")
-                            # === PPT (se existir) ===
-                            safe_name = re.sub(r'[^\w\s-]', '', key).strip()
-                            pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
-                            if os.path.isfile(pptx_path):
-                                with open(pptx_path, "rb") as f:
-                                    st.download_button(
-                                        label="📥 Download Instructions (.pptx)",
-                                        data=f,
-                                        file_name=f"{safe_name}.pptx",
-                                        mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                                        key=f"download_{safe_name}"
-                                    )
-                            else:
-                                st.warning("⚠️ Troubleshooting guide not available.")
 
                     safe_name = re.sub(r'[^\w\s-]', '', category).strip()
                     pptx_path = os.path.join(BASE_DIR, "resources", f"{safe_name}.pptx")
