@@ -167,9 +167,10 @@ If you don't have the converter, contact Mindray Technical Support.
         for line in all_lines:
             for key in problems_database.keys():
                 if key.lower() in line.lower():
-                    if key not in found_issues:
-                        found_issues[key] = []
-                found_issues[key].append(line)
+                    if key.lower() in line.lower():
+                        if key not in found_issues:
+                            found_issues[key] = []
+                        found_issues[key].append(line)
 
         progress_bar.progress(100, text="✅ Analysis complete.")
         return found_issues
@@ -237,7 +238,7 @@ If you don't have the converter, contact Mindray Technical Support.
                                         )
                                 else:
                                     st.warning("⚠️ Troubleshooting guide file not found.")
-                                    
+
                     else:
                         st.warning("⚠️ No data found in problem database.")
         else:
