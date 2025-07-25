@@ -281,7 +281,13 @@ def run_error_search():
                     image_file = data.get("image")
                     image_path = os.path.join(BASE_DIR, "images", image_file) if image_file else None
                     if image_path and os.path.isfile(image_path):
+                        # Reduced image
                         st.image(image_path, caption="Associated image", width=300)
+
+                        # Enlarge image button
+                        if st.button(f"🔍 Ampliar imagem - {category}", key=f"expand_image_{category}"):
+                            with st.modal("Visualização Ampliada"):
+                                st.image(image_path, caption="Imagem ampliada", use_column_width=True)
 
                     st.markdown("**Causes:**")
                     for c in data['causes']:
