@@ -1,5 +1,5 @@
 {
-    "Contamination Detected 🧫": {
+    "Contamination Detected": {
         "problem": "Contamination detected by liquid ingress in HS-50F",
         "causes": [
             "Liquid reflux from the patient's abdomen",
@@ -18,7 +18,7 @@
             "HS-50F"
         ]
     },
-    "Communication Errors 🔵": {
+    "Communication Errors": {
         "problem": "Internal communication failure between modules",
         "causes": [
             "Loose cable",
@@ -48,7 +48,7 @@
             "HS-50F"
         ]
     },
-    "Heating Errors 🔥": {
+    "Heating Errors": {
         "problem": "Heating icon stays on even with heating pipe disconnected",
         "causes": [
             "Damaged heating cable causing feedback to the board",
@@ -69,7 +69,7 @@
             "HS-50F"
         ]
     },
-    "Insufflator Errors 🧪": {
+    "Insufflator Errors": {
         "problem": "Gas flow, valve or pressure sensor issue",
         "causes": [
             "Defective pinch valve",
@@ -86,7 +86,7 @@
             "HS-50F"
         ]
     },
-    "Insufflation / Flow Errors 🧪": {
+    "Insufflation / Flow Errors": {
         "problem": "Proportional valve, pressure sensor, or flow sensor issue",
         "causes": [
             "Proportional valve out of range or short-circuited",
@@ -102,7 +102,7 @@
         ],
         "modelo": []
     },
-    "Power Supply Errors ⚡": {
+    "Power Supply Errors": {
         "problem": "Electrical failure or blown fuse",
         "causes": [
             "Defective AC/DC board",
@@ -116,7 +116,7 @@
         ],
         "modelo": []
     },
-    "Image Processor / Camera Errors 🎥": {
+    "Image Processor / Camera Errors": {
         "problem": "Video board failure or no image detected",
         "causes": [
             "CCU board fault",
@@ -143,7 +143,7 @@
             "HD3"
         ]
     },
-    "Camera Head Errors 🎯": {
+    "Camera Head Errors": {
         "problem": "Camera head malfunction or improper connection",
         "causes": [
             "Optical coupler disconnected",
@@ -167,7 +167,7 @@
             "UX7"
         ]
     },
-    "Video Recording / USB Errors 💾": {
+    "Video Recording / USB Errors": {
         "problem": "Failure to record or store images/videos",
         "causes": [
             "USB drive not recognized",
@@ -190,7 +190,7 @@
             "UX7"
         ]
     },
-        "Brightness Explosion Error 💡": {
+        "Brightness Explosion Error": {
         "problem": "Excessive brightness when approaching gauze due to auto brightness function disabled",
         "causes": [
             "Auto brightness function disabled in OSD menu",
@@ -209,7 +209,7 @@
             "UX5"
         ]
     },
-        "Black Screen Error ⬛": {
+        "Black Screen Error": {
             "problem": "No image displayed on monitor",
             "causes": [
                 "No power to HD3 or monitor",
@@ -230,7 +230,7 @@
                 "HD3"
             ]
     },
-        "Flashing Image Error ⚡": {
+        "Flashing Image Error": {
         "problem": "Image flickers when surgical instruments are inserted",
         "causes": [
             "AE mode set to 'fast'",
@@ -242,12 +242,12 @@
             "Switch scene mode to ENT or SDS",
             "Select and confirm proper scene file"
         ],
-        "image": "Flashing Image Error ⚡.png",
+        "image": "Flashing Image Error.png",
         "modelo": [
             "HD3"
         ]
     },
-        "Color Distortion Error 🎨": {
+        "Color Distortion Error": {
         "problem": "Inaccurate or distorted colors during procedure",
         "causes": [
             "White balance not performed",
@@ -261,12 +261,12 @@
             "Reset monitor and HD3 settings to default",
             "Select appropriate scene mode for surgery"
         ],
-        "image": "Color Distortion Error 🎨.png",
+        "image": "Color Distortion Error.png",
         "modelo": [
             "HD3"
         ]
     },
-        "USB Recognition Error 💾": {
+        "USB Recognition Error": {
         "problem": "USB or portable HDD not recognized for recording",
         "causes": [
             "USB disk not formatted in FAT32",
@@ -283,7 +283,7 @@
             "HD3"
         ]
     },
-        "Light Guide Cable Burn 🔥": {
+        "Light Guide Cable Burn": {
         "problem": "Patient skin burned due to overheating of light guide",
         "causes": [
             "Broken internal optical fibers in light guide",
@@ -293,12 +293,12 @@
             "Inspect light cable before each use",
             "Do not use if more than 1/3 of optical fibers are broken"
         ],
-        "image": "Light Guide Cable Burn 🔥.png",
+        "image": "Light Guide Cable Burn.png",
         "modelo": [
             "HD3"
         ]
     }, 
-        "Light Guide Tip Damage 🛑": {
+        "Light Guide Tip Damage": {
         "problem": "Damage to light guide tip due to excessive insertion",
         "causes": [
             "Limit stopper removed from light guide",
@@ -308,7 +308,7 @@
             "Do not remove the limit stopper",
             "Use only compatible light sources to avoid over-insertion"
         ],
-        "image": "Light Guide Tip Damage 🛑.png",
+        "image": "Light Guide Tip Damage.png",
         "modelo": [
             "HD3"
         ]
@@ -331,7 +331,7 @@
             "R1"
         ]
     },
-        "Image Brightness Error 🌞": {
+        "Image Brightness Error": {
         "problem": "Image too dark, too bright or with poor balance",
         "causes": [
             "Incorrect AE value setting",
@@ -350,7 +350,7 @@
             "R1"
         ]
     },
-        "Color Balance Error 🎨": {
+        "Color Balance Error": {
         "problem": "Image appears with incorrect colors (e.g. purple, yellowish)",
         "causes": [
             "Improper red/blue gain settings",
@@ -367,7 +367,7 @@
             "R1"
         ]
     },
-        "Sharpness / Edge Error ✴️": {
+        "Sharpness / Edge Error": {
         "problem": "Image has excessive noise or unnatural borders",
         "causes": [
             "High values for structure or edge settings",
@@ -383,7 +383,7 @@
             "R1"
         ]
     },
-        "Fluorescence Mode Issue 🌈": {
+        "Fluorescence Mode Issue": {
         "problem": "Weak or unclear fluorescence image during surgery",
         "causes": [
             "Low fluorescence intensity setting",
@@ -398,7 +398,7 @@
             "R1"
         ]
     },
-        "R1 LCD Intermittent Display Error 💡": {
+        "R1 LCD Intermittent Display Error": {
         "problem": "Intermittent blackout of the LCD display during surgery or usage",
         "causes": [
             "Loose flat cable connection between LCD and control board",
@@ -422,7 +422,7 @@
         "ppt": "Troubleshooting LCD Intermittent Error - R1.pptx"
     },
 
-        "HS-50F Device Failure Error Code #01 / #03 🛑": {
+        "HS-50F Device Failure Error Code #01 / #03": {
         "problem": "Device Failure detected (Error Code 01 or 03) in HS-50F",
         "causes": [
             "Residual gas inside the insufflator during self-inspection",
@@ -447,7 +447,7 @@
             "HS-50F"
         ]
     },
-        "HS-50F Device Failure Error Code 02 & 04 🔧": {
+        "HS-50F Device Failure Error Code 02 & 04": {
         "problem": "Inflation and safety valve short-circuit or mechanical failure (Error Code 02 or 04)",
         "causes": [
             "Short circuit or failure of inflation valve",
@@ -465,7 +465,7 @@
             "HS-50F"
         ]
     },
-        "HS-50F Device Failure Error Code 09 📉": {
+        "HS-50F Device Failure Error Code 09": {
         "problem": "High-pressure sensor failure or abnormal readings (Error Code 09)",
         "causes": [
             "Disconnected high-pressure sensor cable",
@@ -483,7 +483,7 @@
             "HS-50F"
         ]
     },
-        "HS-50F Device Failure Error Code 10 ⚠️": {
+        "HS-50F Device Failure Error Code 10": {
         "problem": "Low-pressure sensor out of range (Error Code 10)",
         "causes": [
             "Faulty low-pressure sensor in pneumatic module",
@@ -498,7 +498,7 @@
             "HS-50F"
         ]
     },
-        "HS-50F Device Failure Error Code 11 📐": {
+        "HS-50F Device Failure Error Code 11": {
         "problem": "Differential pressure sensor or valve-front sensor zero-point out of range (Error Code 11)",
         "causes": [
             "Main board differential sensor failure",
@@ -512,7 +512,7 @@
             "HS-50F"
         ]
     },
-        "HS-50F Device Failure Error Code 13 💧": {
+        "HS-50F Device Failure Error Code 13": {
         "problem": "Liquid sensor error detected (Error Code 13)",
         "causes": [
             "Disconnected level sensor cable",
@@ -527,7 +527,7 @@
             "HS-50F"
         ]
     },
-        "HS-50F Device Failure Error Code 15 🔥": {
+        "HS-50F Device Failure Error Code 15": {
         "problem": "Heating module error (Error Code 15)",
         "causes": [
             "Heating plate disconnected",
@@ -542,7 +542,7 @@
             "HS-50F"
         ]
     },
-        "Ux3 Error Code 001 🧠": {
+        "Ux3 Error Code 001": {
         "problem": "EEPROM read/write failure",
         "causes": [
             "Main CPU failure",
@@ -558,7 +558,7 @@
         ]
     },
 
-        "Error Code 002 🔌": {
+        "Error Code 002": {
         "problem": "Communication failure between Main CPU and OSD CPU",
         "causes": [
             "Main CPU failure",
@@ -574,7 +574,7 @@
         ]
     },
 
-        "Error Code 003 🔋": {
+        "Error Code 003": {
         "problem": "Communication failure between Main CPU and Power MCU",
         "causes": [
             "Main CPU failure",
@@ -591,7 +591,7 @@
         ]
     },
 
-        "Ux3 Error Code 104 🌡️": {
+        "Ux3 Error Code 104": {
         "problem": "Over-temperature in CCU A",
         "causes": [
             "Fan failure",
@@ -611,7 +611,7 @@
             ]
         },
 
-            "Error Code 105 🌡️": {
+            "Error Code 105": {
             "problem": "Over-temperature in CCU B",
             "causes": [
                 "Fan failure",
@@ -631,7 +631,7 @@
                     "UX3"
                 ]
         },
-            "Error Code 001 🧠": {
+            "Error Code 001": {
             "problem": "Main CPU Failed to Read or Write EEPROM",
             "causes": [
                 "Main control board faulty",
@@ -647,7 +647,7 @@
             ]
         },
 
-        "Error Code 104 🌡️": {
+        "Error Code 104": {
             "problem": "CCU A Overtemperature",
             "causes": [
                 "Cooling fan failure",
@@ -667,7 +667,7 @@
             ]
         },
 
-        "Error Code 801 🌀": {
+        "Error Code 801": {
             "problem": "System Fan Speed Abnormal",
             "causes": [
                 "Fan failure",
@@ -688,7 +688,7 @@
             ]
         },
         
-        "E002 🔌": {
+        "E002": {
             "problem": "USB communication failure.",
             "causes": ["USB cable disconnected or damaged", "Faulty USB port on main board", "Main board communication failure"],
             "repairs": [
@@ -699,7 +699,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E004 🌐": {
+        "E004": {
             "problem": "Network interface communication failure.",
             "causes": ["Ethernet cable disconnected", "Faulty network port on main board", "Main board communication failure"],
             "repairs": [
@@ -710,7 +710,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E005 🔧": {
+        "E005": {
             "problem": "CAN communication failure.",
             "causes": ["CAN cable disconnected", "CAN interface board failure", "Main board CAN circuit failure"],
             "repairs": [
@@ -721,7 +721,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E006 ⚙️": {
+        "E006": {
             "problem": "System fault. Internal error detected.",
             "causes": ["Main control board failure", "Firmware corruption", "Power module fault"],
             "repairs": [
@@ -732,7 +732,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E007 ⚙️": {
+        "E007": {
             "problem": "System initialization failure.",
             "causes": ["Main board failure", "Component communication error", "Firmware corruption"],
             "repairs": [
@@ -743,7 +743,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E008 ⚙️": {
+        "E008": {
             "problem": "System startup failure.",
             "causes": ["Main control board fault", "Startup software failure", "Hardware initialization error"],
             "repairs": [
@@ -754,7 +754,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E012 ⚙️": {
+        "E012": {
             "problem": "System fault during boot check.",
             "causes": ["Corrupted firmware", "Main control board failure", "Internal communication failure"],
             "repairs": [
@@ -765,7 +765,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E016 🛑": {
+        "E016": {
             "problem": "Communication module initialization failure.",
             "causes": ["Communication board fault", "Main control board failure", "Signal routing failure"],
             "repairs": [
@@ -776,7 +776,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E017 🛑": {
+        "E017": {
             "problem": "Device self-check failure.",
             "causes": ["Firmware corruption", "Main board failure", "Internal connection failure"],
             "repairs": [
@@ -787,7 +787,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E024 🔧": {
+        "E024": {
             "problem": "CAN bus communication abnormal.",
             "causes": ["CAN cable disconnected", "Faulty CAN interface board", "Main board CAN driver failure"],
             "repairs": [
@@ -798,7 +798,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E025 🔧": {
+        "E025": {
             "problem": "CAN communication timeout.",
             "causes": ["CAN cable damage", "Faulty CAN interface board", "Main board communication failure"],
             "repairs": [
@@ -809,7 +809,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E026 🔧": {
+        "E026": {
             "problem": "CAN data frame error.",
             "causes": ["Loose CAN cable", "CAN signal interference", "CAN interface hardware failure"],
             "repairs": [
@@ -820,7 +820,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E027 🔧": {
+        "E027": {
             "problem": "CAN frame lost error.",
             "causes": ["Interference in CAN signal", "Defective CAN cable", "Faulty CAN transceiver on board"],
             "repairs": [
@@ -831,7 +831,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E028 🔧": {
+        "E028": {
             "problem": "CAN bit error detected.",
             "causes": ["Loose CAN cable", "CAN wiring damaged", "Faulty CAN driver IC"],
             "repairs": [
@@ -842,7 +842,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E029 🔧": {
+        "E029": {
             "problem": "CAN bus passive error.",
             "causes": ["Signal interference", "CAN transceiver chip failure", "Main board CAN malfunction"],
             "repairs": [
@@ -853,7 +853,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E030 🔧": {
+        "E030": {
             "problem": "CAN arbitration lost error.",
             "causes": ["Multiple CAN nodes collision", "Faulty CAN interface", "Communication timing error on main board"],
             "repairs": [
@@ -864,7 +864,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E031 🔧": {
+        "E031": {
             "problem": "CAN bus-off error. Communication stopped due to severe fault.",
             "causes": ["Severe CAN errors accumulation", "Faulty CAN transceiver", "Main board CAN circuit failure"],
             "repairs": [
@@ -875,7 +875,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E035 ⚡": {
+        "E035": {
             "problem": "Footswitch communication failure.",
             "causes": ["Footswitch cable disconnected", "Defective footswitch", "Main board communication failure"],
             "repairs": [
@@ -886,8 +886,8 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        
-        "E100 🩹": {
+
+        "E100": {
             "problem": "Neutral electrode connection exception detected.",
             "causes": [
                 "Neutral electrode not properly connected to the patient",
@@ -902,7 +902,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E101 🩹": {
+        "E101": {
             "problem": "Neutral electrode disconnected during operation.",
             "causes": [
                 "Neutral electrode pad detached",
@@ -917,7 +917,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E103 🩹": {
+        "E103": {
             "problem": "Neutral electrode sticking exception detected.",
             "causes": [
                 "Bad contact between electrode and patient's skin",
@@ -932,7 +932,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E104 🩹": {
+        "E104": {
             "problem": "Neutral electrode monitoring module fault.",
             "causes": [
                 "Hardware failure in monitoring circuit",
@@ -947,7 +947,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E106 ⚡": {
+        "E106": {
             "problem": "Electrosurgical generator circuit abnormal.",
             "causes": [
                 "Power module failure",
@@ -962,7 +962,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E107 ⚡": {
+        "E107": {
             "problem": "Monopolar 1 function error.",
             "causes": [
                 "Monopolar 1 handpiece malfunction",
@@ -977,7 +977,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E108 ⚡": {
+        "E108": {
             "problem": "Monopolar 2 function error.",
             "causes": [
                 "Monopolar 2 handpiece failure",
@@ -992,7 +992,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E109 ⚡": {
+        "E109": {
             "problem": "Monopolar 3 function error.",
             "causes": [
                 "Monopolar 3 handpiece malfunction",
@@ -1007,7 +1007,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E110 ⚡": {
+        "E110": {
             "problem": "Bipolar function error.",
             "causes": [
                 "Bipolar handpiece malfunction",
@@ -1022,7 +1022,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E111 ⚡": {
+        "E111": {
             "problem": "Ultrasonic scalpel function error.",
             "causes": [
                 "Faulty ultrasonic scalpel connector",
@@ -1037,7 +1037,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E118 ⚙️": {
+        "E118": {
             "problem": "Advanced bipolar function error.",
             "causes": [
                 "Faulty advanced bipolar handpiece",
@@ -1052,7 +1052,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E119 ⚙️": {
+        "E119": {
             "problem": "Seal function error (bipolar).",
             "causes": [
                 "Seal handpiece malfunction",
@@ -1067,7 +1067,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E120 ⚙️": {
+        "E120": {
             "problem": "Ultrasonic generator internal error.",
             "causes": [
                 "Power module fault",
@@ -1082,7 +1082,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E121 ⚙️": {
+        "E121": {
             "problem": "Ultrasonic transducer fault.",
             "causes": [
                 "Transducer connection failure",
@@ -1097,7 +1097,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E122 ⚙️": {
+        "E122": {
             "problem": "Ultrasonic handpiece connection error.",
             "causes": [
                 "Connector pin damage",
@@ -1112,7 +1112,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E123 ⚙️": {
+        "E123": {
             "problem": "Ultrasonic board overheating.",
             "causes": [
                 "Cooling fan failure",
@@ -1127,7 +1127,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E124 ⚙️": {
+        "E124": {
             "problem": "Ultrasonic generator voltage error.",
             "causes": [
                 "Voltage regulator failure",
@@ -1142,7 +1142,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E125 ⚙️": {
+        "E125": {
             "problem": "Ultrasonic output overload.",
             "causes": [
                 "Short circuit in handpiece or cable",
@@ -1157,7 +1157,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E126 ⚙️": {
+        "E126": {
             "problem": "Ultrasonic startup failure.",
             "causes": [
                 "Firmware corruption",
@@ -1172,7 +1172,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E127 ⚙️": {
+        "E127": {
             "problem": "Ultrasonic handpiece overcurrent detected.",
             "causes": [
                 "Short circuit in handpiece or cable",
@@ -1187,7 +1187,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E128 ⚙️": {
+        "E128": {
             "problem": "Ultrasonic frequency abnormal.",
             "causes": [
                 "Transducer damaged",
@@ -1201,7 +1201,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E129 ⚙️": {
+        "E129": {
             "problem": "Ultrasonic signal amplitude abnormal.",
             "causes": [
                 "Connector loose",
@@ -1216,7 +1216,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E168 🌡️": {
+        "E168": {
             "problem": "Main unit temperature too high.",
             "causes": [
                 "Cooling fan failure",
@@ -1235,7 +1235,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-            "E300 🧠": {
+            "E300": {
             "problem": "Power module communication failure.",
             "causes": [
                 "Power module communication cable disconnected",
@@ -1250,7 +1250,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-            "E303 🧠": {
+            "E303": {
             "problem": "Power module over-temperature.",
             "causes": [
                 "Cooling fan failure",
@@ -1267,7 +1267,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E304 🧠": {
+        "E304": {
             "problem": "Power module over-voltage error.",
             "causes": [
                 "Voltage regulator failure",
@@ -1282,7 +1282,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E308 🧠": {
+        "E308": {
             "problem": "Power module under-voltage error.",
             "causes": [
                 "Input power supply unstable",
@@ -1297,7 +1297,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E310 🧠": {
+        "E310": {
             "problem": "Auxiliary power fault.",
             "causes": [
                 "Auxiliary power supply failure",
@@ -1312,7 +1312,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E311 🧠": {
+        "E311": {
             "problem": "Main power fault.",
             "causes": [
                 "Power supply line failure",
@@ -1327,7 +1327,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E312 🧠": {
+        "E312": {
             "problem": "Power module self-check failure.",
             "causes": [
                 "Internal fault in power module",
@@ -1342,7 +1342,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E313 🧠": {
+        "E313": {
             "problem": "Voltage reference abnormal in power module.",
             "causes": [
                 "Voltage sensing circuit failure",
@@ -1357,7 +1357,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E314 🧠": {
+        "E314": {
             "problem": "Power module hardware fault.",
             "causes": [
                 "Component failure inside power module",
@@ -1372,7 +1372,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E315 🧠": {
+        "E315": {
             "problem": "Power module software fault.",
             "causes": [
                 "Firmware error in power module",
@@ -1387,7 +1387,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E316 🧠": {
+        "E316": {
             "problem": "Voltage fluctuation error.",
             "causes": [
                 "Unstable input voltage",
@@ -1402,7 +1402,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E317 🧠": {
+        "E317": {
             "problem": "Power module PWM abnormal.",
             "causes": [
                 "PWM driver failure inside power module",
@@ -1417,7 +1417,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E318 🧠": {
+        "E318": {
             "problem": "Power module clock error.",
             "causes": [
                 "Clock signal failure in power module",
@@ -1432,7 +1432,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E319 🧠": {
+        "E319": {
             "problem": "Power module output overcurrent.",
             "causes": [
                 "Short circuit in power output",
@@ -1446,7 +1446,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E320 🧠": {
+        "E320": {
             "problem": "Power module over-power protection triggered.",
             "causes": [
                 "Excessive load on output",
@@ -1461,7 +1461,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E321 🧠": {
+        "E321": {
             "problem": "Power module output under-power.",
             "causes": [
                 "Faulty output driver in power module",
@@ -1476,7 +1476,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E405 🔥": {
+        "E405": {
             "problem": "Main control board communication failure with LCD module.",
             "causes": [
                 "LCD communication cable disconnected or damaged",
@@ -1491,7 +1491,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-            "E140 🔥": {
+            "E140": {
             "problem": "NVRAM data abnormal.",
             "causes": [
                 "NVRAM chip failure on main board",
@@ -1506,7 +1506,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E141 🔥": {
+        "E141": {
             "problem": "NVRAM checksum error.",
             "causes": [
                 "Data corruption in NVRAM",
@@ -1521,7 +1521,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E142 🔥": {
+        "E142": {
             "problem": "NVRAM read/write failure.",
             "causes": [
                 "NVRAM chip failure",
@@ -1536,7 +1536,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E143 🔥": {
+        "E143": {
             "problem": "NVRAM communication failure.",
             "causes": [
                 "Faulty NVRAM chip",
@@ -1551,7 +1551,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E144 🔥": {
+        "E144": {
             "problem": "EEPROM checksum error.",
             "causes": [
                 "EEPROM data corrupted",
@@ -1566,7 +1566,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E149 🔥": {
+        "E149": {
             "problem": "Battery low voltage.",
             "causes": [
                 "Battery depleted",
@@ -1581,7 +1581,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E150 🔥": {
+        "E150": {
             "problem": "Battery failure.",
             "causes": [
                 "Battery damaged or fully degraded",
@@ -1596,7 +1596,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E163 🔥": {
+        "E163": {
             "problem": "DVR communication failure.",
             "causes": [
                 "DVR module communication cable disconnected",
@@ -1611,7 +1611,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E164 🔥": {
+        "E164": {
             "problem": "DVR over-temperature.",
             "causes": [
                 "Cooling fan failure",
@@ -1626,7 +1626,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E165 🔥": {
+        "E165": {
             "problem": "DVR hardware fault.",
             "causes": [
                 "Component failure inside DVR module",
@@ -1641,7 +1641,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E167 🔥": {
+        "E167": {
             "problem": "DVR software fault.",
             "causes": [
                 "Firmware corruption in DVR module",
@@ -1656,7 +1656,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E169 🔥": {
+        "E169": {
             "problem": "DVR memory failure.",
             "causes": [
                 "Memory chip fault in DVR",
@@ -1671,7 +1671,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-            "E400 🧠": {
+            "E400": {
             "problem": "Main control board communication failure with LCD.",
             "causes": [
                 "LCD communication cable disconnected or damaged",
@@ -1686,7 +1686,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E402 🧠": {
+        "E402": {
             "problem": "LCD backlight failure.",
             "causes": [
                 "Backlight driver circuit failure",
@@ -1700,7 +1700,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E403 🧠": {
+        "E403": {
             "problem": "LCD data communication error.",
             "causes": [
                 "Data cable failure between LCD and main board",
@@ -1715,7 +1715,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E404 🧠": {
+        "E404": {
             "problem": "LCD control board abnormal.",
             "causes": [
                 "Faulty LCD control board",
@@ -1730,7 +1730,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E405 🧠": {
+        "E405 LCD": {
             "problem": "LCD firmware error.",
             "causes": [
                 "LCD firmware corrupted",
@@ -1745,7 +1745,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E900 ⚠️": {
+        "E900": {
             "problem": "System firmware corruption.",
             "causes": [
                 "Main control board firmware error",
@@ -1759,7 +1759,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E901 ⚠️": {
+        "E901": {
             "problem": "Bootloader error.",
             "causes": [
                 "Corrupted bootloader in main board",
@@ -1773,7 +1773,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E902 ⚠️": {
+        "E902": {
             "problem": "Application software error.",
             "causes": [
                 "Corrupted application software",
@@ -1788,7 +1788,7 @@
             "image": "",
             "modelo": ["UP700", "EP300", "UP500"]
         },
-        "E999 💥": {
+        "E999": {
             "problem": "Fatal hardware error.",
             "causes": [
                 "Severe internal failure in main control board",
