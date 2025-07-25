@@ -284,6 +284,7 @@ def run_error_search():
                         st.image(image_path, caption="Associated image", width=300)
                         if st.button(f"🔍 Ampliar imagem", key=f"expand_image_{category}"):
                             st.session_state["modal_image"] = image_path
+                            st.rerun()
 
                     st.markdown("**Causes:**")
                     for c in data['causes']:
