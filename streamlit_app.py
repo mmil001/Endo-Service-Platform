@@ -12,13 +12,13 @@ from itertools import chain
 # === Paths base directory ===
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# === Carrega usuários ===
+# === Load users ===
 def load_users():
     users_path = os.path.join(BASE_DIR, "database", "users.json")
     with open(users_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-# === Autenticação ===
+# === Authentication ===
 def authenticate(username, password):
     users = load_users()
 
@@ -39,14 +39,14 @@ def authenticate(username, password):
 
     return True
 
-# === Coletar modelos ===
+# === Collect models ===
 def get_models(problems_database):
     model_set = set(chain.from_iterable(
         v.get("modelo", []) for v in problems_database.values() if isinstance(v.get("modelo"), list)
     ))
     return ['All'] + sorted(model_set)
 
-# === Tela de login ===
+# === Login Painel ===
 def login_screen():
     logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
     st.image(logo_path, width=150)
@@ -65,17 +65,17 @@ def login_screen():
         else:
             st.error("Access denied. Invalid user, password, or expired license.")
 
-# === Controle de login ===
+# === Login control ===
 if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
     login_screen()
     st.stop()
 
-# === Config inicial ===
+# === Home Config ===
 st.set_page_config(page_title="Endo Service Platform", layout="wide")
 logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
 st.image(logo_path, width=150)
 
-# === Banco de erros ===
+# === Database ===
 if "problems_database" not in st.session_state:
     problems_path = os.path.join(BASE_DIR, "database", "problems_database.json")
     with open(problems_path, "r", encoding="utf-8") as f:
@@ -83,7 +83,7 @@ if "problems_database" not in st.session_state:
 
 problems_database = st.session_state.problems_database
 
-# === Patterns (fixos ou pode carregar do JSON depois) ===
+# === Patterns (or you can load from JSON later) ===
 patterns = {
     "Contamination Detected 🧫": r"(contamin|liquid.*detected|inlet.*liquid|pollution.*mark|level sensor error|ERR#08)",
     "Communication Errors 🔵": r"(connect.*failed|network.*unreach|ipc.*fail|timeout|socket.*error)",
@@ -95,7 +95,6 @@ patterns = {
     "Camera Head Errors 🎯": r"(camera head.*error|optical.*fail|coupler|lens|focus.*fail|zoom.*fail|no.*camera.*input)",
     "Video Recording / USB Errors 📀": r"(usb.*fail|record.*error|video.*not saved|no.*recording|file.*system.*error)"
 }
-
 # === Tabs ===
 if "selected_tab" not in st.session_state:
     st.session_state.selected_tab = "Log Analyzer"

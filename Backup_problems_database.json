@@ -1,0 +1,1548 @@
+{    
+    "Communication Errors 🔵": {
+        "problem": "Internal communication failure between modules",
+        "causes": [
+            "Loose cable",
+            "Oxidized socket",
+            "Failing IPC board"
+        ],
+        "repairs": [
+            "Check connectors",
+            "Reconnect IPC cable",
+            "Replace internal network board"
+        ],
+        "image": "",
+        "modelo": [
+            "HB100",
+            "HB200L",
+            "HB300",
+            "HB300R",
+            "HB500",
+            "HB500R",
+            "HD3",
+            "U1",
+            "R1",
+            "UX1",
+            "UX3",
+            "UX5",
+            "UX7",
+            "HS-50F"
+        ]
+    },
+    "Heating Errors 🔥": {
+        "problem": "Heating icon stays on even with heating pipe disconnected",
+        "causes": [
+            "Damaged heating cable causing feedback to the board",
+            "Heating plate circuitry failure",
+            "LED D6 remains on even with heating cable disconnected."
+        ],
+        "repairs": [
+            "Disconnect equipment from power supply",
+            "Check the heating cable and LED D6 status on heating board",
+            "If LED D6 is on without cable, replace the heating plate (PN 115-076021-00)",
+            "Reassemble unit and confirm icon is off when no cable is connected",
+            "Verify temperature reading in service menu is ~30°C without cable",
+            "If issue persists, check Main Board and Power Module",
+            "Perform functional test per service manual section 7.4.4 using heating insufflation tube (PN 115-052867-00)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+    "Insufflator Errors 🧪": {
+        "problem": "Gas flow, valve or pressure sensor issue",
+        "causes": [
+            "Defective pinch valve",
+            "Uncalibrated pressure sensor",
+            "Loose tubing"
+        ],
+        "repairs": [
+            "Recalibrate sensor",
+            "Replace flow valve",
+            "Check CO2 supply and connections"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+    "Insufflation / Flow Errors 🧪": {
+        "problem": "Proportional valve, pressure sensor, or flow sensor issue",
+        "causes": [
+            "Proportional valve out of range or short-circuited",
+            "Zero drift in high or low pressure sensor",
+            "Mechanical failure of inflation valve",
+            "ERR#04 to ERR#12 (flow, pressure, valve state mismatch)"
+        ],
+        "repairs": [
+            "Replace pneumatic module (section 9.6)",
+            "Zero calibration of pressure sensor (section 6.2)",
+            "Replace main board if sensor faults persist",
+            "Use diagnostic mode to verify valve heating or flow output"
+        ],
+        "modelo": []
+    },
+    "Power Supply Errors ⚡": {
+        "problem": "Electrical failure or blown fuse",
+        "causes": [
+            "Defective AC/DC board",
+            "Blown fuse",
+            "Overload on power board"
+        ],
+        "repairs": [
+            "Replace fuse",
+            "Check internal power supply",
+            "Inspect power board circuitry"
+        ],
+        "modelo": []
+    },
+    "Image Processor / Camera Errors 🎥": {
+        "problem": "Video board failure or no image detected",
+        "causes": [
+            "CCU board fault",
+            "Disconnected camera head",
+            "Firmware mismatch",
+            "Fault in video signal output module (e.g., HDMI, DVI, SDI)",
+            "Abnormal camera configuration parameters"
+        ],
+        "repairs": [
+            "Replace CCU module",
+            "Verify camera/cable compatibility",
+            "Update firmware (check with KOL)",
+            "Use maintenance menu to reset video output settings",
+            "Check output signal ports and reconfigure resolution if needed"
+        ],
+        "image": "",
+        "modelo": [
+            "U1",
+            "R1",
+            "UX1",
+            "UX3",
+            "UX5",
+            "UX7",
+            "HD3"
+        ]
+    },
+    "Camera Head Errors 🎯": {
+        "problem": "Camera head malfunction or improper connection",
+        "causes": [
+            "Optical coupler disconnected",
+            "Camera head cable pin damaged",
+            "Internal short-circuit or failed signal transmission"
+        ],
+        "repairs": [
+            "Reconnect or replace the camera head",
+            "Inspect cable integrity",
+            "Check CCU log for camera detection errors",
+            "Perform visual inspection per service manual section 5.3"
+        ],
+        "image": "",
+        "modelo": [
+            "HD3",
+            "U1",
+            "R1",
+            "UX1",
+            "UX3",
+            "UX5",
+            "UX7"
+        ]
+    },
+    "Video Recording / USB Errors 💾": {
+        "problem": "Failure to record or store images/videos",
+        "causes": [
+            "USB drive not recognized",
+            "File system error",
+            "Corrupted recorder board"
+        ],
+        "repairs": [
+            "Use Mindray-approved USB drives",
+            "Format USB to FAT32 before use",
+            "Replace recording board if detection fails (section 5.3.3)"
+        ],
+        "image": "",
+        "modelo": [
+            "HD3",
+            "U1",
+            "R1",
+            "UX1",
+            "UX3",
+            "UX5",
+            "UX7"
+        ]
+    },
+        "Brightness Explosion Error 💡": {
+        "problem": "Excessive brightness when approaching gauze due to auto brightness function disabled",
+        "causes": [
+            "Auto brightness function disabled in OSD menu",
+            "Defective video processing board",
+            "Incorrect OSD configuration not being saved after power off"
+        ],
+        "repairs": [
+            "Access the OSD service menu and activate the auto brightness adjustment function",
+            "If the function cannot be saved after power off, replace the video processing board (refer to section 7.3 of the service manual)",
+            "Perform image test using printed paper to verify correct brightness adjustment",
+            "Ensure all connectors (flat cable, button and side connectors) are properly connected during reassembly"
+        ],
+        "image": "S",
+        "modelo": [
+            "HD3",
+            "UX5"
+        ]
+    },
+        "HS-50F Device Failure Error Code 02 & 04 🔧": {
+        "problem": "Inflation and safety valve short-circuit or mechanical failure (Error Code 02 or 04)",
+        "causes": [
+            "Short circuit or failure of inflation valve",
+            "Safety valve failure",
+            "Main board valve driver failure",
+            "Mechanical failure of pneumatic module"
+        ],
+        "repairs": [
+            "Replace pneumatic module assembly (section 9.6)",
+            "Replace main board (section 9.10)",
+            "Conduct valve heating test in diagnostic mode"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+        "HS-50F Device Failure Error Code 09 📉": {
+        "problem": "High-pressure sensor failure or abnormal readings (Error Code 09)",
+        "causes": [
+            "Disconnected high-pressure sensor cable",
+            "Faulty high-pressure sensor",
+            "Main board analog-to-digital (AD) conversion failure"
+        ],
+        "repairs": [
+            "Reconnect high-pressure sensor cable",
+            "Perform zero calibration of high-pressure sensor (section 6.2)",
+            "Replace high-pressure regulator assembly (section 9.3)",
+            "Replace main board if fault persists (section 9.10)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+        "HS-50F Device Failure Error Code 10 ⚠️": {
+        "problem": "Low-pressure sensor out of range (Error Code 10)",
+        "causes": [
+            "Faulty low-pressure sensor in pneumatic module",
+            "Main board analog-to-digital (AD) conversion failure"
+        ],
+        "repairs": [
+            "Replace pneumatic module assembly (section 9.6)",
+            "Replace main board if issue persists (section 9.10)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+        "HS-50F Device Failure Error Code 11 📐": {
+        "problem": "Differential pressure sensor or valve-front sensor zero-point out of range (Error Code 11)",
+        "causes": [
+            "Main board differential sensor failure",
+            "Valve-front pressure sensor malfunction"
+        ],
+        "repairs": [
+            "Replace main board (section 9.10)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+        "HS-50F Device Failure Error Code 13 💧": {
+        "problem": "Liquid sensor error detected (Error Code 13)",
+        "causes": [
+            "Disconnected level sensor cable",
+            "Level sensor failure"
+        ],
+        "repairs": [
+            "Reconnect or inspect level sensor cable",
+            "Replace liquid contamination spare parts (section 9.11)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+        "HS-50F Device Failure Error Code 15 🔥": {
+        "problem": "Heating module error (Error Code 15)",
+        "causes": [
+            "Heating plate disconnected",
+            "Heating plate defective"
+        ],
+        "repairs": [
+            "Reconnect heating plate cable",
+            "Replace heating plate (section 9.15)"
+        ],
+        "image": "",
+        "modelo": [
+            "HS-50F"
+        ]
+    },
+        "Ux3 Error Code 001 🧠": {
+        "problem": "EEPROM read/write failure",
+        "causes": [
+            "Main CPU failure",
+            "EEPROM failure"
+        ],
+        "repairs": [
+            "Restart the system",
+            "If the error persists, replace the Main Control Board PCBA (see section 6.37, page 181)"
+        ],
+        "image": "",
+        "modelo": [
+            "UX3"
+        ]
+    },
+
+        "Error Code 002 🔌": {
+        "problem": "Communication failure between Main CPU and OSD CPU",
+        "causes": [
+            "Main CPU failure",
+            "OSD CPU failure"
+        ],
+        "repairs": [
+            "Restart the system",
+            "If the error persists, replace the Main Control Board PCBA (see section 6.37, page 181)"
+        ],
+        "image": "",
+        "modelo": [
+            "UX3"
+        ]
+    },
+
+        "Error Code 003 🔋": {
+        "problem": "Communication failure between Main CPU and Power MCU",
+        "causes": [
+            "Main CPU failure",
+            "Power MCU failure"
+        ],
+        "repairs": [
+            "Restart the system",
+            "If the error persists, replace the Main Control Board PCBA (see section 6.37, page 181)"
+
+        ],
+        "image": "",
+        "modelo": [
+            "UX3"
+        ]
+    },
+
+        "Ux3 Error Code 104 🌡️": {
+        "problem": "Over-temperature in CCU A",
+        "causes": [
+            "Fan failure",
+            "Defective thermal grease",
+            "Heat sink malfunction or blockage",
+            "CCU hardware fault"
+        ],
+        "repairs": [
+            "Check if all fans are rotating normally (see section 6.19, page 123)",
+            "If the fan is defective, replace the cooling fan (section 6.19, page 123)",
+            "Check and replace the thermal pad or thermal grease if degraded (check during CCU disassembly, section 6.35, page 173)",
+            "If the issue persists, replace the CCU Board PCBA (section 6.35, page 173)"
+        ],
+            "image": "",
+            "modelo": [
+                "UX3"
+            ]
+        },
+
+            "Error Code 105 🌡️": {
+            "problem": "Over-temperature in CCU B",
+            "causes": [
+                "Fan failure",
+                "Defective thermal grease",
+                "Heat sink malfunction or blockage",
+                "CCU hardware fault"
+            ],
+            "repairs": [
+                "Restart the system",
+                "Check if all fans are rotating normally (see section 6.19, page 123)",
+                "If the fan is defective, replace the cooling fan (section 6.19, page 123)",
+                "Check and replace the thermal pad or thermal grease if degraded (check during CCU disassembly, section 6.35, page 173)",
+                "If the issue persists, replace the CCU Board PCBA (section 6.35, page 173)"
+            ],
+            "image": "",
+            "modelo": [
+                    "UX3"
+                ]
+        },
+            "Error Code 001 🧠": {
+            "problem": "Main CPU Failed to Read or Write EEPROM",
+            "causes": [
+                "Main control board faulty",
+                "EEPROM failure"
+            ],
+            "repairs": [
+                "Restart the system",
+                "If the error persists, replace Main Control Board PCBA (see section 7.6.2, page 298)"
+            ],
+            "image": "",
+            "modelo": [
+                "UX5"
+            ]
+        },
+
+        "Error Code 104 🌡️": {
+            "problem": "CCU A Overtemperature",
+            "causes": [
+                "Cooling fan failure",
+                "Thermal pad degraded",
+                "Radiator loose or damaged",
+                "CCU board faulty"
+            ],
+            "repairs": [
+                "Check if fan is rotating (section 6.20, page 141)",
+                "Replace the fan if defective (section 6.20, page 141)",
+                "Check thermal pad and radiator during CCU maintenance (section 6.36, page 179)",
+                "Replace CCU Board PCBA if problem persists (section 6.36, page 179)"
+            ],
+            "image": "",
+            "modelo": [
+                "UX5"
+            ]
+        },
+
+        "Error Code 801 🌀": {
+            "problem": "System Fan Speed Abnormal",
+            "causes": [
+                "Fan failure",
+                "IO board faulty",
+                "Main control board faulty",
+                "OSD cable faulty"
+            ],
+            "repairs": [
+                "Check and reconnect fan (section 6.20, page 141)",
+                "If fan defective, replace cooling fan (section 6.20, page 141)",
+                "Check IO Board PCBA (section 6.33, page 171)",
+                "Check main control board (section 6.38, page 186)",
+                "Check OSD cable (section 6.26, page 154)"
+            ],
+            "image": "",
+            "modelo": [
+                "UX5"
+            ]
+        },
+        
+        "E002 🔌": {
+            "problem": "USB communication failure.",
+            "causes": ["USB cable disconnected or damaged", "Faulty USB port on main board", "Main board communication failure"],
+            "repairs": [
+                "Check and reconnect USB cable (section 7.2.19, page 129)",
+                "Test USB interface on main board",
+                "Replace Main Control Board if USB interface is faulty (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E004 🌐": {
+            "problem": "Network interface communication failure.",
+            "causes": ["Ethernet cable disconnected", "Faulty network port on main board", "Main board communication failure"],
+            "repairs": [
+                "Reconnect Ethernet cable (section 7.2.20, page 130)",
+                "Test network interface on main board",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E005 🔧": {
+            "problem": "CAN communication failure.",
+            "causes": ["CAN cable disconnected", "CAN interface board failure", "Main board CAN circuit failure"],
+            "repairs": [
+                "Check CAN cable (section 7.2.21, page 130)",
+                "Replace CAN Interface Board (section 7.3.29, page 137)",
+                "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E006 ⚙️": {
+            "problem": "System fault. Internal error detected.",
+            "causes": ["Main control board failure", "Firmware corruption", "Power module fault"],
+            "repairs": [
+                "Restart device",
+                "Reload firmware (section 5.1, page 91)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E007 ⚙️": {
+            "problem": "System initialization failure.",
+            "causes": ["Main board failure", "Component communication error", "Firmware corruption"],
+            "repairs": [
+                "Restart system",
+                "Reload firmware (section 5.1, page 91)",
+                "Replace Main Control Board if fault persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E008 ⚙️": {
+            "problem": "System startup failure.",
+            "causes": ["Main control board fault", "Startup software failure", "Hardware initialization error"],
+            "repairs": [
+                "Check all internal cables (section 7.2.19, page 129)",
+                "Reload firmware (section 5.1, page 91)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E012 ⚙️": {
+            "problem": "System fault during boot check.",
+            "causes": ["Corrupted firmware", "Main control board failure", "Internal communication failure"],
+            "repairs": [
+                "Restart system",
+                "Check and reload firmware (section 5.1, page 91)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E016 🛑": {
+            "problem": "Communication module initialization failure.",
+            "causes": ["Communication board fault", "Main control board failure", "Signal routing failure"],
+            "repairs": [
+                "Check connection cables (section 7.2.19, page 129)",
+                "Test communication board (section 7.3.29, page 137)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E017 🛑": {
+            "problem": "Device self-check failure.",
+            "causes": ["Firmware corruption", "Main board failure", "Internal connection failure"],
+            "repairs": [
+                "Reload firmware (section 5.1, page 91)",
+                "Check internal wiring (section 7.2.19, page 129)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E024 🔧": {
+            "problem": "CAN bus communication abnormal.",
+            "causes": ["CAN cable disconnected", "Faulty CAN interface board", "Main board CAN driver failure"],
+            "repairs": [
+                "Check CAN cable (section 7.2.21, page 130)",
+                "Replace CAN interface board (section 7.3.29, page 137)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E025 🔧": {
+            "problem": "CAN communication timeout.",
+            "causes": ["CAN cable damage", "Faulty CAN interface board", "Main board communication failure"],
+            "repairs": [
+                "Inspect and replace CAN cable if needed (section 7.2.21, page 130)",
+                "Test CAN interface board (section 7.3.29, page 137)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E026 🔧": {
+            "problem": "CAN data frame error.",
+            "causes": ["Loose CAN cable", "CAN signal interference", "CAN interface hardware failure"],
+            "repairs": [
+                "Reconnect CAN cable securely (section 7.2.21, page 130)",
+                "Check for electromagnetic interference",
+                "Test and replace CAN interface board if needed (section 7.3.29, page 137)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E027 🔧": {
+            "problem": "CAN frame lost error.",
+            "causes": ["Interference in CAN signal", "Defective CAN cable", "Faulty CAN transceiver on board"],
+            "repairs": [
+                "Check and secure CAN cabling (section 7.2.21, page 130)",
+                "Test CAN interface board (section 7.3.29, page 137)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E028 🔧": {
+            "problem": "CAN bit error detected.",
+            "causes": ["Loose CAN cable", "CAN wiring damaged", "Faulty CAN driver IC"],
+            "repairs": [
+                "Check CAN cable for continuity (section 7.2.21, page 130)",
+                "Test and replace CAN interface board (section 7.3.29, page 137)",
+                "Replace Main Control Board if unresolved (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E029 🔧": {
+            "problem": "CAN bus passive error.",
+            "causes": ["Signal interference", "CAN transceiver chip failure", "Main board CAN malfunction"],
+            "repairs": [
+                "Check CAN cable shielding (section 7.2.21, page 130)",
+                "Replace CAN interface board if faulty (section 7.3.29, page 137)",
+                "Test and replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E030 🔧": {
+            "problem": "CAN arbitration lost error.",
+            "causes": ["Multiple CAN nodes collision", "Faulty CAN interface", "Communication timing error on main board"],
+            "repairs": [
+                "Inspect CAN bus traffic",
+                "Replace CAN interface board if faulty (section 7.3.29, page 137)",
+                "Test and replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E031 🔧": {
+            "problem": "CAN bus-off error. Communication stopped due to severe fault.",
+            "causes": ["Severe CAN errors accumulation", "Faulty CAN transceiver", "Main board CAN circuit failure"],
+            "repairs": [
+                "Reset the system",
+                "Replace CAN interface board if needed (section 7.3.29, page 137)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E035 ⚡": {
+            "problem": "Footswitch communication failure.",
+            "causes": ["Footswitch cable disconnected", "Defective footswitch", "Main board communication failure"],
+            "repairs": [
+                "Reconnect footswitch cable (section 7.2.24, page 133)",
+                "Test and replace footswitch if needed",
+                "Test or replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        
+        "E100 🩹": {
+            "problem": "Neutral electrode connection exception detected.",
+            "causes": [
+                "Neutral electrode not properly connected to the patient",
+                "Neutral electrode cable disconnected or broken",
+                "Neutral electrode monitoring circuit failure"
+            ],
+            "repairs": [
+                "Reconnect neutral electrode (section 8.5.23, page 254)",
+                "Test cable continuity and replace if faulty",
+                "Replace the neutral electrode monitoring module (section 7.3.34, page 201)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E101 🩹": {
+            "problem": "Neutral electrode disconnected during operation.",
+            "causes": [
+                "Neutral electrode pad detached",
+                "Broken neutral electrode cable",
+                "Monitoring module fault"
+            ],
+            "repairs": [
+                "Reconnect electrode securely (section 8.5.24, page 255)",
+                "Replace cable if damaged",
+                "Test and replace monitoring module if needed (section 7.3.34, page 201)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E103 🩹": {
+            "problem": "Neutral electrode sticking exception detected.",
+            "causes": [
+                "Bad contact between electrode and patient's skin",
+                "Electrode cable failure",
+                "Monitoring circuit failure"
+            ],
+            "repairs": [
+                "Ensure electrode is properly adhered to patient (section 8.5.25, page 256)",
+                "Replace cable if faulty",
+                "Replace monitoring module if defective (section 7.3.34, page 201)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E104 🩹": {
+            "problem": "Neutral electrode monitoring module fault.",
+            "causes": [
+                "Hardware failure in monitoring circuit",
+                "Loose cable connections",
+                "Main board signal processing failure"
+            ],
+            "repairs": [
+                "Check cable connections to the monitoring module (section 7.2.19, page 129)",
+                "Replace the neutral electrode monitoring module (section 7.3.34, page 201)",
+                "Replace the Main Control Board if problem persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E106 ⚡": {
+            "problem": "Electrosurgical generator circuit abnormal.",
+            "causes": [
+                "Power module failure",
+                "Electrosurgical generator board failure",
+                "Main control board communication failure"
+            ],
+            "repairs": [
+                "Check power module (section 7.3.34, page 201)",
+                "Test and replace generator board if necessary (section 7.3.44, page 217)",
+                "Check or replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E107 ⚡": {
+            "problem": "Monopolar 1 function error.",
+            "causes": [
+                "Monopolar 1 handpiece malfunction",
+                "Damaged monopolar connector",
+                "Main board output circuit failure"
+            ],
+            "repairs": [
+                "Check monopolar handpiece and connector (section 7.2.5, page 119)",
+                "Test output circuit on main board",
+                "Replace Main Control Board if failure persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E108 ⚡": {
+            "problem": "Monopolar 2 function error.",
+            "causes": [
+                "Monopolar 2 handpiece failure",
+                "Connector or cable fault",
+                "Main board output circuit failure"
+            ],
+            "repairs": [
+                "Test monopolar 2 connector and handpiece (section 7.2.5, page 119)",
+                "Replace connector or cable if faulty",
+                "Replace Main Control Board if problem persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E109 ⚡": {
+            "problem": "Monopolar 3 function error.",
+            "causes": [
+                "Monopolar 3 handpiece malfunction",
+                "Damaged connector or cable",
+                "Output circuit failure on Main Control Board"
+            ],
+            "repairs": [
+                "Test monopolar 3 connector and handpiece (section 7.2.5, page 119)",
+                "Replace damaged cable or connector",
+                "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E110 ⚡": {
+            "problem": "Bipolar function error.",
+            "causes": [
+                "Bipolar handpiece malfunction",
+                "Faulty connector or cable",
+                "Bipolar output circuit failure on Main Board"
+            ],
+            "repairs": [
+                "Test bipolar connector and handpiece (section 7.2.5, page 119)",
+                "Replace connector or cable if damaged",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E111 ⚡": {
+            "problem": "Ultrasonic scalpel function error.",
+            "causes": [
+                "Faulty ultrasonic scalpel connector",
+                "Ultrasonic handpiece malfunction",
+                "Main control board ultrasonic circuit failure"
+            ],
+            "repairs": [
+                "Check ultrasonic scalpel connector (section 7.2.5, page 119)",
+                "Test and replace ultrasonic handpiece (section 7.3.13, page 168)",
+                "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E118 ⚙️": {
+            "problem": "Advanced bipolar function error.",
+            "causes": [
+                "Faulty advanced bipolar handpiece",
+                "Connector or cable failure",
+                "Main control board bipolar output failure"
+            ],
+            "repairs": [
+                "Test advanced bipolar handpiece and connector (section 7.2.5, page 119)",
+                "Replace cable if damaged",
+                "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E119 ⚙️": {
+            "problem": "Seal function error (bipolar).",
+            "causes": [
+                "Seal handpiece malfunction",
+                "Connector failure",
+                "Main board seal output failure"
+            ],
+            "repairs": [
+                "Test seal handpiece and connector (section 7.2.5, page 119)",
+                "Check and replace connector or cable if needed",
+                "Replace Main Control Board if problem persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E120 ⚙️": {
+            "problem": "Ultrasonic generator internal error.",
+            "causes": [
+                "Power module fault",
+                "Ultrasonic board failure",
+                "Main control board ultrasonic communication error"
+            ],
+            "repairs": [
+                "Check power module (section 7.3.34, page 201)",
+                "Test and replace ultrasonic generator board (section 7.3.44, page 217)",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E121 ⚙️": {
+            "problem": "Ultrasonic transducer fault.",
+            "causes": [
+                "Transducer connection failure",
+                "Faulty ultrasonic handpiece",
+                "Ultrasonic generator board failure"
+            ],
+            "repairs": [
+                "Check transducer and connector (section 7.2.5, page 119)",
+                "Test and replace handpiece or transducer",
+                "Replace ultrasonic generator board if faulty (section 7.3.44, page 217)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E122 ⚙️": {
+            "problem": "Ultrasonic handpiece connection error.",
+            "causes": [
+                "Connector pin damage",
+                "Cable failure",
+                "Ultrasonic board communication error"
+            ],
+            "repairs": [
+                "Check and reconnect ultrasonic cable (section 7.2.5, page 119)",
+                "Test connector and replace if damaged",
+                "Replace ultrasonic generator board (section 7.3.44, page 217)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E123 ⚙️": {
+            "problem": "Ultrasonic board overheating.",
+            "causes": [
+                "Cooling fan failure",
+                "Thermal pad degradation",
+                "Ultrasonic board component failure"
+            ],
+            "repairs": [
+                "Check and replace cooling fan (section 7.2.24, page 133)",
+                "Inspect and replace thermal pads (section 7.2.19, page 129)",
+                "Replace ultrasonic generator board (section 7.3.44, page 217)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E124 ⚙️": {
+            "problem": "Ultrasonic generator voltage error.",
+            "causes": [
+                "Voltage regulator failure",
+                "Power supply fault",
+                "Ultrasonic board failure"
+            ],
+            "repairs": [
+                "Check voltage supply (section 7.2.24, page 133)",
+                "Test power module (section 7.3.34, page 201)",
+                "Replace ultrasonic board (section 7.3.44, page 217)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E125 ⚙️": {
+            "problem": "Ultrasonic output overload.",
+            "causes": [
+                "Short circuit in handpiece or cable",
+                "Overload on ultrasonic transducer",
+                "Output circuit failure on ultrasonic board"
+            ],
+            "repairs": [
+                "Check handpiece and cable for short circuits (section 7.2.5, page 119)",
+                "Test and replace transducer if needed",
+                "Replace ultrasonic board (section 7.3.44, page 217)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E126 ⚙️": {
+            "problem": "Ultrasonic startup failure.",
+            "causes": [
+                "Firmware corruption",
+                "Main control board communication failure",
+                "Ultrasonic generator board startup fault"
+            ],
+            "repairs": [
+                "Reload firmware (section 5.1, page 91)",
+                "Check communication cables (section 7.2.19, page 129)",
+                "Replace ultrasonic generator board (section 7.3.44, page 217)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E127 ⚙️": {
+            "problem": "Ultrasonic handpiece overcurrent detected.",
+            "causes": [
+                "Short circuit in handpiece or cable",
+                "Transducer failure",
+                "Ultrasonic output circuit fault"
+            ],
+            "repairs": [
+                "Check handpiece and cable (section 7.2.5, page 119)",
+                "Test transducer",
+                "Replace ultrasonic generator board (section 7.3.44, page 217)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E128 ⚙️": {
+            "problem": "Ultrasonic frequency abnormal.",
+            "causes": [
+                "Transducer damaged",
+                "Cable failure",
+                "Ultrasonic generator board malfunction"
+            ],
+            "repairs": [
+                "Check transducer and cable (section 7.2.5, page 119)",
+                "Test and replace ultrasonic board if needed (section 7.3.44, page 217)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E129 ⚙️": {
+            "problem": "Ultrasonic signal amplitude abnormal.",
+            "causes": [
+                "Connector loose",
+                "Cable damage",
+                "Ultrasonic board signal processing fault"
+            ],
+            "repairs": [
+                "Check ultrasonic connector (section 7.2.5, page 119)",
+                "Replace cable if faulty",
+                "Replace ultrasonic board if failure persists (section 7.3.44, page 217)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E168 🌡️": {
+            "problem": "Main unit temperature too high.",
+            "causes": [
+                "Cooling fan failure",
+                "Air vent blocked",
+                "Heat sink failure",
+                "Power module overheating",
+                "Main board overheating"
+            ],
+            "repairs": [
+                "Check cooling fan (section 7.2.24, page 133)",
+                "Clean air vents (section 7.2.6, page 120)",
+                "Replace thermal pad or heat sink (section 7.2.19, page 129)",
+                "Test power module (section 7.3.34, page 201)",
+                "If problem persists, replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+            "E300 🧠": {
+            "problem": "Power module communication failure.",
+            "causes": [
+                "Power module communication cable disconnected",
+                "Power module failure",
+                "Main control board communication fault"
+            ],
+            "repairs": [
+                "Check power module communication cable (section 7.2.19, page 129)",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "If persists, replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+            "E303 🧠": {
+            "problem": "Power module over-temperature.",
+            "causes": [
+                "Cooling fan failure",
+                "Ventilation blocked",
+                "Thermal pad degraded",
+                "Power module internal fault"
+            ],
+            "repairs": [
+                "Check cooling fan (section 7.2.24, page 133)",
+                "Clean air vents (section 7.2.6, page 120)",
+                "Check thermal pad (section 7.2.19, page 129)",
+                "Replace power module if faulty (section 7.3.34, page 201)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E304 🧠": {
+            "problem": "Power module over-voltage error.",
+            "causes": [
+                "Voltage regulator failure",
+                "Power module failure",
+                "Main board signal processing failure"
+            ],
+            "repairs": [
+                "Check power supply voltage",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "If persists, replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E308 🧠": {
+            "problem": "Power module under-voltage error.",
+            "causes": [
+                "Input power supply unstable",
+                "Power module fault",
+                "Main board monitoring failure"
+            ],
+            "repairs": [
+                "Check input power supply",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E310 🧠": {
+            "problem": "Auxiliary power fault.",
+            "causes": [
+                "Auxiliary power supply failure",
+                "Main board auxiliary circuit fault",
+                "Power module failure"
+            ],
+            "repairs": [
+                "Test auxiliary power output",
+                "Check auxiliary circuits on Main Board (section 7.3.15, page 148)",
+                "Replace power module (section 7.3.34, page 201)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E311 🧠": {
+            "problem": "Main power fault.",
+            "causes": [
+                "Power supply line failure",
+                "Main board power regulation circuit failure",
+                "Power module internal fault"
+            ],
+            "repairs": [
+                "Check main power lines",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "Replace Main Control Board if required (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E312 🧠": {
+            "problem": "Power module self-check failure.",
+            "causes": [
+                "Internal fault in power module",
+                "Main control board communication failure",
+                "Corrupted firmware in power module"
+            ],
+            "repairs": [
+                "Restart system",
+                "Check power module communication cable (section 7.2.19, page 129)",
+                "Replace power module (section 7.3.34, page 201)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E313 🧠": {
+            "problem": "Voltage reference abnormal in power module.",
+            "causes": [
+                "Voltage sensing circuit failure",
+                "Power module internal fault",
+                "Main board signal error"
+            ],
+            "repairs": [
+                "Check voltage reference lines",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E314 🧠": {
+            "problem": "Power module hardware fault.",
+            "causes": [
+                "Component failure inside power module",
+                "Cooling system malfunction",
+                "Main board monitoring failure"
+            ],
+            "repairs": [
+                "Test and replace power module (section 7.3.34, page 201)",
+                "Check cooling fans (section 7.2.24, page 133)",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E315 🧠": {
+            "problem": "Power module software fault.",
+            "causes": [
+                "Firmware error in power module",
+                "Main control board communication failure",
+                "Power module internal processor error"
+            ],
+            "repairs": [
+                "Update firmware (section 5.1, page 91)",
+                "Check communication cables (section 7.2.19, page 129)",
+                "Replace power module (section 7.3.34, page 201)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E316 🧠": {
+            "problem": "Voltage fluctuation error.",
+            "causes": [
+                "Unstable input voltage",
+                "Voltage regulation failure in power module",
+                "Monitoring circuit error on main board"
+            ],
+            "repairs": [
+                "Check input voltage stability",
+                "Test and replace power module (section 7.3.34, page 201)",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E317 🧠": {
+            "problem": "Power module PWM abnormal.",
+            "causes": [
+                "PWM driver failure inside power module",
+                "Faulty power output circuit",
+                "Main board control signal error"
+            ],
+            "repairs": [
+                "Check PWM circuits on power module (section 7.3.34, page 201)",
+                "Test output circuits",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E318 🧠": {
+            "problem": "Power module clock error.",
+            "causes": [
+                "Clock signal failure in power module",
+                "Main control board clock communication failure",
+                "Firmware error"
+            ],
+            "repairs": [
+                "Check communication and clock signal lines (section 7.2.19, page 129)",
+                "Update firmware (section 5.1, page 91)",
+                "Replace power module if problem persists (section 7.3.34, page 201)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E319 🧠": {
+            "problem": "Power module output overcurrent.",
+            "causes": [
+                "Short circuit in power output",
+                "Load connected exceeds rating",
+                "Power module current sensing circuit failure"
+            ],
+            "repairs": [
+                "Check output circuits for short circuits",
+                "Test and replace power module if necessary (section 7.3.34, page 201)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E320 🧠": {
+            "problem": "Power module over-power protection triggered.",
+            "causes": [
+                "Excessive load on output",
+                "Power supply module regulation failure",
+                "Main board load detection error"
+            ],
+            "repairs": [
+                "Verify external load is within specifications",
+                "Test and replace power module if necessary (section 7.3.34, page 201)",
+                "Check Main Control Board for monitoring faults (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E321 🧠": {
+            "problem": "Power module output under-power.",
+            "causes": [
+                "Faulty output driver in power module",
+                "Power supply internal component failure",
+                "Main board monitoring error"
+            ],
+            "repairs": [
+                "Test power module output (section 7.3.34, page 201)",
+                "Replace power module if faulty",
+                "Check Main Control Board signal processing (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E405 🔥": {
+            "problem": "Main control board communication failure with LCD module.",
+            "causes": [
+                "LCD communication cable disconnected or damaged",
+                "LCD module failure",
+                "Main board communication circuit fault"
+            ],
+            "repairs": [
+                "Check LCD communication cable (section 7.2.19, page 129)",
+                "Test and replace LCD module if faulty",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+            "E140 🔥": {
+            "problem": "NVRAM data abnormal.",
+            "causes": [
+                "NVRAM chip failure on main board",
+                "Corrupted system parameters",
+                "Main control board communication fault with NVRAM"
+            ],
+            "repairs": [
+                "Restart the device",
+                "Check and reload factory settings (section 5.1, page 91)",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E141 🔥": {
+            "problem": "NVRAM checksum error.",
+            "causes": [
+                "Data corruption in NVRAM",
+                "NVRAM component failure",
+                "Main board failure handling checksum"
+            ],
+            "repairs": [
+                "Reload system parameters (section 5.1, page 91)",
+                "Check NVRAM module on Main Board",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E142 🔥": {
+            "problem": "NVRAM read/write failure.",
+            "causes": [
+                "NVRAM chip failure",
+                "Corrupted communication line",
+                "Main control board memory controller fault"
+            ],
+            "repairs": [
+                "Check NVRAM connection and interface",
+                "Reload firmware if needed (section 5.1, page 91)",
+                "Replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E143 🔥": {
+            "problem": "NVRAM communication failure.",
+            "causes": [
+                "Faulty NVRAM chip",
+                "Cable or PCB trace damage",
+                "Main control board communication circuit failure"
+            ],
+            "repairs": [
+                "Check NVRAM communication lines",
+                "Test and replace NVRAM chip if faulty",
+                "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E144 🔥": {
+            "problem": "EEPROM checksum error.",
+            "causes": [
+                "EEPROM data corrupted",
+                "EEPROM chip failure",
+                "Main control board memory controller fault"
+            ],
+            "repairs": [
+                "Reload firmware (section 5.1, page 91)",
+                "Test and replace EEPROM chip if needed",
+                "Replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E149 🔥": {
+            "problem": "Battery low voltage.",
+            "causes": [
+                "Battery depleted",
+                "Battery connection failure",
+                "Battery circuit fault on Main Board"
+            ],
+            "repairs": [
+                "Test and replace the internal battery (section 7.3.22, page 176)",
+                "Check battery connector and wiring",
+                "If persists, replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E150 🔥": {
+            "problem": "Battery failure.",
+            "causes": [
+                "Battery damaged or fully degraded",
+                "Battery charging circuit failure",
+                "Main control board battery management failure"
+            ],
+            "repairs": [
+                "Check and replace the internal battery (section 7.3.22, page 176)",
+                "Test and repair battery charging circuit",
+                "Replace Main Control Board if needed (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E163 🔥": {
+            "problem": "DVR communication failure.",
+            "causes": [
+                "DVR module communication cable disconnected",
+                "DVR module failure",
+                "Main control board DVR interface failure"
+            ],
+            "repairs": [
+                "Check DVR communication cable (section 7.2.19, page 129)",
+                "Test DVR module and replace if faulty (section 7.3.29, page 137)",
+                "If persists, replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E164 🔥": {
+            "problem": "DVR over-temperature.",
+            "causes": [
+                "Cooling fan failure",
+                "Thermal pad failure",
+                "DVR module hardware failure"
+            ],
+            "repairs": [
+                "Check and replace DVR cooling fan (section 7.2.24, page 133)",
+                "Inspect and replace thermal pad if degraded (section 7.2.19, page 129)",
+                "Replace DVR module (section 7.3.29, page 137)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E165 🔥": {
+            "problem": "DVR hardware fault.",
+            "causes": [
+                "Component failure inside DVR module",
+                "Power supply failure",
+                "Main board DVR communication fault"
+            ],
+            "repairs": [
+                "Test DVR module (section 7.3.29, page 137)",
+                "Check DVR power supply",
+                "Replace Main Control Board if communication fault persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E167 🔥": {
+            "problem": "DVR software fault.",
+            "causes": [
+                "Firmware corruption in DVR module",
+                "Main control board communication error",
+                "DVR internal processor fault"
+            ],
+            "repairs": [
+                "Reload firmware (section 5.1, page 91)",
+                "Check DVR communication cable (section 7.2.19, page 129)",
+                "Replace DVR module (section 7.3.29, page 137)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E169 🔥": {
+            "problem": "DVR memory failure.",
+            "causes": [
+                "Memory chip fault in DVR",
+                "DVR overheating",
+                "Main control board memory communication fault"
+            ],
+            "repairs": [
+                "Check DVR cooling (section 7.2.24, page 133)",
+                "Test and replace DVR memory if needed",
+                "Replace DVR module (section 7.3.29, page 137)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+            "E400 🧠": {
+            "problem": "Main control board communication failure with LCD.",
+            "causes": [
+                "LCD communication cable disconnected or damaged",
+                "LCD module failure",
+                "Main control board communication fault"
+            ],
+            "repairs": [
+                "Check LCD communication cable (section 7.2.19, page 129)",
+                "Test LCD module and replace if faulty",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E402 🧠": {
+            "problem": "LCD backlight failure.",
+            "causes": [
+                "Backlight driver circuit failure",
+                "LCD module power supply failure",
+                "LCD module internal failure"
+            ],
+            "repairs": [
+                "Check backlight power supply (section 7.2.19, page 129)",
+                "Test and replace LCD module (section 7.3.29, page 137)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E403 🧠": {
+            "problem": "LCD data communication error.",
+            "causes": [
+                "Data cable failure between LCD and main board",
+                "LCD controller failure",
+                "Main control board LCD communication fault"
+            ],
+            "repairs": [
+                "Check LCD data cable (section 7.2.19, page 129)",
+                "Test and replace LCD if needed",
+                "Replace Main Control Board if persists (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E404 🧠": {
+            "problem": "LCD control board abnormal.",
+            "causes": [
+                "Faulty LCD control board",
+                "Power supply issue to LCD",
+                "Main control board interface error"
+            ],
+            "repairs": [
+                "Test LCD control board (section 7.3.29, page 137)",
+                "Check LCD power supply",
+                "Replace Main Control Board if necessary (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E405 🧠": {
+            "problem": "LCD firmware error.",
+            "causes": [
+                "LCD firmware corrupted",
+                "Main board LCD communication failure",
+                "LCD internal memory error"
+            ],
+            "repairs": [
+                "Reload LCD firmware (section 5.1, page 91)",
+                "Check communication cable (section 7.2.19, page 129)",
+                "Replace LCD module (section 7.3.29, page 137)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E900 ⚠️": {
+            "problem": "System firmware corruption.",
+            "causes": [
+                "Main control board firmware error",
+                "Memory corruption",
+                "Software installation failure"
+            ],
+            "repairs": [
+                "Reload system firmware (section 5.1, page 91)",
+                "If persists, replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E901 ⚠️": {
+            "problem": "Bootloader error.",
+            "causes": [
+                "Corrupted bootloader in main board",
+                "Main board memory failure",
+                "Firmware update interrupted"
+            ],
+            "repairs": [
+                "Reload bootloader firmware (section 5.1, page 91)",
+                "If fails, replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E902 ⚠️": {
+            "problem": "Application software error.",
+            "causes": [
+                "Corrupted application software",
+                "Main board memory error",
+                "Firmware update failure"
+            ],
+            "repairs": [
+                "Reload application software (section 5.1, page 91)",
+                "Check main board memory",
+                "Replace Main Control Board if required (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+        },
+        "E999 💥": {
+            "problem": "Fatal hardware error.",
+            "causes": [
+                "Severe internal failure in main control board",
+                "Multiple system hardware failures detected",
+                "Critical communication bus failure"
+            ],
+            "repairs": [
+                "Restart device",
+                "If error persists, replace Main Control Board (section 7.3.15, page 148)"
+            ],
+            "image": "",
+            "modelo": ["UP700", "EP300", "UP500"]
+            }
+}
