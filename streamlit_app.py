@@ -282,9 +282,6 @@ def run_error_search():
                     image_path = os.path.join(BASE_DIR, "images", image_file) if image_file else None
                     if image_path and os.path.isfile(image_path):
                         st.image(image_path, caption="Associated image", width=300)
-                        if st.button(f"🔍 Ampliar imagem", key=f"expand_image_{category}"):
-                            st.session_state["modal_image"] = image_path
-                            st.rerun()
 
                     st.markdown("**Causes:**")
                     for c in data['causes']:
@@ -309,13 +306,6 @@ def run_error_search():
                         st.warning("⚠️ Troubleshooting guide not available.")
         else:
             st.info("No results found.")
-        
-        # Out of loop: show enlarged image if it exists in the state
-        if "modal_image" in st.session_state:
-            with st.modal("🔍 Visualização Ampliada"):
-                st.image(st.session_state["modal_image"], caption="Imagem ampliada", use_column_width=True)
-                if st.button("Fechar"):
-                    st.session_state.pop("modal_image")
 
 # === Routing ===
 if st.session_state.selected_tab == "Log Analyzer":
