@@ -83,18 +83,6 @@ if "problems_database" not in st.session_state:
 
 problems_database = st.session_state.problems_database
 
-# === Patterns (or you can load from JSON later) ===
-patterns = {
-    "Contamination Detected": r"(contamin|liquid.*detected|inlet.*liquid|pollution.*mark|level sensor error|ERR#08)",
-    "Communication Errors": r"(connect.*failed|network.*unreach|ipc.*fail|timeout|socket.*error)",
-    "Heating Errors": r"(heat.*fail|temperature.*alarm|ERR#14|ERR#15|heating plate|tube.*fail)",
-    "Insufflator Errors": r"(flow.*error|pressure.*fail|valve.*fail|ERR#04|gas leak|pinch.*valve)",
-    "Insufflation / Flow Errors": r"(proportional valve|zero drift|ERR#0[4-9]|ERR#1[0-2])",
-    "Power Supply Errors": r"(power.*fail|fuse.*blown|voltage.*error|ERR#06|no power)",
-    "Image Processor / Camera Errors": r"(video.*lost|camera.*error|CCU.*fail|no signal|image.*not found|firmware.*error|hdmi|dvi|sdi.*fail)",
-    "Camera Head Errors": r"(camera head.*error|optical.*fail|coupler|lens|focus.*fail|zoom.*fail|no.*camera.*input)",
-    "Video Recording / USB Errors": r"(usb.*fail|record.*error|video.*not saved|no.*recording|file.*system.*error)"
-}
 # === Tabs ===
 if "selected_tab" not in st.session_state:
     st.session_state.selected_tab = "Log Analyzer"
@@ -183,9 +171,12 @@ If you don't have the converter, contact Mindray Technical Support.
                 if grouped_errors:
                     st.subheader("⚠️ Errors Found in Logs (by keyword or error code)")
                     for label, lines in sorted(grouped_errors.items(), key=lambda x: len(x[1]), reverse=True):
-                        st.markdown(f"### 🧩 `{label}` — {len(lines)} occurrence(s)")
-                        with st.expander("🔎 View example log line"):
-                            st.code(lines[0], language="text")
+                        st.markdown(f"""
+                        <div style="padding: 0.2em 1em; background-color: #1f1f1f; border-left: 4px solid #4CAF50; border-radius: 4px; font-size: 0.9em;">
+                                🧠 <strong>{label}</strong> — {len(lines)} occurrence(s)<br>
+                                🔍 <em>Search for this error in the <strong>Error Library tab</strong></em>
+                            </div>
+                            """, unsafe_allow_html=True)
                     st.markdown("---")
                 else:
                     st.success("✅ No matching error patterns or codes found in the logs.")
