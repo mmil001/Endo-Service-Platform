@@ -2857,7 +2857,7 @@
       "Replace internal network board"
     ],
     "image": "",
-    "model": ["HB100","HB200L","HB300","HB300R","HB500","HB500R","HD3","U1","R1","UX1","UX3","UX5","UX7","HS-50F"]
+    "modelo": ["HB100","HB200L","HB300","HB300R","HB500","HB500R","HD3","U1","R1","UX1","UX3","UX5","UX7","HS-50F"]
   },
   "Heating Errors": {
     "problem": "Heating icon stays on even with heating pipe disconnected",
@@ -2891,7 +2891,7 @@
         "Check CO2 supply and connections"
     ],
     "image": "",
-    "model": ["HS-50F"]
+    "modelo": ["HS-50F"]
   },
   "Insufflation / Flow Errors": {
     "problem": "Proportional valve, pressure sensor, or flow sensor issue",
@@ -2907,7 +2907,7 @@
         "Replace main board if sensor faults persist",
         "Use diagnostic mode to verify valve heating or flow output"
     ],
-    "model": ["HS-50F"]
+    "modelo": ["HS-50F"]
   },
   "Power Supply Errors": {
       "problem": "Electrical failure or blown fuse",
@@ -2921,7 +2921,7 @@
           "Check internal power supply",
           "Inspect power board circuitry"
       ],
-      "model": ["HD3","R1","U1","UX1","UX3","UX5","UX7","HB100","HB200L","HB300","HB300R","HB500","HB500R"]
+      "modelo": ["HD3","R1","U1","UX1","UX3","UX5","UX7","HB100","HB200L","HB300","HB300R","HB500","HB500R"]
   },
   "Image Processor / Camera Errors": {
       "problem": "Video board failure or no image detected",
@@ -2940,7 +2940,7 @@
           "Check output signal ports and reconfigure resolution if needed"
       ],
       "image": "",
-      "model": ["U1","R1","UX1","UX3","UX5","UX7","HD3"]
+      "modelo": ["U1","R1","UX1","UX3","UX5","UX7","HD3"]
   },
   "Camera Head Errors": {
       "problem": "Camera head malfunction or improper connection",
@@ -2956,7 +2956,7 @@
           "Perform visual inspection per service manual section 5.3"
       ],
       "image": "",
-      "model": ["HD3","U1","R1","UX1","UX3","UX5","UX7"]
+      "modelo": ["HD3","U1","R1","UX1","UX3","UX5","UX7"]
   },
   "Video Recording / USB Errors": {
     "problem": "Failure to record or store images/videos",
@@ -2971,7 +2971,7 @@
           "Replace recording board if detection fails (section 5.3.3)"
       ],
       "image": "",
-      "model": ["HD3","U1","R1","UX1","UX3","UX5","UX7"]
+      "modelo": ["HD3","U1","R1","UX1","UX3","UX5","UX7"]
   },
       "Brightness Explosion Error": {
       "problem": "Excessive brightness when approaching gauze due to auto brightness function disabled",
@@ -2987,7 +2987,7 @@
           "Ensure all connectors (flat cable, button and side connectors) are properly connected during reassembly"
       ],
       "image": "S",
-      "model": ["HD3","U1","R1","UX1","UX3","UX5","UX7"]
+      "modelo": ["HD3","U1","R1","UX1","UX3","UX5","UX7"]
   },
   "Color Distortion Error": {
     "problem": "Inaccurate or distorted colors during procedure",
@@ -3004,7 +3004,7 @@
         "Select appropriate scene mode for surgery"
     ],
     "image": "Color Distortion Error.png",
-    "model": ["HD3"]
+    "modelo": ["HD3"]
   },
   "Sharpness / Edge Error": {
     "problem": "Image has excessive noise or unnatural borders",
@@ -3018,7 +3018,7 @@
         "Adjust only if necessary and monitor image impact"
     ],
     "image": "",
-    "model": ["R1"]
+    "modelo": ["R1"]
   },
   "R1 LCD Intermittent Display Error": {
     "problem": "Intermittent blackout of the LCD display during surgery or usage",
@@ -3038,7 +3038,7 @@
         "Verify serial number, date/time, and reconfigure user setup if necessary"
     ],
     "image": "",
-    "model": ["R1"],
+    "modelo": ["R1"],
     "ppt": "Troubleshooting LCD Intermittent Error - R1.pptx"
   },
   "E002 🔌": {
@@ -3050,7 +3050,7 @@
         "Replace Main Control Board if USB interface is faulty (section 7.3.15, page 148)"
     ],
     "image": "",
-    "model": ["UP700", "EP300", "UP500"]
+    "modelo": ["UP700", "EP300", "UP500"]
   },
   "E004": {
     "problem": "Network interface communication failure.",
@@ -3061,7 +3061,7 @@
       "Replace Main Control Board if needed (section 7.3.15, page 148)"
     ],
     "image": "",
-    "model": ["UP700", "EP300", "UP500"]
+    "modelo": ["UP700", "EP300", "UP500"]
   },  
   "E005": {
     "problem": "CAN communication failure.",
@@ -3072,7 +3072,7 @@
       "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
     ],
     "image": "",
-    "model": ["UP700", "EP300", "UP500"]
+    "modelo": ["UP700", "EP300", "UP500"]
     },
     "E006": {
       "problem": "System fault. Internal error detected.",
@@ -3083,7 +3083,7 @@
         "Replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E007": {
       "problem": "System initialization failure.",
@@ -3094,7 +3094,7 @@
         "Replace Main Control Board if fault persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E008": {
       "problem": "System startup failure.",
@@ -3105,7 +3105,7 @@
         "Replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E012": {
       "problem": "System fault during boot check.",
@@ -3116,7 +3116,7 @@
         "Replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E016": {
       "problem": "Communication module initialization failure.",
@@ -3127,7 +3127,7 @@
         "Replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E017": {
       "problem": "Device self-check failure.",
@@ -3138,7 +3138,7 @@
         "Replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E024": {
       "problem": "CAN bus communication abnormal.",
@@ -3149,7 +3149,7 @@
         "Replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E025": {
       "problem": "CAN communication timeout.",
@@ -3160,7 +3160,7 @@
         "Replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
    "E026": {
       "problem": "CAN data frame error.",
@@ -3171,7 +3171,7 @@
         "Test and replace CAN interface board if needed (section 7.3.29, page 137)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E027": {
       "problem": "CAN frame lost error.",
@@ -3182,7 +3182,7 @@
         "Replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E028": {
       "problem": "CAN bit error detected.",
@@ -3193,7 +3193,7 @@
         "Replace Main Control Board if unresolved (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E029": {
       "problem": "CAN bus passive error.",
@@ -3204,7 +3204,7 @@
         "Test and replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E030": {
       "problem": "CAN arbitration lost error.",
@@ -3215,7 +3215,7 @@
         "Test and replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E031": {
       "problem": "CAN bus-off error. Communication stopped due to severe fault.",
@@ -3226,7 +3226,7 @@
         "Replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E035": {
       "problem": "Footswitch communication failure.",
@@ -3237,7 +3237,7 @@
         "Test or replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E100": {
       "problem": "Neutral electrode connection exception detected.",
@@ -3252,7 +3252,7 @@
           "Replace the neutral electrode monitoring module (section 7.3.34, page 201)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E101": {
       "problem": "Neutral electrode disconnected during operation.",
@@ -3267,7 +3267,7 @@
           "Test and replace monitoring module if needed (section 7.3.34, page 201)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E103": {
       "problem": "Neutral electrode sticking exception detected.",
@@ -3282,7 +3282,7 @@
           "Replace monitoring module if defective (section 7.3.34, page 201)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E104": {
       "problem": "Neutral electrode monitoring module fault.",
@@ -3297,7 +3297,7 @@
           "Replace the Main Control Board if problem persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E106": {
       "problem": "Electrosurgical generator circuit abnormal.",
@@ -3312,7 +3312,7 @@
           "Check or replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E107": {
       "problem": "Monopolar 1 function error.",
@@ -3327,7 +3327,7 @@
           "Replace Main Control Board if failure persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E108": {
       "problem": "Monopolar 2 function error.",
@@ -3342,7 +3342,7 @@
           "Replace Main Control Board if problem persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E109": {
       "problem": "Monopolar 3 function error.",
@@ -3357,7 +3357,7 @@
           "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E110": {
       "problem": "Bipolar function error.",
@@ -3372,7 +3372,7 @@
           "Replace Main Control Board if needed (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E111": {
       "problem": "Ultrasonic scalpel function error.",
@@ -3387,7 +3387,7 @@
           "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E118": {
       "problem": "Advanced bipolar function error.",
@@ -3402,7 +3402,7 @@
           "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E119": {
       "problem": "Seal function error (bipolar).",
@@ -3417,7 +3417,7 @@
           "Replace Main Control Board if problem persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E120": {
       "problem": "Ultrasonic generator internal error.",
@@ -3432,7 +3432,7 @@
           "Replace Main Control Board if needed (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E121": {
       "problem": "Ultrasonic transducer fault.",
@@ -3447,7 +3447,7 @@
           "Replace ultrasonic generator board if faulty (section 7.3.44, page 217)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E122": {
       "problem": "Ultrasonic handpiece connection error.",
@@ -3462,7 +3462,7 @@
           "Replace ultrasonic generator board (section 7.3.44, page 217)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E123": {
       "problem": "Ultrasonic board overheating.",
@@ -3477,7 +3477,7 @@
           "Replace ultrasonic generator board (section 7.3.44, page 217)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E124": {
       "problem": "Ultrasonic generator voltage error.",
@@ -3492,7 +3492,7 @@
           "Replace ultrasonic board (section 7.3.44, page 217)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E125": {
       "problem": "Ultrasonic output overload.",
@@ -3507,7 +3507,7 @@
           "Replace ultrasonic board (section 7.3.44, page 217)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E126": {
       "problem": "Ultrasonic startup failure.",
@@ -3522,7 +3522,7 @@
           "Replace ultrasonic generator board (section 7.3.44, page 217)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E127": {
       "problem": "Ultrasonic handpiece overcurrent detected.",
@@ -3537,7 +3537,7 @@
           "Replace ultrasonic generator board (section 7.3.44, page 217)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
    "E128": {
       "problem": "Ultrasonic frequency abnormal.",
@@ -3551,7 +3551,7 @@
           "Test and replace ultrasonic board if needed (section 7.3.44, page 217)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E129": {
       "problem": "Ultrasonic signal amplitude abnormal.",
@@ -3566,7 +3566,7 @@
           "Replace ultrasonic board if failure persists (section 7.3.44, page 217)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E168": {
       "problem": "Main unit temperature too high.",
@@ -3585,7 +3585,7 @@
           "If problem persists, replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E300": {
       "problem": "Power module communication failure.",
@@ -3600,7 +3600,7 @@
           "If persists, replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E303": {
       "problem": "Power module over-temperature.",
@@ -3617,7 +3617,7 @@
           "Replace power module if faulty (section 7.3.34, page 201)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E304": {
       "problem": "Power module over-voltage error.",
@@ -3632,7 +3632,7 @@
         "If persists, replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E308": {
       "problem": "Power module under-voltage error.",
@@ -3647,7 +3647,7 @@
           "Replace Main Control Board if needed (section 7.3.15, page 148)"
         ],
         "image": "",
-        "model": ["UP700", "EP300", "UP500"]
+        "modelo": ["UP700", "EP300", "UP500"]
     },
     "E310": {
       "problem": "Auxiliary power fault.",
@@ -3662,7 +3662,7 @@
           "Replace power module (section 7.3.34, page 201)"
         ],
         "image": "",
-        "model": ["UP700", "EP300", "UP500"]
+        "modelo": ["UP700", "EP300", "UP500"]
     },
     "E311": {
       "problem": "Main power fault.",
@@ -3677,7 +3677,7 @@
           "Replace Main Control Board if required (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E312": {
         "problem": "Power module self-check failure.",
@@ -3692,7 +3692,7 @@
           "Replace power module (section 7.3.34, page 201)"
         ],
         "image": "",
-        "model": ["UP700", "EP300", "UP500"]
+        "modelo": ["UP700", "EP300", "UP500"]
     },
     "E313": {
       "problem": "Voltage reference abnormal in power module.",
@@ -3707,7 +3707,7 @@
           "Replace Main Control Board if persists (section 7.3.15, page 148)"
         ],
         "image": "",
-        "model": ["UP700", "EP300", "UP500"]
+        "modelo": ["UP700", "EP300", "UP500"]
     },
     "E314": {
       "problem": "Power module hardware fault.",
@@ -3722,7 +3722,7 @@
         "Replace Main Control Board if needed (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E315": {
       "problem": "Power module software fault.",
@@ -3737,7 +3737,7 @@
         "Replace power module (section 7.3.34, page 201)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E316": {
       "problem": "Voltage fluctuation error.",
@@ -3752,7 +3752,7 @@
         "Replace Main Control Board if persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E317": {
       "problem": "Power module PWM abnormal.",
@@ -3767,7 +3767,7 @@
         "Replace Main Control Board if needed (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E318": {
       "problem": "Power module clock error.",
@@ -3782,7 +3782,7 @@
         "Replace power module if problem persists (section 7.3.34, page 201)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E319": {
       "problem": "Power module output overcurrent.",
@@ -3796,7 +3796,7 @@
         "Test and replace power module if necessary (section 7.3.34, page 201)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E320": {
       "problem": "Power module over-power protection triggered.",
@@ -3811,7 +3811,7 @@
         "Check Main Control Board for monitoring faults (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E321": {
       "problem": "Power module output under-power.",
@@ -3826,7 +3826,7 @@
         "Check Main Control Board signal processing (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E405": {
       "problem": "Main control board communication failure with LCD module.",
@@ -3841,7 +3841,7 @@
         "Replace Main Control Board if persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
       "E140": {
       "problem": "NVRAM data abnormal.",
@@ -3856,7 +3856,7 @@
         "Replace Main Control Board if persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E141": {
       "problem": "NVRAM checksum error.",
@@ -3871,7 +3871,7 @@
         "Replace Main Control Board if needed (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E142": {
       "problem": "NVRAM read/write failure.",
@@ -3886,7 +3886,7 @@
         "Replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E143": {
       "problem": "NVRAM communication failure.",
@@ -3901,7 +3901,7 @@
         "Replace Main Control Board if issue persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E144": {
       "problem": "EEPROM checksum error.",
@@ -3916,7 +3916,7 @@
         "Replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E149": {
       "problem": "Battery low voltage.",
@@ -3931,7 +3931,7 @@
         "If persists, replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E150": {
       "problem": "Battery failure.",
@@ -3946,7 +3946,7 @@
         "Replace Main Control Board if needed (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E163": {
       "problem": "DVR communication failure.",
@@ -3961,7 +3961,7 @@
         "If persists, replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E164": {
       "problem": "DVR over-temperature.",
@@ -3976,7 +3976,7 @@
         "Replace DVR module (section 7.3.29, page 137)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E165": {
       "problem": "DVR hardware fault.",
@@ -3991,7 +3991,7 @@
         "Replace Main Control Board if communication fault persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E167": {
       "problem": "DVR software fault.",
@@ -4006,7 +4006,7 @@
         "Replace DVR module (section 7.3.29, page 137)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E169": {
       "problem": "DVR memory failure.",
@@ -4021,7 +4021,7 @@
         "Replace DVR module (section 7.3.29, page 137)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
       "E400": {
       "problem": "Main control board communication failure with LCD.",
@@ -4036,7 +4036,7 @@
         "Replace Main Control Board if persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E402": {
       "problem": "LCD backlight failure.",
@@ -4050,7 +4050,7 @@
         "Test and replace LCD module (section 7.3.29, page 137)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E403": {
       "problem": "LCD data communication error.",
@@ -4065,7 +4065,7 @@
         "Replace Main Control Board if persists (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E404": {
       "problem": "LCD control board abnormal.",
@@ -4080,7 +4080,7 @@
         "Replace Main Control Board if necessary (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E405 LCD Error": {
       "problem": "LCD firmware error.",
@@ -4095,7 +4095,7 @@
         "Replace LCD module (section 7.3.29, page 137)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E900": {
       "problem": "System firmware corruption.",
@@ -4109,7 +4109,7 @@
         "If persists, replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
    },
     "E901": {
       "problem": "Bootloader error.",
@@ -4123,7 +4123,7 @@
         "If fails, replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E902": {
       "problem": "Application software error.",
@@ -4138,7 +4138,7 @@
         "Replace Main Control Board if required (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     },
     "E999": {
       "problem": "Fatal hardware error.",
@@ -4152,6 +4152,6 @@
         "If error persists, replace Main Control Board (section 7.3.15, page 148)"
       ],
       "image": "",
-      "model": ["UP700", "EP300", "UP500"]
+      "modelo": ["UP700", "EP300", "UP500"]
     }
 }
