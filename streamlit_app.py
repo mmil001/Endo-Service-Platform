@@ -133,9 +133,12 @@ def run_log_analyzer():
 
     selected_family = st.radio("📌 Select the Equipment Family", family_names, horizontal=True)
 
+
     # Armazena os modelos da família selecionada
     selected_family_models = family_models[selected_family]
     st.session_state.selected_models = selected_family_models
+
+    st.write("🔧 DEBUG: Selected model:", st.session_state.get("selected_model"))
 
     st.markdown(f"✅ Selected Family: **{selected_family}** ({', '.join(selected_family_models)})")
 
@@ -201,8 +204,11 @@ If you don't have the converter, contact Mindray Technical Support.
         with st.spinner("Extracting file..."):
             try:
                 log_files = extract_tar(uploaded_file)
+                selected_model = st.session_state.get("selected_model", "All")  # ✅ Adicionado
                 st.success(f"Extracted {len(log_files)} log files.")
                 issues = analyze_logs(log_files)
+
+                st.write("🔍 DEBUG: Errors detected:", list(issues.keys()))
 
                 if issues:
                     st.subheader("⚠️ Diagnosed Issues")
@@ -213,9 +219,7 @@ If you don't have the converter, contact Mindray Technical Support.
                             continue
 
                         model_list = data.get("model", [])
-                        selected_models = st.session_state.get("selected_models", [])
-
-                        if not any(model in model_list for model in selected_models):
+                        if selected_model != "All" and selected_model not in model_list:
                             continue
 
                         with st.expander(f"🔧 {category} — {len(dates)} occurrences"):
