@@ -50,7 +50,7 @@ def get_models(problems_database):
 def login_screen():
     logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
     st.image(logo_path, width=150)
-    st.markdown("## 🔐 Endo Service Platform - Login")
+    st.markdown("## 🔐 AI Endo Service Platform - Login")
     st.markdown("Please enter your credentials to access the platform.")
     st.markdown("---")
 
@@ -71,7 +71,7 @@ if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
     st.stop()
 
 # === Home Config ===
-st.set_page_config(page_title="Endo Service Platform", layout="wide")
+st.set_page_config(page_title="AI Endo Service Platform", layout="wide")
 logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
 st.image(logo_path, width=150)
 
