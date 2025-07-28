@@ -50,7 +50,7 @@ def get_models(problems_database):
 def login_screen():
     logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
     st.image(logo_path, width=150)
-    st.markdown("## 🔐 AI Endo Service Platform - Login")
+    st.markdown("## 🔐 Endo Service Platform - Login")
     st.markdown("Please enter your credentials to access the platform.")
     st.markdown("---")
 
@@ -71,7 +71,7 @@ if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
     st.stop()
 
 # === Home Config ===
-st.set_page_config(page_title="AI Endo Service Platform", layout="wide")
+st.set_page_config(page_title="Endo Service Platform", layout="wide")
 logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
 st.image(logo_path, width=150)
 
@@ -121,30 +121,7 @@ with st.sidebar:
 
 # === Log Analyzer ===
 def run_log_analyzer():
-    # === Model Family Selector ===
-    family_models = {
-        "Energy Platform": ["EP300", "UP500", "UP700"],
-        "Light Source": ["HB100", "HB200L", "HB300", "HB300R", "HB500", "HB500R"],
-        "Insufflator": ["HS-50F"],
-        "Processor / Imaging": ["HD3", "R1", "U1", "UX1", "UX3", "UX5", "UX7"],
-    }
-
-    family_names = list(family_models.keys())
-
-    selected_family = st.radio("📌 Select the Equipment Family", family_names, horizontal=True)
-
-
-    # Armazena os modelos da família selecionada
-    selected_family_models = family_models[selected_family]
-    st.session_state.selected_models = selected_family_models
-    st.session_state.selected_model = selected_family_models[0]  # <-- ESSA LINHA RESOLVE
-
-    st.write("🔧 DEBUG: Selected model:", st.session_state.get("selected_model"))
-
-    st.markdown(f"✅ Selected Family: **{selected_family}** ({', '.join(selected_family_models)})")
-
     st.markdown("### 📌 How to Prepare the Log File")
-
     st.info("""
 The log file exported from the equipment is in `.lzo` format.
 
@@ -205,25 +182,13 @@ If you don't have the converter, contact Mindray Technical Support.
         with st.spinner("Extracting file..."):
             try:
                 log_files = extract_tar(uploaded_file)
-                selected_model = st.session_state.get("selected_model", "All")  # ✅ Adicionado
                 st.success(f"Extracted {len(log_files)} log files.")
                 issues = analyze_logs(log_files)
-
-                st.write("🔍 DEBUG: Errors detected:", list(issues.keys()))
 
                 if issues:
                     st.subheader("⚠️ Diagnosed Issues")
                     for category, dates in sorted(issues.items(), key=lambda x: max(x[1], default=""), reverse=True):
-                        data = problems_database.get(category, {})
-                        if not data:
-                            continue
-
-                        model_list = data.get("model", [])
-
-                        # Filter to show only problems from the selected model
-                        if selected_model and selected_model != "All" and selected_model not in model_list:
-                            continue
-
+                        data = problems_database.get(category)
                         with st.expander(f"🔧 {category} — {len(dates)} occurrences"):
                             if data:
                                 st.markdown(f"**Problem:** {data.get('problem', 'No description.')}")
@@ -232,13 +197,13 @@ If you don't have the converter, contact Mindray Technical Support.
                                 if image_path and os.path.isfile(image_path):
                                     st.image(image_path, caption="Associated image", width=300)
 
-                                causes = data.get("causes", []) or data.get("cause", [])
+                                causes = data.get("causes", [])
                                 if causes:
                                     st.markdown("**Possible Causes:**")
                                     for cause in causes:
                                         st.markdown(f"- {cause}")
 
-                                repairs = data.get("repairs", []) or data.get("repair", [])
+                                repairs = data.get("repairs", [])
                                 if repairs:
                                     st.markdown("**Recommended Actions:**")
                                     for fix in repairs:
@@ -257,6 +222,8 @@ If you don't have the converter, contact Mindray Technical Support.
                                         )
                             else:
                                 st.markdown("No detailed data found for this error.")
+                else:
+                    st.info("No problems detected.")
 
             except Exception as e:
                 st.error(f"An error occurred: {e}")
