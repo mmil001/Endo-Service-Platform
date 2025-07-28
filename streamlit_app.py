@@ -121,25 +121,37 @@ with st.sidebar:
 
 # === Log Analyzer ===
 def run_log_analyzer():
-    st.markdown("### 📌 How to Prepare the Log File")
-    # === Model Filter ===
-    models = get_models(problems_database)
-    selected_model = st.radio("📌 Filter by Equipment Model", models, horizontal=True)
-
-    # === Model Family Selector (mandatory before upload) ===
+    # === Model Family Selector (com botões e bloqueio de upload) ===
     model_groups = {
-        "🔋 Energy Platform": ["EP300", "UP500", "UP700"],
+        "🔋 Energy Platform": ["EP300"],
         "💡 Light Source": ["HB100", "HB200L", "HB300", "HB300R", "HB500", "HB500R"],
-        "📷 Camera System": ["HD3", "R1", "U1","UX1", "UX3", "UX5", "UX7"],
-        "🔧 Insufflator": ["HS-50F"],
+        "📷 Camera System": ["HD3", "R1", "U1"],
+        "💨 Insufflator": ["HS-50F"],
+        "🔬 Processor / Imaging": ["UX1", "UX3", "UX5", "UX7"],
+        "🖥️ Video Platform": ["UP500", "UP700"]
     }
 
-    all_models = [""] + [model for group in model_groups.values() for model in group]
-    selected_model = st.selectbox("📌 Select the Equipment Model before uploading logs", all_models, index=0)
+    if "selected_model" not in st.session_state:
+        st.session_state.selected_model = None
 
-    if not selected_model:
+    st.markdown("### 🔍 Filter by Equipment Model")
+
+    for group_name, models in model_groups.items():
+        with st.expander(group_name, expanded=True):
+            cols = st.columns(len(models))
+            for i, model in enumerate(models):
+                if cols[i].button(model):
+                    st.session_state.selected_model = model
+                    st.rerun()
+
+    if not st.session_state.selected_model:
         st.warning("⚠️ Please select a model to enable log upload.")
         st.stop()
+
+    selected_model = st.session_state.selected_model
+    st.success(f"✅ Selected Model: **{selected_model}**")
+
+    st.markdown("### 📌 How to Prepare the Log File")
 
     st.info("""
 The log file exported from the equipment is in `.lzo` format.
