@@ -210,6 +210,15 @@ If you don't have the converter, contact Mindray Technical Support.
                 else:
                     st.success("✅ No matching error patterns or codes found in the logs.")
 
+                st.markdown("---")
+                st.markdown("### 🧾 Linha(s) por erro detectado")
+
+                for error, lines_dict in sorted(grouped_errors.items(), key=lambda x: sum(v["count"] for v in x[1].values()), reverse=True):
+                    st.markdown(f"#### 🔹 {error}")
+                    sorted_lines = sorted(lines_dict.items(), key=lambda x: x[1]["count"], reverse=True)
+                    for line_text, data in sorted_lines:
+                        st.markdown(f"- `{data['last_timestamp']}` — {data['count']}x — `{line_text}`")
+
             except Exception as e:
                 st.error(f"An error occurred: {e}")
 
