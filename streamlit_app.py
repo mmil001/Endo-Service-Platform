@@ -136,8 +136,9 @@ If you don't have the converter, contact Mindray Technical Support.
 
     def extract_keyword_and_code_errors(log_files):
         keywords = ["alarm", "timeout", "error", "contamination", "heating", "heat", "fail", "failure"]
-        grouped = defaultdict(list)
+        grouped = defaultdict(lambda: defaultdict(lambda: {"count": 0, "last_timestamp": ""}))
         code_pattern = re.compile(r"\b(E\d{3})\b", re.IGNORECASE)
+        timestamp_pattern = re.compile(r"\d{1,2}/\d{1,2}/\d{2,4}\s+\d{1,2}:\d{1,2}:\d{1,2}")
 
         for file in log_files:
             with open(file, "r", encoding="utf-8", errors="ignore") as f:
@@ -145,19 +146,30 @@ If you don't have the converter, contact Mindray Technical Support.
                     clean_line = line.strip()
                     lower_line = clean_line.lower()
 
-                    # Agrupar por palavra-chave
+                    # Takes the most recent timestamp in the line, if any
+                    ts_match = timestamp_pattern.search(clean_line)
+                    timestamp = ts_match.group(0) if ts_match else ""
+
+                    # Verificação por palavra-chave
                     for keyword in keywords:
                         if keyword in lower_line:
-                            grouped[keyword.upper()].append(clean_line)
+                            entry = grouped[keyword.upper()][clean_line]
+                            entry["count"] += 1
+                            if timestamp > entry["last_timestamp"]:
+                                entry["last_timestamp"] = timestamp
                             break
 
-                    # Agrupar por código E###
+                    # Verify by code E###
                     match = code_pattern.search(clean_line)
                     if match:
                         code = match.group(1).upper()
-                        grouped[code].append(clean_line)
+                        entry = grouped[code][clean_line]
+                        entry["count"] += 1
+                        if timestamp > entry["last_timestamp"]:
+                            entry["last_timestamp"] = timestamp
 
         return grouped
+
 
     if uploaded_file:
         with st.spinner("Extracting file..."):
@@ -170,6 +182,23 @@ If you don't have the converter, contact Mindray Technical Support.
  
                 if grouped_errors:
                     st.subheader("⚠️ Errors Found in Logs (by keyword or error code)")
+
+                    # Sort errors by quantity
+                    sorted_errors = sorted(grouped_errors.items(), key=lambda x: len(x[1]), reverse=True)
+
+                    for error, lines in sorted_errors:
+                        count = len(lines)
+                        col1, col2 = st.columns([5, 2])
+
+                        with col1:
+                            st.markdown(f"🔹 **{error}** — {count} occurrence(s)")
+
+                        with col2:
+                            if st.button("🔍 Buscar na biblioteca", key=f"btn_{error}"):
+                                st.session_state.search_query = error
+                                st.session_state.selected_tab = "Search Errors"
+                                st.experimental_rerun()
+
                     for label, lines in sorted(grouped_errors.items(), key=lambda x: len(x[1]), reverse=True):
                         st.markdown(f"""
                         <div style="padding: 0.2em 1em; background-color: #1f1f1f; border-left: 4px solid #4CAF50; border-radius: 4px; font-size: 0.9em;">
@@ -187,7 +216,12 @@ If you don't have the converter, contact Mindray Technical Support.
 # === Search Errors ===
 def run_error_search():
     st.subheader("🔍 Search Errors")
-    query = st.text_input("Enter a keyword (e.g., 'contamination')")
+    query = st.session_state.get("search_query", "")
+    st.text_input("Enter a keyword (e.g., 'contamination')", value=query, key="search_query_input")
+
+    # Performs search automatically if it comes from Log Analyzer
+    if query and "results" not in st.session_state:
+        search_clicked = True
 
     models = get_models(problems_database)
     selected_model = st.radio("📌 Filter by Equipment Model", models, horizontal=True)
