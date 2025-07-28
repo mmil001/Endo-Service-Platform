@@ -213,13 +213,14 @@ If you don't have the converter, contact Mindray Technical Support.
                 if issues:
                     st.subheader("⚠️ Diagnosed Issues")
                     for category, dates in sorted(issues.items(), key=lambda x: max(x[1], default=""), reverse=True):
-                        data = problems_database.get(category)
-
+                        data = problems_database.get(category, {})
                         if not data:
                             continue
 
                         model_list = data.get("model", [])
-                        if selected_model != "All" and selected_model not in model_list:
+
+                        # Filter to show only problems from the selected model
+                        if selected_model and selected_model != "All" and selected_model not in model_list:
                             continue
 
                         with st.expander(f"🔧 {category} — {len(dates)} occurrences"):
