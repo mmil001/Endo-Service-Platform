@@ -19,6 +19,8 @@
     "FLUORESCENCE": "(during|unclear|surgery|fluorescence|image|weak)",
     "R1": "(intermittent|during|usage|surgery|display|r1|blackout)",
     "HS-50F": "(module|code|error|hs-50f|heating)",
+    "Bipolar Errors": "(bipolar.*fail|SetSmartBipolar.*|bipolar.*timeout)",
+    "Knife Errors": "(knife.*fail|KnifeConnect.*|knife.*timeout)",
     "UX3": "(ux3)",
     "ERROR": "(system|speed|error|abnormal)",
     "E002": "(communication|e002|failure)",
