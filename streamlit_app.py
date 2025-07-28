@@ -122,6 +122,10 @@ with st.sidebar:
 # === Log Analyzer ===
 def run_log_analyzer():
     st.markdown("### 📌 How to Prepare the Log File")
+    # === Model Filter ===
+    models = get_models(problems_database)
+    selected_model = st.radio("📌 Filter by Equipment Model", models, horizontal=True)
+
     st.info("""
 The log file exported from the equipment is in `.lzo` format.
 
@@ -189,6 +193,12 @@ If you don't have the converter, contact Mindray Technical Support.
                     st.subheader("⚠️ Diagnosed Issues")
                     for category, dates in sorted(issues.items(), key=lambda x: max(x[1], default=""), reverse=True):
                         data = problems_database.get(category)
+
+                        if data:
+                            model_list = data.get("modelo", []) or data.get("model", []) or []
+                            if selected_model != "All" and selected_model not in model_list:
+                                continue  # Skip if not matching selected model
+
                         with st.expander(f"🔧 {category} — {len(dates)} occurrences"):
                             if data:
                                 st.markdown(f"**Problem:** {data.get('problem', 'No description.')}")
@@ -197,13 +207,13 @@ If you don't have the converter, contact Mindray Technical Support.
                                 if image_path and os.path.isfile(image_path):
                                     st.image(image_path, caption="Associated image", width=300)
 
-                                causes = data.get("causes", [])
+                                causes = data.get("causes", []) or data.get("cause", [])
                                 if causes:
                                     st.markdown("**Possible Causes:**")
                                     for cause in causes:
                                         st.markdown(f"- {cause}")
 
-                                repairs = data.get("repairs", [])
+                                repairs = data.get("repairs", []) or data.get("repair", [])
                                 if repairs:
                                     st.markdown("**Recommended Actions:**")
                                     for fix in repairs:
@@ -222,8 +232,6 @@ If you don't have the converter, contact Mindray Technical Support.
                                         )
                             else:
                                 st.markdown("No detailed data found for this error.")
-                else:
-                    st.info("No problems detected.")
 
             except Exception as e:
                 st.error(f"An error occurred: {e}")
