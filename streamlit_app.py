@@ -185,8 +185,6 @@ If you don't have the converter, contact Mindray Technical Support.
 
                 progress_bar.progress(100, text="✅ Analysis complete.")
 
-                from collections import defaultdict
-
                 if errors:
                     st.subheader("⚠️ Errors Found in Logs")
 
@@ -198,16 +196,12 @@ If you don't have the converter, contact Mindray Technical Support.
 
                     for category, lines in sorted(grouped_errors.items()):
                         st.markdown(f"### 🧩 `{category}` — {len(lines)} occurrence(s)")
-
-                        # Mostrar apenas uma linha de exemplo no expander
                         example_line = lines[0]
                         with st.expander("🔎 View example log line"):
                             st.code(example_line, language="text")
-
                     st.markdown("---")
                 else:
                     st.success("✅ No known error patterns found in the logs.")
-
             except Exception as e:
                 st.error(f"An error occurred: {e}")
 

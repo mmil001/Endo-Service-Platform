@@ -1,4 +1,6 @@
 {
+    "Ultrasonic / Knife Platform": "(ultrasonic_knife|knife_connect|knife.*plug.*out|plug_out|knife.*fail|ultrasonic.*error)",
+    "Bipolar Errors": "(BIPOLAR|SetSmartBipolar.*|bipolar.*timeout)",
     "CONTAMINATION": "(contamination|ingress|liquid|detected)",
     "COMMUNICATION": "(internal|modules|failure|between|communication)",
     "HEATING": "(pipe|even|disconnected|icon|heating|with|stays)",
@@ -19,8 +21,6 @@
     "FLUORESCENCE": "(during|unclear|surgery|fluorescence|image|weak)",
     "R1": "(intermittent|during|usage|surgery|display|r1|blackout)",
     "HS-50F": "(module|code|error|hs-50f|heating)",
-    "Bipolar Errors": "(BIPOLAR|SetSmartBipolar.*|bipolar.*timeout)",
-    "Knife Errors": "(KNIFE|KnifeConnect.*|knife.*timeout)",
     "UX3": "(ux3)",
     "ERROR": "(system|speed|error|abnormal)",
     "E002": "(communication|e002|failure)",
