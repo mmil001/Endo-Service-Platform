@@ -185,14 +185,11 @@ If you don't have the converter, contact Mindray Technical Support.
 
                     for error, lines_dict in sorted(grouped_errors.items(), key=lambda x: sum(v["count"] for v in x[1].values()), reverse=True):
                         total_count = sum(data["count"] for data in lines_dict.values())
-                        st.markdown(f"🔹 **{error}** — {total_count} occurrence(s)")
-
-                        sorted_lines = sorted(lines_dict.items(), key=lambda x: x[1]["count"], reverse=True)
-                        for line_text, data in sorted_lines:
-                            last_ts = data["last_timestamp"] if data["last_timestamp"] else "No timestamp"
-                            st.markdown(f"""<span style='color:#AAAAAA;'>• {last_ts} — "{line_text}" ({data['count']}x)</span>""", unsafe_allow_html=True)
-
-                        st.markdown("---")
+                        with st.expander(f"🔹 {error} — {total_count} occurrence(s)"):
+                            sorted_lines = sorted(lines_dict.items(), key=lambda x: x[1]["count"], reverse=True)
+                            for line_text, data in sorted_lines:
+                                last_ts = data["last_timestamp"] if data["last_timestamp"] else "No timestamp"
+                                st.markdown(f"""<span style='color:#AAAAAA;'>• {last_ts} — "{line_text}" ({data['count']}x)</span>""", unsafe_allow_html=True)
 
                 for error, lines_dict in sorted(grouped_errors.items(), key=lambda x: sum(v["count"] for v in x[1].values()), reverse=True):
                     st.markdown(f"#### 🔹 {error}")
