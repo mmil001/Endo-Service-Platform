@@ -123,11 +123,10 @@ with st.sidebar:
 def run_log_analyzer():
     # === Model Family Selector ===
     family_models = {
-        "Energy Platform": ["EP300"],
+        "Energy Platform": ["EP300", "UP500", "UP700"],
         "Light Source": ["HB100", "HB200L", "HB300", "HB300R", "HB500", "HB500R"],
         "Insufflator": ["HS-50F"],
         "Processor / Imaging": ["HD3", "R1", "U1", "UX1", "UX3", "UX5", "UX7"],
-        "Video Platform": ["UP500", "UP700"]
     }
 
     family_names = list(family_models.keys())
