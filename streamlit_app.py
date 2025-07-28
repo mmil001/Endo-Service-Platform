@@ -210,23 +210,10 @@ If you don't have the converter, contact Mindray Technical Support.
                         data = problems_database.get(category)
 
                         model_list = data.get("modelo", []) or data.get("model", []) or []
+                        selected_models = st.session_state.get("selected_models", [])
 
-                        selected_model = st.session_state.get("selected_model", None)
-                        if selected_model and selected_model not in model_list:
+                        if not data or not any(model in model_list for model in selected_models):
                             continue
-
-                        if not data:
-                            continue
-
-                        model_list = data.get("modelo", []) or data.get("model", []) or []
-
-                        if selected_model != "All" and selected_model not in model_list:
-                            continue  # skip error that does not belong to the selected model
-
-                        if data:
-                            model_list = data.get("modelo", []) or data.get("model", []) or []
-                            if selected_model != "All" and selected_model not in model_list:
-                                continue
 
                         with st.expander(f"🔧 {category} — {len(dates)} occurrences"):
                             if data:
