@@ -181,37 +181,18 @@ If you don't have the converter, contact Mindray Technical Support.
                 progress_bar.progress(100, text="✅ Analysis complete.")
  
                 if grouped_errors:
-                    st.subheader("⚠️ Errors Found in Logs (by keyword or error code)")
+                    st.subheader("⚠️ Errors Found in Logs")
 
-                    # Sort errors by quantity
-                    sorted_errors = sorted(grouped_errors.items(), key=lambda x: len(x[1]), reverse=True)
+                    for error, lines_dict in sorted(grouped_errors.items(), key=lambda x: sum(v["count"] for v in x[1].values()), reverse=True):
+                        total_count = sum(data["count"] for data in lines_dict.values())
+                        st.markdown(f"🔹 **{error}** — {total_count} occurrence(s)")
 
-                    for error, lines in sorted_errors:
-                        count = len(lines)
-                        col1, col2 = st.columns([5, 2])
+                        sorted_lines = sorted(lines_dict.items(), key=lambda x: x[1]["count"], reverse=True)
+                        for line_text, data in sorted_lines:
+                            last_ts = data["last_timestamp"] if data["last_timestamp"] else "No timestamp"
+                            st.markdown(f"""<span style='color:#AAAAAA;'>• {last_ts} — "{line_text}" ({data['count']}x)</span>""", unsafe_allow_html=True)
 
-                        with col1:
-                            st.markdown(f"🔹 **{error}** — {count} occurrence(s)")
-
-                        with col2:
-                            if st.button("🔍 Buscar na biblioteca", key=f"btn_{error}"):
-                                st.session_state.search_query = error
-                                st.session_state.selected_tab = "Search Errors"
-                                st.experimental_rerun()
-
-                    for label, lines in sorted(grouped_errors.items(), key=lambda x: len(x[1]), reverse=True):
-                        st.markdown(f"""
-                        <div style="padding: 0.2em 1em; background-color: #1f1f1f; border-left: 4px solid #4CAF50; border-radius: 4px; font-size: 0.9em;">
-                                🧠 <strong>{label}</strong> — {len(lines)} occurrence(s)<br>
-                                🔍 <em>Search for this error in the <strong>Error Library tab</strong></em>
-                            </div>
-                            """, unsafe_allow_html=True)
-                    st.markdown("---")
-                else:
-                    st.success("✅ No matching error patterns or codes found in the logs.")
-
-                st.markdown("---")
-                st.markdown("### 🧾 Linha(s) por erro detectado")
+                        st.markdown("---")
 
                 for error, lines_dict in sorted(grouped_errors.items(), key=lambda x: sum(v["count"] for v in x[1].values()), reverse=True):
                     st.markdown(f"#### 🔹 {error}")
