@@ -209,10 +209,13 @@ If you don't have the converter, contact Mindray Technical Support.
                     for category, dates in sorted(issues.items(), key=lambda x: max(x[1], default=""), reverse=True):
                         data = problems_database.get(category)
 
-                        model_list = data.get("modelo", []) or data.get("model", []) or []
+                        if not data:
+                            continue
+
+                        model_list = data.get("model", [])
                         selected_models = st.session_state.get("selected_models", [])
 
-                        if not data or not any(model in model_list for model in selected_models):
+                        if not any(model in model_list for model in selected_models):
                             continue
 
                         with st.expander(f"🔧 {category} — {len(dates)} occurrences"):
