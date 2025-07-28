@@ -185,11 +185,25 @@ If you don't have the converter, contact Mindray Technical Support.
 
                 progress_bar.progress(100, text="✅ Analysis complete.")
 
+                from collections import defaultdict
+
                 if errors:
                     st.subheader("⚠️ Errors Found in Logs")
+
+                    grouped_errors = defaultdict(set)  # usa set para garantir que não repita linhas iguais
+                    occurrences_count = defaultdict(int)
+
                     for error in errors:
-                        st.markdown(f"**Category:** `{error['category']}`")
-                        st.code(error["line"], language="text")
+                        grouped_errors[error["category"]].add(error["line"])
+                        occurrences_count[error["category"]] += 1
+
+                    for category in sorted(grouped_errors.keys()):
+                        st.markdown(f"### 🧩 `{category}` — {occurrences_count[category]} occurrence(s)")
+
+                        for line in sorted(grouped_errors[category]):
+                            with st.expander("🔎 View example log line"):
+                                st.code(line, language="text")
+
                         st.markdown("---")
                 else:
                     st.success("✅ No known error patterns found in the logs.")
