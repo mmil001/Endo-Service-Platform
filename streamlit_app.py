@@ -190,21 +190,21 @@ If you don't have the converter, contact Mindray Technical Support.
                 if errors:
                     st.subheader("⚠️ Errors Found in Logs")
 
-                    grouped_errors = defaultdict(set)  # usa set para garantir que não repita linhas iguais
-                    occurrences_count = defaultdict(int)
+                    from collections import defaultdict
 
+                    grouped_errors = defaultdict(list)
                     for error in errors:
-                        grouped_errors[error["category"]].add(error["line"])
-                        occurrences_count[error["category"]] += 1
+                        grouped_errors[error["category"]].append(error["line"])
 
-                    for category in sorted(grouped_errors.keys()):
-                        st.markdown(f"### 🧩 `{category}` — {occurrences_count[category]} occurrence(s)")
+                    for category, lines in sorted(grouped_errors.items()):
+                        st.markdown(f"### 🧩 `{category}` — {len(lines)} occurrence(s)")
 
-                        for line in sorted(grouped_errors[category]):
-                            with st.expander("🔎 View example log line"):
-                                st.code(line, language="text")
+                        # Mostrar apenas uma linha de exemplo no expander
+                        example_line = lines[0]
+                        with st.expander("🔎 View example log line"):
+                            st.code(example_line, language="text")
 
-                        st.markdown("---")
+                    st.markdown("---")
                 else:
                     st.success("✅ No known error patterns found in the logs.")
 
