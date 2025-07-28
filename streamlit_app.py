@@ -137,6 +137,7 @@ def run_log_analyzer():
     # Armazena os modelos da família selecionada
     selected_family_models = family_models[selected_family]
     st.session_state.selected_models = selected_family_models
+    st.session_state.selected_model = selected_family_models[0]  # <-- ESSA LINHA RESOLVE
 
     st.write("🔧 DEBUG: Selected model:", st.session_state.get("selected_model"))
 
