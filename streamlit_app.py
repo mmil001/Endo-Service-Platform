@@ -121,35 +121,25 @@ with st.sidebar:
 
 # === Log Analyzer ===
 def run_log_analyzer():
-    # === Model Family Selector (com botões e bloqueio de upload) ===
-    model_groups = {
-        "🔋 Energy Platform": ["EP300"],
-        "💡 Light Source": ["HB100", "HB200L", "HB300", "HB300R", "HB500", "HB500R"],
-        "📷 Camera System": ["HD3", "R1", "U1"],
-        "💨 Insufflator": ["HS-50F"],
-        "🔬 Processor / Imaging": ["UX1", "UX3", "UX5", "UX7"],
-        "🖥️ Video Platform": ["UP500", "UP700"]
+    # === Model Family Selector ===
+    family_models = {
+        "Energy Platform": ["EP300"],
+        "Light Source": ["HB100", "HB200L", "HB300", "HB300R", "HB500", "HB500R"],
+        "Camera System": ["HD3", "R1", "U1"],
+        "Insufflator": ["HS-50F"],
+        "Processor / Imaging": ["UX1", "UX3", "UX5", "UX7"],
+        "Video Platform": ["UP500", "UP700"]
     }
 
-    if "selected_model" not in st.session_state:
-        st.session_state.selected_model = None
+    family_names = list(family_models.keys())
 
-    st.markdown("### 🔍 Filter by Equipment Model")
+    selected_family = st.radio("📌 Select the Equipment Family", family_names, horizontal=True)
 
-    for group_name, models in model_groups.items():
-        with st.expander(group_name, expanded=True):
-            cols = st.columns(len(models))
-            for i, model in enumerate(models):
-                if cols[i].button(model):
-                    st.session_state.selected_model = model
-                    st.rerun()
+    # Armazena os modelos da família selecionada
+    selected_family_models = family_models[selected_family]
+    st.session_state.selected_models = selected_family_models
 
-    if not st.session_state.selected_model:
-        st.warning("⚠️ Please select a model to enable log upload.")
-        st.stop()
-
-    selected_model = st.session_state.selected_model
-    st.success(f"✅ Selected Model: **{selected_model}**")
+    st.markdown(f"✅ Selected Family: **{selected_family}** ({', '.join(selected_family_models)})")
 
     st.markdown("### 📌 How to Prepare the Log File")
 
@@ -220,6 +210,12 @@ If you don't have the converter, contact Mindray Technical Support.
                     st.subheader("⚠️ Diagnosed Issues")
                     for category, dates in sorted(issues.items(), key=lambda x: max(x[1], default=""), reverse=True):
                         data = problems_database.get(category)
+
+                        model_list = data.get("modelo", []) or data.get("model", []) or []
+
+                        selected_model = st.session_state.get("selected_model", None)
+                        if selected_model and selected_model not in model_list:
+                            continue
 
                         if not data:
                             continue
