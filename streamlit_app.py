@@ -125,9 +125,8 @@ def run_log_analyzer():
     family_models = {
         "Energy Platform": ["EP300"],
         "Light Source": ["HB100", "HB200L", "HB300", "HB300R", "HB500", "HB500R"],
-        "Camera System": ["HD3", "R1", "U1"],
         "Insufflator": ["HS-50F"],
-        "Processor / Imaging": ["UX1", "UX3", "UX5", "UX7"],
+        "Processor / Imaging": ["HD3", "R1", "U1", "UX1", "UX3", "UX5", "UX7"],
         "Video Platform": ["UP500", "UP700"]
     }
 
