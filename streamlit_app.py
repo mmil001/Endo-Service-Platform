@@ -146,34 +146,24 @@ If you don't have the converter, contact Mindray Technical Support.
             tar.extractall(temp_dir)
         return [os.path.join(root, f) for root, _, files in os.walk(temp_dir) for f in files if f.endswith((".log", ".txt"))]
 
-    def extract_errors_from_log(log_files, patterns):
+    def extract_errors_by_line(log_files):
         all_lines = []
-        seen = set()
+        seen_lines = set()
+
         for file in log_files:
             with open(file, "r", encoding="utf-8", errors="ignore") as f:
                 for line in f:
                     clean = line.strip()
-                    if clean and clean not in seen and re.search(r"[a-zA-Z]", clean):
+                    if clean and clean not in seen_lines and re.search(r"(ERROR|FAIL|FAILURE|;E\d{3};|Alarm Trigger)", clean, re.IGNORECASE):
                         all_lines.append(clean)
-                        seen.add(clean)
+                        seen_lines.add(clean)
 
-        compiled = {cat: re.compile(pat, re.IGNORECASE) for cat, pat in patterns.items()}
-        matched_errors = []
+        # Contar erros distintos pela linha
+        grouped = defaultdict(list)
+        for line in all_lines:
+            grouped[line].append(line)
 
-        for i, line in enumerate(all_lines):
-            for category, regex in compiled.items():
-                if regex.search(line):
-                    matched_errors.append({
-                        "category": category,
-                        "line": line
-                    })
-                    break
-
-            if i % 10 == 0:
-                progress = int((i / len(all_lines)) * 100)
-                progress_bar.progress(progress, text=f"Analyzing logs... ({progress}%)")
-
-        return matched_errors
+        return grouped
 
     if uploaded_file:
         with st.spinner("Extracting file..."):
@@ -181,27 +171,19 @@ If you don't have the converter, contact Mindray Technical Support.
                 log_files = extract_tar(uploaded_file)
                 st.success(f"Extracted {len(log_files)} log files.")
 
-                errors = extract_errors_from_log(log_files, patterns)
-
+                grouped_errors = extract_errors_by_line(log_files)
                 progress_bar.progress(100, text="✅ Analysis complete.")
 
-                if errors:
+                if grouped_errors:
                     st.subheader("⚠️ Errors Found in Logs")
-
-                    from collections import defaultdict
-
-                    grouped_errors = defaultdict(list)
-                    for error in errors:
-                        grouped_errors[error["category"]].append(error["line"])
-
-                    for category, lines in sorted(grouped_errors.items()):
-                        st.markdown(f"### 🧩 `{category}` — {len(lines)} occurrence(s)")
-                        example_line = lines[0]
+                    for idx, (line, instances) in enumerate(sorted(grouped_errors.items())):
+                        st.markdown(f"### 🔸 {len(instances)} occurrence(s)")
                         with st.expander("🔎 View example log line"):
-                            st.code(example_line, language="text")
+                            st.code(line, language="text")
                     st.markdown("---")
                 else:
-                    st.success("✅ No known error patterns found in the logs.")
+                    st.success("✅ No known errors found in the logs.")
+
             except Exception as e:
                 st.error(f"An error occurred: {e}")
 

@@ -1,6 +1,5 @@
 {
-    "Ultrasonic / Knife Platform": "(ultrasonic_knife|knife_connect|knife.*plug.*out|plug_out|knife.*fail|ultrasonic.*error)",
-    "Bipolar Errors": "(BIPOLAR|SetSmartBipolar.*|bipolar.*timeout)",
+    "ENERGY PLATFORM": "(ultrasonic_knife|knife_connect|knife.*plug.*out|plug_out|knife.*fail|ultrasonic.*plug.*out|ULTRASONIC_KNIFE_PLUG_OUT)",
     "CONTAMINATION": "(contamination|ingress|liquid|detected)",
     "COMMUNICATION": "(internal|modules|failure|between|communication)",
     "HEATING": "(pipe|even|disconnected|icon|heating|with|stays)",
