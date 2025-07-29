@@ -88,7 +88,7 @@ if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
     st.stop()
 
 # === Home Config ===
-st.set_page_config(page_title="TESTARALHO Endo Service Platform", layout="wide")
+st.set_page_config(page_title="Endo Service Platform", layout="wide")
 
 # Hide st.cache warning (without hiding st.info with instructions)
 st.markdown("""
@@ -140,6 +140,35 @@ if st.button("🔲 Logout"):
 
 # === Log Analyzer ===
 def run_log_analyzer():
+    st.markdown("""
+        <style>
+        /* Estilo para os títulos de erro encontrados */
+        .streamlit-expanderHeader {
+            font-weight: bold;
+            font-size: 17px;
+            color: #E63946;
+        }
+
+        /* Cor do fundo dos expansores */
+        .streamlit-expander {
+            background-color: #111111;
+            border: 1px solid #444444;
+            border-radius: 8px;
+        }
+
+        /* Espaçamento entre expansores */
+        .stExpander {
+            margin-bottom: 10px;
+        }
+
+        /* Cor do texto das mensagens dentro dos expansores */
+        .markdown-text-container span {
+            color: #CCCCCC !important;
+            font-size: 14px;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
     st.markdown("### 📌 How to Prepare the Log File")
     st.info("""
 The log file exported from the equipment is in `.lzo` format.
@@ -152,6 +181,8 @@ Steps:
 
 If you don't have the converter, contact Mindray Technical Support.
     """)
+
+    
 
     uploaded_file = st.file_uploader("Select a .tar log file", type=["tar"])
 
