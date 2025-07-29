@@ -221,9 +221,9 @@ If you don't have the converter, contact Mindray Technical Support.
                                 entry["last_timestamp"] = timestamp
                             break
 
-                    # Verifica se tem código E### E também uma palavra-chave
+                    # Verifica se tem código E### (independente de keyword)
                     match = code_pattern.search(clean_line)
-                    if match and contains_keyword:
+                    if match:
                         code = match.group(1).upper()
                         entry = grouped[code][clean_line]
                         entry["count"] += 1
