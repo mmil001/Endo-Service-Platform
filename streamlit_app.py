@@ -226,7 +226,6 @@ If you don't have the converter, contact Mindray Technical Support.
                 progress_bar.progress(50, text=f"✅ Extracted {len(log_files)} log files. Starting analysis...")
 
                 grouped_errors = extract_keyword_and_code_errors(log_files)
-                progress_bar.progress(100, text="✅ Analysis complete.")
                 st.success(f"Extracted {len(log_files)} log files.")
 
                 # ⛔ Mostrar erros SÓ após a análise
@@ -239,6 +238,9 @@ If you don't have the converter, contact Mindray Technical Support.
                             for line_text, data in sorted_lines:
                                 last_ts = data["last_timestamp"] if data["last_timestamp"] else "No timestamp"
                                 st.markdown(f"""<span style='color:#AAAAAA;'>• {last_ts} — "{line_text}" ({data['count']}x)</span>""", unsafe_allow_html=True)
+
+                # ✅ Mensagem final após tudo
+                progress_bar.progress(100, text="✅ Analysis complete.")
 
             except Exception as e:
                 st.error(f"An error occurred: {e}")
