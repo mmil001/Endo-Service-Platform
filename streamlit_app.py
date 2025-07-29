@@ -154,7 +154,6 @@ If you don't have the converter, contact Mindray Technical Support.
     """)
 
     uploaded_file = st.file_uploader("Select a .tar log file", type=["tar"])
-    progress_bar = st.progress(0, text="Extraction and Analysis in Progress...")
 
     def extract_tar(file):
         temp_dir = tempfile.mkdtemp()
@@ -218,6 +217,7 @@ If you don't have the converter, contact Mindray Technical Support.
 
 
     if uploaded_file:
+        st.markdown("⏳ Extraction and Analysis in Progress...")
         progress_bar = st.progress(0, text="⏳ Extracting .tar file...")
 
         with st.spinner("Analyzing file..."):
