@@ -374,7 +374,7 @@ def run_error_search():
                     st.markdown("**Causes:**")
                     for c in data['causes']:
                         st.markdown(f"- {c}")
-
+                        
                     st.markdown("**Recommended Actions:**")
                     for r in data['repairs']:
                         st.markdown(f"- {r}")
