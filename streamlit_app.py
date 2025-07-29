@@ -139,9 +139,6 @@ if st.button("🔲 Logout"):
     st.rerun()
 
 # === Log Analyzer ===
-
-from collections import defaultdict
-
 def run_log_analyzer():
     st.markdown("### 📌 How to Prepare the Log File")
     st.info("""
