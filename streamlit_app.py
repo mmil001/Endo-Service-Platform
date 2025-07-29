@@ -156,7 +156,7 @@ If you don't have the converter, contact Mindray Technical Support.
         return [os.path.join(root, f) for root, _, files in os.walk(temp_dir) for f in files if f.endswith((".log", ".txt"))]
 
     def extract_keyword_and_code_errors(log_files):
-        keywords = ["alarm", "timeout", "error", "contamination", "heating", "heat", "fail", "failure"]
+        keywords = ["alarm", "timeout", "error", "contamination", "heating", "heat", "fail", "failure", "Contamination", "LD", "Overheat"]
         grouped = defaultdict(lambda: defaultdict(lambda: {"count": 0, "last_timestamp": ""}))
         code_pattern = re.compile(r"\b(E\d{3})\b", re.IGNORECASE)
         timestamp_pattern = re.compile(r"\d{1,2}/\d{1,2}/\d{2,4}\s+\d{1,2}:\d{1,2}:\d{1,2}")
