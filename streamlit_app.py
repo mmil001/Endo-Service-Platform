@@ -154,7 +154,7 @@ If you don't have the converter, contact Mindray Technical Support.
     """)
 
     uploaded_file = st.file_uploader("Select a .tar log file", type=["tar"])
-    progress_bar = st.progress(0, text="Analysis in Progress...")
+    progress_bar = st.progress(0, text="Extraction and Analysis in Progress...")
 
     def extract_tar(file):
         temp_dir = tempfile.mkdtemp()
@@ -164,7 +164,7 @@ If you don't have the converter, contact Mindray Technical Support.
         with tarfile.open(tar_path, "r") as tar:
             tar.extractall(temp_dir)
 
-        # Lista de nomes de arquivos relevantes (minúsculo)
+        # List of relevant file names (lowercase)
         arquivos_relevantes = [
             "componenterror.log",
             "backend.log",
@@ -220,7 +220,7 @@ If you don't have the converter, contact Mindray Technical Support.
     if uploaded_file:
         progress_bar = st.progress(0, text="⏳ Extracting .tar file...")
 
-        with st.spinner("Extracting file..."):
+        with st.spinner("Analyzing file..."):
             try:
                 log_files = extract_tar(uploaded_file)
                 progress_bar.progress(50, text=f"✅ Extracted {len(log_files)} log files. Starting analysis...")
@@ -239,7 +239,7 @@ If you don't have the converter, contact Mindray Technical Support.
                                 last_ts = data["last_timestamp"] if data["last_timestamp"] else "No timestamp"
                                 st.markdown(f"""<span style='color:#AAAAAA;'>• {last_ts} — "{line_text}" ({data['count']}x)</span>""", unsafe_allow_html=True)
 
-                # ✅ Mensagem final após tudo
+                # ✅ Final Message
                 progress_bar.progress(100, text="✅ Analysis complete.")
 
             except Exception as e:
