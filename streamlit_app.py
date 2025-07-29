@@ -4,7 +4,6 @@ import re
 import tarfile
 import tempfile
 import json
-from collections import defaultdict
 import time
 from datetime import datetime
 from streamlit_cookies_manager import EncryptedCookieManager
