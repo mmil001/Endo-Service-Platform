@@ -1,0 +1,99 @@
+
+📚 Error Library Management Guide
+
+This document explains how to correctly update the Error Library (problems_database.json) and ensure that the Log Analyzer continues working properly with the latest error definitions.
+
+🔧 When Do You Need to Update?
+
+✅ You must update the Error Library when:
+- Adding a new error code.
+- Renaming an existing error code.
+- Updating descriptions, causes, repairs, models, or attaching images/PPT files.
+
+🔥 Critical Note:
+- If you only change descriptions, causes, repairs, or models → you don't need to update the patterns.json.
+- If you add new errors or rename an error (the key name) → you must update the patterns.json.
+
+🚀 How to Update the Error Library Correctly
+
+1️⃣ Edit the file:
+
+/database/problems_database.json
+
+- Add new errors following the correct structure:
+
+{
+  "Error Name Example": {
+    "problem": "Description of the problem",
+    "causes": ["Cause 1", "Cause 2"],
+    "repairs": ["Repair step 1", "Repair step 2"],
+    "modelo": ["Model A", "Model B"],
+    "image": "error_image.png"
+  }
+}
+
+2️⃣ Generate the new patterns file:
+
+→ Run this command:
+
+python scripts/update_patterns.py
+
+or if using Regex-based patterns:
+
+python scripts/update_patterns_regex.py
+
+This will generate or overwrite:
+
+/database/patterns.json
+
+🔥 Why is this important?
+
+- The Log Analyzer uses patterns.json to detect errors inside log files.
+- If patterns.json is not updated, the Log Analyzer won't recognize new errors added to the library.
+
+✅ Recommended Workflow
+
+| Action                                | Run update_patterns.py? |
+| -------------------------------------- | ------------------------ |
+| Adding a new error                    | ✅ Yes                   |
+| Renaming an error                     | ✅ Yes                   |
+| Fixing typo in error name             | ✅ Yes                   |
+| Updating problem, causes, repairs     | ❌ No                    |
+| Updating applicable models            | ❌ No                    |
+| Adding images or PPTs                 | ❌ No                    |
+
+💣 Best Practice (Optional but recommended)
+
+Automate this with a Git pre-commit hook:
+
+1. Create a file:
+
+.git/hooks/pre-commit
+
+2. Paste this:
+
+#!/bin/bash
+python scripts/update_patterns.py
+
+3. Give execution permission:
+
+chmod +x .git/hooks/pre-commit
+
+→ Now, every time you commit, the patterns.json updates automatically.
+
+📌 Final Notes
+
+- Make sure the key names in patterns.json and problems_database.json are exactly identical.
+- Any mismatch will cause the Log Analyzer to skip that error during log parsing.
+
+🔥 Need Help?
+
+Contact:
+Marcos Menezes Magalhães
+Regional Technical Support – Software Engineer
+Mindray LATAM
+📧 marcos.magalhaes@mindray.com
+
+✔️ Keep the library clean. Keep the analyzer smart. ✔️
+
+✅ END OF DOCUMENT
