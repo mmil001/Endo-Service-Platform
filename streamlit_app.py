@@ -140,35 +140,6 @@ if st.button("🔲 Logout"):
 
 # === Log Analyzer ===
 def run_log_analyzer():
-    st.markdown("""
-        <style>
-        /* Estilo para os títulos de erro encontrados */
-        .streamlit-expanderHeader {
-            font-weight: bold;
-            font-size: 17px;
-            color: #E63946;
-        }
-
-        /* Cor do fundo dos expansores */
-        .streamlit-expander {
-            background-color: #111111;
-            border: 1px solid #444444;
-            border-radius: 8px;
-        }
-
-        /* Espaçamento entre expansores */
-        .stExpander {
-            margin-bottom: 10px;
-        }
-
-        /* Cor do texto das mensagens dentro dos expansores */
-        .markdown-text-container span {
-            color: #CCCCCC !important;
-            font-size: 14px;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-
     st.markdown("### 📌 How to Prepare the Log File")
     st.info("""
 The log file exported from the equipment is in `.lzo` format.
@@ -196,10 +167,22 @@ If you don't have the converter, contact Mindray Technical Support.
 
         # List of relevant file names (lowercase)
         arquivos_relevantes = [
-            "componenterror.log",
+            "ComponentError.log",
             "backend.log",
             "frontendlog.log",
             "sys.log",
+            "AgingTestLog.log",
+            "AgingTestResult.txt",
+            "BootLoaderLog.log",
+            "Component.log",
+            "DSPLog.log",
+            "FrontendLog.log",
+            "gpuAdapter.log",
+            "History.log",
+            "ParaLog.log",
+            "TestLog.log",
+            "TestParams.log",
+            "ThreadID.log"
         ]
 
         log_files = []
@@ -212,7 +195,7 @@ If you don't have the converter, contact Mindray Technical Support.
 
     def extract_keyword_and_code_errors(log_files):
         keywords = [k.lower() for k in [
-            "alarm", "error", "underflow", "failure", "ld module", "overheat", "alarmdisplaycomponent", "contamination"
+            "alarm", "error", "underflow", "failure", "ld module", "overheat", "contamination"
             ]]
         grouped = defaultdict(lambda: defaultdict(lambda: {"count": 0, "last_timestamp": ""}))
         code_pattern = re.compile(r"\b(E\d{3})\b", re.IGNORECASE)
@@ -247,7 +230,6 @@ If you don't have the converter, contact Mindray Technical Support.
                             entry["last_timestamp"] = timestamp
 
         return grouped
-
 
     if uploaded_file:
         progress_bar = st.progress(0, text="⏳ Extracting .tar file...")
