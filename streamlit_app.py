@@ -211,15 +211,17 @@ If you don't have the converter, contact Mindray Technical Support.
             with open(file, "r", encoding="utf-8", errors="ignore") as f:
                 for line in f:
                     clean_line = line.strip()
-                if not is_error_line(clean_line) and not code_pattern.search(clean_line):
-                    continue
 
-                    # Takes the most recent timestamp in the line, if any
+                    if not is_error_line(clean_line) and not code_pattern.search(clean_line):
+                        continue
+
+                    lower_line = clean_line.lower()
+
+                    # timestamp
                     ts_match = timestamp_pattern.search(clean_line)
                     timestamp = ts_match.group(0) if ts_match else ""
 
-                    # Keyword verification
-                    contains_keyword = any(kw in lower_line for kw in keywords)
+                    # agrupamento por palavra-chave
                     for keyword in keywords:
                         if keyword in lower_line:
                             entry = grouped[keyword.upper()][clean_line]
@@ -228,7 +230,7 @@ If you don't have the converter, contact Mindray Technical Support.
                                 entry["last_timestamp"] = timestamp
                             break
 
-                    # Verifica se tem código E### (independente de keyword)
+                    # agrupamento por código E###
                     match = code_pattern.search(clean_line)
                     if match:
                         code = match.group(1).upper()
