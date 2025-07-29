@@ -229,13 +229,33 @@ If you don't have the converter, contact Mindray Technical Support.
                 grouped_errors = extract_keyword_and_code_errors(log_files)
                 st.success(f"Extracted {len(log_files)} log files.")
 
-                # ⛔ Mostrar erros SÓ após a análise
+                # Mostrar erros SÓ após a análise
                 if grouped_errors:
                     st.subheader("⚠️ Errors Found in Logs")
                     for error, lines_dict in sorted(grouped_errors.items(), key=lambda x: sum(v["count"] for v in x[1].values()), reverse=True):
                         total_count = sum(data["count"] for data in lines_dict.values())
-                        with st.expander(f"🔹 {error} — {total_count} occurrence(s)"):
-                            sorted_lines = sorted(lines_dict.items(), key=lambda x: x[1]["count"], reverse=True)
+
+                        # Coletar subtags dentro do texto dos logs
+                        sub_keywords = set()
+                        for line_text in lines_dict:
+                            for k in ["contamination", "overheat", "aquecim", "failure", "alarm", "error"]:  # adicione o que for necessário
+                                if k in line_text.lower() and k != error.lower():
+                                    sub_keywords.add(k)
+
+                        # Exibir como subtítulo
+                        subkeys_display = f" ({', '.join(sorted(sub_keywords))})" if sub_keywords else ""
+                        with st.expander(f"🔹 {error}{subkeys_display} — {total_count} occurrence(s)"):
+
+                            # Remove entradas duplicadas com mesmo texto
+                            unique_lines = {}
+                            for line_text, data in lines_dict.items():
+                                if line_text not in unique_lines:
+                                    unique_lines[line_text] = data
+
+                            # Ordena por quantidade
+                            sorted_lines = sorted(unique_lines.items(), key=lambda x: x[1]["count"], reverse=True)
+
+                            # Exibe erros únicos
                             for line_text, data in sorted_lines:
                                 last_ts = data["last_timestamp"] if data["last_timestamp"] else "No timestamp"
                                 st.markdown(f"""<span style='color:#AAAAAA;'>• {last_ts} — "{line_text}" ({data['count']}x)</span>""", unsafe_allow_html=True)
