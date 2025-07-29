@@ -246,24 +246,27 @@ If you don't have the converter, contact Mindray Technical Support.
                         subkeys_display = f" ({', '.join(sorted(sub_keywords))})" if sub_keywords else ""
                         with st.expander(f"🔹 {error}{subkeys_display} — {total_count} occurrence(s)"):
 
-                            # Agrupar por conteúdo do erro ignorando o timestamp
-                            message_map = defaultdict(lambda: {"count": 0, "last_timestamp": "", "full_text": ""})
+                            # Agrupar por conteúdo do erro ignorando timestamp (para remover duplicados)
+                            message_map = {}
 
                             for full_text, data in lines_dict.items():
                                 # Remove timestamp inicial da linha
-                                clean_msg = re.sub(r'^\d{1,2}/\d{1,2}/\d{2,4}\s+\d{1,2}:\d{1,2}:\d{1,2}\s+[-–]\s+', '', full_text)
+                                clean_msg = re.sub(r'^\d{1,2}/\d{1,2}/\d{2,4}\s+\d{1,2}:\d{1,2}:\d{1,2}\s+[-–]?\s*', '', full_text)
 
-                                # Se a linha já existe, atualiza timestamp se for mais recente
-                                if clean_msg not in message_map or data["last_timestamp"] > message_map[clean_msg]["last_timestamp"]:
-                                    message_map[clean_msg]["last_timestamp"] = data["last_timestamp"]
-                                    message_map[clean_msg]["full_text"] = full_text
+                                if clean_msg not in message_map:
+                                    message_map[clean_msg] = {
+                                        "count": data["count"],
+                                        "last_timestamp": data["last_timestamp"]
+                                    }
+                                else:
+                                    message_map[clean_msg]["count"] += data["count"]
+                                    if data["last_timestamp"] > message_map[clean_msg]["last_timestamp"]:
+                                        message_map[clean_msg]["last_timestamp"] = data["last_timestamp"]
 
-                                message_map[clean_msg]["count"] += data["count"]
-
-                            # Ordena por quantidade
+                            # Ordenar por quantidade de ocorrências
                             sorted_items = sorted(message_map.items(), key=lambda x: x[1]["count"], reverse=True)
 
-                            # Exibe apenas uma linha por mensagem única
+                            # Exibir apenas uma linha por erro único
                             for clean_msg, data in sorted_items:
                                 last_ts = data["last_timestamp"] or "No timestamp"
                                 st.markdown(
