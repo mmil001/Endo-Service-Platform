@@ -201,7 +201,7 @@ If you don't have the converter, contact Mindray Technical Support.
 
     def extract_keyword_and_code_errors(log_files):
         keywords = [k.lower() for k in [
-            "alarm", "error", "underflow", "failure", "ld module", "overheat", "contamination", "AlarmTriggerComponent"
+            "Alarm", "alarm", "error", "underflow", "failure", "ld module", "overheat", "contamination"
             ]]
         grouped = defaultdict(lambda: defaultdict(lambda: {"count": 0, "last_timestamp": ""}))
         code_pattern = re.compile(r"(?:\*\*|\*)?(E\d{3})(?:\*\*|\*)?", re.IGNORECASE)
