@@ -204,7 +204,7 @@ If you don't have the converter, contact Mindray Technical Support.
             "Alarm", "alarm", "error", "underflow", "failure", "ld module", "overheat", "contamination"
             ]]
         grouped = defaultdict(lambda: defaultdict(lambda: {"count": 0, "last_timestamp": ""}))
-        code_pattern = re.compile(r"(?:\*\*|\*)?(E\d{3})(?:\*\*|\*)?", re.IGNORECASE)
+        code_pattern = re.compile(r"\b(E\d{3})\b", re.IGNORECASE)
         timestamp_pattern = re.compile(r"\d{1,2}/\d{1,2}/\d{2,4}\s+\d{1,2}:\d{1,2}:\d{1,2}")
 
         for file in log_files:
