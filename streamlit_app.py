@@ -61,7 +61,7 @@ def get_models(problems_database):
 def login_screen():
     logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
     st.image(logo_path, width=150)
-    st.markdown("## 🔐 Endo Service Platform - Login")
+    st.markdown("## 🔐 TESTARALHO - Endo Service Platform - Login")
     st.markdown("Please enter your credentials to access the platform.")
     st.markdown("---")
 
