@@ -88,7 +88,7 @@ if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
     st.stop()
 
 # === Home Config ===
-st.set_page_config(page_title="Endo Service Platform", layout="wide")
+st.set_page_config(page_title="TESTARALHO Endo Service Platform", layout="wide")
 
 # Hide st.cache warning (without hiding st.info with instructions)
 st.markdown("""
@@ -374,7 +374,7 @@ def run_error_search():
                     st.markdown("**Causes:**")
                     for c in data['causes']:
                         st.markdown(f"- {c}")
-                        
+
                     st.markdown("**Recommended Actions:**")
                     for r in data['repairs']:
                         st.markdown(f"- {r}")
