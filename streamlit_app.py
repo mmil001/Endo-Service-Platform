@@ -57,6 +57,12 @@ def get_models(problems_database):
     ))
     return ['All'] + sorted(model_set)
 
+# === Detecta se a linha contém uma palavra-chave de erro real ===
+def is_error_line(line):
+    keywords = ["alarm", "error", "timeout", "heating", "contamination", "fail", "abnormal", "overheat", "failure", "underflow"]
+    line_lower = line.lower()
+    return any(kw in line_lower for kw in keywords)
+
 # === Login Painel ===
 def login_screen():
     logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
@@ -205,6 +211,8 @@ If you don't have the converter, contact Mindray Technical Support.
             with open(file, "r", encoding="utf-8", errors="ignore") as f:
                 for line in f:
                     clean_line = line.strip()
+                    if not is_error_line(clean_line):
+                        continue  # Ignora linha que não aparenta ser erro
                     lower_line = clean_line.lower()
 
                     # Takes the most recent timestamp in the line, if any
