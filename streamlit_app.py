@@ -247,18 +247,32 @@ If you don't have the converter, contact Mindray Technical Support.
                         with st.expander(f"🔹 {error}{subkeys_display} — {total_count} occurrence(s)"):
 
                             # Remove entradas duplicadas com mesmo texto
-                            unique_lines = {}
-                            for line_text, data in lines_dict.items():
-                                if line_text not in unique_lines:
-                                    unique_lines[line_text] = data
+                            from collections import defaultdict
+
+                            # Agrupar por conteúdo do erro ignorando o timestamp
+                            message_map = defaultdict(lambda: {"count": 0, "last_timestamp": "", "full_text": ""})
+
+                            for full_text, data in lines_dict.items():
+                                # Remove timestamp inicial da linha
+                                clean_msg = re.sub(r'^\d{1,2}/\d{1,2}/\d{2,4}\s+\d{1,2}:\d{1,2}:\d{1,2}\s+[-–]\s+', '', full_text)
+
+                                # Se a linha já existe, atualiza timestamp se for mais recente
+                                if clean_msg not in message_map or data["last_timestamp"] > message_map[clean_msg]["last_timestamp"]:
+                                    message_map[clean_msg]["last_timestamp"] = data["last_timestamp"]
+                                    message_map[clean_msg]["full_text"] = full_text
+
+                                message_map[clean_msg]["count"] += data["count"]
 
                             # Ordena por quantidade
-                            sorted_lines = sorted(unique_lines.items(), key=lambda x: x[1]["count"], reverse=True)
+                            sorted_items = sorted(message_map.items(), key=lambda x: x[1]["count"], reverse=True)
 
-                            # Exibe erros únicos
-                            for line_text, data in sorted_lines:
-                                last_ts = data["last_timestamp"] if data["last_timestamp"] else "No timestamp"
-                                st.markdown(f"""<span style='color:#AAAAAA;'>• {last_ts} — "{line_text}" ({data['count']}x)</span>""", unsafe_allow_html=True)
+                            # Exibe apenas uma linha por mensagem única
+                            for clean_msg, data in sorted_items:
+                                last_ts = data["last_timestamp"] or "No timestamp"
+                                st.markdown(
+                                    f"""<span style='color:#AAAAAA;'>• {last_ts} — "{clean_msg}" ({data['count']}x)</span>""",
+                                    unsafe_allow_html=True
+                                )
 
                 # ✅ Final Message
                 progress_bar.progress(100, text="✅ Analysis complete.")
