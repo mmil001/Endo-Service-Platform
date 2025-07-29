@@ -7,7 +7,6 @@ import json
 from collections import defaultdict
 import time
 from datetime import datetime
-from streamlit_cookies_manager import EncryptedCookieManager
 from itertools import chain
 
 # === Paths base directory ===
@@ -40,16 +39,6 @@ def authenticate(username, password):
 
     return True
 
-# === Initialize cookies ===
-cookies = EncryptedCookieManager(prefix="esp/")
-if not cookies.ready():
-    st.stop()
-
-# === Verify cookie for automatic login ===
-if cookies.get("auth_token") == "valid" and "logged_in" not in st.session_state:
-    st.session_state["logged_in"] = True
-    st.session_state["username"] = cookies.get("auth_user")
-
 # === Collect models ===
 def get_models(problems_database):
     model_set = set(chain.from_iterable(
@@ -72,12 +61,6 @@ def login_screen():
         if authenticate(username, password):
             st.session_state["logged_in"] = True
             st.session_state["username"] = username
-
-            # Salva nos cookies
-            cookies["auth_user"] = username
-            cookies["auth_token"] = "valid"
-            cookies.save()
-
             st.rerun()
         else:
             st.error("Access denied. Invalid user, password, or expired license.")
@@ -117,16 +100,12 @@ if selected_tab != st.session_state.selected_tab:
     st.rerun()
 
 # === Logout ===
-if st.button("🔲 Logout"):
-    for key in list(st.session_state.keys()):
-        del st.session_state[key]
-
-    # Limpa os cookies também
-    cookies["auth_user"] = ""
-    cookies["auth_token"] = ""
-    cookies.save()
-
-    st.rerun()
+with st.sidebar:
+    if st.button("🔲 Logout"):
+        for key in list(st.session_state.keys()):
+            del st.session_state[key]
+        st.session_state["logged_in"] = False
+        st.rerun()
 
 # === Log Analyzer ===
 def run_log_analyzer():
