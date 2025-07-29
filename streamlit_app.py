@@ -41,7 +41,7 @@ def authenticate(username, password):
     return True
 
 # === Initialize cookies ===
-cookies = EncryptedCookieManager(prefix="esp/")
+cookies = EncryptedCookieManager(prefix="esp/", password="1234-secret")
 if not cookies.ready():
     st.stop()
 
