@@ -4,6 +4,7 @@ import re
 import tarfile
 import tempfile
 import json
+from collections import defaultdict
 import time
 from datetime import datetime
 from streamlit_cookies_manager import EncryptedCookieManager
@@ -244,9 +245,6 @@ If you don't have the converter, contact Mindray Technical Support.
                         # Exibir como subtítulo
                         subkeys_display = f" ({', '.join(sorted(sub_keywords))})" if sub_keywords else ""
                         with st.expander(f"🔹 {error}{subkeys_display} — {total_count} occurrence(s)"):
-
-                            # Remove entradas duplicadas com mesmo texto
-                            from collections import defaultdict
 
                             # Agrupar por conteúdo do erro ignorando o timestamp
                             message_map = defaultdict(lambda: {"count": 0, "last_timestamp": "", "full_text": ""})
