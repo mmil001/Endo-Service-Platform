@@ -198,7 +198,7 @@ If you don't have the converter, contact Mindray Technical Support.
             "alarm", "error", "underflow", "failure", "ld module", "overheat", "contamination"
             ]]
         grouped = defaultdict(lambda: defaultdict(lambda: {"count": 0, "last_timestamp": ""}))
-        code_pattern = re.compile(r"\b(E\d{3})\b", re.IGNORECASE)
+        code_pattern = re.compile(r"(?:\*\*|\*)?(E\d{3})(?:\*\*|\*)?", re.IGNORECASE)
         timestamp_pattern = re.compile(r"\d{1,2}/\d{1,2}/\d{2,4}\s+\d{1,2}:\d{1,2}:\d{1,2}")
 
         for file in log_files:
@@ -251,7 +251,7 @@ If you don't have the converter, contact Mindray Technical Support.
                         # Coletar subtags dentro do texto dos logs
                         sub_keywords = set()
                         for line_text in lines_dict:
-                            for k in ["contamination", "overheat", "aquecim", "failure", "alarm", "error"]:  # adicione o que for necessário
+                            for k in ["contamination", "overheat", "aquecim", "failure", "alarm", "error", "err", "erro"]:  # adicione o que for necessário
                                 if k in line_text.lower() and k != error.lower():
                                     sub_keywords.add(k)
 
