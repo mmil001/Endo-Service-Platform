@@ -217,7 +217,6 @@ If you don't have the converter, contact Mindray Technical Support.
 
 
     if uploaded_file:
-        st.markdown("⏳ Extraction and Analysis in Progress...")
         progress_bar = st.progress(0, text="⏳ Extracting .tar file...")
 
         with st.spinner("Analyzing file..."):
