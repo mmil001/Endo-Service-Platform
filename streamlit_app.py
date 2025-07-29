@@ -212,6 +212,7 @@ If you don't have the converter, contact Mindray Technical Support.
                     timestamp = ts_match.group(0) if ts_match else ""
 
                     # Keyword verification
+                    contains_keyword = any(kw in lower_line for kw in keywords)
                     for keyword in keywords:
                         if keyword in lower_line:
                             entry = grouped[keyword.upper()][clean_line]
@@ -220,9 +221,9 @@ If you don't have the converter, contact Mindray Technical Support.
                                 entry["last_timestamp"] = timestamp
                             break
 
-                    # Verify by code E###
+                    # Verifica se tem código E### E também uma palavra-chave
                     match = code_pattern.search(clean_line)
-                    if match:
+                    if match and contains_keyword:
                         code = match.group(1).upper()
                         entry = grouped[code][clean_line]
                         entry["count"] += 1
