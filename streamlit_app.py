@@ -211,9 +211,8 @@ If you don't have the converter, contact Mindray Technical Support.
             with open(file, "r", encoding="utf-8", errors="ignore") as f:
                 for line in f:
                     clean_line = line.strip()
-                    if not is_error_line(clean_line):
-                        continue  # Ignora linha que não aparenta ser erro
-                    lower_line = clean_line.lower()
+                if not is_error_line(clean_line) and not code_pattern.search(clean_line):
+                    continue
 
                     # Takes the most recent timestamp in the line, if any
                     ts_match = timestamp_pattern.search(clean_line)
