@@ -144,7 +144,7 @@ If you don't have the converter, contact Mindray Technical Support.
     """)
 
     uploaded_file = st.file_uploader("Select a .tar log file", type=["tar"])
-    progress_bar = st.progress(0, text="Waiting for file...")
+    progress_bar = st.progress(0, text="Analysis in Progress...")
 
     def extract_tar(file):
         temp_dir = tempfile.mkdtemp()
@@ -153,10 +153,25 @@ If you don't have the converter, contact Mindray Technical Support.
             f.write(file.getbuffer())
         with tarfile.open(tar_path, "r") as tar:
             tar.extractall(temp_dir)
-        return [os.path.join(root, f) for root, _, files in os.walk(temp_dir) for f in files if f.endswith((".log", ".txt"))]
+
+        # Lista de nomes de arquivos relevantes (minúsculo)
+        arquivos_relevantes = [
+            "componenterror.log",
+            "backend.log",
+            "frontendlog.log",
+            "sys.log",
+        ]
+
+        log_files = []
+        for root, _, files in os.walk(temp_dir):
+            for f in files:
+                if f.lower() in arquivos_relevantes:
+                    log_files.append(os.path.join(root, f))
+
+        return log_files
 
     def extract_keyword_and_code_errors(log_files):
-        keywords = ["alarm", "timeout", "error", "contamination", "heating", "heat", "fail", "failure", "Contamination", "LD", "Overheat"]
+        keywords = ["alarm", "timeout", "error", "contamination", "underflow", "fail", "failure", "Contamination", "LD", "Overheat"]
         grouped = defaultdict(lambda: defaultdict(lambda: {"count": 0, "last_timestamp": ""}))
         code_pattern = re.compile(r"\b(E\d{3})\b", re.IGNORECASE)
         timestamp_pattern = re.compile(r"\d{1,2}/\d{1,2}/\d{2,4}\s+\d{1,2}:\d{1,2}:\d{1,2}")
@@ -171,7 +186,7 @@ If you don't have the converter, contact Mindray Technical Support.
                     ts_match = timestamp_pattern.search(clean_line)
                     timestamp = ts_match.group(0) if ts_match else ""
 
-                    # Verificação por palavra-chave
+                    # Keyword verification
                     for keyword in keywords:
                         if keyword in lower_line:
                             entry = grouped[keyword.upper()][clean_line]
