@@ -89,17 +89,18 @@ if "logged_in" not in st.session_state or not st.session_state["logged_in"]:
 
 # === Home Config ===
 st.set_page_config(page_title="Endo Service Platform", layout="wide")
-logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
-st.image(logo_path, width=150)
 
-# Hide deprecated alerts in the interface
+# Hide st.cache warning (without hiding st.info with instructions)
 st.markdown("""
     <style>
-    .stAlert {
+    .stAlert div:has(code:contains('st.cache')) {
         display: none;
     }
     </style>
     """, unsafe_allow_html=True)
+
+logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
+st.image(logo_path, width=150)
 
 # === Database ===
 if "problems_database" not in st.session_state:
