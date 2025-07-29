@@ -92,6 +92,15 @@ st.set_page_config(page_title="Endo Service Platform", layout="wide")
 logo_path = os.path.join(BASE_DIR, "images", "mindray_logo_transparent.png")
 st.image(logo_path, width=150)
 
+# Hide deprecated alerts in the interface
+st.markdown("""
+    <style>
+    .stAlert {
+        display: none;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 # === Database ===
 if "problems_database" not in st.session_state:
     problems_path = os.path.join(BASE_DIR, "database", "problems_database.json")
