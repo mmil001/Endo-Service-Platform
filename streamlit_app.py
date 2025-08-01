@@ -161,43 +161,30 @@ If you don't have the converter, contact Mindray Technical Support.
 
     
 
-    uploaded_file = st.file_uploader("Select a .tar log file", type=["tar"])
+    uploaded_file = st.file_uploader("Select a .tar log file or individual log (.log or .txt)", type=["tar", "log", "txt"])
 
     def extract_tar(file):
         temp_dir = tempfile.mkdtemp()
-        tar_path = os.path.join(temp_dir, file.name)
-        with open(tar_path, "wb") as f:
-            f.write(file.getbuffer())
-        with tarfile.open(tar_path, "r") as tar:
-            tar.extractall(temp_dir)
+        arquivos_relevantes = [".log", ".txt"]  # <-- Aqui adiciona
 
-        # List of relevant file names (lowercase)
-        arquivos_relevantes = [
-            "ComponentError.log",
-            "backend.log",
-            "frontendlog.log",
-            "sys.log",
-            "AgingTestLog.log",
-            "AgingTestResult.txt",
-            "BootLoaderLog.log",
-            "Component.log",
-            "DSPLog.log",
-            "FrontendLog.log",
-            "gpuAdapter.log",
-            "History.log",
-            "ParaLog.log",
-            "TestLog.log",
-            "TestParams.log",
-            "ThreadID.log"
-        ]
+        if file.name.endswith(".tar"):
+            tar_path = os.path.join(temp_dir, file.name)
+            with open(tar_path, "wb") as f:
+                f.write(file.getbuffer())
+            with tarfile.open(tar_path, "r") as tar:
+                tar.extractall(temp_dir)
 
-        log_files = []
-        for root, _, files in os.walk(temp_dir):
-            for f in files:
-                if f.lower() in arquivos_relevantes:
-                    log_files.append(os.path.join(root, f))
-
-        return log_files
+            files = []
+            for root, _, filenames in os.walk(temp_dir):
+                for f in filenames:
+                    if any(f.lower().endswith(ext) for ext in arquivos_relevantes):
+                        files.append(os.path.join(root, f))
+            return files
+        else:
+            file_path = os.path.join(temp_dir, file.name)
+            with open(file_path, "wb") as f:
+                f.write(file.getbuffer())
+            return [file_path]
 
     def extract_keyword_and_code_errors(log_files):
         keywords = [k.lower() for k in [
