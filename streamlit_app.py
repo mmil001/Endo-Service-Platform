@@ -295,17 +295,17 @@ If you don't have the converter, contact Mindray Technical Support.
                                     f"<span style='color:#AAAAAA;'>• {last_ts} — \"{clean_msg}\" ({data['count']}x)</span>",
                                     unsafe_allow_html=True
                                 )
-                            
-                            # ====== BOTÃO PARA DOWNLOAD (FORA DO LOOP) ======
-                            final_txt = "\n".join(txt_output)
-                            
-                            st.download_button(
-                                label="📥 Download Analysis as TXT",
-                                data=final_txt,
-                                file_name="log_analysis_result.txt",
-                                mime="text/plain"
-                            )
-                                    
+                                # ====== BOTÃO ÚNICO DE DOWNLOAD ======
+                                final_txt = "\n".join(txt_output)
+                                
+                                st.download_button(
+                                    label="📥 Download Analysis as TXT",
+                                    data=final_txt,
+                                    file_name="log_analysis_result.txt",
+                                    mime="text/plain",
+                                    key="download_log_analysis_txt"
+                                )
+
                 # ✅ Final Message
                 progress_bar.progress(100, text="✅ Analysis complete.")
 
