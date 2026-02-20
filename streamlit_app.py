@@ -244,10 +244,17 @@ If you don't have the converter, contact Mindray Technical Support.
                 # ====== CRIAR ZIP COM ARQUIVOS ORIGINAIS ======
                 zip_buffer = io.BytesIO()
                 
-                with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zip_file:
+                with zipfile.ZipFile(zip_buffer, "w", compression=zipfile.ZIP_DEFLATED) as zip_file:
                     for file_path in log_files:
                         file_name = os.path.basename(file_path)
-                        zip_file.write(file_path, arcname=file_name)
+                
+                        with open(file_path, "rb") as f:
+                            file_data = f.read()
+                
+                        zip_info = zipfile.ZipInfo(file_name)
+                        zip_info.date_time = (2024, 1, 1, 0, 0, 0)  # evita erro <1980
+                
+                        zip_file.writestr(zip_info, file_data)
                 
                 zip_buffer.seek(0)
                 
