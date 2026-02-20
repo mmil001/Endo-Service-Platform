@@ -242,8 +242,17 @@ If you don't have the converter, contact Mindray Technical Support.
                 # Mostrar erros SÓ após a análise
                 if grouped_errors:
                     st.subheader("⚠️ Errors Found in Logs")
+                    # ====== INÍCIO DO TXT PARA DOWNLOAD ======
+                    txt_output = []
+                    txt_output.append("LOG ANALYSIS RESULT")
+                    txt_output.append("=" * 60)
+                    txt_output.append(f"Generated at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+                    txt_output.append("=" * 60)
                     for error, lines_dict in sorted(grouped_errors.items(), key=lambda x: sum(v["count"] for v in x[1].values()), reverse=True):
                         total_count = sum(data["count"] for data in lines_dict.values())
+
+                        txt_output.append(f"\n{error} — {total_count} occurrence(s)")
+                        txt_output.append("-" * 40)
 
                         # Coletar subtags dentro do texto dos logs
                         sub_keywords = set()
@@ -279,11 +288,22 @@ If you don't have the converter, contact Mindray Technical Support.
                             # Exibir apenas uma linha por erro único
                             for clean_msg, data in sorted_items:
                                 last_ts = data["last_timestamp"] or "No timestamp"
+                                txt_line = f"{last_ts} — {clean_msg} ({data['count']}x)"
+                                txt_output.append(txt_line)
                                 st.markdown(
                                     f"""<span style='color:#AAAAAA;'>• {last_ts} — "{clean_msg}" ({data['count']}x)</span>""",
                                     unsafe_allow_html=True
-                                )
+                                    
+                                    # ====== BOTÃO PARA DOWNLOAD ======
+                                    final_txt = "\n".join(txt_output)
 
+                                    st.download_button(
+                                        label="📥 Download Analysis as TXT",
+                                        data=final_txt,
+                                        file_name="log_analysis_result.txt",
+                                        mime="text/plain"
+                                    )
+                                    
                 # ✅ Final Message
                 progress_bar.progress(100, text="✅ Analysis complete.")
 
