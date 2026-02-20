@@ -9,6 +9,8 @@ import time
 from datetime import datetime
 from streamlit_cookies_manager import EncryptedCookieManager
 from itertools import chain
+import zipfile
+import io
 
 # === Paths base directory ===
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -238,6 +240,24 @@ If you don't have the converter, contact Mindray Technical Support.
 
                 grouped_errors = extract_keyword_and_code_errors(log_files)
                 st.success(f"Extracted {len(log_files)} log files.")
+                
+                # ====== CRIAR ZIP COM ARQUIVOS ORIGINAIS ======
+                zip_buffer = io.BytesIO()
+                
+                with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zip_file:
+                    for file_path in log_files:
+                        file_name = os.path.basename(file_path)
+                        zip_file.write(file_path, arcname=file_name)
+                
+                zip_buffer.seek(0)
+                
+                st.download_button(
+                    label="📦 Download Original Logs (ZIP)",
+                    data=zip_buffer,
+                    file_name="original_logs.zip",
+                    mime="application/zip",
+                    key="download_original_zip"
+                )
 
                 # Mostrar erros SÓ após a análise
                 if grouped_errors:
@@ -295,17 +315,17 @@ If you don't have the converter, contact Mindray Technical Support.
                                     f"<span style='color:#AAAAAA;'>• {last_ts} — \"{clean_msg}\" ({data['count']}x)</span>",
                                     unsafe_allow_html=True
                                 )
-                        # ====== BOTÃO ÚNICO DE DOWNLOAD ======
-                        if "final_txt" not in st.session_state:
-                            st.session_state["final_txt"] = "\n".join(txt_output)
-                        
-                        st.download_button(
-                            label="📥 Download Analysis as TXT",
-                            data=st.session_state["final_txt"],
-                            file_name="log_analysis_result.txt",
-                            mime="text/plain",
-                            key="download_log_analysis_txt"
-                        )
+                    # ====== BOTÃO ÚNICO DE DOWNLOAD ======
+                    if "final_txt" not in st.session_state:
+                        st.session_state["final_txt"] = "\n".join(txt_output)
+                    
+                    st.download_button(
+                        label="📥 Download Analysis as TXT",
+                        data=st.session_state["final_txt"],
+                        file_name="log_analysis_result.txt",
+                        mime="text/plain",
+                        key="download_log_analysis_txt"
+                    )
                 # ✅ Final Message
                 progress_bar.progress(100, text="✅ Analysis complete.")
 
